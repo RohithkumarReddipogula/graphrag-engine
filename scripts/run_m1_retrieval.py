@@ -94,9 +94,17 @@ def main() -> None:
                      "reranker": s.reranker_model, "bm25": {"k1": 1.5, "b": 0.75}, "dense": "exact cosine in Neo4j"},
         "selection_rule": "max post-rerank all_gold@10 on multi-hop dev, then recall@5, then grid order",
         "chosen": {k: best[k] for k in ("with_title", "fusion", "alpha")},
+        # Reference row: the MSc thesis setting, reported next to the chosen config.
+        "thesis_setting": next(
+            {k: c[k] for k in ("with_title", "fusion", "alpha", "pre_rerank", "post_rerank")}
+            for c in configs if c["with_title"] and c["fusion"] == "weighted" and c["alpha"] == 0.7
+        ),
+        "spread_note": "all configs, post-rerank multi-hop all_gold@10: min {lo}, max {hi} (n = 100; one question = 0.01)",
         "configs": configs,
         "runtime_s": round(time.time() - t0),
     }
+    vals = [c["post_rerank"]["multi_hop"]["all_gold@10"] for c in configs]
+    report["spread_note"] = report["spread_note"].format(lo=min(vals), hi=max(vals))
     (out / "retrieval_dev.json").write_text(json.dumps(report, indent=1) + "\n")
     print("chosen:", report["chosen"])
     print(json.dumps({"pre_rerank": best["pre_rerank"], "post_rerank": best["post_rerank"]}, indent=1))

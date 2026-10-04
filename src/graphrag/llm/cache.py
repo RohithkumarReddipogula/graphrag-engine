@@ -2,6 +2,8 @@
 
 import hashlib
 import json
+import os
+import threading
 from pathlib import Path
 from typing import Any
 
@@ -30,6 +32,6 @@ class DiskCache:
         path = self._path(model, key)
         path.parent.mkdir(parents=True, exist_ok=True)
         # Write to a temp file first so an interrupted run never leaves a half-written entry.
-        tmp = path.with_suffix(".tmp")
+        tmp = path.with_suffix(f".{os.getpid()}.{threading.get_ident()}.tmp")
         tmp.write_text(json.dumps(value, ensure_ascii=False, indent=1), encoding="utf-8")
         tmp.replace(path)

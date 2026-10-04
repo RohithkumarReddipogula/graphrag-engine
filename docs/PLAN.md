@@ -210,19 +210,23 @@ Same corpus, same generator, same budget, same eval.
   `recall@5`, then grid order. Chosen config and all numbers: `results/m1/retrieval_dev.json`.
 
 ### 6.4 Generation (`src/graphrag/generation.py`)
-- One prompt for every system: answer with the shortest possible span (an entity, a date, or yes/no)
-  or `unknown`. No explanation.
-- Context is packed to a fixed token budget (config, e.g. 1,500 tokens) in rank order. Closed-book gets
-  an empty context and the same instructions.
-- Temperature 0. All calls cached.
+- One prompt for every retrieval system: answer only from the context with the shortest possible span
+  (an entity, a date, or yes/no), or `unknown`. No explanation. Closed-book gets the same instructions
+  without the context sentence ("If you do not know, reply unknown").
+- Context is packed to 1,500 tokens (o200k tokenizer) in rank order; a passage that does not fit is
+  skipped and the next one is tried.
+- Temperature 0, reasoning effort medium. All calls cached; provider pinned (see section 2).
 
 ### 6.5 Evaluation (`src/graphrag/eval/`)
-- Vendor the answer-normalisation and EM/F1 functions from the official 2Wiki eval script (check and keep
-  its licence notice).
-- Paired bootstrap (10,000 resamples) for differences between systems.
-- Retrieval recall@k (k = 2, 5, 10) against `gold_chunk_ids`. No LLM needed, so it is the fastest signal
-  while tuning.
-- Output `results/m1/{system}_{split}.jsonl` (per-question) and `results/m1/summary.json`.
+- Answer scoring copied from the official 2Wiki evaluation script v1.1 (Apache 2.0, notice kept): EM and
+  F1 as the max over the gold answer plus the Wikidata aliases and demonyms of the answer entity
+  (`data/answer_aliases.json`, built by `scripts/build_answer_aliases.py` from the official
+  `data_ids.zip`, checksum pinned). For single-hop questions the aliases come from the evidence object's
+  entity id when the official ids line up with the evidence list.
+- 95% percentile bootstrap CIs (10,000 resamples, fixed seed); paired bootstrap for differences.
+- Retrieval recall@k (k = 2, 5, 10) against `gold_chunk_ids`. No LLM needed, so it is the fastest
+  signal while tuning.
+- Output: `results/m1/generation_dev_<system>.jsonl` (per question) and `results/m1/generation_dev.json`.
 
 ### 6.6 Tests
 - Sampling is deterministic for a fixed seed.

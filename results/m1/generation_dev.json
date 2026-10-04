@@ -1,0 +1,675 @@
+{
+ "split": "dev",
+ "generator": {
+  "model": "openai/gpt-oss-120b",
+  "endpoint": "deepinfra/bf16",
+  "reasoning_effort": "medium",
+  "temperature": 0.0
+ },
+ "context_budget_tokens": 1500,
+ "scoring": "official 2Wiki v1.1 EM/F1, max over gold answer + Wikidata aliases and demonyms",
+ "ci": "95% percentile bootstrap, 10,000 resamples, seed 0",
+ "systems": {
+  "closed_book": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.84,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.84,
+      "n": 25
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.32,
+      "ci_low": 0.16,
+      "ci_high": 0.52,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4608,
+      "ci_low": 0.2901,
+      "ci_high": 0.635,
+      "n": 25
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.16,
+      "ci_low": 0.04,
+      "ci_high": 0.32,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.1689,
+      "ci_low": 0.04,
+      "ci_high": 0.32,
+      "n": 25
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "n": 25
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.38,
+      "ci_low": 0.28,
+      "ci_high": 0.48,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.4174,
+      "ci_low": 0.3237,
+      "ci_high": 0.5132,
+      "n": 100
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.2,
+      "ci_low": 0.04,
+      "ci_high": 0.36,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4722,
+      "ci_low": 0.3267,
+      "ci_high": 0.6233,
+      "n": 25
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.344,
+      "ci_low": 0.264,
+      "ci_high": 0.432,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.4284,
+      "ci_low": 0.3489,
+      "ci_high": 0.51,
+      "n": 125
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 9
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.207,
+      "ci_low": 0.0735,
+      "ci_high": 0.3582,
+      "n": 17
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.0106,
+      "ci_low": 0.0,
+      "ci_high": 0.0317,
+      "n": 21
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.0603,
+      "ci_low": 0.0205,
+      "ci_high": 0.1098,
+      "n": 62
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.3402,
+      "ci_low": 0.2036,
+      "ci_high": 0.4819,
+      "n": 20
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.1286,
+      "ci_low": 0.0768,
+      "ci_high": 0.188,
+      "n": 82
+     }
+    }
+   },
+   "unknown_rate": 0.224,
+   "providers": [
+    "DeepInfra"
+   ]
+  },
+  "hybrid": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.56,
+      "ci_low": 0.36,
+      "ci_high": 0.76,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.6595,
+      "ci_low": 0.4809,
+      "ci_high": 0.8249,
+      "n": 25
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.24,
+      "ci_low": 0.08,
+      "ci_high": 0.4,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.2667,
+      "ci_low": 0.1067,
+      "ci_high": 0.44,
+      "n": 25
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 25
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.44,
+      "ci_low": 0.34,
+      "ci_high": 0.54,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.4716,
+      "ci_low": 0.3774,
+      "ci_high": 0.567,
+      "n": 100
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.98,
+      "ci_low": 0.94,
+      "ci_high": 1.0,
+      "n": 25
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.544,
+      "ci_low": 0.456,
+      "ci_high": 0.632,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.5732,
+      "ci_low": 0.4867,
+      "ci_high": 0.6569,
+      "n": 125
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.4706,
+      "ci_low": 0.2353,
+      "ci_high": 0.7059,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.617,
+      "ci_low": 0.4,
+      "ci_high": 0.8118,
+      "n": 17
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.1905,
+      "ci_low": 0.0476,
+      "ci_high": 0.381,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.2222,
+      "ci_low": 0.0635,
+      "ci_high": 0.4127,
+      "n": 21
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.3226,
+      "ci_low": 0.2097,
+      "ci_high": 0.4355,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.3735,
+      "ci_low": 0.2594,
+      "ci_high": 0.491,
+      "n": 62
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.975,
+      "ci_low": 0.925,
+      "ci_high": 1.0,
+      "n": 20
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.4756,
+      "ci_low": 0.3659,
+      "ci_high": 0.5854,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.5202,
+      "ci_low": 0.4145,
+      "ci_high": 0.6258,
+      "n": 82
+     }
+    }
+   },
+   "unknown_rate": 0.392,
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.53,
+   "mean_context_tokens": 1484.0,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.2,
+    "ci_low": 0.088,
+    "ci_high": 0.312,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.1449,
+    "ci_low": 0.0437,
+    "ci_high": 0.2449,
+    "n": 125
+   }
+  },
+  "hybrid_thesis": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.52,
+      "ci_low": 0.32,
+      "ci_high": 0.72,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.6176,
+      "ci_low": 0.439,
+      "ci_high": 0.7883,
+      "n": 25
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.24,
+      "ci_low": 0.08,
+      "ci_high": 0.4,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.2867,
+      "ci_low": 0.1265,
+      "ci_high": 0.4667,
+      "n": 25
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.04,
+      "ci_low": 0.0,
+      "ci_high": 0.12,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.04,
+      "ci_low": 0.0,
+      "ci_high": 0.12,
+      "n": 25
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.44,
+      "ci_low": 0.35,
+      "ci_high": 0.54,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.4761,
+      "ci_low": 0.3836,
+      "ci_high": 0.5717,
+      "n": 100
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.98,
+      "ci_low": 0.94,
+      "ci_high": 1.0,
+      "n": 25
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.544,
+      "ci_low": 0.456,
+      "ci_high": 0.632,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.5769,
+      "ci_low": 0.4915,
+      "ci_high": 0.6596,
+      "n": 125
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.4118,
+      "ci_low": 0.1765,
+      "ci_high": 0.6471,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.5554,
+      "ci_low": 0.3333,
+      "ci_high": 0.7608,
+      "n": 17
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.1905,
+      "ci_low": 0.0476,
+      "ci_high": 0.381,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.246,
+      "ci_low": 0.0794,
+      "ci_high": 0.4286,
+      "n": 21
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.3065,
+      "ci_low": 0.1935,
+      "ci_high": 0.4194,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.3646,
+      "ci_low": 0.2527,
+      "ci_high": 0.4802,
+      "n": 62
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.975,
+      "ci_low": 0.925,
+      "ci_high": 1.0,
+      "n": 20
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.4634,
+      "ci_low": 0.3537,
+      "ci_high": 0.5732,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.5135,
+      "ci_low": 0.4094,
+      "ci_high": 0.6196,
+      "n": 82
+     }
+    }
+   },
+   "unknown_rate": 0.384,
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.53,
+   "mean_context_tokens": 1483.9,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.2,
+    "ci_low": 0.096,
+    "ci_high": 0.304,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.1485,
+    "ci_low": 0.0494,
+    "ci_high": 0.2471,
+    "n": 125
+   }
+  }
+ },
+ "closed_book_wrong_subset": {
+  "definition": "dev questions with closed-book EM = 0",
+  "n": 82
+ },
+ "paired_diff_hybrid_vs_thesis_em": {
+  "mean": 0.0,
+  "ci_low": -0.024,
+  "ci_high": 0.024,
+  "n": 125
+ },
+ "spend": {
+  "this_run_usd": 0.028483,
+  "openrouter_remaining_usd": 7.574705,
+  "generation_seconds": 182
+ }
+}

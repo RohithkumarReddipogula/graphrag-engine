@@ -5,6 +5,7 @@ down, the call raises and the run is resumed later from the cache.
 """
 
 import json
+import threading
 import time
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
@@ -17,6 +18,7 @@ from graphrag.config import Settings
 from graphrag.llm.cache import DiskCache, cache_key
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1"
+_LEDGER_LOCK = threading.Lock()   # calls may run in parallel threads
 
 
 @dataclass(frozen=True)
@@ -131,7 +133,7 @@ def append_ledger(ledger: Path, model: str, r: ProviderResponse) -> None:
         "output_tokens": r.output_tokens,
         "cost_usd": r.cost_usd,
     }
-    with ledger.open("a", encoding="utf-8") as f:
+    with _LEDGER_LOCK, ledger.open("a", encoding="utf-8") as f:
         f.write(json.dumps(row) + "\n")
 
 

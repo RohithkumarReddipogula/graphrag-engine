@@ -98,28 +98,28 @@
 {"id": "f33eda240bae11ebab90acde48001122", "type": "inference", "gold": ["William the Conqueror", "Constance of Normandy"], "gold_rank_pre": [75, 1], "gold_rank_post": [null, 1]}
 {"id": "73ab605a0bb011ebab90acde48001122", "type": "inference", "gold": ["Sigismund I, Prince of Anhalt-Dessau", "Albert V, Prince of Anhalt-Dessau"], "gold_rank_pre": [7, 1], "gold_rank_post": [2, 1]}
 {"id": "e5224d9a0bae11ebab90acde48001122", "type": "inference", "gold": ["Princess Ileana of Romania", "Marie of Romania"], "gold_rank_pre": [1, 5], "gold_rank_post": [1, 9]}
-{"id": "sh_e0a0787e23", "type": "single_hop", "gold": ["Anne Fontaine"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_1ebbc5d23b", "type": "single_hop", "gold": ["Dead Man"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_6c84fa0e12", "type": "single_hop", "gold": ["Abel Ferry"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_4211281b0d", "type": "single_hop", "gold": ["Chilperic I"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_b47298f7e2", "type": "single_hop", "gold": ["Love, Honor and Oh-Baby!"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_e31c07b844", "type": "single_hop", "gold": ["Sailor's Luck"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_2ef66a5b15", "type": "single_hop", "gold": ["Archduke Carl Ludwig of Austria (1918–2007)"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_cc5aa67a0b", "type": "single_hop", "gold": ["An Hour Before Dawn"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_e8ee9b5c60", "type": "single_hop", "gold": ["Tay Garnett"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_ef0eee2373", "type": "single_hop", "gold": ["Bolesław the Elder"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_cf41520de6", "type": "single_hop", "gold": ["Edward Sedgwick"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_35fdc9f7bd", "type": "single_hop", "gold": ["Gu Changwei"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_767c4d238e", "type": "single_hop", "gold": ["A City Upside Down"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_53c1b4c55b", "type": "single_hop", "gold": ["Adam's Rib"], "gold_rank_pre": [2], "gold_rank_post": [1]}
-{"id": "sh_0ce9f03a52", "type": "single_hop", "gold": ["Adelaide of Auxerre (born c. 870)"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_9141d7b8d1", "type": "single_hop", "gold": ["N. a pris les dés..."], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_95d2ff3c72", "type": "single_hop", "gold": ["J. Searle Dawley"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_66e07b8b0f", "type": "single_hop", "gold": ["Stary Onokhoy"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_c47916db98", "type": "single_hop", "gold": ["Benjamin Nash"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_5a6ae22606", "type": "single_hop", "gold": ["Daniel Beltrá"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_c39ef46d00", "type": "single_hop", "gold": ["Marie Leszczyńska"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_df36b27169", "type": "single_hop", "gold": ["Júdás"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_23b6b3063a", "type": "single_hop", "gold": ["Constance of Normandy"], "gold_rank_pre": [1], "gold_rank_post": [1]}
-{"id": "sh_d9a36213b7", "type": "single_hop", "gold": ["Why I Would Not Marry?"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_cce8c05796", "type": "single_hop", "gold": ["Australia After Dark"], "gold_rank_pre": [1], "gold_rank_post": [1]}
 {"id": "sh_8be01deee4", "type": "single_hop", "gold": ["The Happening (1967 film)"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_786fbf3d4e", "type": "single_hop", "gold": ["Bonne of Armagnac"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_45d3f639a8", "type": "single_hop", "gold": ["Corrections Class"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_c64e7af5ea", "type": "single_hop", "gold": ["Rotrou IV, Count of Perche"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_cf41520de6", "type": "single_hop", "gold": ["Edward Sedgwick"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_9beba158ad", "type": "single_hop", "gold": ["Bastiaan Geleijnse"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_d0cf68077b", "type": "single_hop", "gold": ["Febbre da cavallo - La mandrakata"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_5fe42b8489", "type": "single_hop", "gold": ["Sidney Olcott"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_51682cffd7", "type": "single_hop", "gold": ["Michael Curtiz"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_7da0108502", "type": "single_hop", "gold": ["Clarence Moore (businessman)"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_7a1364702f", "type": "single_hop", "gold": ["Edward Dillon (actor)"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_d2c3159f4a", "type": "single_hop", "gold": ["James Whale"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_23b6b3063a", "type": "single_hop", "gold": ["Constance of Normandy"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_ef0eee2373", "type": "single_hop", "gold": ["Bolesław the Elder"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_661383538d", "type": "single_hop", "gold": ["James Scudamore, 3rd Viscount Scudamore"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_8391a986af", "type": "single_hop", "gold": ["Hir Jamus Saghir"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_1a1c417365", "type": "single_hop", "gold": ["Edward de Vere, 17th Earl of Oxford"], "gold_rank_pre": [2], "gold_rank_post": [1]}
+{"id": "sh_9abdb6ab45", "type": "single_hop", "gold": ["Billy Two Hats"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_2f513eb37e", "type": "single_hop", "gold": ["Richard Stanton"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_3c59831e6a", "type": "single_hop", "gold": ["Prince Dmitri Alexandrovich of Russia"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_23f2551f2f", "type": "single_hop", "gold": ["Diego Fernández de Oviedo"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_4278d78960", "type": "single_hop", "gold": ["Lloyd Ingraham"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_c65dc93aea", "type": "single_hop", "gold": ["All Over the Guy"], "gold_rank_pre": [1], "gold_rank_post": [1]}
+{"id": "sh_db26c29bda", "type": "single_hop", "gold": ["Comrades (1921 film)"], "gold_rank_pre": [1], "gold_rank_post": [1]}

@@ -21,6 +21,160 @@
   "fusion": "weighted",
   "alpha": 0.9
  },
+ "thesis_setting": {
+  "with_title": true,
+  "fusion": "weighted",
+  "alpha": 0.7,
+  "pre_rerank": {
+   "all": {
+    "n": 125,
+    "recall@2": 0.728,
+    "all_gold@2": 0.472,
+    "recall@5": 0.794,
+    "all_gold@5": 0.576,
+    "recall@10": 0.824,
+    "all_gold@10": 0.632
+   },
+   "bridge_comparison": {
+    "n": 25,
+    "recall@2": 0.46,
+    "all_gold@2": 0.0,
+    "recall@5": 0.53,
+    "all_gold@5": 0.0,
+    "recall@10": 0.54,
+    "all_gold@10": 0.0
+   },
+   "comparison": {
+    "n": 25,
+    "recall@2": 0.98,
+    "all_gold@2": 0.96,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   },
+   "compositional": {
+    "n": 25,
+    "recall@2": 0.64,
+    "all_gold@2": 0.28,
+    "recall@5": 0.7,
+    "all_gold@5": 0.4,
+    "recall@10": 0.7,
+    "all_gold@10": 0.4
+   },
+   "inference": {
+    "n": 25,
+    "recall@2": 0.56,
+    "all_gold@2": 0.12,
+    "recall@5": 0.74,
+    "all_gold@5": 0.48,
+    "recall@10": 0.88,
+    "all_gold@10": 0.76
+   },
+   "multi_hop": {
+    "n": 100,
+    "recall@2": 0.66,
+    "all_gold@2": 0.34,
+    "recall@5": 0.7425,
+    "all_gold@5": 0.47,
+    "recall@10": 0.78,
+    "all_gold@10": 0.54
+   },
+   "single_hop": {
+    "n": 25,
+    "recall@2": 1.0,
+    "all_gold@2": 1.0,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   },
+   "single_hop_all": {
+    "n": 25,
+    "recall@2": 1.0,
+    "all_gold@2": 1.0,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   }
+  },
+  "post_rerank": {
+   "all": {
+    "n": 125,
+    "recall@2": 0.744,
+    "all_gold@2": 0.488,
+    "recall@5": 0.8,
+    "all_gold@5": 0.584,
+    "recall@10": 0.828,
+    "all_gold@10": 0.632
+   },
+   "bridge_comparison": {
+    "n": 25,
+    "recall@2": 0.5,
+    "all_gold@2": 0.0,
+    "recall@5": 0.54,
+    "all_gold@5": 0.0,
+    "recall@10": 0.56,
+    "all_gold@10": 0.0
+   },
+   "comparison": {
+    "n": 25,
+    "recall@2": 0.98,
+    "all_gold@2": 0.96,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   },
+   "compositional": {
+    "n": 25,
+    "recall@2": 0.6,
+    "all_gold@2": 0.2,
+    "recall@5": 0.66,
+    "all_gold@5": 0.32,
+    "recall@10": 0.72,
+    "all_gold@10": 0.44
+   },
+   "inference": {
+    "n": 25,
+    "recall@2": 0.64,
+    "all_gold@2": 0.28,
+    "recall@5": 0.8,
+    "all_gold@5": 0.6,
+    "recall@10": 0.86,
+    "all_gold@10": 0.72
+   },
+   "multi_hop": {
+    "n": 100,
+    "recall@2": 0.68,
+    "all_gold@2": 0.36,
+    "recall@5": 0.75,
+    "all_gold@5": 0.48,
+    "recall@10": 0.785,
+    "all_gold@10": 0.54
+   },
+   "single_hop": {
+    "n": 25,
+    "recall@2": 1.0,
+    "all_gold@2": 1.0,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   },
+   "single_hop_all": {
+    "n": 25,
+    "recall@2": 1.0,
+    "all_gold@2": 1.0,
+    "recall@5": 1.0,
+    "all_gold@5": 1.0,
+    "recall@10": 1.0,
+    "all_gold@10": 1.0
+   }
+  }
+ },
+ "spread_note": "all configs, post-rerank multi-hop all_gold@10: min 0.48, max 0.56 (n = 100; one question = 0.01)",
  "configs": [
   {
    "with_title": true,
@@ -641,8 +795,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.7,
-     "all_gold@2": 0.44,
+     "recall@2": 0.708,
+     "all_gold@2": 0.448,
      "recall@5": 0.78,
      "all_gold@5": 0.544,
      "recall@10": 0.818,
@@ -695,8 +849,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -704,8 +858,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -794,8 +948,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.71,
-     "all_gold@2": 0.448,
+     "recall@2": 0.718,
+     "all_gold@2": 0.456,
      "recall@5": 0.782,
      "all_gold@5": 0.552,
      "recall@10": 0.826,
@@ -848,8 +1002,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -857,8 +1011,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -947,8 +1101,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.72,
-     "all_gold@2": 0.464,
+     "recall@2": 0.728,
+     "all_gold@2": 0.472,
      "recall@5": 0.79,
      "all_gold@5": 0.568,
      "recall@10": 0.826,
@@ -1001,8 +1155,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -1010,8 +1164,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -1712,8 +1866,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.718,
-     "all_gold@2": 0.456,
+     "recall@2": 0.726,
+     "all_gold@2": 0.464,
      "recall@5": 0.786,
      "all_gold@5": 0.56,
      "recall@10": 0.822,
@@ -1766,8 +1920,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -1775,8 +1929,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -1867,10 +2021,10 @@
      "n": 125,
      "recall@2": 0.578,
      "all_gold@2": 0.32,
-     "recall@5": 0.686,
-     "all_gold@5": 0.448,
-     "recall@10": 0.756,
-     "all_gold@10": 0.536
+     "recall@5": 0.702,
+     "all_gold@5": 0.464,
+     "recall@10": 0.764,
+     "all_gold@10": 0.544
     },
     "bridge_comparison": {
      "n": 25,
@@ -1921,19 +2075,19 @@
      "n": 25,
      "recall@2": 0.92,
      "all_gold@2": 0.92,
-     "recall@5": 0.92,
-     "all_gold@5": 0.92,
-     "recall@10": 0.96,
-     "all_gold@10": 0.96
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
+     "recall@10": 1.0,
+     "all_gold@10": 1.0
     },
     "single_hop_all": {
      "n": 25,
      "recall@2": 0.92,
      "all_gold@2": 0.92,
-     "recall@5": 0.92,
-     "all_gold@5": 0.92,
-     "recall@10": 0.96,
-     "all_gold@10": 0.96
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
+     "recall@10": 1.0,
+     "all_gold@10": 1.0
     }
    },
    "post_rerank": {
@@ -2018,10 +2172,10 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.596,
-     "all_gold@2": 0.336,
-     "recall@5": 0.724,
-     "all_gold@5": 0.48,
+     "recall@2": 0.604,
+     "all_gold@2": 0.344,
+     "recall@5": 0.732,
+     "all_gold@5": 0.488,
      "recall@10": 0.778,
      "all_gold@10": 0.56
     },
@@ -2072,19 +2226,19 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.92,
-     "all_gold@2": 0.92,
-     "recall@5": 0.96,
-     "all_gold@5": 0.96,
+     "recall@2": 0.96,
+     "all_gold@2": 0.96,
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
      "recall@10": 1.0,
      "all_gold@10": 1.0
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.92,
-     "all_gold@2": 0.92,
-     "recall@5": 0.96,
-     "all_gold@5": 0.96,
+     "recall@2": 0.96,
+     "all_gold@2": 0.96,
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
      "recall@10": 1.0,
      "all_gold@10": 1.0
     }
@@ -2171,10 +2325,10 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.612,
-     "all_gold@2": 0.352,
-     "recall@5": 0.746,
-     "all_gold@5": 0.504,
+     "recall@2": 0.62,
+     "all_gold@2": 0.36,
+     "recall@5": 0.754,
+     "all_gold@5": 0.512,
      "recall@10": 0.782,
      "all_gold@10": 0.56
     },
@@ -2225,19 +2379,19 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.92,
-     "all_gold@2": 0.92,
-     "recall@5": 0.96,
-     "all_gold@5": 0.96,
+     "recall@2": 0.96,
+     "all_gold@2": 0.96,
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
      "recall@10": 1.0,
      "all_gold@10": 1.0
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.92,
-     "all_gold@2": 0.92,
-     "recall@5": 0.96,
-     "all_gold@5": 0.96,
+     "recall@2": 0.96,
+     "all_gold@2": 0.96,
+     "recall@5": 1.0,
+     "all_gold@5": 1.0,
      "recall@10": 1.0,
      "all_gold@10": 1.0
     }
@@ -2783,8 +2937,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.69,
-     "all_gold@2": 0.424,
+     "recall@2": 0.698,
+     "all_gold@2": 0.432,
      "recall@5": 0.784,
      "all_gold@5": 0.56,
      "recall@10": 0.826,
@@ -2837,8 +2991,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -2846,8 +3000,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -3548,8 +3702,8 @@
    "pre_rerank": {
     "all": {
      "n": 125,
-     "recall@2": 0.686,
-     "all_gold@2": 0.424,
+     "recall@2": 0.694,
+     "all_gold@2": 0.432,
      "recall@5": 0.782,
      "all_gold@5": 0.56,
      "recall@10": 0.814,
@@ -3602,8 +3756,8 @@
     },
     "single_hop": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -3611,8 +3765,8 @@
     },
     "single_hop_all": {
      "n": 25,
-     "recall@2": 0.96,
-     "all_gold@2": 0.96,
+     "recall@2": 1.0,
+     "all_gold@2": 1.0,
      "recall@5": 1.0,
      "all_gold@5": 1.0,
      "recall@10": 1.0,
@@ -3695,5 +3849,5 @@
    }
   }
  ],
- "runtime_s": 353
+ "runtime_s": 339
 }
