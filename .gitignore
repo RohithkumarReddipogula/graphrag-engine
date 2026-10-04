@@ -1,0 +1,22 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Local caches and raw downloads (regenerable)
+.cache/
+data/raw/
+neo4j/
+
+# OS
+.DS_Store
+
+# Original build doc (superseded by docs/PLAN.md)
+docs/build-doc.pdf
