@@ -57,7 +57,21 @@ pilot batches only, at the primary name threshold 90:
   - at least 90% of the 30 hand-checked triples correct (at least 27 of 30).
 If all three pass, the full corpus is extracted. If not, one more prompt fix on dev, then decide.
 
-## 5. Open decisions
+## 5. Decision rule after pilot v2 (decided)
+
+Decision rule after pilot v2, fixed on 2026-10-04 before seeing any v3 numbers:
+  - Prompt v3 is the last prompt fix. It is judged on 9 fresh batches (never extracted before) with the
+    same scorer and the same quality bar.
+  - If v3 passes the bar, the full corpus is extracted.
+  - If v3 fails, every miss is classified as before (name or granularity difference that is actually
+    a correct fact; relation stated in reverse; fact attributed to another subject; real miss; wrong
+    fact; fact not stated in the paragraph):
+    - if the remaining failures are mostly name or granularity differences that are actually correct
+      facts, the full corpus is extracted anyway, the strict score is reported honestly, and M3 entity
+      resolution handles names;
+    - if there are many real missing or wrong facts, stop and rethink the extractor.
+
+## 6. Open decisions
 
 - Gemini judge limits: `docs/limits.md` still has TBD for the gemini-3.8-flash free-tier limits. The
   judge runs once, at M5, on about 2,250 answers, so the limits matter then.

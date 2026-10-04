@@ -140,6 +140,17 @@ pilot batches only, at the primary name threshold 90:
   - slot precision of at least 0.90;
   - at least 90% of the 30 hand-checked triples correct (at least 27 of 30).
 If all three pass, the full corpus is extracted. If not, one more prompt fix on dev, then decide.
+- Decision rule after pilot v2, fixed on 2026-10-04 before seeing any v3 numbers:
+  - Prompt v3 is the last prompt fix. It is judged on 9 fresh batches (never extracted before) with the
+    same scorer and the same quality bar.
+  - If v3 passes the bar, the full corpus is extracted.
+  - If v3 fails, every miss is classified as before (name or granularity difference that is actually
+    a correct fact; relation stated in reverse; fact attributed to another subject; real miss; wrong
+    fact; fact not stated in the paragraph):
+    - if the remaining failures are mostly name or granularity differences that are actually correct
+      facts, the full corpus is extracted anyway, the strict score is reported honestly, and M3 entity
+      resolution handles names;
+    - if there are many real missing or wrong facts, stop and rethink the extractor.
 
 **Done when:** extraction for the whole corpus is cached, and `results/m2/extraction_scores.json` exists.
 
