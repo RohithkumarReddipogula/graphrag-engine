@@ -44,14 +44,14 @@ Available on 2026-10-04 (checked against the provider docs):
 | Role | Proposed | Notes |
 |---|---|---|
 | Extractor | `gemini-3.8-flash` (stable) | Fallback choice if the free daily quota is too low: `gemini-3.5-flash-lite`. **No cross-provider fallback**: on quota exhaustion the run stops and resumes from cache. |
-| Generator | `llama-3.3-70b-versatile` (Groq, production) | `llama-3.1-8b-instant` is too weak for multi-hop and would make every system look bad. |
+| Generator | `openai/gpt-oss-120b` (Groq, production, paid Developer tier with a spending limit set in the console) | Replaces `llama-3.3-70b-versatile`, which is not available on my Groq account (404 `model_not_found`; the account's model list has no Llama chat models). The free tier's daily token cap would allow only about 100 calls a day. `reasoning_effort` stays at the provider default and is the same for every system. Cost estimate: `results/m0/generator_cost.json`. |
 | Judge | `gemini-3.8-flash` | Never the same model as the generator. |
 | Embeddings | `intfloat/e5-base-v2` (768-dim, local) | Same as the thesis. Prefixes are mandatory: `query: ` for questions, `passage: ` for chunks and entity descriptions. |
 | Reranker | `BAAI/bge-reranker-base` (local cross-encoder) | |
 
-Free-tier limits are **not published** for these models (Gemini shows them only in AI Studio; Groq's
-rate-limit page omits both Llama models). Read the real numbers from AI Studio and the Groq console
-before M1, and record them in `docs/limits.md`. Log the model version string returned with every response.
+Gemini free-tier limits are **not published** (AI Studio shows them per account), and the Groq paid tier
+has its own limits. Read the real numbers from AI Studio and the Groq console before M1, and record them
+in `docs/limits.md`. Log the model version string returned with every response.
 
 ## 3. Budget estimate
 
