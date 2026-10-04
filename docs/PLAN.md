@@ -251,3 +251,10 @@ Same corpus, same generator, same budget, same eval.
   subset exist to account for that.
 - Template single-hop questions overlap lexically with their source paragraph, which favours BM25.
 - Aggregation questions are out of scope.
+- Baseline retrieval config: all 24 dev configurations (title on/off x 11 alphas + RRF) are within noise
+  on the selection metric (spread in `results/m1/retrieval_dev.json`, `spread_note`). The chosen config
+  (no title, alpha 0.9) follows a rule fixed before the run; the thesis setting (title, alpha 0.7) is
+  reported next to it.
+- Scoring: answers count as correct when they match the gold answer or a Wikidata alias. 57 of 100
+  single-hop questions have no official entity ids that line up with their evidence, so they are scored
+  against the gold answer only.
