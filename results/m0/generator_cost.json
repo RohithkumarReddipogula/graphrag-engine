@@ -1,85 +1,63 @@
 {
   "model": "openai/gpt-oss-120b",
+  "pinned_endpoint": "deepinfra/bf16",
+  "reasoning_effort": "medium",
   "price_usd_per_million_tokens": {
-    "input": 0.15,
-    "output": 0.6
+    "input": 0.037,
+    "output": 0.17
   },
+  "price_source": "openrouter.ai/api/v1/models/openai/gpt-oss-120b/endpoints",
   "usd_per_eur": 1.1225,
+  "remaining_credit_usd": 7.59999,
   "assumed_input_tokens_per_call": 1700,
-  "assumed_output_tokens_per_call": 267,
+  "assumed_output_tokens_per_call": 271,
   "measured": {
-    "default": {
-      "calls": [
-        {
-          "type": "compositional",
-          "input_tokens": 1273,
-          "output_tokens": 148
-        },
-        {
-          "type": "comparison",
-          "input_tokens": 628,
-          "output_tokens": 157
-        },
-        {
-          "type": "bridge_comparison",
-          "input_tokens": 842,
-          "output_tokens": 217
-        },
-        {
-          "type": "inference",
-          "input_tokens": 897,
-          "output_tokens": 253
-        },
-        {
-          "type": "compositional",
-          "input_tokens": 790,
-          "output_tokens": 141
-        },
-        {
-          "type": "comparison",
-          "input_tokens": 1190,
-          "output_tokens": 267
-        }
-      ],
-      "mean_output_tokens": 197.2,
-      "max_output_tokens": 267
-    },
-    "low": {
-      "calls": [
-        {
-          "type": "compositional",
-          "input_tokens": 1273,
-          "output_tokens": 36
-        },
-        {
-          "type": "comparison",
-          "input_tokens": 628,
-          "output_tokens": 47
-        },
-        {
-          "type": "bridge_comparison",
-          "input_tokens": 842,
-          "output_tokens": 78
-        },
-        {
-          "type": "inference",
-          "input_tokens": 897,
-          "output_tokens": 72
-        },
-        {
-          "type": "compositional",
-          "input_tokens": 790,
-          "output_tokens": 47
-        },
-        {
-          "type": "comparison",
-          "input_tokens": 1190,
-          "output_tokens": 99
-        }
-      ],
-      "mean_output_tokens": 63.2,
-      "max_output_tokens": 99
-    }
+    "calls": [
+      {
+        "type": "compositional",
+        "provider": "DeepInfra",
+        "input_tokens": 1260,
+        "output_tokens": 144,
+        "cost_usd": 7.11e-05
+      },
+      {
+        "type": "comparison",
+        "provider": "DeepInfra",
+        "input_tokens": 615,
+        "output_tokens": 86,
+        "cost_usd": 3.7375e-05
+      },
+      {
+        "type": "bridge_comparison",
+        "provider": "DeepInfra",
+        "input_tokens": 829,
+        "output_tokens": 237,
+        "cost_usd": 7.0963e-05
+      },
+      {
+        "type": "inference",
+        "provider": "DeepInfra",
+        "input_tokens": 884,
+        "output_tokens": 220,
+        "cost_usd": 7.0108e-05
+      },
+      {
+        "type": "compositional",
+        "provider": "DeepInfra",
+        "input_tokens": 777,
+        "output_tokens": 146,
+        "cost_usd": 5.3569e-05
+      },
+      {
+        "type": "comparison",
+        "provider": "DeepInfra",
+        "input_tokens": 1177,
+        "output_tokens": 271,
+        "cost_usd": 8.9619e-05
+      }
+    ],
+    "mean_output_tokens": 184,
+    "max_output_tokens": 271
   },
   "projections": {
     "expected": {
@@ -87,16 +65,18 @@
       "systems": 5,
       "test_systems": 6,
       "calls": 8500,
-      "usd": 3.53,
-      "eur": 3.14
+      "usd": 0.93,
+      "eur": 0.83,
+      "fits_remaining_credit": true
     },
     "pessimistic": {
       "dev_iterations": 20,
       "systems": 5,
       "test_systems": 6,
       "calls": 14750,
-      "usd": 6.12,
-      "eur": 5.46
+      "usd": 1.61,
+      "eur": 1.43,
+      "fits_remaining_credit": true
     }
   }
 }

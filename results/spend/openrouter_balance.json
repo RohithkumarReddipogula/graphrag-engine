@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-10-04T09:50:12+00:00",
+  "total_credits_usd": 7.6,
+  "total_usage_usd": 1e-05,
+  "remaining_usd": 7.59999,
+  "project_ledger": {
+    "calls": 7,
+    "cost_usd": 0.000403
+  }
+}

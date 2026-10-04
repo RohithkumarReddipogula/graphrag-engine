@@ -28,7 +28,15 @@ Date the Gemini limits were read: TBD
 ## Cost and credit
 
 - Price of the pinned endpoint is read live from OpenRouter's endpoint list each time the estimate runs.
-- Cost estimate: `results/m0/generator_cost.json` (`scripts/estimate_generator_cost.py`). Pending: it needs
-  a working `OPENROUTER_API_KEY` to measure token usage on the pinned endpoint.
+- Cost estimate: `results/m0/generator_cost.json` (`scripts/estimate_generator_cost.py`). Measured on the
+  pinned endpoint (6 validation questions, all served by DeepInfra, max 271 output tokens including
+  reasoning), at USD 0.037 per million input tokens and USD 0.17 per million output tokens. Each call is
+  assumed to use the full 1,500-token context plus 200 prompt tokens and the max measured output:
+
+  | Scenario | Dev iterations | Calls | Cost (USD) | Fits 7.60 USD credit |
+  |---|---|---|---|---|
+  | Expected | 10 | 8,500 | 0.93 | yes |
+  | Pessimistic | 20 | 14,750 | 1.61 | yes |
+
 - Remaining credit: `results/spend/openrouter_balance.json` (`scripts/credit_status.py`; also refreshed by
   `scripts/check_env.py`).
