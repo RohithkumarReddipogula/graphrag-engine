@@ -28,7 +28,7 @@ def test_split_is_deterministic_and_stratified():
     assert not {x.id for x in a[0]} & {x.id for x in a[1]}
 
 
-def test_title_collision_keeps_both_texts_with_distinct_ids():
+def test_genuinely_different_texts_of_one_title_are_kept_apart():
     q1 = q("1", "comparison", ["Heat"], [("Heat", "Heat is a 1995 film."), ("X", "x")])
     q2 = q("2", "comparison", ["Heat"], [("Heat", "Heat is a 1972 film."), ("Y", "y")])
     corpus = build.build_corpus([q1, q2], n_distractors=4, seed=42)
@@ -36,11 +36,33 @@ def test_title_collision_keeps_both_texts_with_distinct_ids():
     heat = [c for c in corpus.chunks.values() if c["title"] == "Heat"]
     assert {c["text"] for c in heat} == {"Heat is a 1995 film.", "Heat is a 1972 film."}
     assert len({c["id"] for c in heat}) == 2 and all("#" in c["id"] for c in heat)
-    assert len(corpus.collisions) == 1 and corpus.collisions[0]["title"] == "Heat"
+    assert [c["kind"] for c in corpus.collisions] == ["kept_apart"]
     assert set(corpus.collisions[0]["ids"]) == {c["id"] for c in heat}
     # Each question's gold resolves to its own version, not the twin.
     assert corpus.chunks[build.gold_chunk_ids(q1, corpus)[0]]["text"] == "Heat is a 1995 film."
     assert corpus.chunks[build.gold_chunk_ids(q2, corpus)[0]]["text"] == "Heat is a 1972 film."
+
+
+def test_spacing_variants_are_merged_and_gold_points_to_the_merged_chunk():
+    a = "Elliot Silverstein (born August 3, 1927) is a director of \"Cat Ballou\"."
+    b = "Elliot Silverstein( born August 3, 1927) is a director of\" Cat Ballou\"."
+    q1 = q("1", "compositional", ["Elliot Silverstein"], [("Elliot Silverstein", a)])
+    q2 = q("2", "compositional", ["Elliot Silverstein"], [("Elliot Silverstein", b)])
+    q3 = q("3", "inference", ["Elliot Silverstein"], [("Elliot Silverstein", a)])
+    corpus = build.build_corpus([q1, q2, q3], 4, 42)
+
+    assert list(corpus.chunks) == ["Elliot Silverstein"]
+    assert corpus.chunks["Elliot Silverstein"]["text"] == a          # the variant most questions use
+    assert {build.gold_chunk_ids(x, corpus)[0] for x in (q1, q2, q3)} == {"Elliot Silverstein"}
+    assert corpus.collisions == [
+        {"title": "Elliot Silverstein", "kind": "merged_spacing_variants", "id": "Elliot Silverstein", "variants": 2}
+    ]
+    assert corpus.multi_variant_titles == {"Elliot Silverstein"}
+
+
+def test_spacing_key_ignores_spacing_around_punctuation_only():
+    assert build.spacing_key("Jean- Marie Poir\u00e9 ; born") == build.spacing_key("Jean-Marie Poir\u00e9; born")
+    assert build.spacing_key("a b") != build.spacing_key("ab")
 
 
 def test_identical_title_and_text_is_stored_once_without_hash():
@@ -107,16 +129,19 @@ def test_committed_splits_are_disjoint_and_gold_ids_exist():
 def test_collisions_are_logged_and_every_version_is_in_the_corpus():
     corpus = {c["id"]: c for c in read_jsonl("corpus.jsonl")}
     for col in read_jsonl("collisions.jsonl"):
-        assert len(col["ids"]) >= 2
-        assert all(cid in corpus and corpus[cid]["title"] == col["title"] for cid in col["ids"])
-        assert len({corpus[cid]["text"] for cid in col["ids"]}) == len(col["ids"])
+        if col["kind"] == "merged_spacing_variants":
+            assert col["id"] in corpus and col["variants"] >= 2
+        else:
+            assert col["kind"] == "kept_apart" and len(col["ids"]) >= 2
+            assert all(cid in corpus and corpus[cid]["title"] == col["title"] for cid in col["ids"])
+            assert len({build.spacing_key(corpus[cid]["text"]) for cid in col["ids"]}) == len(col["ids"])
 
 
 RAW = DATA / "raw" / "2wiki_validation.parquet"
 
 
 @pytest.mark.skipif(not RAW.exists(), reason="raw parquet not downloaded")
-def test_every_gold_paragraph_is_in_the_corpus_with_its_exact_text():
+def test_every_gold_paragraph_is_in_the_corpus_with_its_text():
     assert sha256_of(RAW) == SHA256
     corpus = {c["id"]: c for c in read_jsonl("corpus.jsonl")}
     sampled = {r["id"]: r for r in read_jsonl("questions_dev.jsonl") + read_jsonl("questions_test.jsonl")}
@@ -131,6 +156,8 @@ def test_every_gold_paragraph_is_in_the_corpus_with_its_exact_text():
         ]
         assert len(raw_gold) == len(rec["gold_chunk_ids"]), row.id
         for (title, text), cid in zip(raw_gold, rec["gold_chunk_ids"]):
-            assert corpus[cid]["title"] == title and corpus[cid]["text"] == text, (row.id, cid)
+            # Exact text, up to spacing around punctuation (spacing variants are merged into one chunk).
+            assert corpus[cid]["title"] == title, (row.id, cid)
+            assert build.spacing_key(corpus[cid]["text"]) == build.spacing_key(text), (row.id, cid)
             checked += 1
     assert len(sampled) == 400 and checked > 0

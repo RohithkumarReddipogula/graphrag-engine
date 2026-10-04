@@ -18,7 +18,7 @@ the baseline wins.
 |---|---|
 | Dataset | 2WikiMultiHopQA, **validation split only** (the public test split has no answers). Our dev and test splits are both carved from it with a fixed seed. |
 | Sample | 100 dev + 300 test multi-hop questions, stratified (25 / 75 per type × 4 types: compositional, comparison, bridge_comparison, inference). Plus 100 single-hop questions generated from evidence triples (25 dev / 75 test). |
-| Corpus | Gold paragraphs of every sampled question + 4 random distractors per question, pooled into one corpus. 1 paragraph = 1 chunk. Chunk id = paragraph title, or `title#<short hash>` when two different texts share a title (both kept). Every gold paragraph of every sampled question must be in the corpus. |
+| Corpus | Gold paragraphs of every sampled question + 4 random distractors per question, pooled into one corpus. 1 paragraph = 1 chunk. Chunk id = paragraph title. Texts of one title that differ only in spacing around punctuation are merged into one chunk; genuinely different texts of one title are all kept as `title#<short hash>`. Every gold paragraph of every sampled question must be in the corpus. |
 | Store | Neo4j is the only persistent store (local, Docker via OrbStack): graph + vector index. No Chroma, no FAISS. The BM25 index is built in memory from the Neo4j chunks at startup (about 2k paragraphs, under a second), because the Neo4j full-text index does not expose `k1`/`b` and uses a different tokenizer from the thesis. |
 | Baseline | Same retriever as my MSc thesis (github.com/RohithkumarReddipogula/AI-Powered-Rag-System): BM25 (`rank_bm25`, k1 1.5, b 0.75, lowercase + punctuation stripped) + E5 dense, min-max normalised, weighted fusion `alpha * dense + (1 - alpha) * bm25` with alpha 0.70 as the start value, tuned on dev. RRF is kept as an alternative and compared on dev. Then the `bge-reranker-base` cross-encoder. Lives behind its own `Retriever` interface and never imports graph code. |
 | Generation | Short answer only (entity, date, or yes/no). Same generator model and same context token budget for every system. |
@@ -59,10 +59,10 @@ Dataset numbers come from `data/stats.json` (built by `scripts/build_data.py`, s
 
 | Item | Value |
 |---|---|
-| Paragraphs in corpus | 2,055 |
-| Corpus size | 154,783 words |
+| Paragraphs in corpus | 2,049 |
+| Corpus size | 154,414 words |
 | Paragraph length | median 47 words, max 900 |
-| Title collisions (same title, different text) | 6 titles, 12 paragraphs, all kept. All 6 are the same paragraph with different spacing around punctuation, not homonyms. |
+| Same title, different raw text | 6 titles. All 6 are the same paragraph tokenised two ways (spacing around punctuation), not homonyms, and were merged. Titles with genuinely different texts: 0. |
 | Single-hop candidates (checkable, single-valued) | 225 dev, 633 test |
 | Extraction calls at 8 paragraphs / call | ~260 calls, ~0.6M input tokens incl. prompt overhead |
 | Generator calls, one dev iteration (125 q × ~5 systems) | ~625 |
@@ -166,12 +166,13 @@ Same corpus, same generator, same budget, same eval.
    with `id, question, answer, type, evidences, gold_titles`.
 3. Corpus: for each sampled question, its gold paragraphs + 4 seeded-random distractors. Paragraph text =
    sentences joined with spaces. Identical (title, text) pairs are stored once.
-   **Collision rule:** when a title appears with a different text, keep both. These are likely the
-   same-title films and same-name people that 2Wiki includes on purpose, and dropping one can delete gold
-   evidence. The id is the title, plus `#` and the first 8 hex chars of the SHA-1 of the text when the title
-   collides. Every collision goes to `data/collisions.jsonl`. Each question stores the exact chunk ids of
-   its gold paragraphs (`gold_chunk_ids`), resolved from its own context, so gold never points to the wrong
-   twin. Store `data/corpus.jsonl`. Dev and test share one corpus, as in a real deployment.
+   **Collision rule:** texts are compared with a key that ignores spacing around punctuation. 2Wiki
+   contains some paragraphs in two tokenisations (`Silverstein (born` vs `Silverstein( born`); those are
+   merged into one chunk, storing the variant most questions use, and every raw variant maps to that id.
+   Genuinely different texts of one title are all kept, with id `title#` + the first 8 hex chars of the
+   SHA-1 of the comparison key. Merges and kept-apart titles are logged in `data/collisions.jsonl`. Each
+   question stores the chunk ids of its gold paragraphs (`gold_chunk_ids`), resolved from its own
+   context, so gold never points to a different same-title paragraph. Store `data/corpus.jsonl`. Dev and test share one corpus, as in a real deployment.
 4. Single-hop questions: from evidence triples of the sampled questions (dev triples → dev, test triples →
    test). Keep a triple only if its relation is single-valued (17 templates; multi-valued relations such
    as `award received` or `child` are excluded because they have several correct answers), exactly one

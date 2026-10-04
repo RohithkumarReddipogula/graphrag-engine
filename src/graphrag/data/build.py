@@ -85,41 +85,64 @@ def selected_paragraphs(q: Question, n_distractors: int, seed: int) -> list[tupl
     return [p for p in q.context if p[0] in gold] + distractors[:n_distractors]
 
 
-def chunk_id(title: str, text: str, collides: bool) -> str:
-    if not collides:
+def spacing_key(text: str) -> str:
+    """Comparison key that ignores spacing around punctuation. 2Wiki contains some paragraphs in two
+    tokenisations ("Silverstein (born" vs "Silverstein( born"); they must compare equal."""
+    t = re.sub(r"\s+", " ", text)
+    return re.sub(r"\s*([^\w\s])\s*", r"\1", t).strip()
+
+
+def chunk_id(title: str, key: str, kept_apart: bool) -> str:
+    if not kept_apart:
         return title
-    return f"{title}#{hashlib.sha1(text.encode('utf-8')).hexdigest()[:8]}"
+    return f"{title}#{hashlib.sha1(key.encode('utf-8')).hexdigest()[:8]}"
 
 
 @dataclass
 class Corpus:
     chunks: dict[str, dict[str, str]]                 # id -> {"id", "title", "text"}
-    ids: dict[tuple[str, str], str]                   # (title, text) -> id
+    ids: dict[tuple[str, str], str]                   # (title, raw text) -> id, for every raw variant
     collisions: list[dict[str, Any]]
+    multi_variant_titles: set[str] = field(default_factory=set)   # titles seen with more than one raw text
 
 
 def build_corpus(questions: list[Question], n_distractors: int, seed: int) -> Corpus:
-    """Pool paragraphs. Identical (title, text) pairs are stored once. When one title has several texts,
-    every version is kept and gets an id with a short content hash, so no version can be dropped."""
-    pairs: dict[tuple[str, str], None] = {}
+    """Pool paragraphs.
+
+    - Raw texts of one title that differ only in spacing around punctuation are merged into one chunk.
+      The stored text is the variant used by most questions (ties: lexicographically smallest), and
+      every raw variant maps to that chunk id, so gold ids point to the merged paragraph.
+    - Genuinely different texts of one title are all kept, each with an id carrying a short hash of its
+      comparison key, so no version can be dropped.
+    """
+    uses: Counter[tuple[str, str]] = Counter()
     for q in questions:
         for p in selected_paragraphs(q, n_distractors, seed):
-            pairs.setdefault(p, None)
+            uses[p] += 1
 
-    texts_by_title: dict[str, list[str]] = defaultdict(list)
-    for title, text in pairs:
-        texts_by_title[title].append(text)
+    variants: dict[tuple[str, str], list[str]] = defaultdict(list)   # (title, key) -> raw texts
+    for title, text in uses:
+        variants[(title, spacing_key(text))].append(text)
+    keys_by_title: dict[str, list[str]] = defaultdict(list)
+    for title, key in variants:
+        keys_by_title[title].append(key)
 
     ids, chunks, collisions = {}, {}, []
-    for (title, text) in pairs:
-        collides = len(texts_by_title[title]) > 1
-        cid = chunk_id(title, text, collides)
-        ids[(title, text)] = cid
-        chunks[cid] = {"id": cid, "title": title, "text": text}
-    for title, texts in texts_by_title.items():
+    for (title, key), texts in variants.items():
+        kept_apart = len(keys_by_title[title]) > 1
+        cid = chunk_id(title, key, kept_apart)
+        stored = min(texts, key=lambda t: (-uses[(title, t)], t))
+        chunks[cid] = {"id": cid, "title": title, "text": stored}
+        for t in texts:
+            ids[(title, t)] = cid
         if len(texts) > 1:
-            collisions.append({"title": title, "ids": [ids[(title, t)] for t in texts]})
-    return Corpus(chunks=chunks, ids=ids, collisions=collisions)
+            collisions.append({"title": title, "kind": "merged_spacing_variants", "id": cid, "variants": len(texts)})
+    for title, keys in keys_by_title.items():
+        if len(keys) > 1:
+            collisions.append({"title": title, "kind": "kept_apart", "ids": [ids[(title, variants[(title, k)][0])] for k in keys]})
+
+    multi = {t for t, keys in keys_by_title.items() if sum(len(variants[(t, k)]) for k in keys) > 1}
+    return Corpus(chunks=chunks, ids=ids, collisions=collisions, multi_variant_titles=multi)
 
 
 def gold_chunk_ids(q: Question, corpus: Corpus) -> list[str]:
@@ -147,7 +170,7 @@ def _strip_disambiguator(title: str) -> str:
 def single_hop_candidates(questions: list[Question], corpus: Corpus) -> list[dict[str, Any]]:
     """One candidate per (subject, relation), kept only if it is unambiguous and checkable:
     single-valued relation, exactly one gold paragraph of the source question matches the subject, the
-    object appears verbatim in that paragraph, and the paragraph's title does not collide."""
+    object appears verbatim in that paragraph, and the title was seen with only one raw text."""
     by_key: dict[tuple[str, str], dict[str, Any]] = {}
     objects: dict[tuple[str, str], set[str]] = defaultdict(set)
     for q in questions:
@@ -161,7 +184,9 @@ def single_hop_candidates(questions: list[Question], corpus: Corpus) -> list[dic
                 continue
             title, text = matches[0]
             cid = corpus.ids[(title, text)]
-            if "#" in cid or o.lower() not in text.lower():
+            # Titles seen with more than one raw text are skipped (this also keeps the sample identical
+            # to the one built before spacing variants were merged).
+            if title in corpus.multi_variant_titles or o.lower() not in text.lower():
                 continue
             by_key[(s, rel)] = {
                 "id": "sh_" + hashlib.sha1(f"{s}|{rel}".encode("utf-8")).hexdigest()[:10],

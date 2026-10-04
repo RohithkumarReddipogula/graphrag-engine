@@ -69,8 +69,8 @@ def main() -> None:
             "words_total": sum(words),
             "words_median": statistics.median(words),
             "words_max": max(words),
-            "title_collisions": len(corpus.collisions),
-            "chunks_in_collisions": sum(len(c["ids"]) for c in corpus.collisions),
+            "merged_spacing_variants": sum(1 for c in corpus.collisions if c["kind"] == "merged_spacing_variants"),
+            "titles_kept_apart": sum(1 for c in corpus.collisions if c["kind"] == "kept_apart"),
         },
     }
     (data_dir / "stats.json").write_text(json.dumps(stats, indent=2, ensure_ascii=False) + "\n")
@@ -96,7 +96,11 @@ def main() -> None:
             "- Verdict: ",
             "",
         ]
-    (data_dir / "single_hop_handcheck.md").write_text("\n".join(lines))
+    sheet = data_dir / "single_hop_handcheck.md"
+    if sheet.exists():
+        print(f"kept existing {sheet.name} (it may hold hand-check marks)")
+    else:
+        sheet.write_text("\n".join(lines))
     print(json.dumps(stats, indent=2, ensure_ascii=False))
 
 

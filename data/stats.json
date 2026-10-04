@@ -60,11 +60,11 @@
     }
   },
   "corpus": {
-    "chunks": 2055,
-    "words_total": 154783,
+    "chunks": 2049,
+    "words_total": 154414,
     "words_median": 47,
     "words_max": 900,
-    "title_collisions": 6,
-    "chunks_in_collisions": 12
+    "merged_spacing_variants": 6,
+    "titles_kept_apart": 0
   }
 }
