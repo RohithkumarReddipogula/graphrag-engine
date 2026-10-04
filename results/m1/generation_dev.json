@@ -9,6 +9,7 @@
  "context_budget_tokens": 1500,
  "scoring": "official 2Wiki v1.1 EM/F1, max over gold answer + Wikidata aliases and demonyms",
  "ci": "95% percentile bootstrap, 10,000 resamples, seed 0",
+ "abstention": "every system may answer 'unknown'; it scores 0. unknown_rate and accuracy on answered questions are reported next to EM",
  "systems": {
   "closed_book": {
    "all_questions": {
@@ -24,6 +25,12 @@
       "ci_low": 0.44,
       "ci_high": 0.84,
       "n": 25
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 20,
+      "em": 0.8,
+      "f1": 0.8
      }
     },
     "inference": {
@@ -38,6 +45,12 @@
       "ci_low": 0.2901,
       "ci_high": 0.635,
       "n": 25
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 20,
+      "em": 0.4,
+      "f1": 0.576
      }
     },
     "compositional": {
@@ -52,6 +65,12 @@
       "ci_low": 0.04,
       "ci_high": 0.32,
       "n": 25
+     },
+     "unknown_rate": 0.44,
+     "answered": {
+      "n": 14,
+      "em": 0.2857,
+      "f1": 0.3016
      }
     },
     "bridge_comparison": {
@@ -66,6 +85,12 @@
       "ci_low": 0.2,
       "ci_high": 0.6,
       "n": 25
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 18,
+      "em": 0.5556,
+      "f1": 0.5556
      }
     },
     "multi_hop": {
@@ -80,6 +105,12 @@
       "ci_low": 0.3237,
       "ci_high": 0.5132,
       "n": 100
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 72,
+      "em": 0.5278,
+      "f1": 0.5797
      }
     },
     "single_hop": {
@@ -94,6 +125,12 @@
       "ci_low": 0.3267,
       "ci_high": 0.6233,
       "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.2,
+      "f1": 0.4722
      }
     },
     "all": {
@@ -108,6 +145,12 @@
       "ci_low": 0.3489,
       "ci_high": 0.51,
       "n": 125
+     },
+     "unknown_rate": 0.224,
+     "answered": {
+      "n": 97,
+      "em": 0.4433,
+      "f1": 0.552
      }
     }
    },
@@ -124,6 +167,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0,
       "n": 9
+     },
+     "unknown_rate": 0.5556,
+     "answered": {
+      "n": 4,
+      "em": 0.0,
+      "f1": 0.0
      }
     },
     "inference": {
@@ -138,6 +187,12 @@
       "ci_low": 0.0735,
       "ci_high": 0.3582,
       "n": 17
+     },
+     "unknown_rate": 0.2941,
+     "answered": {
+      "n": 12,
+      "em": 0.0,
+      "f1": 0.2933
      }
     },
     "compositional": {
@@ -152,6 +207,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0317,
       "n": 21
+     },
+     "unknown_rate": 0.5238,
+     "answered": {
+      "n": 10,
+      "em": 0.0,
+      "f1": 0.0222
      }
     },
     "bridge_comparison": {
@@ -166,6 +227,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0,
       "n": 15
+     },
+     "unknown_rate": 0.4667,
+     "answered": {
+      "n": 8,
+      "em": 0.0,
+      "f1": 0.0
      }
     },
     "multi_hop": {
@@ -180,6 +247,12 @@
       "ci_low": 0.0205,
       "ci_high": 0.1098,
       "n": 62
+     },
+     "unknown_rate": 0.4516,
+     "answered": {
+      "n": 34,
+      "em": 0.0,
+      "f1": 0.11
      }
     },
     "single_hop": {
@@ -194,6 +267,12 @@
       "ci_low": 0.2036,
       "ci_high": 0.4819,
       "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.0,
+      "f1": 0.3402
      }
     },
     "all": {
@@ -208,10 +287,15 @@
       "ci_low": 0.0768,
       "ci_high": 0.188,
       "n": 82
+     },
+     "unknown_rate": 0.3415,
+     "answered": {
+      "n": 54,
+      "em": 0.0,
+      "f1": 0.1953
      }
     }
    },
-   "unknown_rate": 0.224,
    "providers": [
     "DeepInfra"
    ]
@@ -230,6 +314,12 @@
       "ci_low": 0.88,
       "ci_high": 1.0,
       "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
      }
     },
     "inference": {
@@ -244,6 +334,12 @@
       "ci_low": 0.4809,
       "ci_high": 0.8249,
       "n": 25
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 18,
+      "em": 0.7778,
+      "f1": 0.916
      }
     },
     "compositional": {
@@ -258,6 +354,12 @@
       "ci_low": 0.1067,
       "ci_high": 0.44,
       "n": 25
+     },
+     "unknown_rate": 0.64,
+     "answered": {
+      "n": 9,
+      "em": 0.6667,
+      "f1": 0.7407
      }
     },
     "bridge_comparison": {
@@ -272,6 +374,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0,
       "n": 25
+     },
+     "unknown_rate": 1.0,
+     "answered": {
+      "n": 0,
+      "em": null,
+      "f1": null
      }
     },
     "multi_hop": {
@@ -286,6 +394,12 @@
       "ci_low": 0.3774,
       "ci_high": 0.567,
       "n": 100
+     },
+     "unknown_rate": 0.49,
+     "answered": {
+      "n": 51,
+      "em": 0.8627,
+      "f1": 0.9246
      }
     },
     "single_hop": {
@@ -300,6 +414,12 @@
       "ci_low": 0.94,
       "ci_high": 1.0,
       "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.96,
+      "f1": 0.98
      }
     },
     "all": {
@@ -314,6 +434,12 @@
       "ci_low": 0.4867,
       "ci_high": 0.6569,
       "n": 125
+     },
+     "unknown_rate": 0.392,
+     "answered": {
+      "n": 76,
+      "em": 0.8947,
+      "f1": 0.9428
      }
     }
    },
@@ -330,6 +456,12 @@
       "ci_low": 0.6667,
       "ci_high": 1.0,
       "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
      }
     },
     "inference": {
@@ -344,6 +476,12 @@
       "ci_low": 0.4,
       "ci_high": 0.8118,
       "n": 17
+     },
+     "unknown_rate": 0.2941,
+     "answered": {
+      "n": 12,
+      "em": 0.6667,
+      "f1": 0.8741
      }
     },
     "compositional": {
@@ -358,6 +496,12 @@
       "ci_low": 0.0635,
       "ci_high": 0.4127,
       "n": 21
+     },
+     "unknown_rate": 0.6667,
+     "answered": {
+      "n": 7,
+      "em": 0.5714,
+      "f1": 0.6667
      }
     },
     "bridge_comparison": {
@@ -372,6 +516,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0,
       "n": 15
+     },
+     "unknown_rate": 1.0,
+     "answered": {
+      "n": 0,
+      "em": null,
+      "f1": null
      }
     },
     "multi_hop": {
@@ -386,6 +536,12 @@
       "ci_low": 0.2594,
       "ci_high": 0.491,
       "n": 62
+     },
+     "unknown_rate": 0.5645,
+     "answered": {
+      "n": 27,
+      "em": 0.7407,
+      "f1": 0.8576
      }
     },
     "single_hop": {
@@ -400,6 +556,12 @@
       "ci_low": 0.925,
       "ci_high": 1.0,
       "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.95,
+      "f1": 0.975
      }
     },
     "all": {
@@ -414,10 +576,15 @@
       "ci_low": 0.4145,
       "ci_high": 0.6258,
       "n": 82
+     },
+     "unknown_rate": 0.4268,
+     "answered": {
+      "n": 47,
+      "em": 0.8298,
+      "f1": 0.9076
      }
     }
    },
-   "unknown_rate": 0.392,
    "providers": [
     "DeepInfra"
    ],
@@ -450,6 +617,12 @@
       "ci_low": 0.88,
       "ci_high": 1.0,
       "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
      }
     },
     "inference": {
@@ -464,6 +637,12 @@
       "ci_low": 0.439,
       "ci_high": 0.7883,
       "n": 25
+     },
+     "unknown_rate": 0.32,
+     "answered": {
+      "n": 17,
+      "em": 0.7647,
+      "f1": 0.9083
      }
     },
     "compositional": {
@@ -478,6 +657,12 @@
       "ci_low": 0.1265,
       "ci_high": 0.4667,
       "n": 25
+     },
+     "unknown_rate": 0.6,
+     "answered": {
+      "n": 10,
+      "em": 0.6,
+      "f1": 0.7167
      }
     },
     "bridge_comparison": {
@@ -492,6 +677,12 @@
       "ci_low": 0.0,
       "ci_high": 0.12,
       "n": 25
+     },
+     "unknown_rate": 0.96,
+     "answered": {
+      "n": 1,
+      "em": 1.0,
+      "f1": 1.0
      }
     },
     "multi_hop": {
@@ -506,6 +697,12 @@
       "ci_low": 0.3836,
       "ci_high": 0.5717,
       "n": 100
+     },
+     "unknown_rate": 0.48,
+     "answered": {
+      "n": 52,
+      "em": 0.8462,
+      "f1": 0.9155
      }
     },
     "single_hop": {
@@ -520,6 +717,12 @@
       "ci_low": 0.94,
       "ci_high": 1.0,
       "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.96,
+      "f1": 0.98
      }
     },
     "all": {
@@ -534,6 +737,12 @@
       "ci_low": 0.4915,
       "ci_high": 0.6596,
       "n": 125
+     },
+     "unknown_rate": 0.384,
+     "answered": {
+      "n": 77,
+      "em": 0.8831,
+      "f1": 0.9365
      }
     }
    },
@@ -550,6 +759,12 @@
       "ci_low": 0.6667,
       "ci_high": 1.0,
       "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
      }
     },
     "inference": {
@@ -564,6 +779,12 @@
       "ci_low": 0.3333,
       "ci_high": 0.7608,
       "n": 17
+     },
+     "unknown_rate": 0.3529,
+     "answered": {
+      "n": 11,
+      "em": 0.6364,
+      "f1": 0.8583
      }
     },
     "compositional": {
@@ -578,6 +799,12 @@
       "ci_low": 0.0794,
       "ci_high": 0.4286,
       "n": 21
+     },
+     "unknown_rate": 0.619,
+     "answered": {
+      "n": 8,
+      "em": 0.5,
+      "f1": 0.6458
      }
     },
     "bridge_comparison": {
@@ -592,6 +819,12 @@
       "ci_low": 0.0,
       "ci_high": 0.0,
       "n": 15
+     },
+     "unknown_rate": 1.0,
+     "answered": {
+      "n": 0,
+      "em": null,
+      "f1": null
      }
     },
     "multi_hop": {
@@ -606,6 +839,12 @@
       "ci_low": 0.2527,
       "ci_high": 0.4802,
       "n": 62
+     },
+     "unknown_rate": 0.5645,
+     "answered": {
+      "n": 27,
+      "em": 0.7037,
+      "f1": 0.8373
      }
     },
     "single_hop": {
@@ -620,6 +859,12 @@
       "ci_low": 0.925,
       "ci_high": 1.0,
       "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.95,
+      "f1": 0.975
      }
     },
     "all": {
@@ -634,10 +879,15 @@
       "ci_low": 0.4094,
       "ci_high": 0.6196,
       "n": 82
+     },
+     "unknown_rate": 0.4268,
+     "answered": {
+      "n": 47,
+      "em": 0.8085,
+      "f1": 0.8959
      }
     }
    },
-   "unknown_rate": 0.384,
    "providers": [
     "DeepInfra"
    ],
@@ -658,7 +908,7 @@
   }
  },
  "closed_book_wrong_subset": {
-  "definition": "dev questions with closed-book EM = 0",
+  "definition": "questions with closed_book EM = 0",
   "n": 82
  },
  "paired_diff_hybrid_vs_thesis_em": {

@@ -13,7 +13,8 @@ from concurrent.futures import ThreadPoolExecutor
 from graphrag.config import get_settings
 from graphrag.embed import E5Encoder
 from graphrag.eval.answers import score
-from graphrag.eval.bootstrap import mean_ci, paired_diff_ci
+from graphrag.eval.bootstrap import paired_diff_ci
+from graphrag.eval.report import build_summary
 from graphrag.generation import build_prompt, pack_context, parse_answer
 from graphrag.llm.client import make_llm
 from graphrag.llm.spend import ledger_totals, write_balance
@@ -24,11 +25,20 @@ from graphrag.store.neo4j_client import connect
 logging.getLogger("neo4j").setLevel(logging.ERROR)
 BUDGET_TOKENS = 1500
 WORKERS = 8
-GROUPS = ["comparison", "inference", "compositional", "bridge_comparison", "multi_hop", "single_hop", "all"]
 
 
 def read_jsonl(path):
     return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+
+
+def summary_header(s) -> dict:
+    return {
+        "split": "dev",
+        "generator": {"model": s.generator_model, "endpoint": s.generator_provider,
+                      "reasoning_effort": s.generator_reasoning_effort, "temperature": 0.0},
+        "context_budget_tokens": BUDGET_TOKENS,
+        "scoring": "official 2Wiki v1.1 EM/F1, max over gold answer + Wikidata aliases and demonyms",
+    }
 
 
 def load_systems() -> dict[str, HybridConfig | None]:
@@ -39,23 +49,6 @@ def load_systems() -> dict[str, HybridConfig | None]:
         "hybrid": HybridConfig(with_title=chosen["with_title"], fusion=chosen["fusion"], alpha=chosen["alpha"]),
         "hybrid_thesis": HybridConfig(with_title=True, fusion="weighted", alpha=0.7),
     }
-
-
-def in_group(row: dict, group: str) -> bool:
-    if group == "all":
-        return True
-    if group == "multi_hop":
-        return row["type"] != "single_hop"
-    return row["type"] == group
-
-
-def summarize(rows: list[dict]) -> dict:
-    out = {}
-    for g in GROUPS:
-        sub = [r for r in rows if in_group(r, g)]
-        if sub:
-            out[g] = {"em": mean_ci([r["em"] for r in sub]), "f1": mean_ci([r["f1"] for r in sub])}
-    return out
 
 
 def main() -> None:
@@ -111,34 +104,7 @@ def main() -> None:
         print(f"{name}: {len(rows)} answers, {sum(not r['cached'] for r in rows)} live calls", flush=True)
 
     # 3. Summary.
-    cb = {r["id"]: r for r in per_system["closed_book"]}
-    cb_wrong = {i for i, r in cb.items() if r["em"] == 0.0}
-    summary = {
-        "split": "dev",
-        "generator": {"model": s.generator_model, "endpoint": s.generator_provider,
-                      "reasoning_effort": s.generator_reasoning_effort, "temperature": 0.0},
-        "context_budget_tokens": BUDGET_TOKENS,
-        "scoring": "official 2Wiki v1.1 EM/F1, max over gold answer + Wikidata aliases and demonyms",
-        "ci": "95% percentile bootstrap, 10,000 resamples, seed 0",
-        "systems": {},
-        "closed_book_wrong_subset": {"definition": "dev questions with closed-book EM = 0", "n": len(cb_wrong)},
-    }
-    for name, rows in per_system.items():
-        entry = {
-            "all_questions": summarize(rows),
-            "closed_book_wrong": summarize([r for r in rows if r["id"] in cb_wrong]),
-            "unknown_rate": round(sum(r["unknown"] for r in rows) / len(rows), 4),
-            "providers": sorted({r["provider"] for r in rows}),
-        }
-        if name != "closed_book":
-            ctx_rows = [r for r in rows if r["type"] != "single_hop"]
-            entry["multi_hop_all_gold_in_context"] = round(sum(r["all_gold_in_context"] for r in ctx_rows) / len(ctx_rows), 4)
-            entry["mean_context_tokens"] = round(sum(r["context_tokens"] for r in rows) / len(rows), 1)
-            for metric in ("em", "f1"):
-                entry[f"paired_diff_vs_closed_book_{metric}"] = paired_diff_ci(
-                    [r[metric] for r in rows], [cb[r["id"]][metric] for r in rows]
-                )
-        summary["systems"][name] = entry
+    summary = build_summary(per_system, summary_header(s))
     h, t = per_system["hybrid"], {r["id"]: r for r in per_system["hybrid_thesis"]}
     summary["paired_diff_hybrid_vs_thesis_em"] = paired_diff_ci([r["em"] for r in h], [t[r["id"]]["em"] for r in h])
     balance = write_balance(s)
