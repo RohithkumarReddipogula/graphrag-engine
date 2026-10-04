@@ -213,6 +213,8 @@ docker compose up -d
 
 ## 8. Data, code and licences
 
+- This project: MIT License (see `LICENSE`). The MIT licence covers the code and documentation written
+  for this project. It does not cover the third-party material below, which keeps its own terms.
 - Dataset: 2WikiMultihopQA. Xanh Ho, Anh-Khoa Duong Nguyen, Saku Sugawara and Akiko Aizawa,
   "Constructing A Multi-hop QA Dataset for Comprehensive Evaluation of Reasoning Steps", COLING 2020.
   Repository: github.com/Alab-NII/2wikimultihop (Apache License 2.0). The dataset is built from
@@ -235,4 +237,4 @@ reported next to the M1 baseline in the same table format, including the unknown
 
 ---
 
-Rohith Kumar Reddipogula, 2026. Work in progress.
+Rohith Kumar Reddipogula, 2026. MIT License. Work in progress.
