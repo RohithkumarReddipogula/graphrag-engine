@@ -181,21 +181,30 @@ Same corpus, same generator, same budget, same eval.
    75 test with the seed. Hand-check 30 in `data/single_hop_handcheck.md`.
 
 ### 6.2 Store (`src/graphrag/store/`)
-- `(:Document {id, title})-[:HAS_CHUNK]->(:Chunk {id, text, embedding})`. One document per paragraph for now.
-- Unique constraint on `Chunk.id`, vector index on `Chunk.embedding` (768, cosine). Embeddings are
-  computed with the `passage: ` prefix.
-- Idempotent loader: re-running it changes nothing.
+- `(:Document {id, title})-[:HAS_CHUNK]->(:Chunk {id, title, text, text_hash, embedding_title, embedding_text})`.
+  One document per paragraph for now.
+- Two E5 embeddings per chunk (`passage: ` prefix): one of `title. text`, one of the text alone, so
+  whether to index the title is decided on dev. Unique constraints on `Chunk.id` and `Document.id`;
+  one vector index per embedding (768, cosine).
+- Idempotent loader (`scripts/load_corpus.py`): only new or changed chunks are embedded, chunks no longer
+  in the corpus are deleted, and a second run changes nothing.
 
 ### 6.3 Hybrid retriever (`src/graphrag/retrieval/hybrid.py`)
-- BM25 top-50 (in-memory `rank_bm25`, thesis tokenizer and parameters), dense top-50 from the Neo4j
-  vector index (question embedded with the `query: ` prefix).
+- BM25 top-50 (in-memory `rank_bm25`, thesis tokenizer and parameters), dense top-50 by **exact** cosine
+  computed in Neo4j (question embedded with the `query: ` prefix). The HNSW vector index is approximate:
+  on 20 dev questions its top-50 missed up to 3 exact hits in the tail, and fusion uses the whole top-50.
+  At about 2k chunks an exact scan is fast and deterministic. (`db.index.vector.queryNodes` is also
+  deprecated in this Neo4j version in favour of the `SEARCH` clause, which works if the corpus grows.)
 - Fusion, set in config:
-  - `weighted` (default, thesis): min-max normalise each score list, missing score counts as 0,
-    `alpha * dense + (1 - alpha) * bm25`, alpha 0.70 to start, grid-searched on dev.
-  - `rrf`: Reciprocal Rank Fusion with `k=60`, compared against `weighted` on dev.
-- Top-30 after fusion, then `bge-reranker-base` rerank, then top-k.
+  - `weighted` (thesis): min-max normalise each score list, missing score counts as 0,
+    `alpha * dense + (1 - alpha) * bm25`.
+  - `rrf`: Reciprocal Rank Fusion with `k=60`.
+- Top-30 after fusion, then `bge-reranker-base` rerank (on `title. text`), then top-k.
 - Recall@k is reported both before and after the reranker, so the reranker's effect is visible.
-- Implements `Retriever.retrieve(question) -> list[Passage]`. No graph imports (enforced by a test).
+- Implements `Retriever.retrieve(question, k) -> list[Passage]`. No graph imports (enforced by a test).
+- Dev sweep (`scripts/run_m1_retrieval.py`): title on/off x (weighted alpha 0.0 to 1.0 step 0.1, rrf).
+  Selection rule, fixed before the run: max post-rerank `all_gold@10` on multi-hop dev, then
+  `recall@5`, then grid order. Chosen config and all numbers: `results/m1/retrieval_dev.json`.
 
 ### 6.4 Generation (`src/graphrag/generation.py`)
 - One prompt for every system: answer with the shortest possible span (an entity, a date, or yes/no)
