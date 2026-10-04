@@ -7,6 +7,7 @@ data/single_hop_handcheck.md. The raw parquet stays in data/raw/ (gitignored).
 
 import json
 import random
+import re
 import statistics
 from collections import Counter
 from pathlib import Path
@@ -22,6 +23,25 @@ N_DEV, N_TEST = 25, 75              # per multi-hop type
 N_DISTRACTORS = 4
 N_SH_DEV, N_SH_TEST = 25, 75
 N_HANDCHECK = 30
+
+
+def hand_check_summary(sheet: Path) -> dict | None:
+    """Error rate from the verdicts in the hand-check sheet. A verdict starting with "ok" is correct."""
+    if not sheet.exists():
+        return None
+    verdicts = re.findall(r"(?m)^- Verdict: *(.*)$", sheet.read_text(encoding="utf-8"))
+    marked = [v.strip() for v in verdicts if v.strip()]
+    if not marked:
+        return {"sheet": f"data/{sheet.name}", "status": "not checked yet"}
+    errors = [i + 1 for i, v in enumerate(verdicts) if v.strip() and not v.strip().lower().startswith("ok")]
+    return {
+        "sheet": f"data/{sheet.name}",
+        "checked_set": "v1 single-hop sample (before the hand-check rules)",
+        "checked": len(marked),
+        "errors": len(errors),
+        "error_rate": round(len(errors) / len(marked), 4),
+        "error_items": errors,
+    }
 
 
 def write_jsonl(path: Path, rows) -> None:
@@ -58,6 +78,11 @@ def main() -> None:
             "test": dict(Counter(r["type"] for r in test)),
         },
         "single_hop": {
+            "rules": build.SINGLE_HOP_RULES,
+            "excluded_after_hand_check": [
+                {"subject": k[0], "relation": k[1], "reason": v} for k, v in build.EXCLUDED_SINGLE_HOP.items()
+            ],
+            "hand_check": hand_check_summary(data_dir / "single_hop_handcheck.md"),
             "candidate_pools": sh_pools,
             "dev": len(sh_dev),
             "test": len(sh_test),

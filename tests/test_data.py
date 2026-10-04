@@ -92,8 +92,30 @@ def test_single_hop_filters():
     corpus = build.build_corpus([q1], 4, 42)
     cands = build.single_hop_candidates([q1], corpus)
     assert [(c["question"], c["answer"], c["gold_chunk_ids"]) for c in cands] == [
-        ("Who directed Film A?", "Jane Doe", ["Film A (1990 film)"])
+        ("Who directed Film A (1990 film)?", "Jane Doe", ["Film A (1990 film)"])
     ]
+
+
+def test_single_hop_hand_check_rules():
+    ctx = [
+        ("Nils Gaup", "Nils Gaup is a Sami director."),
+        ("Pathfinder (1987 film)", "Pathfinder is a 1987 film directed by Nils Gaup."),
+        ("Heat (1995 film)", "Heat is directed by Michael Mann."),
+        ("Heat (1972 film)", "Heat is directed by Paul Morrissey."),
+        ("Anne Fontaine", "Anne Fontaine is a Luxembourger film director."),
+        ("Frances M. Vega", "Frances M. Vega was a US Army soldier."),
+    ]
+    q1 = q("1", "compositional", [t for t, _ in ctx], ctx, evidences=[
+        ("Pathfinder", "director", "nils gaup"),                      # casing taken from the paragraph
+        ("Heat", "director", "Michael Mann"),                        # two "Heat" paragraphs: ambiguous, skipped
+        ("Anne Fontaine", "place of birth", "Luxembourger"),          # excluded after the hand check
+        ("Frances M. Vega", "country of citizenship", "United States"),  # relation dropped
+    ])
+    corpus = build.build_corpus([q1], 8, 42)
+    cands = build.single_hop_candidates([q1], corpus)
+    assert [(c["question"], c["answer"]) for c in cands] == [("Who directed Pathfinder (1987 film)?", "Nils Gaup")]
+    assert "country of citizenship" not in build.SINGLE_HOP_TEMPLATES
+
 
 
 def test_single_hop_dev_facts_never_in_test():
@@ -161,3 +183,9 @@ def test_every_gold_paragraph_is_in_the_corpus_with_its_text():
             assert build.spacing_key(corpus[cid]["text"]) == build.spacing_key(text), (row.id, cid)
             checked += 1
     assert len(sampled) == 400 and checked > 0
+
+
+@needs_data
+def test_committed_stats_record_the_hand_check():
+    hc = json.loads((DATA / "stats.json").read_text())["single_hop"]["hand_check"]
+    assert hc["checked"] == 30 and hc["errors"] == 4 and hc["error_rate"] == round(4 / 30, 4)

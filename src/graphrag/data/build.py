@@ -13,7 +13,8 @@ from typing import Any
 
 TYPES = ["compositional", "comparison", "bridge_comparison", "inference"]
 
-# Single-hop templates for relations with one value per subject. Multi-valued relations (award received,
+# Single-hop templates for relations with one value per subject. "country of citizenship" was dropped
+# after the hand check: both of its checked questions failed (implied, not stated; or not citizenship). Multi-valued relations (award received,
 # child, sibling, educated at, employer, occupation, has part, ...) are excluded: a question like "Which
 # award did X receive?" has several correct answers and EM would punish a correct one.
 SINGLE_HOP_TEMPLATES = {
@@ -22,7 +23,6 @@ SINGLE_HOP_TEMPLATES = {
     "father": "Who is the father of {s}?",
     "date of death": "When did {s} die?",
     "publication date": "When was {s} released?",
-    "country of citizenship": "What is the country of citizenship of {s}?",
     "place of birth": "Where was {s} born?",
     "mother": "Who is the mother of {s}?",
     "place of death": "Where did {s} die?",
@@ -163,21 +163,51 @@ def question_record(q: Question, corpus: Corpus) -> dict[str, Any]:
     }
 
 
+# Single facts removed after the hand check (data/single_hop_handcheck.md), with the reason.
+EXCLUDED_SINGLE_HOP = {
+    ("Anne Fontaine", "place of birth"): "2Wiki evidence gives a nationality (Luxembourger), not a place",
+}
+
+SINGLE_HOP_RULES = [
+    "relation must be single-valued (templates in SINGLE_HOP_TEMPLATES); country of citizenship dropped after the hand check",
+    "exactly one gold paragraph of the source question matches the subject",
+    "the object appears verbatim (case-insensitive) in that paragraph; the answer keeps the paragraph's casing",
+    "the paragraph title was seen with only one raw text",
+    "if the paragraph title has a bracketed disambiguation, the question uses the full title",
+    "skip if the subject name (without disambiguation) matches more than one paragraph in the corpus",
+    "skip subjects with conflicting objects for the same relation anywhere in the sample",
+    "skip facts listed in EXCLUDED_SINGLE_HOP",
+    "facts used in dev never appear in test",
+]
+
+
 def _strip_disambiguator(title: str) -> str:
     return re.sub(r"\s*\([^)]*\)$", "", title).strip().lower()
 
 
+def _has_disambiguator(title: str) -> bool:
+    return bool(re.search(r"\([^)]*\)$", title.strip()))
+
+
+def _cased_answer(obj: str, text: str) -> str | None:
+    """The object as written in the paragraph (original casing), or None if it does not appear."""
+    i = text.lower().find(obj.lower())
+    return text[i:i + len(obj)] if i >= 0 else None
+
+
 def single_hop_candidates(questions: list[Question], corpus: Corpus) -> list[dict[str, Any]]:
-    """One candidate per (subject, relation), kept only if it is unambiguous and checkable:
-    single-valued relation, exactly one gold paragraph of the source question matches the subject, the
-    object appears verbatim in that paragraph, and the title was seen with only one raw text."""
+    """One candidate per (subject, relation), kept only if it is unambiguous and checkable. The rules are
+    listed in SINGLE_HOP_RULES."""
+    chunks_per_name = Counter(_strip_disambiguator(c["title"]) for c in corpus.chunks.values())
     by_key: dict[tuple[str, str], dict[str, Any]] = {}
     objects: dict[tuple[str, str], set[str]] = defaultdict(set)
     for q in questions:
         gold_paras = [p for p in q.context if p[0] in set(q.gold_titles)]
         for s, rel, o in q.evidences:
             objects[(s, rel)].add(o)
-            if rel not in SINGLE_HOP_TEMPLATES or (s, rel) in by_key:
+            if rel not in SINGLE_HOP_TEMPLATES or (s, rel) in by_key or (s, rel) in EXCLUDED_SINGLE_HOP:
+                continue
+            if chunks_per_name[_strip_disambiguator(s)] > 1:
                 continue
             matches = [p for p in gold_paras if p[0].lower() == s.lower() or _strip_disambiguator(p[0]) == s.lower()]
             if len(matches) != 1:
@@ -186,12 +216,14 @@ def single_hop_candidates(questions: list[Question], corpus: Corpus) -> list[dic
             cid = corpus.ids[(title, text)]
             # Titles seen with more than one raw text are skipped (this also keeps the sample identical
             # to the one built before spacing variants were merged).
-            if title in corpus.multi_variant_titles or o.lower() not in text.lower():
+            answer = _cased_answer(o, text)
+            if title in corpus.multi_variant_titles or answer is None:
                 continue
+            subject = title if _has_disambiguator(title) else s
             by_key[(s, rel)] = {
                 "id": "sh_" + hashlib.sha1(f"{s}|{rel}".encode("utf-8")).hexdigest()[:10],
-                "question": SINGLE_HOP_TEMPLATES[rel].format(s=s),
-                "answer": o,
+                "question": SINGLE_HOP_TEMPLATES[rel].format(s=subject),
+                "answer": answer,
                 "type": "single_hop",
                 "relation": rel,
                 "evidences": [[s, rel, o]],

@@ -174,11 +174,14 @@ Same corpus, same generator, same budget, same eval.
    question stores the chunk ids of its gold paragraphs (`gold_chunk_ids`), resolved from its own
    context, so gold never points to a different same-title paragraph. Store `data/corpus.jsonl`. Dev and test share one corpus, as in a real deployment.
 4. Single-hop questions: from evidence triples of the sampled questions (dev triples → dev, test triples →
-   test). Keep a triple only if its relation is single-valued (17 templates; multi-valued relations such
-   as `award received` or `child` are excluded because they have several correct answers), exactly one
-   gold paragraph of the source question matches the subject, the object appears verbatim in that
-   paragraph, and the paragraph title does not collide. Drop facts used in dev from test. Sample 25 dev /
-   75 test with the seed. Hand-check 30 in `data/single_hop_handcheck.md`.
+   test), one template per single-valued relation (16 templates; multi-valued relations such as
+   `award received` or `child` are excluded because they have several correct answers). The full rule
+   list is `SINGLE_HOP_RULES` in `src/graphrag/data/build.py`, recorded in `data/stats.json`.
+   Hand check of 30 questions of the first sample (`data/single_hop_handcheck.md`): 4 errors. Rules
+   added after it: drop `country of citizenship`, keep a bracketed title disambiguation in the question,
+   skip subjects whose name matches more than one corpus paragraph, keep the paragraph's casing in the
+   answer, and exclude one fact with a wrong 2Wiki evidence triple. The regenerated sample has not been
+   hand-checked again.
 
 ### 6.2 Store (`src/graphrag/store/`)
 - `(:Document {id, title})-[:HAS_CHUNK]->(:Chunk {id, title, text, text_hash, embedding_title, embedding_text})`.
