@@ -15,6 +15,7 @@ model and endpoint as the generator.
 import json
 import time
 from dataclasses import dataclass, field
+from typing import Callable
 
 from pydantic import ValidationError
 
@@ -154,17 +155,39 @@ def merge_stats(parts: list[RunStats]) -> RunStats:
     return total
 
 
-def extract_many(llm: CachedLLM, batches: dict[int, list[dict]], workers: int = 4) -> tuple[dict[int, BatchExtraction | None], RunStats]:
+def extract_many(
+    llm: CachedLLM,
+    batches: dict[int, list[dict]],
+    workers: int = 4,
+    on_done: "Callable[[int, int, RunStats], None] | None" = None,
+) -> tuple[dict[int, BatchExtraction | None], RunStats]:
     """Extract several batches in parallel threads. Each batch is an independent cached call, so the
     results do not depend on the number of workers. Each task keeps its own RunStats (merged at the end).
-    A QuotaExhausted in any task is re-raised after the running tasks finish; cached work is kept."""
-    from concurrent.futures import ThreadPoolExecutor
+    on_done(done, total, stats_so_far) is called after every finished batch, for progress output.
+    A QuotaExhausted is re-raised after the other running tasks finish; their work is cached and kept."""
+    from concurrent.futures import ThreadPoolExecutor, as_completed
 
-    def one(item):
-        i, batch = item
+    def one(i: int):
         st = RunStats(batches=1)
-        return i, extract_batch(llm, batch, st), st
+        return i, extract_batch(llm, batches[i], st), st
 
+    results: dict[int, BatchExtraction | None] = {}
+    parts: list[RunStats] = []
+    stop: QuotaExhausted | None = None
     with ThreadPoolExecutor(workers) as pool:
-        results = list(pool.map(one, sorted(batches.items())))
-    return {i: parsed for i, parsed, _ in results}, merge_stats([st for _, _, st in results])
+        futures = [pool.submit(one, i) for i in sorted(batches)]
+        for fut in as_completed(futures):
+            try:
+                i, parsed, st = fut.result()
+            except QuotaExhausted as exc:
+                stop = stop or exc
+                for f in futures:
+                    f.cancel()
+                continue
+            results[i] = parsed
+            parts.append(st)
+            if on_done:
+                on_done(len(results), len(batches), merge_stats(parts))
+    if stop:
+        raise QuotaExhausted(f"{stop} (finished batches: {len(results)} of {len(batches)}, all cached)")
+    return results, merge_stats(parts)

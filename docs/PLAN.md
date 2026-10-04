@@ -152,6 +152,18 @@ If all three pass, the full corpus is extracted. If not, one more prompt fix on 
       resolution handles names;
     - if there are many real missing or wrong facts, stop and rethink the extractor.
 
+- Outcome of the pilots (2026-10-04): prompt v3 on 9 fresh batches passed recall (0.76) and failed
+  slot precision (0.76); the manual classification of all 10 failures found 1 real miss and 0 wrong
+  facts (`results/m2/pilot_v3_classification.json`), and the hand check found 28 of 30 triples correct
+  (`results/m2/extraction_handcheck.md`, bar 27). Under the decision rule the full corpus is extracted
+  with prompt v3 and the strict score is reported as it is.
+- Deterministic post-processing of every extracted relation (`src/graphrag/extraction/postprocess.py`,
+  not a prompt change), with the number of triples each rule changed reported in
+  `results/m2/extraction_run.json`:
+  1. `OTHER` whose `other_label` is a listed relation name becomes that relation;
+  2. a leading `<label>:` prefix is stripped from the object, where `<label>` is the triple's own
+     `other_label` or relation name (other colons, as in "Star Wars: A New Hope", are left alone).
+
 **Done when:** extraction for the whole corpus is cached, and `results/m2/extraction_scores.json` exists.
 
 ### M3: Entity resolution
@@ -161,6 +173,11 @@ If all three pass, the full corpus is extracted. If not, one more prompt fix on 
 - Assign stable surrogate IDs; keep an alias table.
 - Measure: duplicate rate on a hand-labelled sample of ~100 entities (before/after), and **precision on a
   hand-checked sample of ~50 merges**.
+
+- Same-name entities must not be merged because the name matches. Prompt v3 names a paragraph's
+  subject by its title without the bracketed part, so different entities can share a name
+  ("Albert II", the 1923 and 1949 "Adam's Rib"). Merging uses the source paragraph (`chunk_id`) and the
+  description, never the name alone.
 
 **Done when:** `results/m3/resolution_report.md` shows both numbers and the thresholds used.
 

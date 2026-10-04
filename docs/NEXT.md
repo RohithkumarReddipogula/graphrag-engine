@@ -4,49 +4,26 @@ Last updated: 2026-10-04. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 
 ## 1. Where we are
 
-- M0 (environment) and M1 (data, hybrid baseline, closed-book baseline, dev results) are done and
-  documented in `README.md`.
-- M2 (extraction) pilot is done. Extractor: `openai/gpt-oss-120b` on the pinned OpenRouter endpoint
-  `deepinfra/bf16`, strict JSON-schema output (reason for the switch from Gemini: `docs/limits.md`).
-- Pilot results, all from `results/m2/pilot.json`:
-  - sample: 6 batches (48 paragraphs), the batches with the most dev gold triples; 0 schema failures;
-  - cost: USD 0.0085 for the sample, projected USD 0.36 for the full corpus of 2,049 paragraphs;
-  - recall 17 of 22 dev gold triples, slot precision 17 of 17, the same at every name threshold
-    from 80 to 100;
-  - 311 relations extracted, 76 of them `OTHER`.
-- OpenRouter credit left: USD 7.56 (`results/spend/openrouter_balance.json`).
-- The full-corpus extraction has not been run.
+- M0 and M1 are done (`README.md`).
+- M2 pilots are done. Prompt v3 on 9 fresh batches: recall 0.76 (pass), slot precision 0.76 (fail);
+  all 10 failures classified, 1 real miss and 0 wrong facts (`results/m2/pilot_v3_classification.json`);
+  hand check 28 of 30 correct (`results/m2/extraction_handcheck.md`). Under the decision rule in
+  section 5, the full corpus is extracted with prompt v3.
+- Deterministic post-processing added for every extracted relation (`docs/PLAN.md`, M2).
 
-## 2. Findings from the pilot that drive the next step
+## 2. Next step
 
-- 9 of the 76 `OTHER` triples are really fixed-list relations (6 occupation, 2 award received,
-  1 founded by): the model wrote the relation name into the object or label instead of using it as
-  the relation.
-- Facts stated only through adjectives were missed: "a Syrian village" (country Syria),
-  "Hungarian-born American" (country of citizenship).
-- One miss is a scoring artefact, not an extraction error: "Akbank T.A.S." extracted for gold subject
-  "Akbank" does not fuzzy-match. Scoring stays strict; entity resolution (M3) is where this belongs.
-- 22 gold triples is too few to judge quality.
+1. Full-corpus extraction (`scripts/run_m2_extraction.py`), then `results/m2/extraction_scores.json`
+   on all dev paragraphs, strict score reported as it is. That closes M2.
+2. M3 entity resolution. Same-name entities ("Albert II", the two "Adam's Rib" films) must not be
+   merged because the name matches; use the source paragraph and the description.
 
-## 3. Next step (in this order)
+## 3. History of the M2 pilots
 
-1. Fix the extraction prompt (`src/graphrag/extraction/extract.py`, `SYSTEM`), tuned on dev only:
-   - a fact that matches a listed relation must use that relation, never `OTHER`;
-   - facts stated through adjectives count ("a Syrian village" gives country Syria,
-     "Hungarian-born American" gives country of citizenship).
-2. Run a larger pilot of about 15 batches with at least 9 new batches:
-   - the 6 old batches (indices 8, 14, 45, 113, 146, 159, chosen by dev gold density) are re-extracted
-     with the new prompt (new cache keys, so they are new calls);
-   - the new batches are the next batches by dev gold density, excluding the old 6, chosen by the same
-     rule in `scripts/run_m2_pilot.py`;
-   - report old and new batches separately. The old batches were used to find the prompt problems, so
-     only the new batches give an unbiased estimate. Keep the old prompt's results for comparison.
-3. Create a 30-triple hand-check sheet (`results/m2/extraction_handcheck.md`), a seeded random sample
-   of extracted triples from the larger pilot, each with its paragraph, to measure true precision
-   (2Wiki gold triples cover only what the questions need). Same format as
-   `data/single_hop_handcheck.md`; a verdict starting with "ok" counts as correct.
-4. Only after the hand check: the full-corpus run (`scripts/run_m2_extraction.py`), then
-   `results/m2/extraction_scores.json` on all dev paragraphs. That closes M2.
+- v1: 6 batches; `OTHER` misused for listed relations, adjective facts missed (`results/m2/pilot_v1.json`).
+- v2: 6 old + 9 new batches; misuse fixed; failed the bar on the new batches, mostly name differences
+  (`results/m2/pilot_v2.json`).
+- v3: 9 fresh batches + v2's new batches; see section 1 (`results/m2/pilot_v3.json`).
 
 ## 4. Quality bar for the full run (decided)
 
