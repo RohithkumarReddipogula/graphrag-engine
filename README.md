@@ -209,6 +209,9 @@ docker compose up -d
 - Abstention: "unknown" scores 0. On two-way comparison questions a guess would often be right, so a
   system that abstains can score below a system that guesses. The unknown rate is reported for that
   reason.
+- Same model for extraction and generation: the knowledge graph is extracted with the same model
+  (`openai/gpt-oss-120b`, same pinned endpoint) that later answers the questions. Its extraction errors
+  and its answering errors may be correlated. The judge (`gemini-3.8-flash`) is a different model.
 - Aggregation questions are out of scope.
 
 ## 8. Data, code and licences

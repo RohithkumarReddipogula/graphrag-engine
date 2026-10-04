@@ -44,3 +44,17 @@ def test_options_are_part_of_the_cache_key(tmp_path):
     llm.complete("q", options={"reasoning_effort": "high"})
     llm.complete("q", options={"reasoning_effort": "low"})
     assert calls == [{"reasoning_effort": "low"}, {"reasoning_effort": "high"}]
+
+
+def test_salt_makes_a_separately_cached_call(tmp_path):
+    calls = []
+
+    def fake(model, prompt, system, temperature, options):
+        calls.append(prompt)
+        return ProviderResponse("x", "v", 1, 1)
+
+    llm = CachedLLM("m", fake, DiskCache(tmp_path))
+    llm.complete("q")
+    llm.complete("q", salt="retry-1")
+    llm.complete("q", salt="retry-1")
+    assert calls == ["q", "q"]

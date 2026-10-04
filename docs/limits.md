@@ -2,7 +2,8 @@
 
 | Role | Model id | Provider and access | Limits | Source |
 |---|---|---|---|---|
-| Extractor, judge | gemini-3.8-flash | Google AI Studio, free tier | RPM TBD, RPD TBD, TPM TBD | aistudio.google.com/rate-limit |
+| Judge | gemini-3.8-flash | Google AI Studio, free tier | RPM TBD, RPD TBD, TPM TBD | aistudio.google.com/rate-limit |
+| Extractor | openai/gpt-oss-120b | OpenRouter, same pinned endpoint as the generator | Prepaid credit (shared with the generator) | openrouter.ai/settings/credits |
 | Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
 Date the Gemini limits were read: TBD
@@ -13,6 +14,14 @@ Date the Gemini limits were read: TBD
    `model_not_found`, and the account's model list contains no Llama chat models.
 2. Planned next: `openai/gpt-oss-120b` on Groq's paid Developer tier. Developer upgrades are unavailable.
 3. Current (2026-10-04): `openai/gpt-oss-120b` through OpenRouter.
+
+## Extractor change (2026-10-04)
+
+The plan first named `gemini-3.8-flash` (free tier) as the extractor. The first pilot call returned
+503 "This model is currently experiencing high demand", and the free tier's daily limits are unknown, so
+the extraction could stall for days. The extractor is now `openai/gpt-oss-120b` on the same pinned
+OpenRouter endpoint as the generator, with strict JSON-schema output. The judge stays `gemini-3.8-flash`,
+so it differs from both. Pilot tokens, cost and the full-corpus projection: `results/m2/pilot.json`.
 
 ## Generator reproducibility settings
 

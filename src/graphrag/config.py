@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     neo4j_user: str = "neo4j"
 
     # Models (pinned in docs/PLAN.md)
-    extractor_model: str = "gemini-3.8-flash"
+    extractor_model: str = "openai/gpt-oss-120b"     # same pinned OpenRouter endpoint as the generator
     judge_model: str = "gemini-3.8-flash"
     generator_model: str = "openai/gpt-oss-120b"
     generator_provider: str = "deepinfra/bf16"      # OpenRouter endpoint tag; fallbacks disabled

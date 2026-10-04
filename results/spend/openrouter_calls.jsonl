@@ -374,3 +374,9 @@
 {"ts": "2026-10-04T10:27:12+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1598, "output_tokens": 99, "cost_usd": 7.5956e-05}
 {"ts": "2026-10-04T10:27:12+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1574, "output_tokens": 141, "cost_usd": 8.2208e-05}
 {"ts": "2026-10-04T10:27:12+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1568, "output_tokens": 117, "cost_usd": 7.7906e-05}
+{"ts": "2026-10-04T10:46:19+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1811, "output_tokens": 8958, "cost_usd": 0.001589867}
+{"ts": "2026-10-04T10:47:58+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1553, "output_tokens": 7850, "cost_usd": 0.001391961}
+{"ts": "2026-10-04T10:49:15+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1578, "output_tokens": 6644, "cost_usd": 0.001187866}
+{"ts": "2026-10-04T10:51:01+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1718, "output_tokens": 8842, "cost_usd": 0.001566706}
+{"ts": "2026-10-04T10:52:01+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 1369, "output_tokens": 6470, "cost_usd": 0.001150553}
+{"ts": "2026-10-04T10:53:35+00:00", "model": "openai/gpt-oss-120b", "provider": "DeepInfra", "input_tokens": 2323, "output_tokens": 8816, "cost_usd": 0.001584671}

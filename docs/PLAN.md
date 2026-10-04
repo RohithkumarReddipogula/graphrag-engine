@@ -43,9 +43,9 @@ Available on 2026-10-04 (checked against the provider docs):
 
 | Role | Proposed | Notes |
 |---|---|---|
-| Extractor | `gemini-3.8-flash` (stable) | Fallback choice if the free daily quota is too low: `gemini-3.5-flash-lite`. **No cross-provider fallback**: on quota exhaustion the run stops and resumes from cache. |
+| Extractor | `openai/gpt-oss-120b` via OpenRouter, the same pinned `deepinfra/bf16` endpoint as the generator, fallbacks disabled, strict JSON-schema output | Changed from `gemini-3.8-flash` (2026-10-04): the Gemini free tier returned 503 "high demand" on the first pilot call, and its daily limits are unknown, so a ~260-call extraction could stall for days. Paid from the same OpenRouter credit; pilot cost and projection in `results/m2/pilot.json`. Consequence: extractor and generator are the same model (listed as a limitation). |
 | Generator | `openai/gpt-oss-120b` via OpenRouter, pinned to the `deepinfra/bf16` endpoint with fallbacks disabled (`allow_fallbacks: false`, `require_parameters: true`). Temperature 0, `reasoning.effort` = `medium` for every system. | `llama-3.3-70b-versatile` is not available on my Groq account (404 `model_not_found`), and Groq Developer upgrades are unavailable. The provider that served each call is stored in the cache entry and in `results/spend/openrouter_calls.jsonl`; a call served by any other provider raises and is not cached. Paid from prepaid OpenRouter credit; balance in `results/spend/openrouter_balance.json`. Cost estimate: `results/m0/generator_cost.json`. |
-| Judge | `gemini-3.8-flash` | Never the same model as the generator. |
+| Judge | `gemini-3.8-flash` | Never the same model as the generator (or the extractor). |
 | Embeddings | `intfloat/e5-base-v2` (768-dim, local) | Same as the thesis. Prefixes are mandatory: `query: ` for questions, `passage: ` for chunks and entity descriptions. |
 | Reranker | `BAAI/bge-reranker-base` (local cross-encoder) | |
 
@@ -117,11 +117,22 @@ Detailed in §6.
 hybrid baseline, plus retrieval recall@k.
 
 ### M2: Extraction
-- Prompt that returns JSON entities (name, coarse type, short description) and relations from the fixed
-  34 + `OTHER` list, 8 paragraphs per call, with the paragraph title attached to every item.
-- Strict schema validation; invalid output is retried once, then logged and skipped.
-- Score against 2Wiki gold triples on **dev paragraphs only**: relation must match, both entities must
-  fuzzy-match after normalisation (rapidfuzz, threshold tuned on dev). Report precision/recall per relation.
+- Extractor: `openai/gpt-oss-120b` on the pinned OpenRouter endpoint, strict `json_schema` structured
+  output (the endpoint supports it, and `require_parameters` forces it). Prompt returns, per chunk,
+  entities (name, coarse type, short description) and relations from the fixed 34 + `OTHER` list,
+  8 paragraphs per call in a fixed batching (sorted chunk ids), every item tagged with its `chunk_id`.
+- Validation: the schema plus "exactly the chunk ids that were sent"; invalid output is retried once
+  (as a new, separately cached call), then logged and skipped. Rate limits and temporary 5xx errors are
+  retried after a minute; a persistent outage stops the run, which resumes from the cache.
+- Pilot first (`scripts/run_m2_pilot.py`): the 6 batches with the most dev gold triples; tokens, cost,
+  projection for the full corpus against the remaining credit, and scores. Results in `results/m2/pilot.json`.
+- Scoring against 2Wiki gold triples on **dev paragraphs only**. 2Wiki gold triples are only the facts
+  the questions need, so plain precision would count correct extra facts as errors. Reported instead:
+  recall (share of gold triples matched by some extracted triple) and slot precision (among extracted
+  triples whose subject and relation match a gold triple, the share whose object matches). A match
+  needs the same relation, names matching by rapidfuzz ratio on normalised text (primary threshold 90,
+  fixed before the pilot; 80 to 100 as a sensitivity check), dates matching on year, month and day
+  where both state them. True precision: hand check of a sample of extracted triples.
 
 **Done when:** extraction for the whole corpus is cached, and `results/m2/extraction_scores.json` exists.
 

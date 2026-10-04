@@ -158,13 +158,17 @@ class CachedLLM:
         system: str | None = None,
         temperature: float = 0.0,
         options: dict[str, Any] | None = None,
+        salt: str | None = None,
     ) -> LLMResult:
         """`options` are provider-specific request fields. They, the backend and the defaults are all
-        part of the cache key, so changing any of them never returns a stale answer."""
+        part of the cache key, so changing any of them never returns a stale answer. `salt` only changes
+        the cache key (it is not sent), so a retry of the same request is a new, separately cached call."""
         options = {**self._defaults, **(options or {})}
         request: dict[str, Any] = {"prompt": prompt, "system": system, "temperature": temperature}
         if options:
             request["options"] = options
+        if salt:
+            request["salt"] = salt
         if self._backend:
             request["backend"] = self._backend
         key = cache_key(self.model, request)
