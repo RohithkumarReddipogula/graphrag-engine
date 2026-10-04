@@ -81,3 +81,22 @@ def test_aliases_let_a_country_match_its_demonym():
     assert score(extracted, gold, 90)["overall"]["recalled"] == 1
     no_alias = [{**gold[0], "object_aliases": ["Hungarian"]}]
     assert score(extracted, no_alias, 90)["overall"]["recalled"] == 0
+
+
+def _batch_json(ids):
+    return json.dumps({"paragraphs": [{"chunk_id": c, "entities": [], "relations": []} for c in ids]})
+
+
+def test_one_truncated_chunk_id_is_repaired():
+    batch = [{"id": "Saw Hnaung of Sagaing"}, {"id": "Saw Yun"}]
+    parsed = validate(_batch_json(["Saw Hnaung of Saga", "Saw Yun"]), batch)
+    assert sorted(p.chunk_id for p in parsed.paragraphs) == ["Saw Hnaung of Sagaing", "Saw Yun"]
+
+
+def test_unrelated_or_ambiguous_ids_are_not_repaired():
+    batch = [{"id": "Heat"}, {"id": "Saw Yun"}]
+    with pytest.raises(ValueError, match="chunk ids differ"):
+        validate(_batch_json(["Completely Different", "Saw Yun"]), batch)
+    batch3 = [{"id": "A1"}, {"id": "A2"}, {"id": "B"}]
+    with pytest.raises(ValueError, match="chunk ids differ"):
+        validate(_batch_json(["A", "A", "B"]), batch3)

@@ -4,19 +4,19 @@ Last updated: 2026-10-04. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 
 ## 1. Where we are
 
-- M0 and M1 are done (`README.md`).
-- M2 pilots are done. Prompt v3 on 9 fresh batches: recall 0.76 (pass), slot precision 0.76 (fail);
-  all 10 failures classified, 1 real miss and 0 wrong facts (`results/m2/pilot_v3_classification.json`);
-  hand check 28 of 30 correct (`results/m2/extraction_handcheck.md`). Under the decision rule in
-  section 5, the full corpus is extracted with prompt v3.
-- Deterministic post-processing added for every extracted relation (`docs/PLAN.md`, M2).
+- M0, M1 and M2 are done.
+- M2: the whole corpus is extracted with prompt v3 and post-processed (`results/m2/extractions.jsonl`,
+  run summary in `results/m2/extraction_run.json`, strict dev scores in
+  `results/m2/extraction_scores.json`). Hand check 28 of 30 correct.
 
-## 2. Next step
+## 2. Next step: M3 entity resolution
 
-1. Full-corpus extraction (`scripts/run_m2_extraction.py`), then `results/m2/extraction_scores.json`
-   on all dev paragraphs, strict score reported as it is. That closes M2.
-2. M3 entity resolution. Same-name entities ("Albert II", the two "Adam's Rib" films) must not be
-   merged because the name matches; use the source paragraph and the description.
+1. Same-name entities ("Albert II", the two "Adam's Rib" films) must not be merged because the name
+   matches; use the source paragraph (`chunk_id`) and the description.
+2. Plan in `docs/PLAN.md`, M3: normalise, candidate pairs by embedding of name + description within the
+   same type, LLM check only for borderline pairs, merge only when sure; measure the duplicate rate on
+   about 100 hand-labelled entities and the precision of about 50 merges.
+3. Decide the judge-limit and single-hop re-check questions in section 6 before M5.
 
 ## 3. History of the M2 pilots
 

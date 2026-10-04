@@ -1,7 +1,8 @@
 # GraphRAG Engine
 
-Status: work in progress. Milestones M0 and M1 are complete: data, a strong hybrid retrieval baseline,
-and a closed-book baseline, all measured on the dev split. The graph milestones (M2 to M5) are next.
+Status: work in progress. Milestones M0 to M2 are complete: data, a strong hybrid retrieval baseline,
+a closed-book baseline (all measured on the dev split), and entity and relation extraction for the
+whole corpus. Entity resolution and graph retrieval (M3 to M5) are next.
 No test-split numbers exist yet; the test split is run once, at the end.
 
 ## Contents
@@ -45,8 +46,8 @@ The full plan and every design decision are in `docs/PLAN.md`.
 |---|---|---|
 | M0 | Environment: Neo4j in Docker, cached LLM clients, cost tracking | done |
 | M1 | Data, hybrid baseline, closed-book baseline, dev results | done |
-| M2 | Entity and relation extraction, scored against 2Wiki evidence triples | next |
-| M3 | Entity resolution (merge only when sure), measured by hand-checked samples | planned |
+| M2 | Entity and relation extraction, scored against 2Wiki evidence triples | done |
+| M3 | Entity resolution (merge only when sure), measured by hand-checked samples | next |
 | M4 | Graph build and graph retrieval (path scoring from linked entities) | planned |
 | M5 | One final run on the test split, judge scores, error analysis | planned |
 | M6 | Packaging: read-only API and a simple graph view | planned |
@@ -234,8 +235,8 @@ docker compose up -d
 
 ## 9. Work in progress
 
-Next: M2 (entity and relation extraction with a fixed relation list taken from 2Wiki, scored against
-the 2Wiki evidence triples), then M3 (entity resolution) and M4 (graph retrieval). Graph results will be
+M2 is done: the whole corpus is extracted (scores in `results/m2/extraction_scores.json`, method in
+`docs/PLAN.md`). Next: M3 (entity resolution) and M4 (graph retrieval). Graph results will be
 reported next to the M1 baseline in the same table format, including the unknown rate.
 
 ---

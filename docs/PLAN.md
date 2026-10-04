@@ -157,6 +157,10 @@ If all three pass, the full corpus is extracted. If not, one more prompt fix on 
   facts (`results/m2/pilot_v3_classification.json`), and the hand check found 28 of 30 triples correct
   (`results/m2/extraction_handcheck.md`, bar 27). Under the decision rule the full corpus is extracted
   with prompt v3 and the strict score is reported as it is.
+- Chunk-id repair in validation: when exactly one sent chunk id is missing and exactly one unknown id
+  came back, and the two are near-identical (prefix, or rapidfuzz ratio of at least 90), the unknown id
+  is mapped back. Added after the full run, where one batch failed twice on a truncated id
+  ("Saw Hnaung of Saga" for "Saw Hnaung of Sagaing"); the cached responses were re-validated, no new call.
 - Deterministic post-processing of every extracted relation (`src/graphrag/extraction/postprocess.py`,
   not a prompt change), with the number of triples each rule changed reported in
   `results/m2/extraction_run.json`:

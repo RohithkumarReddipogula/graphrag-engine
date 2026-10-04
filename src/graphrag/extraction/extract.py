@@ -74,9 +74,30 @@ def response_options() -> dict:
     }
 
 
+ID_REPAIR_MIN_RATIO = 90
+
+
+def repair_chunk_ids(parsed: BatchExtraction, sent: list[str]) -> BatchExtraction:
+    """Fix one mistyped chunk id: when exactly one sent id is missing, exactly one unknown id came back,
+    and the two are near-identical (one is a prefix of the other, or rapidfuzz ratio >= 90), the unknown
+    id is mapped back to the sent one. Anything else is left for validate() to reject."""
+    from rapidfuzz import fuzz
+
+    got = [p.chunk_id for p in parsed.paragraphs]
+    missing = sorted(set(sent) - set(got))
+    extra = sorted(set(got) - set(sent))
+    if len(missing) == 1 and len(extra) == 1 and got.count(extra[0]) == 1:
+        m, e = missing[0], extra[0]
+        if m.startswith(e) or e.startswith(m) or fuzz.ratio(m, e) >= ID_REPAIR_MIN_RATIO:
+            for p in parsed.paragraphs:
+                if p.chunk_id == e:
+                    p.chunk_id = m
+    return parsed
+
+
 def validate(raw: str, batch: list[dict]) -> BatchExtraction:
-    parsed = BatchExtraction.model_validate(json.loads(raw))
     sent = sorted(c["id"] for c in batch)
+    parsed = repair_chunk_ids(BatchExtraction.model_validate(json.loads(raw)), sent)
     got = sorted(p.chunk_id for p in parsed.paragraphs)
     if got != sent:
         raise ValueError(f"chunk ids differ: missing {sorted(set(sent) - set(got))}, extra {sorted(set(got) - set(sent))}")

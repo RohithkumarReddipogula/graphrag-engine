@@ -1,0 +1,30 @@
+{
+ "prompt_version": "v3",
+ "model": "openai/gpt-oss-120b",
+ "endpoint": "deepinfra/bf16",
+ "batch_size": 8,
+ "workers": 8,
+ "batches_total": 257,
+ "batches_ok": 257,
+ "batches_ok_after_retry": 2,
+ "batches_failed": 0,
+ "chunks_extracted": 2049,
+ "chunks_total": 2049,
+ "entities": 13962,
+ "relations": 12547,
+ "postprocessing": {
+  "other_to_listed": 126,
+  "strip_label_prefix": 26,
+  "relations_total": 12547,
+  "relations_changed": 145
+ },
+ "live_calls_this_run": 0,
+ "tokens": {
+  "input": 495617,
+  "output": 1954840
+ },
+ "cost_usd_all_batches": 0.348874,
+ "remaining_credit_usd": 7.168616,
+ "complete": true,
+ "seconds": 0
+}
