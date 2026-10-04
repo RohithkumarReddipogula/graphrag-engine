@@ -1,0 +1,70 @@
+{
+  "source": {
+    "repo": "framolfese/2WikiMultihopQA",
+    "revision": "fe713bfbd1afbca1a65246741a75890405d56a3a",
+    "file_sha256": "408e2dbb28edc6c8b9ca3ba0c94d4fc7bf17ffb923766593a3a7f546ab4cba59"
+  },
+  "params": {
+    "seed": 42,
+    "dev_per_type": 25,
+    "test_per_type": 75,
+    "distractors_per_question": 4
+  },
+  "validation_questions": 12576,
+  "multi_hop": {
+    "dev": {
+      "compositional": 25,
+      "comparison": 25,
+      "bridge_comparison": 25,
+      "inference": 25
+    },
+    "test": {
+      "compositional": 75,
+      "comparison": 75,
+      "bridge_comparison": 75,
+      "inference": 75
+    }
+  },
+  "single_hop": {
+    "candidate_pools": {
+      "dev_pool": 225,
+      "test_pool": 633
+    },
+    "dev": 25,
+    "test": 75,
+    "dev_relations": {
+      "director": 9,
+      "place of birth": 3,
+      "father": 3,
+      "mother": 2,
+      "date of birth": 2,
+      "publication date": 1,
+      "place of burial": 1,
+      "place of death": 1,
+      "date of death": 1,
+      "country": 1,
+      "country of citizenship": 1
+    },
+    "test_relations": {
+      "director": 22,
+      "date of birth": 15,
+      "father": 9,
+      "mother": 9,
+      "publication date": 7,
+      "country of citizenship": 4,
+      "date of death": 3,
+      "place of birth": 2,
+      "country": 2,
+      "place of death": 1,
+      "inception": 1
+    }
+  },
+  "corpus": {
+    "chunks": 2055,
+    "words_total": 154783,
+    "words_median": 47,
+    "words_max": 900,
+    "title_collisions": 6,
+    "chunks_in_collisions": 12
+  }
+}

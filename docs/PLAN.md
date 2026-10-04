@@ -44,32 +44,33 @@ Available on 2026-10-04 (checked against the provider docs):
 | Role | Proposed | Notes |
 |---|---|---|
 | Extractor | `gemini-3.8-flash` (stable) | Fallback choice if the free daily quota is too low: `gemini-3.5-flash-lite`. **No cross-provider fallback**: on quota exhaustion the run stops and resumes from cache. |
-| Generator | `openai/gpt-oss-120b` (Groq, production, paid Developer tier with a spending limit set in the console) | Replaces `llama-3.3-70b-versatile`, which is not available on my Groq account (404 `model_not_found`; the account's model list has no Llama chat models). The free tier's daily token cap would allow only about 100 calls a day. `reasoning_effort` stays at the provider default and is the same for every system. Cost estimate: `results/m0/generator_cost.json`. |
+| Generator | `openai/gpt-oss-120b` via OpenRouter, pinned to the `deepinfra/bf16` endpoint with fallbacks disabled (`allow_fallbacks: false`, `require_parameters: true`). Temperature 0, `reasoning.effort` = `medium` for every system. | `llama-3.3-70b-versatile` is not available on my Groq account (404 `model_not_found`), and Groq Developer upgrades are unavailable. The provider that served each call is stored in the cache entry and in `results/spend/openrouter_calls.jsonl`; a call served by any other provider raises and is not cached. Paid from prepaid OpenRouter credit; balance in `results/spend/openrouter_balance.json`. Cost estimate: `results/m0/generator_cost.json`. |
 | Judge | `gemini-3.8-flash` | Never the same model as the generator. |
 | Embeddings | `intfloat/e5-base-v2` (768-dim, local) | Same as the thesis. Prefixes are mandatory: `query: ` for questions, `passage: ` for chunks and entity descriptions. |
 | Reranker | `BAAI/bge-reranker-base` (local cross-encoder) | |
 
-Gemini free-tier limits are **not published** (AI Studio shows them per account), and the Groq paid tier
-has its own limits. Read the real numbers from AI Studio and the Groq console before M1, and record them
-in `docs/limits.md`. Log the model version string returned with every response.
+Gemini free-tier limits are **not published** (AI Studio shows them per account). Read them from AI
+Studio and record them in `docs/limits.md`. The generator has no daily cap; it is bounded by OpenRouter
+credit instead. Log the model version string returned with every response.
 
 ## 3. Budget estimate
 
-Measured by simulating the sample on the real validation file (seed 42):
+Dataset numbers come from `data/stats.json` (built by `scripts/build_data.py`, seed 42):
 
 | Item | Value |
 |---|---|
-| Unique paragraphs in corpus | ~2,080 |
-| Corpus size | ~154k words ≈ 216k input tokens |
-| Paragraph length | median 46 words, max ~950 |
-| Title collisions (same title, different text) | 9 (all kept, each with its own id) |
-| Unique evidence triples in sample | ~1,000 (enough for 100 single-hop questions) |
+| Paragraphs in corpus | 2,055 |
+| Corpus size | 154,783 words |
+| Paragraph length | median 47 words, max 900 |
+| Title collisions (same title, different text) | 6 titles, 12 paragraphs, all kept. All 6 are the same paragraph with different spacing around punctuation, not homonyms. |
+| Single-hop candidates (checkable, single-valued) | 225 dev, 633 test |
 | Extraction calls at 8 paragraphs / call | ~260 calls, ~0.6M input tokens incl. prompt overhead |
 | Generator calls, one dev iteration (125 q × ~5 systems) | ~625 |
 | Generator + judge calls, final test run (375 q × 6 systems) | ~2,250 + ~2,250 |
 
 Extraction is cheap (~260 calls). It fits in 1 to 3 days even at a low daily request cap. **The real quota
-risk is evaluation, not extraction**: the final test run needs ~4,500 calls. Mitigations:
+risk is evaluation, not extraction**: the final test run needs ~4,500 calls (generator calls are paid from
+OpenRouter credit, judge calls count against the Gemini free tier). Mitigations:
 - Every LLM call is cached on disk, keyed by `(model, prompt hash)`. Re-runs are free.
 - Dev iterations use EM/F1 only. The judge runs once, on test.
 - The test run may span several days and resumes from cache.
@@ -105,7 +106,7 @@ graphrag-engine/
 ### M0: Environment (half a day)
 - Install OrbStack. `docker compose up` brings up Neo4j 5 locally.
 - Python 3.14 venv, `pyproject.toml`, `pytest` runs green on an empty test.
-- Record model choices and free-tier limits in `docs/limits.md`.
+- Record model choices, rate limits and the generator's provider pin in `docs/limits.md`.
 
 **Done when:** `scripts/check_env.py` connects to Neo4j and makes one cached call to each LLM.
 
@@ -172,8 +173,11 @@ Same corpus, same generator, same budget, same eval.
    its gold paragraphs (`gold_chunk_ids`), resolved from its own context, so gold never points to the wrong
    twin. Store `data/corpus.jsonl`. Dev and test share one corpus, as in a real deployment.
 4. Single-hop questions: from evidence triples of the sampled questions (dev triples → dev, test triples →
-   test), drop date relations whose object is ambiguous, apply one template per relation (34 templates),
-   dedupe, sample 25 dev / 75 test with the seed. Gold title = paragraph of the subject. Hand-check 30.
+   test). Keep a triple only if its relation is single-valued (17 templates; multi-valued relations such
+   as `award received` or `child` are excluded because they have several correct answers), exactly one
+   gold paragraph of the source question matches the subject, the object appears verbatim in that
+   paragraph, and the paragraph title does not collide. Drop facts used in dev from test. Sample 25 dev /
+   75 test with the seed. Hand-check 30 in `data/single_hop_handcheck.md`.
 
 ### 6.2 Store (`src/graphrag/store/`)
 - `(:Document {id, title})-[:HAS_CHUNK]->(:Chunk {id, text, embedding})`. One document per paragraph for now.
