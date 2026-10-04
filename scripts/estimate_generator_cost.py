@@ -1,23 +1,22 @@
 """Estimate the project's generator cost from measured token usage.
 
-Runs 6 real 2Wiki validation questions through the generator at two reasoning efforts (cached, so a
-re-run is free), then projects the cost for the planned call volume. Writes
-results/m0/generator_cost.json. Prices and the FX rate are inputs, recorded with their source date.
+Runs 6 real 2Wiki validation questions through the configured generator (pinned OpenRouter endpoint,
+configured reasoning effort; cached, so a re-run is free), reads the pinned endpoint's current price from
+OpenRouter, and projects the cost for the planned call volume against the available credit.
+Writes results/m0/generator_cost.json.
 """
 
 import json
 import random
 import statistics
 import sys
-import time
 
 import pandas as pd
 
 from graphrag.config import ROOT, get_settings
 from graphrag.llm.client import make_llm
+from graphrag.llm.spend import pinned_endpoint_price, write_balance
 
-MODEL = "openai/gpt-oss-120b"
-PRICE_USD_PER_M = {"input": 0.15, "output": 0.60}  # console.groq.com/docs/model/openai/gpt-oss-120b, read 2026-10-04
 USD_PER_EUR = 1.1225                                # ECB reference rate, 2026-10-02
 CONTEXT_BUDGET_TOKENS = 1500
 PROMPT_OVERHEAD_TOKENS = 200                        # system prompt + question + formatting, rounded up
@@ -55,38 +54,52 @@ def context(row, budget_words: int = 1100) -> str:
 
 
 def main(parquet_path: str) -> None:
-    llm = make_llm(MODEL, get_settings())
-    measured = {}
-    for effort in ["default", "low"]:
-        calls = []
-        for row in sample_rows(parquet_path):
-            prompt = f"Context:\n{context(row)}\n\nQuestion: {row.question}\nAnswer:"
-            options = None if effort == "default" else {"reasoning_effort": effort}
-            out = llm.complete(prompt, system=SYSTEM, options=options)
-            calls.append({"type": row.type, "input_tokens": out.input_tokens, "output_tokens": out.output_tokens})
-            if not out.cached:
-                time.sleep(14)  # stay under the free-tier tokens-per-minute cap
-        outs = [c["output_tokens"] for c in calls]
-        measured[effort] = {
-            "calls": calls,
-            "mean_output_tokens": round(statistics.mean(outs), 1),
-            "max_output_tokens": max(outs),
-        }
+    settings = get_settings()
+    llm = make_llm(settings.generator_model, settings)
+    price = pinned_endpoint_price(settings)
+    calls = []
+    for row in sample_rows(parquet_path):
+        prompt = f"Context:\n{context(row)}\n\nQuestion: {row.question}\nAnswer:"
+        out = llm.complete(prompt, system=SYSTEM)
+        calls.append({
+            "type": row.type,
+            "provider": out.provider,
+            "input_tokens": out.input_tokens,
+            "output_tokens": out.output_tokens,
+            "cost_usd": out.cost_usd,
+        })
+    outs = [c["output_tokens"] for c in calls]
+    measured = {
+        "calls": calls,
+        "mean_output_tokens": round(statistics.mean(outs), 1),
+        "max_output_tokens": max(outs),
+    }
 
-    # Conservative per-call figures: a full context budget, and the max measured output at default effort.
+    # Conservative per-call figures: a full context budget, and the max measured output.
     in_per_call = CONTEXT_BUDGET_TOKENS + PROMPT_OVERHEAD_TOKENS
-    out_per_call = measured["default"]["max_output_tokens"]
+    out_per_call = measured["max_output_tokens"]
+    balance = write_balance(settings)
 
     projections = {}
     for name, s in SCENARIOS.items():
         n_calls = s["dev_iterations"] * s["systems"] * DEV_Q + s["test_systems"] * TEST_Q
-        usd = n_calls * (in_per_call * PRICE_USD_PER_M["input"] + out_per_call * PRICE_USD_PER_M["output"]) / 1e6
-        projections[name] = {**s, "calls": n_calls, "usd": round(usd, 2), "eur": round(usd / USD_PER_EUR, 2)}
+        usd = n_calls * (in_per_call * price["input"] + out_per_call * price["output"]) / 1e6
+        projections[name] = {
+            **s,
+            "calls": n_calls,
+            "usd": round(usd, 2),
+            "eur": round(usd / USD_PER_EUR, 2),
+            "fits_remaining_credit": usd <= balance["remaining_usd"],
+        }
 
     report = {
-        "model": MODEL,
-        "price_usd_per_million_tokens": PRICE_USD_PER_M,
+        "model": settings.generator_model,
+        "pinned_endpoint": settings.generator_provider,
+        "reasoning_effort": settings.generator_reasoning_effort,
+        "price_usd_per_million_tokens": price,
+        "price_source": f"openrouter.ai/api/v1/models/{settings.generator_model}/endpoints",
         "usd_per_eur": USD_PER_EUR,
+        "remaining_credit_usd": balance["remaining_usd"],
         "assumed_input_tokens_per_call": in_per_call,
         "assumed_output_tokens_per_call": out_per_call,
         "measured": measured,
@@ -94,7 +107,8 @@ def main(parquet_path: str) -> None:
     }
     out_path = ROOT / "results" / "m0" / "generator_cost.json"
     out_path.write_text(json.dumps(report, indent=2) + "\n")
-    print(json.dumps({k: report[k] for k in ["assumed_input_tokens_per_call", "assumed_output_tokens_per_call", "projections"]}, indent=2))
+    keys = ["price_usd_per_million_tokens", "remaining_credit_usd", "assumed_output_tokens_per_call", "projections"]
+    print(json.dumps({k: report[k] for k in keys}, indent=2))
 
 
 if __name__ == "__main__":

@@ -13,10 +13,10 @@ class Settings(BaseSettings):
 
     # Secrets
     gemini_api_key: SecretStr | None = None
-    groq_api_key: SecretStr | None = None
+    openrouter_api_key: SecretStr | None = None
     neo4j_password: SecretStr | None = None
 
-    @field_validator("gemini_api_key", "groq_api_key", "neo4j_password", mode="before")
+    @field_validator("gemini_api_key", "openrouter_api_key", "neo4j_password", mode="before")
     @classmethod
     def _blank_is_missing(cls, value: object) -> object:
         # "KEY=" in .env arrives as an empty string; treat it as not set so the error says so.
@@ -32,6 +32,8 @@ class Settings(BaseSettings):
     extractor_model: str = "gemini-3.8-flash"
     judge_model: str = "gemini-3.8-flash"
     generator_model: str = "openai/gpt-oss-120b"
+    generator_provider: str = "deepinfra/bf16"      # OpenRouter endpoint tag; fallbacks disabled
+    generator_reasoning_effort: str = "medium"      # same for every system
     embedding_model: str = "intfloat/e5-base-v2"
     reranker_model: str = "BAAI/bge-reranker-base"
 

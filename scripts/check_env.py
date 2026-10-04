@@ -7,6 +7,7 @@ import sys
 
 from graphrag.config import get_settings
 from graphrag.llm.client import make_llm
+from graphrag.llm.spend import write_balance
 from graphrag.store.neo4j_client import connect
 
 
@@ -29,10 +30,17 @@ def main() -> int:
         try:
             result = make_llm(model, settings).complete("Reply with the single word: ready")
             source = "cache" if result.cached else "live"
-            print(f"[ok]   {role}: {model} -> {result.model_version} ({source}) said {result.text.strip()!r}")
+            print(f"[ok]   {role}: {model} -> {result.model_version} via {result.provider} ({source}) said {result.text.strip()!r}")
         except Exception as exc:
             ok = False
             print(f"[fail] {role}: {model}: {type(exc).__name__}: {exc}")
+
+    try:
+        b = write_balance(settings)
+        print(f"[ok]   openrouter credit: {b['remaining_usd']:.4f} USD left of {b['total_credits_usd']:.2f}")
+    except Exception as exc:
+        ok = False
+        print(f"[fail] openrouter credit: {type(exc).__name__}: {exc}")
 
     return 0 if ok else 1
 

@@ -1,31 +1,34 @@
 # Model choices and rate limits
 
-Read the limits from the provider consoles (they are not published in the docs) and fill in the table.
-Date of reading: TBD
+| Role | Model id | Provider and access | Limits | Source |
+|---|---|---|---|---|
+| Extractor, judge | gemini-3.8-flash | Google AI Studio, free tier | RPM TBD, RPD TBD, TPM TBD | aistudio.google.com/rate-limit |
+| Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
-| Role | Model id | Provider and tier | RPM | RPD | TPM | Source |
-|---|---|---|---|---|---|---|
-| Extractor, judge | gemini-3.8-flash | Google AI Studio, free | TBD | TBD | TBD | aistudio.google.com/rate-limit |
-| Generator | openai/gpt-oss-120b | Groq, paid Developer tier | TBD | TBD | TBD | console.groq.com/settings/limits |
+Date the Gemini limits were read: TBD
 
-## Generator change (2026-10-04)
+## Generator history
 
-The plan first named `llama-3.3-70b-versatile` on Groq. It is not available on my Groq account: the API
-returns 404 `model_not_found`, and the account's model list contains no Llama chat models. The generator
-is now `openai/gpt-oss-120b`, a Groq production model, on the paid Developer tier with a spending limit set
-in the Groq console.
+1. Planned: `llama-3.3-70b-versatile` on Groq. Not available on my Groq account: the API returns 404
+   `model_not_found`, and the account's model list contains no Llama chat models.
+2. Planned next: `openai/gpt-oss-120b` on Groq's paid Developer tier. Developer upgrades are unavailable.
+3. Current (2026-10-04): `openai/gpt-oss-120b` through OpenRouter.
 
-Cost estimate: `results/m0/generator_cost.json`, produced by `scripts/estimate_generator_cost.py`. It
-measures real token usage on 6 validation questions and projects the planned call volume with Groq's
-published price (USD 0.15 per million input tokens, USD 0.60 per million output tokens) and the ECB
-reference rate of 2026-10-02 (1 EUR = 1.1225 USD):
+## Generator reproducibility settings
 
-| Scenario | Dev iterations | Calls | Cost (EUR) |
-|---|---|---|---|
-| Expected | 10 | 8,500 | 3.14 |
-| Pessimistic | 20 | 14,750 | 5.46 |
+- Endpoint pinned to `deepinfra/bf16` (DeepInfra, bf16 weights). Chosen for a low price, high uptime and a
+  declared weight format; the tag also excludes DeepInfra's separate `turbo` endpoint.
+- `allow_fallbacks: false` and `require_parameters: true`: OpenRouter may not route to another provider or
+  to an endpoint that ignores a parameter.
+- Temperature 0 and `reasoning.effort` = `medium` for every system.
+- Every live call records the serving provider, token counts and cost in
+  `results/spend/openrouter_calls.jsonl`. A call served by any other provider raises and is not cached.
+- The pinned endpoint and the effort are part of the LLM cache key.
 
-Both scenarios assume a full 1,500-token context plus 200 tokens of prompt per call, and the largest
-measured output (267 tokens, which includes hidden reasoning tokens billed as output).
+## Cost and credit
 
-Spending limit set in the Groq console: TBD
+- Price of the pinned endpoint is read live from OpenRouter's endpoint list each time the estimate runs.
+- Cost estimate: `results/m0/generator_cost.json` (`scripts/estimate_generator_cost.py`). Pending: it needs
+  a working `OPENROUTER_API_KEY` to measure token usage on the pinned endpoint.
+- Remaining credit: `results/spend/openrouter_balance.json` (`scripts/credit_status.py`; also refreshed by
+  `scripts/check_env.py`).
