@@ -1,0 +1,104 @@
+{
+ "pilot": "v3",
+ "batches": "fresh (judged against the quality bar)",
+ "classified_by": "manual reading of each paragraph, 2026-10-04",
+ "failures": [
+  {
+   "gold": [
+    "Adam's Rib",
+    "director",
+    "George Cukor"
+   ],
+   "extracted": "Cecil B. DeMille (from the 1923 film's paragraph)",
+   "category": "correct fact, same-name subject"
+  },
+  {
+   "gold": [
+    "Sigismund III Vasa",
+    "country of citizenship",
+    "Lithuania"
+   ],
+   "extracted": "Poland",
+   "category": "correct per text, granularity"
+  },
+  {
+   "gold": [
+    "Sigismund III Vasa",
+    "country of citizenship",
+    "Lithuania"
+   ],
+   "extracted": "Sweden",
+   "category": "correct per text, granularity"
+  },
+  {
+   "gold": [
+    "Sigismund III, Prince of Anhalt-Dessau",
+    "father",
+    "John II, Prince of Anhalt-Zerbst"
+   ],
+   "extracted": "George I, Prince of Anhalt-Dessau",
+   "category": "correct per text, gold triple wrong"
+  },
+  {
+   "gold": [
+    "The Young Diana",
+    "director",
+    "Albert Capellani"
+   ],
+   "extracted": "Robert G. Vignola (co-director; Capellani also extracted)",
+   "category": "correct fact, second valid object"
+  },
+  {
+   "gold": [
+    "Alec R. Costandinos",
+    "country of citizenship",
+    "Egypt"
+   ],
+   "extracted": null,
+   "category": "not stated in paragraph"
+  },
+  {
+   "gold": [
+    "Albert Capellani",
+    "place of death",
+    "Paris"
+   ],
+   "extracted": null,
+   "category": "not stated in paragraph"
+  },
+  {
+   "gold": [
+    "Sigismund III Vasa",
+    "country of citizenship",
+    "Lithuania"
+   ],
+   "extracted": null,
+   "category": "granularity, debatable (recall miss)"
+  },
+  {
+   "gold": [
+    "Aldri annet enn brak",
+    "director",
+    "Edith Carlmar"
+   ],
+   "extracted": null,
+   "category": "not stated in paragraph (text says edited by)"
+  },
+  {
+   "gold": [
+    "Albert V, Prince of Anhalt-Dessau",
+    "father",
+    "Sigismund I, Prince of Anhalt-Dessau"
+   ],
+   "extracted": null,
+   "category": "real miss"
+  }
+ ],
+ "summary": {
+  "failures": 10,
+  "real_miss": 1,
+  "wrong_fact": 0,
+  "correct_fact_or_granularity": 6,
+  "not_stated_in_paragraph": 3
+ }
+}

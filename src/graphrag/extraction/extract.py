@@ -22,21 +22,29 @@ from graphrag.extraction.schema import ENTITY_TYPES, RELATIONS, BatchExtraction,
 from graphrag.llm.client import CachedLLM
 
 BATCH_SIZE = 8
-# v1 (pilot 1, commit 06f195b) had no OTHER rule and no adjective rule; see results/m2/pilot_v1.json.
-PROMPT_VERSION = "v2"
+# v1 (commit 06f195b): no OTHER rule, no adjective rule; results/m2/pilot_v1.json.
+# v2 (commit bc8eb06): adds the OTHER and adjective rules; results/m2/pilot_v2.json.
+# v3: adds subject-by-title naming, family facts from the paragraph's person, performer for music only.
+PROMPT_VERSION = "v3"
 
 SYSTEM = f"""You extract a knowledge graph from Wikipedia paragraphs.
 
 For each paragraph, independently of the others:
 1. List the named entities it mentions: the paragraph's own subject first, then every person, film,
-   place, organisation or work it names. Use the name as written in the paragraph. Type is one of:
+   place, organisation or work it names. Name the paragraph's own subject by the paragraph title,
+   without any bracketed part (title "Heat (1995 film)" gives "Heat"), and use exactly that name for
+   it in every relation. Name other entities as written in the paragraph. Type is one of:
    {", ".join(ENTITY_TYPES)}. Description: at most 12 words, taken from the paragraph.
 2. List the facts it states as relations (subject, relation, object), using only these relations:
 {chr(10).join(f"   - {name}: {desc}" for name, desc in RELATIONS.items())}
    If a fact fits one of these relations, you must use that relation. Use OTHER, with a short
    other_label, only for an important fact that fits none of them. Never use OTHER for a fact that a
    listed relation covers, and never put a relation name into the object or the other_label.
-   Follow the direction given above (subject -> object).
+   Follow the direction given above (subject -> object). State family facts from the person the
+   paragraph is about: "son of X" gives (subject, father, X) or (subject, mother, X); you may add the
+   reverse child relation as well.
+   performer is only for music and recordings (a singer or band performing a song or album); an actor
+   appearing in a film or show is OTHER with other_label "cast member".
    Facts stated through an adjective or a description count as stated. A nationality adjective
    ("a French village", "a Polish-born British actor") states the country or the country of
    citizenship; give the country (France; Poland and United Kingdom).

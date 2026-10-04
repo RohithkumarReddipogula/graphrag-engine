@@ -1,0 +1,1523 @@
+{
+ "prompt_version": "v3",
+ "extractor": {
+  "model": "openai/gpt-oss-120b",
+  "endpoint": "deepinfra/bf16",
+  "reasoning_effort": "medium",
+  "structured_output": "strict json_schema"
+ },
+ "scoring": "recall and slot precision vs dev gold triples, names by rapidfuzz ratio, gold entities also match their Wikidata aliases and demonyms (data/evidence_aliases.json), dates by parts",
+ "batches": {
+  "fresh": [
+   4,
+   6,
+   9,
+   10,
+   11,
+   23,
+   192,
+   209,
+   232
+  ],
+  "v2_new": [
+   19,
+   20,
+   47,
+   48,
+   55,
+   64,
+   98,
+   167,
+   174
+  ],
+  "fresh_selection": "next 9 batches by dev gold triples, excluding all batches of pilots v1 and v2"
+ },
+ "runs": {
+  "batches_ok": 18,
+  "ok_after_retry": 2,
+  "failed": [],
+  "live_calls": 20
+ },
+ "tokens": {
+  "input": 38776,
+  "output": 149040,
+  "input_per_paragraph": 269.3,
+  "output_per_paragraph": 1035.0
+ },
+ "cost": {
+  "pilot_usd": 0.024985,
+  "per_paragraph_usd": 0.00017351,
+  "projected_full_corpus_usd": 0.3555,
+  "remaining_credit_usd": 7.497582,
+  "fits_remaining_credit": true
+ },
+ "fresh_batches_v3": {
+  "paragraphs": 72,
+  "dev_gold_triples": 21,
+  "scores_by_threshold": {
+   "80": {
+    "overall": {
+     "gold": 21,
+     "recalled": 16,
+     "slot_pred": 22,
+     "slot_correct": 16,
+     "recall": 0.7619,
+     "slot_precision": 0.7273
+    },
+    "per_relation": {
+     "country of citizenship": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "date of birth": {
+      "gold": 3,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 6,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 0.6667
+     },
+     "father": {
+      "gold": 2,
+      "recalled": 1,
+      "slot_pred": 2,
+      "slot_correct": 1,
+      "recall": 0.5,
+      "slot_precision": 0.5
+     },
+     "mother": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 2,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 0.5
+     },
+     "performer": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of birth": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     }
+    }
+   },
+   "85": {
+    "overall": {
+     "gold": 21,
+     "recalled": 16,
+     "slot_pred": 21,
+     "slot_correct": 16,
+     "recall": 0.7619,
+     "slot_precision": 0.7619
+    },
+    "per_relation": {
+     "country of citizenship": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "date of birth": {
+      "gold": 3,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 6,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 0.6667
+     },
+     "father": {
+      "gold": 2,
+      "recalled": 1,
+      "slot_pred": 2,
+      "slot_correct": 1,
+      "recall": 0.5,
+      "slot_precision": 0.5
+     },
+     "mother": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "performer": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of birth": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     }
+    }
+   },
+   "90": {
+    "overall": {
+     "gold": 21,
+     "recalled": 16,
+     "slot_pred": 21,
+     "slot_correct": 16,
+     "recall": 0.7619,
+     "slot_precision": 0.7619
+    },
+    "per_relation": {
+     "country of citizenship": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "date of birth": {
+      "gold": 3,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 6,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 0.6667
+     },
+     "father": {
+      "gold": 2,
+      "recalled": 1,
+      "slot_pred": 2,
+      "slot_correct": 1,
+      "recall": 0.5,
+      "slot_precision": 0.5
+     },
+     "mother": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "performer": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of birth": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     }
+    }
+   },
+   "95": {
+    "overall": {
+     "gold": 21,
+     "recalled": 16,
+     "slot_pred": 21,
+     "slot_correct": 16,
+     "recall": 0.7619,
+     "slot_precision": 0.7619
+    },
+    "per_relation": {
+     "country of citizenship": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "date of birth": {
+      "gold": 3,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 6,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 0.6667
+     },
+     "father": {
+      "gold": 2,
+      "recalled": 1,
+      "slot_pred": 2,
+      "slot_correct": 1,
+      "recall": 0.5,
+      "slot_precision": 0.5
+     },
+     "mother": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "performer": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of birth": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     }
+    }
+   },
+   "100": {
+    "overall": {
+     "gold": 21,
+     "recalled": 16,
+     "slot_pred": 20,
+     "slot_correct": 16,
+     "recall": 0.7619,
+     "slot_precision": 0.8
+    },
+    "per_relation": {
+     "country of citizenship": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "date of birth": {
+      "gold": 3,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 6,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 0.6667
+     },
+     "father": {
+      "gold": 2,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.5,
+      "slot_precision": 1.0
+     },
+     "mother": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "performer": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of birth": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     }
+    }
+   }
+  },
+  "extracted": {
+   "entities": 515,
+   "relations": 471,
+   "other": 156,
+   "other_using_a_list_relation_name": 2
+  }
+ },
+ "v2_new_batches_v3": {
+  "paragraphs": 72,
+  "dev_gold_triples": 27,
+  "scores_by_threshold": {
+   "80": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 25,
+     "slot_correct": 20,
+     "recall": 0.7037,
+     "slot_precision": 0.8
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 5,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 0.2
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "85": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 22,
+     "slot_correct": 19,
+     "recall": 0.7037,
+     "slot_precision": 0.8636
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 3,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 0.3333
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "90": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 22,
+     "slot_correct": 19,
+     "recall": 0.7037,
+     "slot_precision": 0.8636
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 3,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 0.3333
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "95": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 22,
+     "slot_correct": 19,
+     "recall": 0.7037,
+     "slot_precision": 0.8636
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 3,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 0.3333
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "100": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 22,
+     "slot_correct": 19,
+     "recall": 0.7037,
+     "slot_precision": 0.8636
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 1,
+      "slot_pred": 3,
+      "slot_correct": 1,
+      "recall": 0.3333,
+      "slot_precision": 0.3333
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   }
+  },
+  "extracted": {
+   "entities": 441,
+   "relations": 410,
+   "other": 105,
+   "other_using_a_list_relation_name": 11
+  }
+ },
+ "v2_new_batches_v2": {
+  "paragraphs": 72,
+  "dev_gold_triples": 27,
+  "scores_by_threshold": {
+   "80": {
+    "overall": {
+     "gold": 27,
+     "recalled": 19,
+     "slot_pred": 23,
+     "slot_correct": 20,
+     "recall": 0.7037,
+     "slot_precision": 0.8696
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 0.6667,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 5,
+      "slot_pred": 5,
+      "slot_correct": 5,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 0,
+      "slot_pred": 2,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "85": {
+    "overall": {
+     "gold": 27,
+     "recalled": 18,
+     "slot_pred": 20,
+     "slot_correct": 18,
+     "recall": 0.6667,
+     "slot_precision": 0.9
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 0.6667,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 4,
+      "slot_pred": 4,
+      "slot_correct": 4,
+      "recall": 0.8,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "90": {
+    "overall": {
+     "gold": 27,
+     "recalled": 17,
+     "slot_pred": 19,
+     "slot_correct": 17,
+     "recall": 0.6296,
+     "slot_precision": 0.8947
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 0.6667,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 0.6,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "95": {
+    "overall": {
+     "gold": 27,
+     "recalled": 17,
+     "slot_pred": 19,
+     "slot_correct": 17,
+     "recall": 0.6296,
+     "slot_precision": 0.8947
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 0.6667,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 0.6,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   },
+   "100": {
+    "overall": {
+     "gold": 27,
+     "recalled": 17,
+     "slot_pred": 19,
+     "slot_correct": 17,
+     "recall": 0.6296,
+     "slot_precision": 0.8947
+    },
+    "per_relation": {
+     "award received": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "country": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "country of citizenship": {
+      "gold": 3,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 0.6667,
+      "slot_precision": 1.0
+     },
+     "country of origin": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "date of birth": {
+      "gold": 5,
+      "recalled": 3,
+      "slot_pred": 3,
+      "slot_correct": 3,
+      "recall": 0.6,
+      "slot_precision": 1.0
+     },
+     "date of death": {
+      "gold": 1,
+      "recalled": 0,
+      "slot_pred": 0,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": null
+     },
+     "director": {
+      "gold": 6,
+      "recalled": 6,
+      "slot_pred": 6,
+      "slot_correct": 6,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "father": {
+      "gold": 3,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of birth": {
+      "gold": 2,
+      "recalled": 0,
+      "slot_pred": 1,
+      "slot_correct": 0,
+      "recall": 0.0,
+      "slot_precision": 0.0
+     },
+     "place of death": {
+      "gold": 1,
+      "recalled": 1,
+      "slot_pred": 1,
+      "slot_correct": 1,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     },
+     "publication date": {
+      "gold": 2,
+      "recalled": 2,
+      "slot_pred": 2,
+      "slot_correct": 2,
+      "recall": 1.0,
+      "slot_precision": 1.0
+     }
+    }
+   }
+  },
+  "extracted": {
+   "entities": 454,
+   "relations": 375,
+   "other": 47,
+   "other_using_a_list_relation_name": 0
+  }
+ },
+ "gold_triples_without_identified_paragraph": 10,
+ "primary_threshold": 90,
+ "quality_bar": {
+  "recall": 0.7619,
+  "slot_precision": 0.7619,
+  "handcheck_correct": 27,
+  "handcheck_n": 30,
+  "judged_on": "fresh batches only",
+  "recall_pass": true,
+  "slot_precision_pass": false,
+  "handcheck": "pending: results/m2/extraction_handcheck.md"
+ },
+ "handcheck_sample": 30
+}
