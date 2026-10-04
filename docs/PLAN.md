@@ -134,6 +134,13 @@ hybrid baseline, plus retrieval recall@k.
   fixed before the pilot; 80 to 100 as a sensitivity check), dates matching on year, month and day
   where both state them. True precision: hand check of a sample of extracted triples.
 
+- Quality bar, fixed on 2026-10-04 before seeing any new-batch numbers. Measured on the new (unseen)
+pilot batches only, at the primary name threshold 90:
+  - recall of at least 0.75 against dev gold triples;
+  - slot precision of at least 0.90;
+  - at least 90% of the 30 hand-checked triples correct (at least 27 of 30).
+If all three pass, the full corpus is extracted. If not, one more prompt fix on dev, then decide.
+
 **Done when:** extraction for the whole corpus is cached, and `results/m2/extraction_scores.json` exists.
 
 ### M3: Entity resolution

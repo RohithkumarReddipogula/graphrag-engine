@@ -48,10 +48,17 @@ Last updated: 2026-10-04. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 4. Only after the hand check: the full-corpus run (`scripts/run_m2_extraction.py`), then
    `results/m2/extraction_scores.json` on all dev paragraphs. That closes M2.
 
-## 4. Open decisions
+## 4. Quality bar for the full run (decided)
 
-- Quality bar for the full run: what recall on the new pilot batches and what hand-check precision
-  are good enough? Not set yet; decide before looking at the new-batch numbers.
+Quality bar, fixed on 2026-10-04 before seeing any new-batch numbers. Measured on the new (unseen)
+pilot batches only, at the primary name threshold 90:
+  - recall of at least 0.75 against dev gold triples;
+  - slot precision of at least 0.90;
+  - at least 90% of the 30 hand-checked triples correct (at least 27 of 30).
+If all three pass, the full corpus is extracted. If not, one more prompt fix on dev, then decide.
+
+## 5. Open decisions
+
 - Gemini judge limits: `docs/limits.md` still has TBD for the gemini-3.8-flash free-tier limits. The
   judge runs once, at M5, on about 2,250 answers, so the limits matter then.
 - Single-hop set v2: regenerated after the hand check and not checked a second time. Decide whether to
