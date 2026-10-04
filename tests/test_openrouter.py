@@ -20,21 +20,20 @@ def _settings(tmp_path) -> Settings:
 
 
 def _fake_post(provider_name: str, captured: list):
-    def post(url, headers, json, timeout):
-        captured.append(json)
-        body = {
-            "model": json["model"],
+    def post(url, headers, body, deadline_s=600):
+        captured.append(body)
+        return 200, {
+            "model": body["model"],
             "provider": provider_name,
             "choices": [{"message": {"content": "ready"}}],
             "usage": {"prompt_tokens": 10, "completion_tokens": 5, "cost": 0.0001},
         }
-        return httpx.Response(200, json=body, request=httpx.Request("POST", url))
     return post
 
 
 def test_request_pins_provider_and_disables_fallbacks(tmp_path, monkeypatch):
     captured = []
-    monkeypatch.setattr(llm_client.httpx, "post", _fake_post("DeepInfra", captured))
+    monkeypatch.setattr(llm_client, "_post_json", _fake_post("DeepInfra", captured))
     llm = llm_client.make_llm("openai/gpt-oss-120b", _settings(tmp_path))
 
     result = llm.complete("hi")
@@ -47,7 +46,7 @@ def test_request_pins_provider_and_disables_fallbacks(tmp_path, monkeypatch):
 
 
 def test_every_live_call_is_logged_and_cache_hits_are_not(tmp_path, monkeypatch):
-    monkeypatch.setattr(llm_client.httpx, "post", _fake_post("DeepInfra", []))
+    monkeypatch.setattr(llm_client, "_post_json", _fake_post("DeepInfra", []))
     settings = _settings(tmp_path)
     llm = llm_client.make_llm("openai/gpt-oss-120b", settings)
 
@@ -61,7 +60,7 @@ def test_every_live_call_is_logged_and_cache_hits_are_not(tmp_path, monkeypatch)
 
 
 def test_wrong_provider_is_billed_but_not_cached(tmp_path, monkeypatch):
-    monkeypatch.setattr(llm_client.httpx, "post", _fake_post("Together", []))
+    monkeypatch.setattr(llm_client, "_post_json", _fake_post("Together", []))
     settings = _settings(tmp_path)
     llm = llm_client.make_llm("openai/gpt-oss-120b", settings)
 
@@ -83,3 +82,37 @@ def test_backend_is_part_of_the_cache_key(tmp_path):
     CachedLLM("m", fake, cache, backend="openrouter:deepinfra/bf16").complete("q")
     CachedLLM("m", fake, cache, backend="openrouter:groq").complete("q")
     assert len(calls) == 2
+
+
+class _SlowStream:
+    """Stands in for httpx.stream: keeps sending padding, like OpenRouter does for slow requests."""
+    status_code = 200
+    request = None
+
+    def __init__(self, *a, **k):
+        pass
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False
+
+    def iter_bytes(self):
+        while True:
+            yield b" "
+
+
+def test_call_deadline_stops_a_stream_that_never_ends(monkeypatch):
+    monkeypatch.setattr(llm_client.httpx, "stream", _SlowStream)
+    with pytest.raises(llm_client.CallTimeout, match="TIMEOUT"):
+        llm_client._post_json("https://x", {}, {}, deadline_s=0.05)
+
+
+def test_timeouts_and_overload_are_retryable():
+    from graphrag.extraction.extract import _is_retryable
+
+    assert _is_retryable(llm_client.CallTimeout("TIMEOUT: OpenRouter call exceeded 600 s"))
+    assert _is_retryable(httpx.ReadTimeout("The read operation timed out"))
+    assert _is_retryable(RuntimeError("503 Service Unavailable"))
+    assert not _is_retryable(RuntimeError("401 Unauthorized"))

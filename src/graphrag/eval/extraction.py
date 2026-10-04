@@ -6,7 +6,9 @@ precision against them would count correct extra facts as errors. Reported inste
 - slot precision: among extracted triples whose subject and relation match a gold triple, the share
   whose object matches too.
 A match needs the same relation and both entities to match: names by rapidfuzz ratio on normalised text
-(threshold given), dates by year, month and day where both sides state them.
+(threshold given), dates by year, month and day where both sides state them. As in the official 2Wiki
+v1.1 evidence scoring, a gold subject or object also matches any Wikidata alias or demonym of its entity
+(data/evidence_aliases.json), where the official ids line up with the evidence list.
 """
 
 import re
@@ -54,6 +56,16 @@ def objects_match(relation: str, a: str, b: str, threshold: float) -> bool:
     return dates_match(a, b) if relation in DATE_RELATIONS else names_match(a, b, threshold)
 
 
+def _subject_ok(t: dict, g: dict, threshold: float) -> bool:
+    return any(names_match(t["subject"], alias, threshold) for alias in g.get("subject_aliases") or [g["subject"]])
+
+
+def _object_ok(t: dict, g: dict, threshold: float) -> bool:
+    if g["relation"] in DATE_RELATIONS:
+        return dates_match(t["object"], g["object"])
+    return any(names_match(t["object"], alias, threshold) for alias in g.get("object_aliases") or [g["object"]])
+
+
 def score(extracted: list[dict], gold: list[dict], threshold: float) -> dict:
     """extracted / gold: dicts with subject, relation, object (gold also has chunk_id)."""
     by_rel: dict[str, list[dict]] = defaultdict(list)
@@ -62,19 +74,19 @@ def score(extracted: list[dict], gold: list[dict], threshold: float) -> dict:
 
     per_rel: dict[str, dict[str, int]] = defaultdict(lambda: {"gold": 0, "recalled": 0, "slot_pred": 0, "slot_correct": 0})
     for g in gold:
-        cands = [t for t in by_rel[g["relation"]] if names_match(t["subject"], g["subject"], threshold)]
+        cands = [t for t in by_rel[g["relation"]] if _subject_ok(t, g, threshold)]
         r = per_rel[g["relation"]]
         r["gold"] += 1
-        r["recalled"] += any(objects_match(g["relation"], t["object"], g["object"], threshold) for t in cands)
+        r["recalled"] += any(_object_ok(t, g, threshold) for t in cands)
 
     # Slot precision: each extracted triple counted once, against the gold slots it fills.
     for rel, triples in by_rel.items():
         slots = [g for g in gold if g["relation"] == rel]
         for t in triples:
-            hits = [g for g in slots if names_match(t["subject"], g["subject"], threshold)]
+            hits = [g for g in slots if _subject_ok(t, g, threshold)]
             if hits:
                 per_rel[rel]["slot_pred"] += 1
-                per_rel[rel]["slot_correct"] += any(objects_match(rel, t["object"], g["object"], threshold) for g in hits)
+                per_rel[rel]["slot_correct"] += any(_object_ok(t, g, threshold) for g in hits)
 
     def rates(d):
         return {
@@ -87,11 +99,17 @@ def score(extracted: list[dict], gold: list[dict], threshold: float) -> dict:
     return {"overall": rates(total), "per_relation": {k: rates(v) for k, v in sorted(per_rel.items()) if v["gold"]}}
 
 
-def gold_triples(questions: list[dict], corpus: dict[str, dict]) -> tuple[list[dict], int]:
+def gold_triples(questions: list[dict], corpus: dict[str, dict], evidence_aliases: dict | None = None) -> tuple[list[dict], int]:
     """Gold evidence triples with the chunk that states them: the question's gold paragraph whose title
-    matches the subject. Returns (triples, number of triples whose paragraph could not be identified)."""
+    matches the subject, plus alias sets for subject and object when available (single-hop questions use
+    their source question's entry). Returns (triples, number whose paragraph could not be identified)."""
+    alias_index: dict[tuple, dict] = {}
+    for qid, entries in (evidence_aliases or {}).items():
+        for e in entries:
+            alias_index[(qid, tuple(e["evidence"]))] = e
     seen, out, unmapped = set(), [], 0
     for q in questions:
+        source = q.get("source_question_id", q.get("id"))
         titles = {cid: corpus[cid]["title"] for cid in q["gold_chunk_ids"]}
         for s, rel, o in q["evidences"]:
             if (s, rel, o) in seen:
@@ -101,5 +119,7 @@ def gold_triples(questions: list[dict], corpus: dict[str, dict]) -> tuple[list[d
             if len(match) != 1:
                 unmapped += 1
                 continue
-            out.append({"subject": s, "relation": rel, "object": o, "chunk_id": match[0]})
+            a = alias_index.get((source, (s, rel, o)), {})
+            out.append({"subject": s, "relation": rel, "object": o, "chunk_id": match[0],
+                        "subject_aliases": a.get("subject_aliases", [s]), "object_aliases": a.get("object_aliases", [o])})
     return out, unmapped

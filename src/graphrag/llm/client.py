@@ -18,6 +18,31 @@ from graphrag.config import Settings
 from graphrag.llm.cache import DiskCache, cache_key
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1"
+# Hard wall-clock limit per call. httpx timeouts only limit the gap between received bytes, and
+# OpenRouter keeps slow requests alive by sending padding, so a stalled upstream would never time out.
+CALL_DEADLINE_S = 600
+READ_GAP_S = 120
+
+
+class CallTimeout(RuntimeError):
+    """A call exceeded CALL_DEADLINE_S; message contains TIMEOUT so callers can retry it."""
+
+
+def _post_json(url: str, headers: dict, body: dict, deadline_s: float = CALL_DEADLINE_S) -> tuple[int, dict]:
+    """POST and read the JSON body as a stream, aborting once the whole call takes longer than deadline_s."""
+    start = time.monotonic()
+    timeout = httpx.Timeout(READ_GAP_S, connect=30.0)
+    with httpx.stream("POST", url, headers=headers, json=body, timeout=timeout) as resp:
+        chunks = []
+        for chunk in resp.iter_bytes():
+            chunks.append(chunk)
+            if time.monotonic() - start > deadline_s:
+                raise CallTimeout(f"TIMEOUT: OpenRouter call exceeded {deadline_s:.0f} s")
+        if resp.status_code >= 400:
+            raise httpx.HTTPStatusError(
+                f"{resp.status_code} from OpenRouter: {b''.join(chunks)[:300]!r}", request=resp.request, response=resp
+            )
+        return resp.status_code, json.loads(b"".join(chunks))
 _LEDGER_LOCK = threading.Lock()   # calls may run in parallel threads
 
 
@@ -98,9 +123,7 @@ def _openrouter_call(settings: Settings, ledger: Path) -> ProviderCall:
             "usage": {"include": True},
             **options,
         }
-        resp = httpx.post(f"{OPENROUTER_URL}/chat/completions", headers=headers, json=body, timeout=120)
-        resp.raise_for_status()
-        data = resp.json()
+        _, data = _post_json(f"{OPENROUTER_URL}/chat/completions", headers, body)
         if "error" in data:
             raise RuntimeError(f"OpenRouter error: {data['error']}")
 

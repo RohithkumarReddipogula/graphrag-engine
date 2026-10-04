@@ -1,6 +1,7 @@
 """Accepted answers per question, as in the official 2Wiki evaluation script v1.1: the gold answer plus
 all aliases and demonyms of its Wikidata entity. Single-hop questions use the entity id of the evidence
-object. Writes data/answer_aliases.json ({question id: [accepted answers]})."""
+object. Writes data/answer_aliases.json ({question id: [accepted answers]}) and data/evidence_aliases.json
+(alias sets for the subject and object of each evidence triple, where the official ids line up)."""
 
 import json
 
@@ -47,7 +48,25 @@ def main() -> None:
             stats["single_hop"] += 1
             stats["with_aliases"] += len(golds) > 1
     (data / "answer_aliases.json").write_text(json.dumps(out, indent=1, ensure_ascii=False) + "\n")
-    print(stats)
+
+    # Evidence aliases, as the official v1.1 script uses for evidence scoring: for each multi-hop
+    # question whose evidences_id lines up with its evidences, the alias sets of every subject and object.
+    ev_out, ev_stats = {}, {"questions": 0, "aligned": 0}
+    for name in ("questions_dev.jsonl", "questions_test.jsonl"):
+        for q in read_jsonl(data / name):
+            d = official[q["id"]]
+            ev_stats["questions"] += 1
+            if len(d["evidences_id"]) != len(d["evidences"]):
+                continue
+            ev_stats["aligned"] += 1
+            ev_out[q["id"]] = [
+                {"evidence": list(e),
+                 "subject_aliases": sorted({e[0]} | aliases.get(ids[0], set())),
+                 "object_aliases": sorted({e[2]} | aliases.get(ids[2], set()))}
+                for e, ids in zip(d["evidences"], d["evidences_id"])
+            ]
+    (data / "evidence_aliases.json").write_text(json.dumps(ev_out, indent=1, ensure_ascii=False) + "\n")
+    print(stats, ev_stats)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,9685 @@
+{
+ "b7a3a90c0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Archduke Carl Christian of Austria",
+    "father",
+    "Archduke Carl Ludwig of Austria"
+   ],
+   "subject_aliases": [
+    "Archduke Carl Christian of Austria"
+   ],
+   "object_aliases": [
+    "Archduke Carl Ludwig of Austria",
+    "Archduke Carl Ludwig of Austria (1918–2007)",
+    "Carl Ludwig Habsburg-Lothringen"
+   ]
+  },
+  {
+   "evidence": [
+    "Archduke Carl Ludwig of Austria",
+    "place of death",
+    "Brussels"
+   ],
+   "subject_aliases": [
+    "Archduke Carl Ludwig of Austria",
+    "Archduke Carl Ludwig of Austria (1918–2007)",
+    "Carl Ludwig Habsburg-Lothringen"
+   ],
+   "object_aliases": [
+    "Brussels",
+    "Brussels metropolitan area",
+    "Bruxellois",
+    "Greater Brussels",
+    "urban area of Brussels"
+   ]
+  }
+ ],
+ "22f512680bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Bonne of Armagnac",
+    "father",
+    "Bernard VII, Count of Armagnac"
+   ],
+   "subject_aliases": [
+    "Bonne d'Armagnac",
+    "Bonne of Armagnac"
+   ],
+   "object_aliases": [
+    "Bernard VII d'Armagnac",
+    "Bernard VII, Count of Armagnac"
+   ]
+  },
+  {
+   "evidence": [
+    "Bernard VII, Count of Armagnac",
+    "place of death",
+    "Paris"
+   ],
+   "subject_aliases": [
+    "Bernard VII d'Armagnac",
+    "Bernard VII, Count of Armagnac"
+   ],
+   "object_aliases": [
+    "City of Light",
+    "Paris",
+    "Paris, France",
+    "Parisian",
+    "Parisienne"
+   ]
+  }
+ ],
+ "b6dfdcac0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Jacques-Victor Henry, Prince Royal of Haiti",
+    "father",
+    "Henri Christophe"
+   ],
+   "subject_aliases": [
+    "Jacques-Victor Henry",
+    "Jacques-Victor Henry, Prince Royal of Haiti"
+   ],
+   "object_aliases": [
+    "Henri Christophe",
+    "Henry Christopher",
+    "Henry I of Haiti",
+    "King of Haiti"
+   ]
+  },
+  {
+   "evidence": [
+    "Henri Christophe",
+    "place of burial",
+    "Citadelle Laferrière"
+   ],
+   "subject_aliases": [
+    "Henri Christophe",
+    "Henry Christopher",
+    "Henry I of Haiti",
+    "King of Haiti"
+   ],
+   "object_aliases": [
+    "Citadel",
+    "Citadelle Henry Christophe",
+    "Citadelle Laferriere",
+    "Citadelle Laferrière",
+    "the Citadelle"
+   ]
+  }
+ ],
+ "5cb7d5260bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "MacKenzie Bezos",
+    "spouse",
+    "Jeff Bezos"
+   ],
+   "subject_aliases": [
+    "MacKenzie Bezos",
+    "MacKenzie S. Bezos",
+    "MacKenzie S. Tuttle",
+    "Mackenzie Bezos"
+   ],
+   "object_aliases": [
+    "Jeff Bezos",
+    "Jeff Preston Bezos",
+    "Jeffrey Preston \"Jeff\" Bezos",
+    "Jeffrey Preston Bezos",
+    "Jeffrey Preston Jorgensen"
+   ]
+  },
+  {
+   "evidence": [
+    "Jeff Bezos",
+    "place of birth",
+    "Albuquerque, New Mexico"
+   ],
+   "subject_aliases": [
+    "Jeff Bezos",
+    "Jeff Preston Bezos",
+    "Jeffrey Preston \"Jeff\" Bezos",
+    "Jeffrey Preston Bezos",
+    "Jeffrey Preston Jorgensen"
+   ],
+   "object_aliases": [
+    "ABQ",
+    "Albiuquerque, NM",
+    "Albuquerque",
+    "Albuquerque, NM",
+    "Albuquerque, New Mexico",
+    "Burqueño"
+   ]
+  }
+ ],
+ "48d89aea0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Samantha \"Sammi\" Davis",
+    "spouse",
+    "Kurt Voss"
+   ],
+   "subject_aliases": [
+    "Samantha \"Sammi\" Davis",
+    "Sammi Davis"
+   ],
+   "object_aliases": [
+    "Kurt Voss"
+   ]
+  },
+  {
+   "evidence": [
+    "Kurt Voss",
+    "place of birth",
+    "L.A."
+   ],
+   "subject_aliases": [
+    "Kurt Voss"
+   ],
+   "object_aliases": [
+    "Angeleno",
+    "City of Angels",
+    "City of Los Angeles",
+    "Double Dubuque",
+    "L.A.",
+    "LA",
+    "LA, California",
+    "La La Land",
+    "Los Angelean",
+    "Los Angeleno",
+    "Los Angeles",
+    "Los Angeles, California",
+    "Los Angelino",
+    "Pink City",
+    "The town of Our Lady the Queen of the Angels of the Little Portion",
+    "Tinsel Town"
+   ]
+  }
+ ],
+ "d89acde60bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Damrong Rajanubhab",
+    "father",
+    "Mongkut"
+   ],
+   "subject_aliases": [
+    "Damrong Rajanubhab",
+    "Krom Phraya Damrong Racha Nuphap"
+   ],
+   "object_aliases": [
+    "Menggeketuo",
+    "Mongkut",
+    "Rama IV",
+    "Zheng Ming"
+   ]
+  },
+  {
+   "evidence": [
+    "Mongkut",
+    "country of citizenship",
+    "Siam"
+   ],
+   "subject_aliases": [
+    "Menggeketuo",
+    "Mongkut",
+    "Rama IV",
+    "Zheng Ming"
+   ],
+   "object_aliases": [
+    "Kingdom of Thailand",
+    "Land of Smiles",
+    "Siam",
+    "Siamese",
+    "THA",
+    "Thai",
+    "Thailand",
+    "Yothathep",
+    "th",
+    "🇹🇭"
+   ]
+  }
+ ],
+ "0e18c6be0bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Words of Love",
+    "performer",
+    "Buddy Holly"
+   ],
+   "subject_aliases": [
+    "Words of Love"
+   ],
+   "object_aliases": [
+    "00085469927 IPI",
+    "Buddy Holly",
+    "Charles Hardin Holley"
+   ]
+  },
+  {
+   "evidence": [
+    "Buddy Holly",
+    "place of death",
+    "Clear Lake, Iowa"
+   ],
+   "subject_aliases": [
+    "00085469927 IPI",
+    "Buddy Holly",
+    "Charles Hardin Holley"
+   ],
+   "object_aliases": [
+    "Clear Lake, Iowa"
+   ]
+  }
+ ],
+ "8ee8432c0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Cristina Rodríguez",
+    "father",
+    "El Cid"
+   ],
+   "subject_aliases": [
+    "Cristina Rodriguez",
+    "Cristina Rodríguez",
+    "Cristina Rodríguez (noble)"
+   ],
+   "object_aliases": [
+    "El Campeador",
+    "El Cid",
+    "Felix Rodriguez de Burgos",
+    "Mario Rodrigo"
+   ]
+  },
+  {
+   "evidence": [
+    "El Cid",
+    "date of death",
+    "10 July 1099"
+   ],
+   "subject_aliases": [
+    "El Campeador",
+    "El Cid",
+    "Felix Rodriguez de Burgos",
+    "Mario Rodrigo"
+   ],
+   "object_aliases": [
+    "10 July 1099"
+   ]
+  }
+ ],
+ "a75801860bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Struggle for Eagle Peak",
+    "director",
+    "Tancred Ibsen"
+   ],
+   "subject_aliases": [
+    "Struggle for Eagle Peak"
+   ],
+   "object_aliases": [
+    "Tancred Ibsen"
+   ]
+  },
+  {
+   "evidence": [
+    "Tancred Ibsen",
+    "child",
+    "Tancred Ibsen, Jr."
+   ],
+   "subject_aliases": [
+    "Tancred Ibsen"
+   ],
+   "object_aliases": [
+    "Tancred Ibsen Jr.",
+    "Tancred Ibsen, Jr."
+   ]
+  }
+ ],
+ "1dc6c4e60bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Maria Isabel de Alcântara, Countess of Iguaçu",
+    "mother",
+    "Domitila de Castro, Marchioness of Santos"
+   ],
+   "subject_aliases": [
+    "Maria Isabel de Alcântara, Countess of Iguaçu"
+   ],
+   "object_aliases": [
+    "Domitila de Castro, Marchioness of Santos"
+   ]
+  },
+  {
+   "evidence": [
+    "Domitila de Castro, Marchioness of Santos",
+    "date of death",
+    "November 3, 1867"
+   ],
+   "subject_aliases": [
+    "Domitila de Castro, Marchioness of Santos"
+   ],
+   "object_aliases": [
+    "November 3, 1867"
+   ]
+  }
+ ],
+ "022e38200bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Metamorphoses",
+    "composer",
+    "Alec R. Costandinos"
+   ],
+   "subject_aliases": [
+    "Metamorphoses",
+    "Metamorphoses (1978 film)"
+   ],
+   "object_aliases": [
+    "Alec R. Costandinos"
+   ]
+  },
+  {
+   "evidence": [
+    "Alec R. Costandinos",
+    "country of citizenship",
+    "Egypt"
+   ],
+   "subject_aliases": [
+    "Alec R. Costandinos"
+   ],
+   "object_aliases": [
+    "Arab Rep. Egypt",
+    "Arab Republic of Egypt",
+    "EGY",
+    "Egypt",
+    "Egyptian",
+    "Rep. Egypt",
+    "Republic of Egypt",
+    "eg",
+    "🇪🇬"
+   ]
+  }
+ ],
+ "2f726b600bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Young Diana",
+    "director",
+    "Albert Capellani"
+   ],
+   "subject_aliases": [
+    "The Young Diana",
+    "Young Diana"
+   ],
+   "object_aliases": [
+    "Albert Capellani"
+   ]
+  },
+  {
+   "evidence": [
+    "Albert Capellani",
+    "place of death",
+    "Paris"
+   ],
+   "subject_aliases": [
+    "Albert Capellani"
+   ],
+   "object_aliases": [
+    "City of Light",
+    "Paris",
+    "Paris, France",
+    "Parisian",
+    "Parisienne"
+   ]
+  }
+ ],
+ "933e32ee0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    " Cowards",
+    "director",
+    "Simon Nuchtern"
+   ],
+   "subject_aliases": [
+    " Cowards",
+    "Cowards (1970 film)",
+    "Love-In 72"
+   ],
+   "object_aliases": [
+    "Simon Nuchtern"
+   ]
+  },
+  {
+   "evidence": [
+    "Simon Nuchtern",
+    "place of birth",
+    "Belgian"
+   ],
+   "subject_aliases": [
+    "Simon Nuchtern"
+   ],
+   "object_aliases": [
+    "BEL",
+    "Belgian",
+    "Belgium",
+    "Kingdom of Belgium",
+    "be",
+    "🇧🇪"
+   ]
+  }
+ ],
+ "926f4e660bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "John Albert Vasa",
+    "father",
+    "Sigismund III Vasa"
+   ],
+   "subject_aliases": [
+    "John Albert Vasa"
+   ],
+   "object_aliases": [
+    "King of Poland Siegmund",
+    "King of Poland Siegmund III",
+    "King of Poland Sigismund III",
+    "King of Poland Zygmunt III",
+    "King of Poland and Sweden Sigismond III",
+    "King of Poland and Sweden Sigismund III",
+    "King of Poland and Sweden Sigismund III Vasa",
+    "King of Poland and Sweden Sygismond III",
+    "King of Poland and Sweden Zygmunt III",
+    "King of Poland and Sweden Zygmunt III Waza",
+    "Sigismund III Vasa",
+    "król Polski i Szwecji Zygmunt III Waza",
+    "re di Polonia e di Svezia Zygmunt III Waza"
+   ]
+  },
+  {
+   "evidence": [
+    "Sigismund III Vasa",
+    "country of citizenship",
+    "Lithuania"
+   ],
+   "subject_aliases": [
+    "King of Poland Siegmund",
+    "King of Poland Siegmund III",
+    "King of Poland Sigismund III",
+    "King of Poland Zygmunt III",
+    "King of Poland and Sweden Sigismond III",
+    "King of Poland and Sweden Sigismund III",
+    "King of Poland and Sweden Sigismund III Vasa",
+    "King of Poland and Sweden Sygismond III",
+    "King of Poland and Sweden Zygmunt III",
+    "King of Poland and Sweden Zygmunt III Waza",
+    "Sigismund III Vasa",
+    "król Polski i Szwecji Zygmunt III Waza",
+    "re di Polonia e di Svezia Zygmunt III Waza"
+   ],
+   "object_aliases": [
+    "Grand Duchy of Lithuania",
+    "Lithuania",
+    "Lithuanian"
+   ]
+  }
+ ],
+ "bf3f6dbc0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Countess Anna of Nassau",
+    "spouse",
+    "William Louis, Count of Nassau-Dillenburg"
+   ],
+   "subject_aliases": [
+    "Countess Anna of Nassau"
+   ],
+   "object_aliases": [
+    "William Louis, Count of Nassau-Dillenburg"
+   ]
+  },
+  {
+   "evidence": [
+    "William Louis, Count of Nassau-Dillenburg",
+    "place of death",
+    "Leeuwarden"
+   ],
+   "subject_aliases": [
+    "William Louis, Count of Nassau-Dillenburg"
+   ],
+   "object_aliases": [
+    "Leeuwarden",
+    "Leewadden",
+    "Liwwadden",
+    "Ljouwert",
+    "Luwt"
+   ]
+  }
+ ],
+ "afc663b80bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "RFK Must Die",
+    "director",
+    "Shane O'Sullivan"
+   ],
+   "subject_aliases": [
+    "RFK Must Die"
+   ],
+   "object_aliases": [
+    "Shane O'Sullivan"
+   ]
+  },
+  {
+   "evidence": [
+    "Shane O'Sullivan",
+    "place of birth",
+    "Waterford"
+   ],
+   "subject_aliases": [
+    "Shane O'Sullivan"
+   ],
+   "object_aliases": [
+    "Waterford",
+    "Waterford City",
+    "Waterfordian"
+   ]
+  }
+ ],
+ "a1c998940bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "High Lane",
+    "director",
+    "Abel Ferry"
+   ],
+   "subject_aliases": [
+    "High Lane",
+    "High Lane (film)",
+    "Vertige"
+   ],
+   "object_aliases": [
+    "Abel Ferry"
+   ]
+  },
+  {
+   "evidence": [
+    "Abel Ferry",
+    "place of burial",
+    "Vosges"
+   ],
+   "subject_aliases": [
+    "Abel Ferry"
+   ],
+   "object_aliases": [
+    "Vosges",
+    "Vosges (department)"
+   ]
+  }
+ ],
+ "ccddfdfc0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Hürriyet Daily News",
+    "publisher",
+    "Doğan Media"
+   ],
+   "subject_aliases": [
+    "Hürriyet Daily News",
+    "Hürriyet Daily News and Economic Review",
+    "Turkish Daily News"
+   ],
+   "object_aliases": [
+    "Doğan Media",
+    "Doğan Media Group"
+   ]
+  },
+  {
+   "evidence": [
+    "Doğan Media",
+    "inception",
+    "1997"
+   ],
+   "subject_aliases": [
+    "Doğan Media",
+    "Doğan Media Group"
+   ],
+   "object_aliases": [
+    "1997"
+   ]
+  }
+ ],
+ "d9189eae0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Fighting Hombre",
+    "director",
+    "Jack Nelson"
+   ],
+   "subject_aliases": [
+    "The Fighting Hombre"
+   ],
+   "object_aliases": [
+    "Jack Nelson",
+    "Jack Nelson (actor)"
+   ]
+  },
+  {
+   "evidence": [
+    "Jack Nelson",
+    "place of birth",
+    "Memphis, Tennessee"
+   ],
+   "subject_aliases": [
+    "Jack Nelson",
+    "Jack Nelson (actor)"
+   ],
+   "object_aliases": [
+    "Memphian",
+    "Memphis",
+    "Memphis, Tennessee"
+   ]
+  }
+ ],
+ "75c64fb00bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Avril 14th",
+    "performer",
+    "Aphex Twin"
+   ],
+   "subject_aliases": [
+    "Avril 14th"
+   ],
+   "object_aliases": [
+    "AFX",
+    "Aphex Twin",
+    "Blue Calx",
+    "Bradley Strider",
+    "Caustic Window",
+    "GAK",
+    "PBoD",
+    "Phonic Boy on Dope",
+    "Polygon Window",
+    "Power-Pill",
+    "Q-Chastic",
+    "Richard D. James",
+    "Richard David James",
+    "Soit-P.P.",
+    "The Dice Man"
+   ]
+  },
+  {
+   "evidence": [
+    "Aphex Twin",
+    "award received",
+    "Grammy Award for Best Dance/Electronic Album"
+   ],
+   "subject_aliases": [
+    "AFX",
+    "Aphex Twin",
+    "Blue Calx",
+    "Bradley Strider",
+    "Caustic Window",
+    "GAK",
+    "PBoD",
+    "Phonic Boy on Dope",
+    "Polygon Window",
+    "Power-Pill",
+    "Q-Chastic",
+    "Richard D. James",
+    "Richard David James",
+    "Soit-P.P.",
+    "The Dice Man"
+   ],
+   "object_aliases": [
+    "Grammy Award for Best Dance/Electronic Album",
+    "Grammy Award for Best Dance/Electronica Album"
+   ]
+  }
+ ],
+ "d1c8b2a00bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Happening",
+    "director",
+    "Elliot Silverstein"
+   ],
+   "subject_aliases": [
+    "Happening",
+    "The Happening",
+    "The Happening (1967 film)"
+   ],
+   "object_aliases": [
+    "Elliot Silverstein"
+   ]
+  },
+  {
+   "evidence": [
+    "Elliot Silverstein",
+    "place of birth",
+    "Massachusetts"
+   ],
+   "subject_aliases": [
+    "Elliot Silverstein"
+   ],
+   "object_aliases": [
+    "Bay State",
+    "Bay Stater",
+    "Commonwealth of Massachusetts",
+    "MA",
+    "Massachusetts",
+    "Massachusettsan",
+    "Massachusite",
+    "Masshole"
+   ]
+  }
+ ],
+ "5307443e0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Disco Singh",
+    "director",
+    "Anurag Singh"
+   ],
+   "subject_aliases": [
+    "Disco Singh"
+   ],
+   "object_aliases": [
+    "Anurag Singh",
+    "Anurag Singh (director)"
+   ]
+  },
+  {
+   "evidence": [
+    "Anurag Singh",
+    "place of birth",
+    "Jalandhar"
+   ],
+   "subject_aliases": [
+    "Anurag Singh",
+    "Anurag Singh (director)"
+   ],
+   "object_aliases": [
+    "Jalandhar",
+    "Jullundur"
+   ]
+  }
+ ],
+ "b61741320bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "An Hour Before Dawn",
+    "director",
+    "J. Searle Dawley"
+   ],
+   "subject_aliases": [
+    "An Hour Before Dawn",
+    "Hour Before Dawn"
+   ],
+   "object_aliases": [
+    "J. Searle Dawley"
+   ]
+  },
+  {
+   "evidence": [
+    "J. Searle Dawley",
+    "place of birth",
+    "Colorado"
+   ],
+   "subject_aliases": [
+    "J. Searle Dawley"
+   ],
+   "object_aliases": [
+    "CO",
+    "Colo.",
+    "Colorado",
+    "Coloradoan",
+    "State of Colorado"
+   ]
+  }
+ ],
+ "e9a74ce40bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Love on the Cloud",
+    "director",
+    "Gu Changwei"
+   ],
+   "subject_aliases": [
+    "Love on the Cloud"
+   ],
+   "object_aliases": [
+    "Gu Changwei"
+   ]
+  },
+  {
+   "evidence": [
+    "Gu Changwei",
+    "place of birth",
+    "Xi'an"
+   ],
+   "subject_aliases": [
+    "Gu Changwei"
+   ],
+   "object_aliases": [
+    "Xi An",
+    "Xi'an",
+    "Xian",
+    "Xi’an City",
+    "Xi’an, China"
+   ]
+  }
+ ],
+ "a594836a0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Nathalie...",
+    "director",
+    "Anne Fontaine"
+   ],
+   "subject_aliases": [
+    "Nathalie..."
+   ],
+   "object_aliases": [
+    "Anne Fontaine",
+    "Anne Fontaine Sibertin-Blanc"
+   ]
+  },
+  {
+   "evidence": [
+    "Anne Fontaine",
+    "place of birth",
+    "Luxembourger"
+   ],
+   "subject_aliases": [
+    "Anne Fontaine",
+    "Anne Fontaine Sibertin-Blanc"
+   ],
+   "object_aliases": [
+    "Grand Duchy of Luxembourg",
+    "LU",
+    "LUX",
+    "Luxembourg",
+    "Luxembourger",
+    "Luxembourgish",
+    "Luxemburg",
+    "Voices from Chernobyl",
+    "lu",
+    "🇱🇺"
+   ]
+  }
+ ],
+ "3408c15f08f411ebbdaaac1f6bf848b6": [
+  {
+   "evidence": [
+    "Beth Willman",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Beth Willman"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Elva Dryer",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Elva Dryer"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "d5e00ef508f611ebbdaaac1f6bf848b6": [
+  {
+   "evidence": [
+    "El Adobe de Capistrano",
+    "country",
+    "U.S."
+   ],
+   "subject_aliases": [
+    "El Adobe de Capistrano"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Haberkorn House and Farmstead",
+    "country",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Haberkorn House and Farmstead"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "b41c5e6a098d11ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Stary Onokhoy",
+    "country",
+    "Russia"
+   ],
+   "subject_aliases": [
+    "Stary Onokhoy"
+   ],
+   "object_aliases": [
+    "RU",
+    "RUS",
+    "Rossija",
+    "Rossijskaja Federatsija",
+    "Rossiya",
+    "Rossiyskaya Federatsiya",
+    "Rus",
+    "Russia",
+    "Russian",
+    "Russian Federation",
+    "ru"
+   ]
+  },
+  {
+   "evidence": [
+    "Vtorye Korosteli",
+    "country",
+    "Russia"
+   ],
+   "subject_aliases": [
+    "Vtorye Korosteli",
+    "Vtoryye Korosteli"
+   ],
+   "object_aliases": [
+    "RU",
+    "RUS",
+    "Rossija",
+    "Rossijskaja Federatsija",
+    "Rossiya",
+    "Rossiyskaya Federatsiya",
+    "Rus",
+    "Russia",
+    "Russian",
+    "Russian Federation",
+    "ru"
+   ]
+  }
+ ],
+ "44311522097311ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Comrades (1921 film)",
+    "country of origin",
+    "German"
+   ],
+   "subject_aliases": [
+    "Comrades",
+    "Comrades (1921 film)"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  },
+  {
+   "evidence": [
+    "Céleste (1982 film)",
+    "country of origin",
+    "German"
+   ],
+   "subject_aliases": [
+    "Celeste",
+    "Céleste",
+    "Céleste (1982 film)"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  }
+ ],
+ "cd76b49608e911ebbda7ac1f6bf848b6": [
+  {
+   "evidence": [
+    "By the Grace of God (film)",
+    "country of origin",
+    "French"
+   ],
+   "subject_aliases": [
+    "By the Grace of God",
+    "By the Grace of God (film)"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "By the Grace of God (film)",
+    "country of origin",
+    "Belgian"
+   ],
+   "subject_aliases": [
+    "A Texas Steer",
+    "By the Grace of God (film)",
+    "Texas Steer"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "Belgian",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "A Texas Steer",
+    "country of origin",
+    "American"
+   ],
+   "subject_aliases": [
+    "A Texas Steer",
+    "By the Grace of God",
+    "By the Grace of God (film)"
+   ],
+   "object_aliases": [
+    "American",
+    "BEL",
+    "Belgian",
+    "Belgium",
+    "Kingdom of Belgium",
+    "be",
+    "🇧🇪"
+   ]
+  }
+ ],
+ "99d7edfa086011ebbd5dac1f6bf848b6": [
+  {
+   "evidence": [
+    "The Human League",
+    "country of origin",
+    "British"
+   ],
+   "subject_aliases": [
+    "Human League",
+    "The Human League"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  },
+  {
+   "evidence": [
+    "Agents of Good Roots",
+    "country of origin",
+    "American"
+   ],
+   "subject_aliases": [
+    "Agents of Good Roots"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "095e03c4089f11ebbd78ac1f6bf848b6": [
+  {
+   "evidence": [
+    "National Archeologic Museum of Pontecagnano",
+    "country",
+    "Italy"
+   ],
+   "subject_aliases": [
+    "National Archeologic Museum of Pontecagnano"
+   ],
+   "object_aliases": [
+    "IT",
+    "ITA",
+    "Italia",
+    "Italian",
+    "Italian Republic",
+    "Italy",
+    "it",
+    "🇮🇹"
+   ]
+  },
+  {
+   "evidence": [
+    "Museum of Contemporary Art Villa Croce",
+    "country",
+    "Italian"
+   ],
+   "subject_aliases": [
+    "Museum of Contemporary Art Villa Croce",
+    "Museum of Contemporary Art, Genoa",
+    "villa croce contemporary art museum"
+   ],
+   "object_aliases": [
+    "IT",
+    "ITA",
+    "Italia",
+    "Italian",
+    "Italian Republic",
+    "Italy",
+    "it",
+    "🇮🇹"
+   ]
+  }
+ ],
+ "28c8c38f08cc11ebbd93ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Daniel Beltrá",
+    "country of citizenship",
+    "America"
+   ],
+   "subject_aliases": [
+    "Daniel Beltra",
+    "Daniel Beltrá"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Omar Cook",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Omar Cook"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Omar Cook",
+    "country of citizenship",
+    "Montenegrin"
+   ],
+   "subject_aliases": [
+    "Omar Cook"
+   ],
+   "object_aliases": [
+    "MNE",
+    "Montenegrin",
+    "Montenegro",
+    "me",
+    "🇲🇪"
+   ]
+  }
+ ],
+ "4dd6b933097411ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Ajez",
+    "country",
+    "Syria"
+   ],
+   "subject_aliases": [
+    "Ajez"
+   ],
+   "object_aliases": [
+    "Ba'athist Syria",
+    "SYR",
+    "Syria",
+    "Syrian",
+    "Syrian Arab Republic",
+    "sy",
+    "🇸🇾"
+   ]
+  },
+  {
+   "evidence": [
+    "Hir Jamus Saghir",
+    "country",
+    "Syria"
+   ],
+   "subject_aliases": [
+    "Hir Jamus Saghir",
+    "Little Hir Jamus"
+   ],
+   "object_aliases": [
+    "Ba'athist Syria",
+    "SYR",
+    "Syria",
+    "Syrian",
+    "Syrian Arab Republic",
+    "sy",
+    "🇸🇾"
+   ]
+  }
+ ],
+ "8dcab52d092f11ebbdaeac1f6bf848b6": [
+  {
+   "evidence": [
+    "Les Misérables (1917 film)",
+    "country of origin",
+    "American"
+   ],
+   "subject_aliases": [
+    "Les Miserables",
+    "Les Misérables",
+    "Les Misérables (1917 film)",
+    "Miserables",
+    "Misérables"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "The Better 'Ole (1926 film)",
+    "country of origin",
+    "American"
+   ],
+   "subject_aliases": [
+    "Better 'Ole",
+    "The Better 'Ole",
+    "The Better 'Ole (1926 film)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "a9459e98086211ebbd5dac1f6bf848b6": [
+  {
+   "evidence": [
+    "What Did You Expect? (film)",
+    "director",
+    "Gorman Bechard"
+   ],
+   "subject_aliases": [
+    "What Did You Expect?",
+    "What Did You Expect? (film)"
+   ],
+   "object_aliases": [
+    "Gorman Bechard"
+   ]
+  },
+  {
+   "evidence": [
+    "The Naked Island",
+    "director",
+    "Kaneto Shindō"
+   ],
+   "subject_aliases": [
+    "Naked Island",
+    "The Naked Island"
+   ],
+   "object_aliases": [
+    " Shindo",
+    "Kaneto Shindo",
+    "Kaneto Shindou",
+    "Kaneto Shindō",
+    "Shindo Kaneto",
+    "Shindō Kaneto"
+   ]
+  },
+  {
+   "evidence": [
+    "Gorman Bechard",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Gorman Bechard"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Kaneto Shindo",
+    "country of citizenship",
+    "Japan"
+   ],
+   "subject_aliases": [
+    " Shindo",
+    "Kaneto Shindo",
+    "Kaneto Shindou",
+    "Kaneto Shindō",
+    "Shindo Kaneto",
+    "Shindō Kaneto"
+   ],
+   "object_aliases": [
+    "JA",
+    "JAP",
+    "JP",
+    "JPN",
+    "Japan",
+    "Japanese",
+    "Land of the Rising Sun",
+    "Nihon",
+    "Nihon-koku",
+    "Nihonjin",
+    "Nippon",
+    "Nippon-koku",
+    "Nipponjin",
+    "State of Japan",
+    "jp",
+    "🇯🇵",
+    "🗾"
+   ]
+  }
+ ],
+ "c8edf21008d811ebbd9cac1f6bf848b6": [
+  {
+   "evidence": [
+    "The Curse of Iku",
+    "director",
+    "Frank Borzage"
+   ],
+   "subject_aliases": [
+    "Curse of Iku",
+    "The Curse of Iku"
+   ],
+   "object_aliases": [
+    "Frank Borzage"
+   ]
+  },
+  {
+   "evidence": [
+    "Cops and Robbers (1973 film)",
+    "director",
+    "Aram Avakian"
+   ],
+   "subject_aliases": [
+    "Cops and Robbers",
+    "Cops and Robbers (1973 film)"
+   ],
+   "object_aliases": [
+    "Aram Avakian"
+   ]
+  },
+  {
+   "evidence": [
+    "Frank Borzage",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Frank Borzage"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Aram Avakian",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Aram Avakian"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "5b43e68c086211ebbd5dac1f6bf848b6": [
+  {
+   "evidence": [
+    "Júdás",
+    "director",
+    "Michael Curtiz"
+   ],
+   "subject_aliases": [
+    "Judas",
+    "Júdás"
+   ],
+   "object_aliases": [
+    "Michael Curtiz"
+   ]
+  },
+  {
+   "evidence": [
+    "The Wilby Conspiracy",
+    "director",
+    "Ralph Nelson"
+   ],
+   "subject_aliases": [
+    "The Wilby Conspiracy",
+    "Wilby Conspiracy"
+   ],
+   "object_aliases": [
+    "Ralph Nelson"
+   ]
+  },
+  {
+   "evidence": [
+    "Michael Curtiz",
+    "country of citizenship",
+    "Hungarian"
+   ],
+   "subject_aliases": [
+    "Michael Curtiz"
+   ],
+   "object_aliases": [
+    "HUN",
+    "Hungarian",
+    "Hungary",
+    "Magyar",
+    "The Man Who Walked Alone",
+    "hu",
+    "🇭🇺"
+   ]
+  },
+  {
+   "evidence": [
+    "Michael Curtiz",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Michael Curtiz",
+    "Ralph Nelson"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Ralph Nelson",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Michael Curtiz",
+    "Ralph Nelson"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "308416280bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Geoffrey III (died 1202), Count of Perche",
+    "father",
+    "Rotrou IV, Count of Perche"
+   ],
+   "subject_aliases": [
+    "Geoffrey III (died 1202), Count of Perche",
+    "Geoffrey III, Count of Perche"
+   ],
+   "object_aliases": [
+    "Rotrou IV, Count of Perche"
+   ]
+  },
+  {
+   "evidence": [
+    "Rotrou IV, Count of Perche",
+    "father",
+    "Rotrou III, Count of Perche"
+   ],
+   "subject_aliases": [
+    "Rotrou IV, Count of Perche"
+   ],
+   "object_aliases": [
+    "Rotrou III, Count of Perche"
+   ]
+  }
+ ],
+ "880bd3dc0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Beatrice of Provence",
+    "spouse",
+    "Charles I of Naples"
+   ],
+   "subject_aliases": [
+    "Beatrice of Provence"
+   ],
+   "object_aliases": [
+    "Charles I of Anjou",
+    "Charles I of Naples",
+    "Charles of Anjou"
+   ]
+  },
+  {
+   "evidence": [
+    "Charles I of Anjou",
+    "mother",
+    "Blanche of Castile"
+   ],
+   "subject_aliases": [
+    "Charles I of Anjou",
+    "Charles I of Naples",
+    "Charles of Anjou"
+   ],
+   "object_aliases": [
+    "Blanche of Castile"
+   ]
+  }
+ ],
+ "a0b2a4ce0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Rudolph of France",
+    "mother",
+    "Adelaide of Auxerre"
+   ],
+   "subject_aliases": [
+    "Rudolph of France"
+   ],
+   "object_aliases": [
+    "Adelaida d'Auxerre",
+    "Adelaide of Auxerre",
+    "Adelaide of Auxerre (born c. 870)",
+    "Adélaïde de Bourgogne"
+   ]
+  },
+  {
+   "evidence": [
+    "Adelaide of Auxerre",
+    "father",
+    "Conrad II, Duke of Transjurane Burgundy"
+   ],
+   "subject_aliases": [
+    "Adelaida d'Auxerre",
+    "Adelaide of Auxerre",
+    "Adelaide of Auxerre (born c. 870)",
+    "Adélaïde de Bourgogne"
+   ],
+   "object_aliases": [
+    "Conrad II, Duke of Transjurane Burgundy",
+    "Conrado II, duque de Borgoña"
+   ]
+  }
+ ],
+ "aaaeeb220baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Catherine of Courtenay",
+    "spouse",
+    "Charles of Valois"
+   ],
+   "subject_aliases": [
+    "Catherine I, Latin Empress",
+    "Catherine of Courtenay"
+   ],
+   "object_aliases": [
+    "Charles of Valois",
+    "Charles, Count of Valois"
+   ]
+  },
+  {
+   "evidence": [
+    "Charles of Valois",
+    "father",
+    "Philip III of France"
+   ],
+   "subject_aliases": [
+    "Charles of Valois",
+    "Charles, Count of Valois"
+   ],
+   "object_aliases": [
+    "Philip III of France",
+    "Philippe III",
+    "the Bold"
+   ]
+  }
+ ],
+ "00fc38720bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Maquiztzin",
+    "spouse",
+    "Tlacaelel"
+   ],
+   "subject_aliases": [
+    "Maquiztzin"
+   ],
+   "object_aliases": [
+    "Tlacaelel"
+   ]
+  },
+  {
+   "evidence": [
+    "Tlacaelel",
+    "sibling",
+    "Chimalpopoca"
+   ],
+   "subject_aliases": [
+    "Tlacaelel"
+   ],
+   "object_aliases": [
+    "Chimalpopoca"
+   ]
+  }
+ ],
+ "f21ce3f20bae11ebab90acde48001122": [
+  {
+   "evidence": [
+    "James Scudamore, 3rd Viscount Scudamore",
+    "father",
+    "John Scudamore, 2nd Viscount Scudamore"
+   ],
+   "subject_aliases": [
+    "James Scudamore, 3rd Viscount Scudamore"
+   ],
+   "object_aliases": [
+    "John Scudamore, 2nd Viscount Scudamore"
+   ]
+  },
+  {
+   "evidence": [
+    "John Scudamore, 2nd Viscount Scudamore",
+    "mother",
+    "Jane Bennet"
+   ],
+   "subject_aliases": [
+    "John Scudamore, 2nd Viscount Scudamore"
+   ],
+   "object_aliases": [
+    "Jane Bennet"
+   ]
+  }
+ ],
+ "c8c9d8d80baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Diego Fernández de Oviedo",
+    "father",
+    "Fernando Flaínez"
+   ],
+   "subject_aliases": [
+    "Diego Fernandez de Oviedo",
+    "Diego Fernández de Oviedo"
+   ],
+   "object_aliases": [
+    "Fernando Flainez",
+    "Fernando Flaínez"
+   ]
+  },
+  {
+   "evidence": [
+    "Fernando Flaínez",
+    "father",
+    "Flaín Muñoz"
+   ],
+   "subject_aliases": [
+    "Fernando Flainez",
+    "Fernando Flaínez"
+   ],
+   "object_aliases": [
+    "Flaín Muñoz"
+   ]
+  }
+ ],
+ "77f2d5bc0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Louisa Grace Beauclerk, Duchess of St Albans",
+    "father",
+    "John Manners"
+   ],
+   "subject_aliases": [
+    "Louisa Grace Beauclerk, Duchess of St Albans",
+    "Louisa Grace Manners",
+    "Louise Grace, Duchess of St Albans"
+   ],
+   "object_aliases": [
+    "John Manners",
+    "John Manners (English politician)"
+   ]
+  },
+  {
+   "evidence": [
+    "John Manners",
+    "father",
+    "Lord William Manners"
+   ],
+   "subject_aliases": [
+    "John Manners",
+    "John Manners (English politician)"
+   ],
+   "object_aliases": [
+    "Lord William Manners"
+   ]
+  }
+ ],
+ "7bd965f20baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Wenceslaus of Niemodlin",
+    "father",
+    "Bolesław the Elder"
+   ],
+   "subject_aliases": [
+    "Wenceslaus of Niemodlin"
+   ],
+   "object_aliases": [
+    "Bolesław the Elder"
+   ]
+  },
+  {
+   "evidence": [
+    "Bolesław the Elder",
+    "father",
+    "Bolko I of Opole"
+   ],
+   "subject_aliases": [
+    "Bolesław the Elder"
+   ],
+   "object_aliases": [
+    "Bolko I of Opole"
+   ]
+  }
+ ],
+ "2151e72a0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Kaev Hua II",
+    "father",
+    "Barom Reachea V"
+   ],
+   "subject_aliases": [
+    "Ang Chea",
+    "Kaev Hua II",
+    "Keo Fa II",
+    "Nặc Ông Đài"
+   ],
+   "object_aliases": [
+    "Barom Reachea V"
+   ]
+  },
+  {
+   "evidence": [
+    "Barom Reachea V",
+    "father",
+    "Outey"
+   ],
+   "subject_aliases": [
+    "Barom Reachea V"
+   ],
+   "object_aliases": [
+    "Outey"
+   ]
+  }
+ ],
+ "06cdb6180bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Janusz Aleksander Sanguszko",
+    "mother",
+    "Marianna Lubomirska"
+   ],
+   "subject_aliases": [
+    "Janusz Aleksander Sanguszko"
+   ],
+   "object_aliases": [
+    "Marianna Lubomirska"
+   ]
+  },
+  {
+   "evidence": [
+    "Marianna Lubomirska",
+    "mother",
+    "Teofila Ludwika Zasławska"
+   ],
+   "subject_aliases": [
+    "Marianna Lubomirska"
+   ],
+   "object_aliases": [
+    "Teofila Ludwika Zasławska"
+   ]
+  }
+ ],
+ "62aa2da40bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Prince Dmitri Alexandrovich of Russia",
+    "mother",
+    "Grand Duchess Xenia Alexandrovna of Russia"
+   ],
+   "subject_aliases": [
+    "Dmitry Aleksandrovich Romanov",
+    "Prince Dmitri Alexandrovich of Russia"
+   ],
+   "object_aliases": [
+    "Grand Duchess Xenia Alexandrovna of Russia"
+   ]
+  },
+  {
+   "evidence": [
+    "Grand Duchess Xenia Alexandrovna of Russia",
+    "mother",
+    "Maria Feodorovna"
+   ],
+   "subject_aliases": [
+    "Grand Duchess Xenia Alexandrovna of Russia"
+   ],
+   "object_aliases": [
+    "Dagmar of Denmark",
+    "Maria Feodorovna",
+    "Maria Feodorovna (Dagmar of Denmark)",
+    "Princess Dagmar of Denmark",
+    "Princess Dagmar of Schleswig-Holstein-Sonderburg-Glücksburg"
+   ]
+  }
+ ],
+ "84c99c760bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Louis, Dauphin of France",
+    "mother",
+    "Marie Leszczyńska"
+   ],
+   "subject_aliases": [
+    "Louis, Dauphin of France",
+    "Louis, Dauphin of France (son of Louis XV)"
+   ],
+   "object_aliases": [
+    "Königin Maria Frankreich",
+    "Marie Leszczyńska",
+    "Marie Leszczyńska reine de France",
+    "Marie-Catherine Leszczyńska",
+    "Queen consort of Louis XV Marie Leszczyńska",
+    "Queen, consort of Louis XV, King of France Maria Leszczyńska",
+    "Queen, consort of Louis XV, King of France Marie Leszczyńska",
+    "queen of France Marie Leszczyńska"
+   ]
+  },
+  {
+   "evidence": [
+    "Marie Leszczyńska",
+    "mother",
+    "Catherine Opalińska"
+   ],
+   "subject_aliases": [
+    "Königin Maria Frankreich",
+    "Marie Leszczyńska",
+    "Marie Leszczyńska reine de France",
+    "Marie-Catherine Leszczyńska",
+    "Queen consort of Louis XV Marie Leszczyńska",
+    "Queen, consort of Louis XV, King of France Maria Leszczyńska",
+    "Queen, consort of Louis XV, King of France Marie Leszczyńska",
+    "queen of France Marie Leszczyńska"
+   ],
+   "object_aliases": [
+    "Catherine Opalińska"
+   ]
+  }
+ ],
+ "5702c1920baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Sabina de Iturbide y Huarte",
+    "mother",
+    "Ana María de Huarte y Muñiz"
+   ],
+   "subject_aliases": [
+    "Sabina de Iturbide y Huarte"
+   ],
+   "object_aliases": [
+    "Ana María Huarte",
+    "Ana María de Huarte y Muñiz"
+   ]
+  },
+  {
+   "evidence": [
+    "Ana María Huarte",
+    "father",
+    "Isidro Huarte"
+   ],
+   "subject_aliases": [
+    "Ana María Huarte",
+    "Ana María de Huarte y Muñiz"
+   ],
+   "object_aliases": [
+    "Isidro Huarte"
+   ]
+  }
+ ],
+ "347300820bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Infanta Isabel Fernanda of Spain",
+    "father",
+    "Infante Francisco de Paula of Spain"
+   ],
+   "subject_aliases": [
+    "Infanta Isabel Fernanda of Spain",
+    "Infanta Isabel Fernandina of Spain"
+   ],
+   "object_aliases": [
+    "Infante Francisco de Paula of Spain",
+    "Infante Francisco de Paula, Duke of Cádiz"
+   ]
+  },
+  {
+   "evidence": [
+    "Infante Francisco de Paula of Spain",
+    "spouse",
+    "Princess Luisa Carlotta of Naples and Sicily"
+   ],
+   "subject_aliases": [
+    "Infante Francisco de Paula of Spain",
+    "Infante Francisco de Paula, Duke of Cádiz"
+   ],
+   "object_aliases": [
+    "Princess Luisa Carlotta of Naples and Sicily"
+   ]
+  }
+ ],
+ "29970e8e0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "John, Count of Brienne",
+    "father",
+    "Walter IV of Brienne"
+   ],
+   "subject_aliases": [
+    "John, Count of Brienne"
+   ],
+   "object_aliases": [
+    "Walter IV of Brienne",
+    "Walter IV the Great of Brienne",
+    "Walter IV, Count of Brienne"
+   ]
+  },
+  {
+   "evidence": [
+    "Walter IV the Great of Brienne",
+    "mother",
+    "Elvira of Sicily"
+   ],
+   "subject_aliases": [
+    "Walter IV of Brienne",
+    "Walter IV the Great of Brienne",
+    "Walter IV, Count of Brienne"
+   ],
+   "object_aliases": [
+    "Elvira of Sicily"
+   ]
+  }
+ ],
+ "d09a3e680baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Mara Branković",
+    "spouse",
+    "Murad II"
+   ],
+   "subject_aliases": [
+    "Mara Branković",
+    "Sultana Marija"
+   ],
+   "object_aliases": [
+    "Murad II",
+    "Murad II Kodja"
+   ]
+  },
+  {
+   "evidence": [
+    "Murad II",
+    "mother",
+    "Emine Hatun"
+   ],
+   "subject_aliases": [
+    "Murad II",
+    "Murad II Kodja"
+   ],
+   "object_aliases": [
+    "Emine Hatun"
+   ]
+  }
+ ],
+ "77fc0df80bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Susan de Vere, Countess of Montgomery",
+    "father",
+    "Edward de Vere"
+   ],
+   "subject_aliases": [
+    "Susan de Vere, Countess of Montgomery"
+   ],
+   "object_aliases": [
+    "Edward de Vere",
+    "Edward de Vere, 17th Earl of Oxford"
+   ]
+  },
+  {
+   "evidence": [
+    "Edward de Vere, 17th Earl of Oxford",
+    "father",
+    "John de Vere, 16th Earl of Oxford"
+   ],
+   "subject_aliases": [
+    "Edward de Vere",
+    "Edward de Vere, 17th Earl of Oxford"
+   ],
+   "object_aliases": [
+    "John de Vere, 16th Earl of Oxford"
+   ]
+  }
+ ],
+ "3a148dcc0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Fredegund",
+    "spouse",
+    "Chilperic I"
+   ],
+   "subject_aliases": [
+    "Fredegund"
+   ],
+   "object_aliases": [
+    "Chilperic I"
+   ]
+  },
+  {
+   "evidence": [
+    "Chilperic I",
+    "mother",
+    "Aregund"
+   ],
+   "subject_aliases": [
+    "Chilperic I"
+   ],
+   "object_aliases": [
+    "Aregund"
+   ]
+  }
+ ],
+ "1c7876600bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Henry III of Bar",
+    "father",
+    "Theobald II, Count of Bar"
+   ],
+   "subject_aliases": [
+    "Henry III of Bar",
+    "Henry III, Count of Bar"
+   ],
+   "object_aliases": [
+    "Theobald II (1221– October 1291) was a count of Bar",
+    "Theobald II, Count of Bar"
+   ]
+  },
+  {
+   "evidence": [
+    "Theobald II, Count of Bar",
+    "mother",
+    "Philippa of Dreux"
+   ],
+   "subject_aliases": [
+    "Theobald II (1221– October 1291) was a count of Bar",
+    "Theobald II, Count of Bar"
+   ],
+   "object_aliases": [
+    "Philippa of Dreux"
+   ]
+  }
+ ],
+ "5b64d94a0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Donald Ferlys Wilson Baden-Powell",
+    "father",
+    "George Baden-Powell"
+   ],
+   "subject_aliases": [
+    "Donald Ferlys Wilson Baden-Powell"
+   ],
+   "object_aliases": [
+    "George Baden-Powell"
+   ]
+  },
+  {
+   "evidence": [
+    "George Baden-Powell",
+    "father",
+    "Baden Powell"
+   ],
+   "subject_aliases": [
+    "George Baden-Powell"
+   ],
+   "object_aliases": [
+    "Baden Powell",
+    "Baden Powell (mathematician)"
+   ]
+  }
+ ],
+ "5349f3b80baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Beatrice of Burgundy, Lady of Bourbon",
+    "spouse",
+    "Robert"
+   ],
+   "subject_aliases": [
+    "Beatrice of Burgundy, Lady of Bourbon"
+   ],
+   "object_aliases": [
+    "Robert",
+    "Robert, Count of Clermont"
+   ]
+  },
+  {
+   "evidence": [
+    "Robert",
+    "mother",
+    "Margaret of Provence"
+   ],
+   "subject_aliases": [
+    "Robert",
+    "Robert, Count of Clermont"
+   ],
+   "object_aliases": [
+    "Margaret of Provence"
+   ]
+  }
+ ],
+ "f33eda240bae11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Constance of Normandy",
+    "father",
+    "William the Conqueror"
+   ],
+   "subject_aliases": [
+    "Constance de Normandie",
+    "Constance of Normandy"
+   ],
+   "object_aliases": [
+    "Guillaume de Normandie",
+    "Guillaume le Batard",
+    "Guillaume le Bâtard",
+    "Guillaume le Conquerant",
+    "Guillaume le Conquérant",
+    "King of England William I",
+    "King of England and Duke of Normandy William I",
+    "King of England and Duke of Normandy William the Conqueror",
+    "William I",
+    "William I of England",
+    "William of Normandy",
+    "William the Bastard",
+    "William the Conqueror",
+    "William, King of the Normans",
+    "der Eroberer Wilhelm"
+   ]
+  },
+  {
+   "evidence": [
+    "William the Conqueror",
+    "mother",
+    "Herleva"
+   ],
+   "subject_aliases": [
+    "Guillaume de Normandie",
+    "Guillaume le Batard",
+    "Guillaume le Bâtard",
+    "Guillaume le Conquerant",
+    "Guillaume le Conquérant",
+    "King of England William I",
+    "King of England and Duke of Normandy William I",
+    "King of England and Duke of Normandy William the Conqueror",
+    "William I",
+    "William I of England",
+    "William of Normandy",
+    "William the Bastard",
+    "William the Conqueror",
+    "William, King of the Normans",
+    "der Eroberer Wilhelm"
+   ],
+   "object_aliases": [
+    "Arlette de Falaise",
+    "Herleva"
+   ]
+  }
+ ],
+ "73ab605a0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Albert V, Prince of Anhalt-Dessau",
+    "father",
+    "Sigismund I, Prince of Anhalt-Dessau"
+   ],
+   "subject_aliases": [
+    "Albert V, Prince of Anhalt-Dessau",
+    "Albrecht VI Prinz von Anhalt-Zerbst"
+   ],
+   "object_aliases": [
+    "Sigismund I, Prince of Anhalt-Dessau"
+   ]
+  },
+  {
+   "evidence": [
+    "Sigismund I, Prince of Anhalt-Dessau",
+    "father",
+    "John II, Prince of Anhalt-Zerbst"
+   ],
+   "subject_aliases": [
+    "Sigismund I, Prince of Anhalt-Dessau"
+   ],
+   "object_aliases": [
+    "John II, Prince of Anhalt-Zerbst"
+   ]
+  }
+ ],
+ "e5224d9a0bae11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Princess Ileana of Romania",
+    "mother",
+    "Marie of Romania"
+   ],
+   "subject_aliases": [
+    "Princess Ileana of Romania"
+   ],
+   "object_aliases": [
+    "Marie of Edinburgh",
+    "Marie of Romania",
+    "Princess Marie of Edinburgh"
+   ]
+  },
+  {
+   "evidence": [
+    "Marie of Romania",
+    "mother",
+    "Grand Duchess Maria Alexandrovna of Russia"
+   ],
+   "subject_aliases": [
+    "Marie of Edinburgh",
+    "Marie of Romania",
+    "Princess Marie of Edinburgh"
+   ],
+   "object_aliases": [
+    "Grand Duchess Maria Alexandrovna of Russia"
+   ]
+  }
+ ],
+ "9076d3180bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Man of God",
+    "director",
+    "Jefery Levy"
+   ],
+   "subject_aliases": [
+    "Man of God",
+    "Man of God (film)"
+   ],
+   "object_aliases": [
+    "Jefery Levy"
+   ]
+  },
+  {
+   "evidence": [
+    "Jefery Levy",
+    "employer",
+    "University of Southern California"
+   ],
+   "subject_aliases": [
+    "Jefery Levy"
+   ],
+   "object_aliases": [
+    "Keck School of Medicine of USC",
+    "USC",
+    "University of Southern CA",
+    "University of Southern California"
+   ]
+  }
+ ],
+ "48c8f7f80bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Papy fait de la résistance",
+    "director",
+    "Jean-Marie Poiré"
+   ],
+   "subject_aliases": [
+    "Gramps Is in the Resistance",
+    "Papy fait de la resistance",
+    "Papy fait de la résistance"
+   ],
+   "object_aliases": [
+    "Jean-Marie Poire",
+    "Jean-Marie Poiré"
+   ]
+  },
+  {
+   "evidence": [
+    "Jean-Marie Poiré",
+    "father",
+    "Alain Poiré"
+   ],
+   "subject_aliases": [
+    "Jean-Marie Poire",
+    "Jean-Marie Poiré"
+   ],
+   "object_aliases": [
+    "Alain Poire",
+    "Alain Poiré"
+   ]
+  }
+ ],
+ "c4b0d44e0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Charles Henry Gordon-Lennox, 10th Duke of Richmond",
+    "father",
+    "Frederick Gordon-Lennox, 9th Duke of Richmond"
+   ],
+   "subject_aliases": [
+    "Charles Gordon-Lennox",
+    "Charles Gordon-Lennox, 10th Duke of Richmond",
+    "Charles Henry Gordon-Lennox, 10th Duke of Richmond"
+   ],
+   "object_aliases": [
+    "Frederick Charles Gordon-Lennox",
+    "Frederick Gordon-Lennox",
+    "Frederick Gordon-Lennox, 9th Duke of Richmond"
+   ]
+  },
+  {
+   "evidence": [
+    "Frederick Gordon-Lennox, 9th Duke of Richmond",
+    "date of death",
+    "2 November 1989"
+   ],
+   "subject_aliases": [
+    "Frederick Charles Gordon-Lennox",
+    "Frederick Gordon-Lennox",
+    "Frederick Gordon-Lennox, 9th Duke of Richmond"
+   ],
+   "object_aliases": [
+    "2 November 1989"
+   ]
+  }
+ ],
+ "2231ab5e0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "John Oliver Frank Kingman",
+    "father",
+    "John Frank Charles Kingman"
+   ],
+   "subject_aliases": [
+    "John Kingman (businessman)",
+    "John Oliver Frank Kingman"
+   ],
+   "object_aliases": [
+    "John Frank Charles Kingman",
+    "John Kingman"
+   ]
+  },
+  {
+   "evidence": [
+    "John Frank Charles Kingman",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "John Frank Charles Kingman",
+    "John Kingman"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  }
+ ],
+ "32ef13800bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Madeleine Frieden-Kinnen",
+    "spouse",
+    "Pierre Frieden"
+   ],
+   "subject_aliases": [
+    "Madeleine Frieden-Kinnen"
+   ],
+   "object_aliases": [
+    "Pierre Frieden"
+   ]
+  },
+  {
+   "evidence": [
+    "Pierre Frieden",
+    "educated at",
+    "Athénée de Luxembourg"
+   ],
+   "subject_aliases": [
+    "Pierre Frieden"
+   ],
+   "object_aliases": [
+    "Athenee de Luxembourg",
+    "Athénée de Luxembourg"
+   ]
+  }
+ ],
+ "a6b118a00bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Inside Pop: The Rock Revolution",
+    "director",
+    "David Oppenheim"
+   ],
+   "subject_aliases": [
+    "Inside Pop: The Rock Revolution"
+   ],
+   "object_aliases": [
+    "David Oppenheim",
+    "David Oppenheim (clarinetist)"
+   ]
+  },
+  {
+   "evidence": [
+    "David Oppenheim",
+    "employer",
+    "New York University"
+   ],
+   "subject_aliases": [
+    "David Oppenheim",
+    "David Oppenheim (clarinetist)"
+   ],
+   "object_aliases": [
+    "NYU",
+    "New York University",
+    "University of New York",
+    "University of the City of New York"
+   ]
+  }
+ ],
+ "660aa3cc0bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    " Chinnari",
+    "director",
+    "T. S. Nagabharana"
+   ],
+   "subject_aliases": [
+    " Chinnari",
+    "Chinnari Mutha"
+   ],
+   "object_aliases": [
+    "T. S. Nagabharana"
+   ]
+  },
+  {
+   "evidence": [
+    "T. S. Nagabharana",
+    "place of birth",
+    "Bangalore"
+   ],
+   "subject_aliases": [
+    "T. S. Nagabharana"
+   ],
+   "object_aliases": [
+    "Bangalore",
+    "Bangalorean",
+    "Bengaluru",
+    "Namma Bengaluru",
+    "ಬೆಂದಕಾಳೂರು"
+   ]
+  }
+ ],
+ "91ec5b380bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Once and Forever",
+    "director",
+    "Phil Goldstone"
+   ],
+   "subject_aliases": [
+    "Once and Forever"
+   ],
+   "object_aliases": [
+    "Phil Goldstone"
+   ]
+  },
+  {
+   "evidence": [
+    "Phil Goldstone",
+    "place of birth",
+    "Polish"
+   ],
+   "subject_aliases": [
+    "Phil Goldstone"
+   ],
+   "object_aliases": [
+    "PL",
+    "POL",
+    "Poland",
+    "Pole",
+    "Polish",
+    "Polska",
+    "Republic of Poland",
+    "🇵🇱"
+   ]
+  }
+ ],
+ "92e263960bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Paolo II Vitelli",
+    "father",
+    "Alessandro Vitelli"
+   ],
+   "subject_aliases": [
+    "Paolo II Vitelli"
+   ],
+   "object_aliases": [
+    "Alessandro Vitelli"
+   ]
+  },
+  {
+   "evidence": [
+    "Alessandro Vitelli",
+    "place of death",
+    "Citerna"
+   ],
+   "subject_aliases": [
+    "Alessandro Vitelli"
+   ],
+   "object_aliases": [
+    "Citerna"
+   ]
+  }
+ ],
+ "cd11fc5e0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "L’Homme idéal",
+    "director",
+    "Xavier Gélin"
+   ],
+   "subject_aliases": [
+    "Homme ideal",
+    "Homme idéal",
+    "L'Homme idéal",
+    "L’Homme idéal"
+   ],
+   "object_aliases": [
+    "Xavier Gelin",
+    "Xavier Gélin"
+   ]
+  },
+  {
+   "evidence": [
+    "Xavier Gélin",
+    "mother",
+    "Danièle Delorme"
+   ],
+   "subject_aliases": [
+    "Xavier Gelin",
+    "Xavier Gélin"
+   ],
+   "object_aliases": [
+    "Daniele Delorme",
+    "Danièle Delorme",
+    "Gabrielle Girard"
+   ]
+  }
+ ],
+ "821858b00bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Jamie Campbell",
+    "spouse",
+    "Amber Sainsbury"
+   ],
+   "subject_aliases": [
+    "James Robert Campbell",
+    "Jamie Campbell",
+    "Jamie Campbell (documentary filmmaker)"
+   ],
+   "object_aliases": [
+    "Amber Sainsbury"
+   ]
+  },
+  {
+   "evidence": [
+    "Amber Sainsbury",
+    "place of birth",
+    "New Zealand"
+   ],
+   "subject_aliases": [
+    "Amber Sainsbury"
+   ],
+   "object_aliases": [
+    "Aotearoa",
+    "Dominion of New Zealand",
+    "Kiwi",
+    "NZ",
+    "NZL",
+    "New Zealand",
+    "New Zealander",
+    "Nz",
+    "nz",
+    "🇳🇿"
+   ]
+  }
+ ],
+ "b536dc7a0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Africa Renewal",
+    "publisher",
+    "United Nations"
+   ],
+   "subject_aliases": [
+    "Africa Renewal"
+   ],
+   "object_aliases": [
+    "UN",
+    "UNO",
+    "United Nations",
+    "United Nations Organization",
+    "🇺🇳"
+   ]
+  },
+  {
+   "evidence": [
+    "United Nations",
+    "inception",
+    "1945"
+   ],
+   "subject_aliases": [
+    "UN",
+    "UNO",
+    "United Nations",
+    "United Nations Organization",
+    "🇺🇳"
+   ],
+   "object_aliases": [
+    "1945"
+   ]
+  }
+ ],
+ "39af8adc0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Rembrandt's J'Accuse",
+    "director",
+    "Peter Greenaway"
+   ],
+   "subject_aliases": [
+    "Rembrandt's J'Accuse"
+   ],
+   "object_aliases": [
+    "Peter Greenaway"
+   ]
+  },
+  {
+   "evidence": [
+    "Peter Greenaway",
+    "place of birth",
+    "Newport, Wales"
+   ],
+   "subject_aliases": [
+    "Peter Greenaway"
+   ],
+   "object_aliases": [
+    "Casnewydd",
+    "Newport",
+    "Newport, Gwent",
+    "Newport, Wales",
+    "Newportonian"
+   ]
+  }
+ ],
+ "08f5c0bc0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Flags and Waves",
+    "director",
+    "Bill Reeves"
+   ],
+   "subject_aliases": [
+    "Flags and Waves"
+   ],
+   "object_aliases": [
+    "Bill Reeves",
+    "William \"Bill\" Reeves",
+    "William Reeves",
+    "William Reeves (animator)"
+   ]
+  },
+  {
+   "evidence": [
+    "William \"Bill\" Reeves",
+    "place of birth",
+    "Toronto"
+   ],
+   "subject_aliases": [
+    "Bill Reeves",
+    "William \"Bill\" Reeves",
+    "William Reeves",
+    "William Reeves (animator)"
+   ],
+   "object_aliases": [
+    "City of Toronto",
+    "Hogtown",
+    "T-O",
+    "The 416",
+    "The Six",
+    "Toronto",
+    "Toronto (Ont.)",
+    "Toronto, Canada",
+    "Toronto, Ontario",
+    "Torontonian"
+   ]
+  }
+ ],
+ "2080c9f00bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Eagle's Eye",
+    "director",
+    "George Lessey"
+   ],
+   "subject_aliases": [
+    "Eagle's Eye",
+    "The Eagle's Eye"
+   ],
+   "object_aliases": [
+    "George Lessey"
+   ]
+  },
+  {
+   "evidence": [
+    "George Lessey",
+    "educated at",
+    "Amherst"
+   ],
+   "subject_aliases": [
+    "George Lessey"
+   ],
+   "object_aliases": [
+    "Amherst",
+    "Amherst College"
+   ]
+  }
+ ],
+ "7bf264760bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Maria Anna Sophia of Saxony",
+    "father",
+    "Augustus III of Poland"
+   ],
+   "subject_aliases": [
+    "Maria Anna Sophia",
+    "Maria Anna Sophia of Saxony"
+   ],
+   "object_aliases": [
+    "Augustus II of Saxony",
+    "Augustus III of Poland",
+    "Frederick Augustus II"
+   ]
+  },
+  {
+   "evidence": [
+    "Augustus III of Poland",
+    "date of death",
+    "5 October 1763"
+   ],
+   "subject_aliases": [
+    "Augustus II of Saxony",
+    "Augustus III of Poland",
+    "Frederick Augustus II"
+   ],
+   "object_aliases": [
+    "5 October 1763"
+   ]
+  }
+ ],
+ "d8c06f220bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Back Long Ago",
+    "director",
+    "Ricardo Becher"
+   ],
+   "subject_aliases": [
+    "Back Long Ago"
+   ],
+   "object_aliases": [
+    "Ricardo Becher"
+   ]
+  },
+  {
+   "evidence": [
+    "Ricardo Becher",
+    "place of death",
+    "Buenos Aires"
+   ],
+   "subject_aliases": [
+    "Ricardo Becher"
+   ],
+   "object_aliases": [
+    "Autonomous City of Buenos Aires",
+    "Bonaerense",
+    "Buenos Aires",
+    "Buenos Aires, Argentina",
+    "Buenos Ayres",
+    "Porteño"
+   ]
+  }
+ ],
+ "3ae059580bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Encino Man",
+    "director",
+    "Les Mayfield"
+   ],
+   "subject_aliases": [
+    "Encino Man"
+   ],
+   "object_aliases": [
+    "Les Mayfield"
+   ]
+  },
+  {
+   "evidence": [
+    "Les Mayfield",
+    "place of birth",
+    "Albuquerque, New Mexico"
+   ],
+   "subject_aliases": [
+    "Les Mayfield"
+   ],
+   "object_aliases": [
+    "ABQ",
+    "Albiuquerque, NM",
+    "Albuquerque",
+    "Albuquerque, NM",
+    "Albuquerque, New Mexico",
+    "Burqueño"
+   ]
+  }
+ ],
+ "1732d6ea0bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Alice",
+    "composer",
+    "Bernardo Sassetti"
+   ],
+   "subject_aliases": [
+    "Alice",
+    "Alice (2005 film)"
+   ],
+   "object_aliases": [
+    "Bernardo Sassetti"
+   ]
+  },
+  {
+   "evidence": [
+    "Bernardo Sassetti",
+    "place of death",
+    "Cascais"
+   ],
+   "subject_aliases": [
+    "Bernardo Sassetti"
+   ],
+   "object_aliases": [
+    "Cascais",
+    "Cascais Municipality"
+   ]
+  }
+ ],
+ "60fd4e7c0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Setepenre",
+    "mother",
+    "Nefertiti"
+   ],
+   "subject_aliases": [
+    "Setepenre",
+    "Setepenre (princess)"
+   ],
+   "object_aliases": [
+    "Nefertiti"
+   ]
+  },
+  {
+   "evidence": [
+    "Nefertiti",
+    "place of death",
+    "Amarna"
+   ],
+   "subject_aliases": [
+    "Nefertiti"
+   ],
+   "object_aliases": [
+    "Akhetaten",
+    "Akhetaton",
+    "Amarna",
+    "El-Amarna",
+    "Tel el-Amarna"
+   ]
+  }
+ ],
+ "c8ed69100bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Dark Clouds Over the Dachstein",
+    "director",
+    "Anton Kutter"
+   ],
+   "subject_aliases": [
+    "Dark Clouds Over the Dachstein"
+   ],
+   "object_aliases": [
+    "Anton Kutter"
+   ]
+  },
+  {
+   "evidence": [
+    "Anton Kutter",
+    "place of birth",
+    "Biberach"
+   ],
+   "subject_aliases": [
+    "Anton Kutter"
+   ],
+   "object_aliases": [
+    "Biberach",
+    "Biberach an der Riss",
+    "Biberach an der Riß",
+    "Biberach/Riß"
+   ]
+  }
+ ],
+ "8dcc10240bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "¡Cuatro!",
+    "director",
+    "Tim Wheeler"
+   ],
+   "subject_aliases": [
+    "¡Cuatro!"
+   ],
+   "object_aliases": [
+    "Tim Wheeler"
+   ]
+  },
+  {
+   "evidence": [
+    "Tim Wheeler",
+    "country of citizenship",
+    "Northern Irish"
+   ],
+   "subject_aliases": [
+    "Tim Wheeler"
+   ],
+   "object_aliases": [
+    "NIR",
+    "North Ireland",
+    "Northern Ireland",
+    "Northern Irish",
+    "Northern Irishman",
+    "Northern Irishwoman",
+    "UKN",
+    "Ulsterman"
+   ]
+  }
+ ],
+ "a88c568a0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Martha Érika Alonso Hidalgo",
+    "spouse",
+    "Rafael Moreno Valle"
+   ],
+   "subject_aliases": [
+    "Martha Érika Alonso",
+    "Martha Érika Alonso Hidalgo",
+    "Martha Érika Alonso de Moreno Valle"
+   ],
+   "object_aliases": [
+    "Haudini por haber fingido su muerte",
+    "Rafael Moreno Valle",
+    "Rafael Moreno Valle Rosas"
+   ]
+  },
+  {
+   "evidence": [
+    "Rafael Moreno Valle",
+    "date of birth",
+    "30 June 1968"
+   ],
+   "subject_aliases": [
+    "Haudini por haber fingido su muerte",
+    "Rafael Moreno Valle",
+    "Rafael Moreno Valle Rosas"
+   ],
+   "object_aliases": [
+    "30 June 1968"
+   ]
+  }
+ ],
+ "93c02f920bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "George Charles Wallich",
+    "father",
+    "Nathaniel Wallich"
+   ],
+   "subject_aliases": [
+    "G.C.Wall.",
+    "George Charles Wallich"
+   ],
+   "object_aliases": [
+    "Nathaniel Wallich",
+    "Wall."
+   ]
+  },
+  {
+   "evidence": [
+    "Nathaniel Wallich",
+    "employer",
+    "Calcutta Botanical Garden"
+   ],
+   "subject_aliases": [
+    "Nathaniel Wallich",
+    "Wall."
+   ],
+   "object_aliases": [
+    "Acharya Jagadish Chandra Bose Indian Botanic Garden",
+    "Calcutta Botanical Garden",
+    "Indian Botanic Garden",
+    "Royal Botanic Garden, Calcutta."
+   ]
+  }
+ ],
+ "1db3dc120bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Saw Hnaung of Sagaing",
+    "spouse",
+    "Saw Yun"
+   ],
+   "subject_aliases": [
+    "Saw Hnaung of Sagaing"
+   ],
+   "object_aliases": [
+    "Saw Yun"
+   ]
+  },
+  {
+   "evidence": [
+    "Saw Yun",
+    "country of citizenship",
+    "Myanmar"
+   ],
+   "subject_aliases": [
+    "Saw Yun"
+   ],
+   "object_aliases": [
+    "BUR",
+    "Burma",
+    "Burmese",
+    "MM",
+    "MYA",
+    "Myanmar",
+    "Myanmarese",
+    "Republic of the Union of Myanmar",
+    "Union of Burma",
+    "🇲🇲"
+   ]
+  }
+ ],
+ "7ff5b9520bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Tekla Chemabwai",
+    "spouse",
+    "Julius Sang"
+   ],
+   "subject_aliases": [
+    "Tekla Chemabwai"
+   ],
+   "object_aliases": [
+    "Julius Sang"
+   ]
+  },
+  {
+   "evidence": [
+    "Julius Sang",
+    "educated at",
+    "North Carolina Central University"
+   ],
+   "subject_aliases": [
+    "Julius Sang"
+   ],
+   "object_aliases": [
+    "North Carolina Central University"
+   ]
+  }
+ ],
+ "397b2ab60bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Eros, o Deus do Amor",
+    "director",
+    "Walter Hugo Khouri"
+   ],
+   "subject_aliases": [
+    "Eros, o Deus do Amor"
+   ],
+   "object_aliases": [
+    "Walter Hugo Khouri"
+   ]
+  },
+  {
+   "evidence": [
+    "Walter Hugo Khouri",
+    "place of birth",
+    "São Paulo"
+   ],
+   "subject_aliases": [
+    "Walter Hugo Khouri"
+   ],
+   "object_aliases": [
+    "Paulista",
+    "Paulistano",
+    "Sao Paulo",
+    "São Paulo",
+    "São Paulo city"
+   ]
+  }
+ ],
+ "533207540bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Temple",
+    "director",
+    "Scott Spiegel"
+   ],
+   "subject_aliases": [
+    "Temple",
+    "The Temple",
+    "The Temple (film)"
+   ],
+   "object_aliases": [
+    "Scott Spiegel"
+   ]
+  },
+  {
+   "evidence": [
+    "Scott Spiegel",
+    "place of birth",
+    "Birmingham"
+   ],
+   "subject_aliases": [
+    "Scott Spiegel"
+   ],
+   "object_aliases": [
+    "Birmingham",
+    "Birmingham, Michigan",
+    "Birminghamian",
+    "Brummie"
+   ]
+  }
+ ],
+ "80f2ebbc0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Road Through the Dark",
+    "director",
+    "Edmund Mortimer"
+   ],
+   "subject_aliases": [
+    "Road Through the Dark",
+    "The Road Through the Dark"
+   ],
+   "object_aliases": [
+    "Edmund Mortimer",
+    "Edmund Mortimer (actor)"
+   ]
+  },
+  {
+   "evidence": [
+    "Edmund Mortimer",
+    "place of birth",
+    "New York"
+   ],
+   "subject_aliases": [
+    "Edmund Mortimer",
+    "Edmund Mortimer (actor)"
+   ],
+   "object_aliases": [
+    "Big Apple",
+    "City of New York",
+    "Knickerbocker",
+    "NY City",
+    "NYC",
+    "New York",
+    "New York City",
+    "New York, New York",
+    "New Yorker",
+    "the five boroughs"
+   ]
+  }
+ ],
+ "407810d40bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Timerider: The Adventure of Lyle Swann",
+    "director",
+    "William Dear"
+   ],
+   "subject_aliases": [
+    "Timerider: The Adventure of Lyle Swann"
+   ],
+   "object_aliases": [
+    "William Dear"
+   ]
+  },
+  {
+   "evidence": [
+    "William Dear",
+    "place of birth",
+    "Toronto, Ontario"
+   ],
+   "subject_aliases": [
+    "William Dear"
+   ],
+   "object_aliases": [
+    "City of Toronto",
+    "Hogtown",
+    "T-O",
+    "The 416",
+    "The Six",
+    "Toronto",
+    "Toronto (Ont.)",
+    "Toronto, Canada",
+    "Toronto, Ontario",
+    "Torontonian"
+   ]
+  }
+ ],
+ "13fc53700bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Great Dome Robbery",
+    "director",
+    "Gabriel Range"
+   ],
+   "subject_aliases": [
+    "Great Dome Robbery",
+    "The Great Dome Robbery"
+   ],
+   "object_aliases": [
+    "Gabriel Range"
+   ]
+  },
+  {
+   "evidence": [
+    "Gabriel Range",
+    "place of birth",
+    "British"
+   ],
+   "subject_aliases": [
+    "Gabriel Range"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  }
+ ],
+ "cc3587140bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Humehume",
+    "father",
+    "Kaumualii"
+   ],
+   "subject_aliases": [
+    "Humehume"
+   ],
+   "object_aliases": [
+    "Kaumualii"
+   ]
+  },
+  {
+   "evidence": [
+    "Kaumualii",
+    "country of citizenship",
+    "Kingdom of Hawaiʻi"
+   ],
+   "subject_aliases": [
+    "Kaumualii"
+   ],
+   "object_aliases": [
+    "Hawaiian Kingdom",
+    "Kingdom of Hawaii",
+    "Kingdom of Hawaiʻi"
+   ]
+  }
+ ],
+ "6ec345340bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "George Saunders Rideout",
+    "father",
+    "Sherwood Rideout"
+   ],
+   "subject_aliases": [
+    "George Rideout",
+    "George Saunders Rideout"
+   ],
+   "object_aliases": [
+    "Sherwood Rideout"
+   ]
+  },
+  {
+   "evidence": [
+    "Sherwood Rideout",
+    "place of death",
+    "train"
+   ],
+   "subject_aliases": [
+    "Sherwood Rideout"
+   ],
+   "object_aliases": [
+    "Train",
+    "rail train",
+    "rail-train",
+    "railroad train",
+    "railtrain",
+    "railway train",
+    "train"
+   ]
+  }
+ ],
+ "d97e08de0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Girls Always Happy",
+    "director",
+    "Yang Mingming"
+   ],
+   "subject_aliases": [
+    "Girls Always Happy"
+   ],
+   "object_aliases": [
+    "Yang Mingming"
+   ]
+  },
+  {
+   "evidence": [
+    "Yang Mingming",
+    "educated at",
+    "National Academy of Chinese Theatre Arts"
+   ],
+   "subject_aliases": [
+    "Yang Mingming"
+   ],
+   "object_aliases": [
+    "National Academy of Chinese Theatre Arts"
+   ]
+  }
+ ],
+ "3a3d60020bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Tu Amor No Es Garantía",
+    "performer",
+    "Anaís"
+   ],
+   "subject_aliases": [
+    "Tu Amor No Es Garantia",
+    "Tu Amor No Es Garantía"
+   ],
+   "object_aliases": [
+    "Anais",
+    "Anaís"
+   ]
+  },
+  {
+   "evidence": [
+    "Anaís",
+    "country of citizenship",
+    "Dominican Republic"
+   ],
+   "subject_aliases": [
+    "Anais",
+    "Anaís"
+   ],
+   "object_aliases": [
+    "DR",
+    "Dominican Republic",
+    "RD",
+    "Republica Dominicana",
+    "República Dominicana",
+    "🇩🇴"
+   ]
+  }
+ ],
+ "0d58f95c0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "First Victory Loan: Return Journey",
+    "director",
+    "Ken G. Hall"
+   ],
+   "subject_aliases": [
+    "First Victory Loan: Return Journey"
+   ],
+   "object_aliases": [
+    "Ken G. Hall"
+   ]
+  },
+  {
+   "evidence": [
+    "Ken G. Hall",
+    "country of citizenship",
+    "Australian"
+   ],
+   "subject_aliases": [
+    "Ken G. Hall"
+   ],
+   "object_aliases": [
+    "AU",
+    "AUS",
+    "Aussie",
+    "Australia",
+    "Australian",
+    "Australianb",
+    "Australien",
+    "British Colony of Australia",
+    "Commonwealth of Australia",
+    "Ozzie",
+    "Straya",
+    "au",
+    "🇦🇺"
+   ]
+  }
+ ],
+ "816b78940bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Thieves",
+    "director",
+    "André Téchiné"
+   ],
+   "subject_aliases": [
+    "Les Voleurs",
+    "Thieves",
+    "Thieves (1996 film)"
+   ],
+   "object_aliases": [
+    "Andre Techine",
+    "André Téchiné"
+   ]
+  },
+  {
+   "evidence": [
+    "André Téchiné",
+    "employer",
+    "Cahiers du cinéma"
+   ],
+   "subject_aliases": [
+    "Andre Techine",
+    "André Téchiné"
+   ],
+   "object_aliases": [
+    "Cahiers du cinema",
+    "Cahiers du cinéma"
+   ]
+  }
+ ],
+ "f9ac302a0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Vladimir Feldman",
+    "spouse",
+    "Irina Berezina"
+   ],
+   "subject_aliases": [
+    "Vladimir Feldman"
+   ],
+   "object_aliases": [
+    "Irina Berezina"
+   ]
+  },
+  {
+   "evidence": [
+    "Irina Berezina",
+    "place of birth",
+    "Kiev"
+   ],
+   "subject_aliases": [
+    "Irina Berezina"
+   ],
+   "object_aliases": [
+    "Kiev",
+    "Kievan",
+    "Kyiv",
+    "Kyiw",
+    "Kyjiv",
+    "Kyjiw",
+    "Kyyiv",
+    "Kyïv",
+    "Киев",
+    "Київ"
+   ]
+  }
+ ],
+ "7e73e6560bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Tři chlapi v chalupě",
+    "director",
+    "Josef Mach"
+   ],
+   "subject_aliases": [
+    "Tři chlapi v chalupě"
+   ],
+   "object_aliases": [
+    "Josef Mach"
+   ]
+  },
+  {
+   "evidence": [
+    "Josef Mach",
+    "place of birth",
+    "Prostějov"
+   ],
+   "subject_aliases": [
+    "Josef Mach"
+   ],
+   "object_aliases": [
+    "Prostějov"
+   ]
+  }
+ ],
+ "b587d3d20bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Maria of Aragon, Lady of Cameros",
+    "spouse",
+    "Peter of Castile, Lord of Cameros"
+   ],
+   "subject_aliases": [
+    "Maria of Aragon, Lady of Cameros"
+   ],
+   "object_aliases": [
+    "Peter of Castile, Lord of Cameros"
+   ]
+  },
+  {
+   "evidence": [
+    "Peter of Castile, Lord of Cameros",
+    "place of death",
+    "Pinos Puente"
+   ],
+   "subject_aliases": [
+    "Peter of Castile, Lord of Cameros"
+   ],
+   "object_aliases": [
+    "Pinos Puente"
+   ]
+  }
+ ],
+ "9bdf51ee0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Daniel Carasso",
+    "father",
+    "Isaac Carasso"
+   ],
+   "subject_aliases": [
+    "Daniel Carasso"
+   ],
+   "object_aliases": [
+    "Isaac Carasso"
+   ]
+  },
+  {
+   "evidence": [
+    "Isaac Carasso",
+    "place of birth",
+    "Salonica"
+   ],
+   "subject_aliases": [
+    "Isaac Carasso"
+   ],
+   "object_aliases": [
+    "Salonica",
+    "Thessalonian",
+    "Thessalonica",
+    "Thessaloniki"
+   ]
+  }
+ ],
+ "0bedb7e80bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "John Middleton Murry",
+    "spouse",
+    "Katherine Mansfield"
+   ],
+   "subject_aliases": [
+    "John Middleton Murry",
+    "John Murry"
+   ],
+   "object_aliases": [
+    "Katherine Beauchamp Mansfield",
+    "Katherine Mansfield",
+    "Katherine Mansfield Beauchamp Murry",
+    "Kathleen Murry"
+   ]
+  },
+  {
+   "evidence": [
+    "Katherine Mansfield",
+    "cause of death",
+    "tuberculosis"
+   ],
+   "subject_aliases": [
+    "Katherine Beauchamp Mansfield",
+    "Katherine Mansfield",
+    "Katherine Mansfield Beauchamp Murry",
+    "Kathleen Murry"
+   ],
+   "object_aliases": [
+    "In the clinic. Tuberculosis",
+    "TB",
+    "Tuberculosis",
+    "consumption",
+    "hydrothorax",
+    "phthisis",
+    "phthisis pulmonalis",
+    "tuberculosis"
+   ]
+  }
+ ],
+ "570bf6f40bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Timber Falls",
+    "director",
+    "Tony Giglio"
+   ],
+   "subject_aliases": [
+    "Timber Falls"
+   ],
+   "object_aliases": [
+    "Tony Giglio"
+   ]
+  },
+  {
+   "evidence": [
+    "Tony Giglio",
+    "place of birth",
+    "Medford, Massachusetts"
+   ],
+   "subject_aliases": [
+    "Tony Giglio"
+   ],
+   "object_aliases": [
+    "Medford",
+    "Medford, Massachusetts"
+   ]
+  }
+ ],
+ "5b2359b00bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Sources of Life",
+    "director",
+    "Oskar Roehler"
+   ],
+   "subject_aliases": [
+    "Sources of Life"
+   ],
+   "object_aliases": [
+    "Oskar Roehler"
+   ]
+  },
+  {
+   "evidence": [
+    "Oskar Roehler",
+    "father",
+    "Klaus Roehler"
+   ],
+   "subject_aliases": [
+    "Oskar Roehler"
+   ],
+   "object_aliases": [
+    "Klaus Roehler"
+   ]
+  }
+ ],
+ "aba745da0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "The Gentle Art of Burglary",
+    "director",
+    "Raymond L. Schrock"
+   ],
+   "subject_aliases": [
+    "Gentle Art of Burglary",
+    "The Gentle Art of Burglary"
+   ],
+   "object_aliases": [
+    "Raymond L. Schrock"
+   ]
+  },
+  {
+   "evidence": [
+    "Raymond L. Schrock",
+    "place of birth",
+    "Goshen"
+   ],
+   "subject_aliases": [
+    "Raymond L. Schrock"
+   ],
+   "object_aliases": [
+    "Goshen",
+    "Goshen, Indiana"
+   ]
+  }
+ ],
+ "c44558940bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Fear and Desire",
+    "director",
+    "Stanley Kubrick"
+   ],
+   "subject_aliases": [
+    "Fear and Desire"
+   ],
+   "object_aliases": [
+    "Stanley Kubrick"
+   ]
+  },
+  {
+   "evidence": [
+    "Stanley Kubrick",
+    "place of death",
+    "Childwickbury Manor"
+   ],
+   "subject_aliases": [
+    "Stanley Kubrick"
+   ],
+   "object_aliases": [
+    "Childwickbury Manor"
+   ]
+  }
+ ],
+ "b7d447220bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Alexander of Masovia",
+    "father",
+    "Siemowit IV"
+   ],
+   "subject_aliases": [
+    "Aleksander Mazowiecki",
+    "Alexander of Masovia"
+   ],
+   "object_aliases": [
+    "Siemowit IV",
+    "Siemowit IV, Duke of Masovia"
+   ]
+  },
+  {
+   "evidence": [
+    "Siemowit IV",
+    "date of death",
+    "21 January 1426"
+   ],
+   "subject_aliases": [
+    "Siemowit IV",
+    "Siemowit IV, Duke of Masovia"
+   ],
+   "object_aliases": [
+    "21 January 1426"
+   ]
+  }
+ ],
+ "d277d83e0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Wenceslaus I, Duke of Legnica",
+    "father",
+    "Bolesław III the Generous"
+   ],
+   "subject_aliases": [
+    "Wenceslaus I of Legnica",
+    "Wenceslaus I, Duke of Legnica"
+   ],
+   "object_aliases": [
+    "Bolesław III the Generous"
+   ]
+  },
+  {
+   "evidence": [
+    "Bolesław III the Generous",
+    "date of birth",
+    "23 September 1291"
+   ],
+   "subject_aliases": [
+    "Bolesław III the Generous"
+   ],
+   "object_aliases": [
+    "23 September 1291"
+   ]
+  }
+ ],
+ "017a4e840bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Ernst Gunther, Duke of Schleswig-Holstein",
+    "father",
+    "Frederick VIII, Duke of Schleswig-Holstein"
+   ],
+   "subject_aliases": [
+    "Ernst Gunther, Duke of Schleswig-Holstein"
+   ],
+   "object_aliases": [
+    "Frederick VIII, Duke of Schleswig-Holstein"
+   ]
+  },
+  {
+   "evidence": [
+    "Frederick VIII, Duke of Schleswig-Holstein",
+    "date of death",
+    "January 14, 1880"
+   ],
+   "subject_aliases": [
+    "Frederick VIII, Duke of Schleswig-Holstein"
+   ],
+   "object_aliases": [
+    "January 14, 1880"
+   ]
+  }
+ ],
+ "c285e2f00bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Mesquite Buckaroo",
+    "director",
+    "Harry S. Webb"
+   ],
+   "subject_aliases": [
+    "Mesquite Buckaroo"
+   ],
+   "object_aliases": [
+    "Harry S. Webb"
+   ]
+  },
+  {
+   "evidence": [
+    "Harry S. Webb",
+    "place of birth",
+    "Pennsylvania"
+   ],
+   "subject_aliases": [
+    "Harry S. Webb"
+   ],
+   "object_aliases": [
+    "Commonwealth of Pennsylvania",
+    "Keystone State",
+    "PA",
+    "Penna.",
+    "Pennamite",
+    "Pennsylvania",
+    "Pennsylvania, United States (State of Pennsylvania) Keystone State (PA) Penna",
+    "Pennsylvanian"
+   ]
+  }
+ ],
+ "6ae076e40bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Andrew Balding",
+    "father",
+    "Ian Balding"
+   ],
+   "subject_aliases": [
+    "Andrew Balding"
+   ],
+   "object_aliases": [
+    "Ian Balding"
+   ]
+  },
+  {
+   "evidence": [
+    "Ian Balding",
+    "place of birth",
+    "US"
+   ],
+   "subject_aliases": [
+    "Ian Balding"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "f1d5f41e0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Rewind (Find a Way)",
+    "performer",
+    "Beverley Knight"
+   ],
+   "subject_aliases": [
+    "Rewind (Find a Way)"
+   ],
+   "object_aliases": [
+    "Beverley Knight"
+   ]
+  },
+  {
+   "evidence": [
+    "Beverley Knight",
+    "award received",
+    "Member of the Order of the British Empire"
+   ],
+   "subject_aliases": [
+    "Beverley Knight"
+   ],
+   "object_aliases": [
+    "MBE",
+    "Member of the Most Excellent Order of the British Empire",
+    "Member of the Order of the British Empire",
+    "Member, Order of the British Empire"
+   ]
+  }
+ ],
+ "041581680bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Gwilym Lloyd George, 1st Viscount Tenby",
+    "father",
+    "David Lloyd George"
+   ],
+   "subject_aliases": [
+    "Gwilym Lloyd George",
+    "Gwilym Lloyd George, 1st Viscount Tenby"
+   ],
+   "object_aliases": [
+    "David Lloyd George",
+    "David Lloyd George, 1st Earl Lloyd-George of Dwyfor",
+    "Earl Lloyd-George",
+    "George David Lloyd",
+    "George Lloyd",
+    "Lord Lloyd-George"
+   ]
+  },
+  {
+   "evidence": [
+    "David Lloyd George",
+    "place of birth",
+    "Manchester"
+   ],
+   "subject_aliases": [
+    "David Lloyd George",
+    "David Lloyd George, 1st Earl Lloyd-George of Dwyfor",
+    "Earl Lloyd-George",
+    "George David Lloyd",
+    "George Lloyd",
+    "Lord Lloyd-George"
+   ],
+   "object_aliases": [
+    "Manchester",
+    "Mancunian"
+   ]
+  }
+ ],
+ "2cfcf5500bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Duke Louis of Württemberg",
+    "father",
+    "Frederick II Eugene, Duke of Württemberg"
+   ],
+   "subject_aliases": [
+    "Duke Louis of Württemberg",
+    "Louis, Duke of Württemberg"
+   ],
+   "object_aliases": [
+    "Frederick II Eugene, Duke of Württemberg",
+    "Friedrich Eugen"
+   ]
+  },
+  {
+   "evidence": [
+    "Frederick II Eugene, Duke of Württemberg",
+    "place of birth",
+    "Stuttgart"
+   ],
+   "subject_aliases": [
+    "Frederick II Eugene, Duke of Württemberg",
+    "Friedrich Eugen"
+   ],
+   "object_aliases": [
+    "Stuttgart",
+    "Stuttgarter"
+   ]
+  }
+ ],
+ "03e822b00bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Duchess Marie Gabrielle in Bavaria",
+    "mother",
+    "Infanta Maria Josepha of Portugal"
+   ],
+   "subject_aliases": [
+    "Duchess Marie Gabrielle in Bavaria",
+    "Marie Gabrielle"
+   ],
+   "object_aliases": [
+    "Infanta Maria Josepha of Portugal"
+   ]
+  },
+  {
+   "evidence": [
+    "Infanta Maria Josepha of Portugal",
+    "date of birth",
+    "19 March 1857"
+   ],
+   "subject_aliases": [
+    "Infanta Maria Josepha of Portugal"
+   ],
+   "object_aliases": [
+    "19 March 1857"
+   ]
+  }
+ ],
+ "f1c093bc0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Everybody's Woman",
+    "director",
+    "Max Ophüls"
+   ],
+   "subject_aliases": [
+    "Everybody's Woman",
+    "La signora di tutti"
+   ],
+   "object_aliases": [
+    "Max Ophuls",
+    "Max Ophüls",
+    "Maximillian Oppenheimer"
+   ]
+  },
+  {
+   "evidence": [
+    "Max Ophüls",
+    "place of birth",
+    "Saarbrücken"
+   ],
+   "subject_aliases": [
+    "Max Ophuls",
+    "Max Ophüls",
+    "Maximillian Oppenheimer"
+   ],
+   "object_aliases": [
+    "Saarbrucken",
+    "Saarbrücken"
+   ]
+  }
+ ],
+ "898591da0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Warsaw Bridge",
+    "director",
+    "Pere Portabella"
+   ],
+   "subject_aliases": [
+    "El puente de Varsovia",
+    "Warsaw Bridge"
+   ],
+   "object_aliases": [
+    "Pere Portabella"
+   ]
+  },
+  {
+   "evidence": [
+    "Pere Portabella",
+    "country of citizenship",
+    "Spanish"
+   ],
+   "subject_aliases": [
+    "Pere Portabella"
+   ],
+   "object_aliases": [
+    "ES",
+    "ESP",
+    "España",
+    "Jettatore",
+    "Kingdom of Spain",
+    "Spain",
+    "Spaniard",
+    "Spanish",
+    "🇪🇸"
+   ]
+  }
+ ],
+ "90a2678a0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Hedwig of Nordgau",
+    "spouse",
+    "Siegfried of Luxembourg"
+   ],
+   "subject_aliases": [
+    "Hedwig of Nordgau"
+   ],
+   "object_aliases": [
+    "Siegfried of Luxembourg",
+    "Sigfried, Count of the Ardennes"
+   ]
+  },
+  {
+   "evidence": [
+    "Sigfried, Count of the Ardennes",
+    "place of burial",
+    "Trier"
+   ],
+   "subject_aliases": [
+    "Siegfried of Luxembourg",
+    "Sigfried, Count of the Ardennes"
+   ],
+   "object_aliases": [
+    "Augusta Treverorum",
+    "Treveris",
+    "Trier"
+   ]
+  }
+ ],
+ "45df5d7c0bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Le vieux fusil",
+    "director",
+    "Robert Enrico"
+   ],
+   "subject_aliases": [
+    "Le Vieux Fusil",
+    "Le vieux fusil",
+    "Vieux fusil"
+   ],
+   "object_aliases": [
+    "Robert Enrico"
+   ]
+  },
+  {
+   "evidence": [
+    "Robert Enrico",
+    "place of birth",
+    "Liévin"
+   ],
+   "subject_aliases": [
+    "Robert Enrico"
+   ],
+   "object_aliases": [
+    "Liévin"
+   ]
+  }
+ ],
+ "234c4f060bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Robert Henley, 2nd Earl of Northington",
+    "father",
+    "Robert Henley, 1st Earl of Northington"
+   ],
+   "subject_aliases": [
+    "Robert Henley, 2nd Earl of Northington"
+   ],
+   "object_aliases": [
+    "Robert Henley, 1st Earl of Northington"
+   ]
+  },
+  {
+   "evidence": [
+    "Robert Henley, 1st Earl of Northington",
+    "date of birth",
+    "1708"
+   ],
+   "subject_aliases": [
+    "Robert Henley, 1st Earl of Northington"
+   ],
+   "object_aliases": [
+    "1708"
+   ]
+  }
+ ],
+ "b902f2fa0bdb11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Wee Wee Hours",
+    "performer",
+    "Chuck Berry"
+   ],
+   "subject_aliases": [
+    "Wee Wee Hours"
+   ],
+   "object_aliases": [
+    "00002948399 IPI",
+    "00002948497 IPI",
+    "Charles Edward Anderson \"Chuck\" Berry",
+    "Charles Edward Anderson Berry",
+    "Charles Edward Anderson Chuck Berry",
+    "Chuck Berry"
+   ]
+  },
+  {
+   "evidence": [
+    "Chuck Berry",
+    "place of birth",
+    "St. Louis, Missouri"
+   ],
+   "subject_aliases": [
+    "00002948399 IPI",
+    "00002948497 IPI",
+    "Charles Edward Anderson \"Chuck\" Berry",
+    "Charles Edward Anderson Berry",
+    "Charles Edward Anderson Chuck Berry",
+    "Chuck Berry"
+   ],
+   "object_aliases": [
+    "City of St. Louis",
+    "Saint Louis",
+    "St Louis",
+    "St. Louis",
+    "St. Louis City",
+    "St. Louis, MO",
+    "St. Louis, Missouri",
+    "St. Louisan"
+   ]
+  }
+ ],
+ "f05f4efc0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Carolyn Jean Lewis (née Wright",
+    "spouse",
+    "Greg Lewis"
+   ],
+   "subject_aliases": [
+    "Carolyn Jean Lewis (née Wright",
+    "Carolyn Wright"
+   ],
+   "object_aliases": [
+    "Greg Lewis",
+    "Greg Lewis (sprinter)",
+    "Gregory David Lewis",
+    "Gregory Lewis"
+   ]
+  },
+  {
+   "evidence": [
+    "Greg Lewis",
+    "place of birth",
+    "Victoria"
+   ],
+   "subject_aliases": [
+    "Greg Lewis",
+    "Greg Lewis (sprinter)",
+    "Gregory David Lewis",
+    "Gregory Lewis"
+   ],
+   "object_aliases": [
+    "State of Victoria",
+    "VIC",
+    "VIC(Australia)",
+    "Victoria",
+    "Victoria (Australia)",
+    "Victoria, Australia",
+    "Victorian"
+   ]
+  }
+ ],
+ "da177f520bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Ruben Blades Is Not My Name",
+    "director",
+    "Abner Benaim"
+   ],
+   "subject_aliases": [
+    "Ruben Blades Is Not My Name"
+   ],
+   "object_aliases": [
+    "Abner Benaim"
+   ]
+  },
+  {
+   "evidence": [
+    "Abner Benaim",
+    "place of birth",
+    "Panamá"
+   ],
+   "subject_aliases": [
+    "Abner Benaim"
+   ],
+   "object_aliases": [
+    "Panama City",
+    "Panamá"
+   ]
+  }
+ ],
+ "8a9903ca0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Felix V",
+    "mother",
+    "Bonne of Berry"
+   ],
+   "subject_aliases": [
+    "Amadeus VIII of Savoy",
+    "Amadeus VIII, Duke of Savoy",
+    "Felix V"
+   ],
+   "object_aliases": [
+    "Bonne of Berry"
+   ]
+  },
+  {
+   "evidence": [
+    "Bonne of Berry",
+    "country of citizenship",
+    "France"
+   ],
+   "subject_aliases": [
+    "Bonne of Berry"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  }
+ ],
+ "e10f53d00bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Ben-Hur",
+    "composer",
+    "Miklós Rózsa"
+   ],
+   "subject_aliases": [
+    "Ben Hur",
+    "Ben-Hur",
+    "Ben-Hur (1959 film)"
+   ],
+   "object_aliases": [
+    "Miklos Rozsa",
+    "Miklós Rózsa"
+   ]
+  },
+  {
+   "evidence": [
+    "Miklós Rózsa",
+    "date of death",
+    "27 July 1995"
+   ],
+   "subject_aliases": [
+    "Miklos Rozsa",
+    "Miklós Rózsa"
+   ],
+   "object_aliases": [
+    "27 July 1995"
+   ]
+  }
+ ],
+ "6ffa31bc0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Preston Tylk",
+    "director",
+    "Jon Bokenkamp"
+   ],
+   "subject_aliases": [
+    "Preston Tylk"
+   ],
+   "object_aliases": [
+    "Jon Bokenkamp"
+   ]
+  },
+  {
+   "evidence": [
+    "Jon Bokenkamp",
+    "place of birth",
+    "Kearney"
+   ],
+   "subject_aliases": [
+    "Jon Bokenkamp"
+   ],
+   "object_aliases": [
+    "Kearney",
+    "Kearney, Nebraska"
+   ]
+  }
+ ],
+ "942b9cea0bd911eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Ayşe Hatun",
+    "father",
+    "Sultan Bayezid II"
+   ],
+   "subject_aliases": [
+    "Ayşe Hatun",
+    "Ayşe Hatun (daughter of Bayezid II)",
+    "Ayşe Sultan"
+   ],
+   "object_aliases": [
+    "Adlî",
+    "Bayezid II",
+    "Sultan Bayazid II",
+    "Sultan Bayezid II",
+    "Sultan Bayezit II",
+    "Sultan of the Turks Baiazet II",
+    "Sultan of the Turks Bajezid II",
+    "Sultan of the Turks Bayazid II",
+    "Sultan of the Turks Bayezid II",
+    "Sultan of the Turks Bayezit II"
+   ]
+  },
+  {
+   "evidence": [
+    "Bayezid II",
+    "place of burial",
+    "Turkish"
+   ],
+   "subject_aliases": [
+    "Adlî",
+    "Bayezid II",
+    "Sultan Bayazid II",
+    "Sultan Bayezid II",
+    "Sultan Bayezit II",
+    "Sultan of the Turks Baiazet II",
+    "Sultan of the Turks Bajezid II",
+    "Sultan of the Turks Bayazid II",
+    "Sultan of the Turks Bayezid II",
+    "Sultan of the Turks Bayezit II"
+   ],
+   "object_aliases": [
+    "Republic of Turkey",
+    "TUR",
+    "Turk",
+    "Turkey",
+    "Turkic",
+    "Turkish",
+    "tr",
+    "İhsan Sabancı",
+    "🇹🇷"
+   ]
+  }
+ ],
+ "2433c9080bde11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Henry Page Woodward",
+    "father",
+    "Henry Woodward"
+   ],
+   "subject_aliases": [
+    "Harry Page Woodward",
+    "Henry Page Woodward"
+   ],
+   "object_aliases": [
+    "H. B. W.",
+    "Henry Bolingbroke Woodward",
+    "Henry Woodward",
+    "Henry Woodward (geologist)"
+   ]
+  },
+  {
+   "evidence": [
+    "Henry Woodward",
+    "educated at",
+    "Norwich School"
+   ],
+   "subject_aliases": [
+    "H. B. W.",
+    "Henry Bolingbroke Woodward",
+    "Henry Woodward",
+    "Henry Woodward (geologist)"
+   ],
+   "object_aliases": [
+    "King Edward VI Grammar School",
+    "Norwich Grammar School",
+    "Norwich School"
+   ]
+  }
+ ],
+ "f09b5e4e0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Octavius Henry Cyril Vernon Harcourt",
+    "father",
+    "Edward Venables-Vernon-Harcourt"
+   ],
+   "subject_aliases": [
+    "Octavius Henry Cyril Vernon",
+    "Octavius Henry Cyril Vernon Harcourt",
+    "Octavius Vernon Harcourt"
+   ],
+   "object_aliases": [
+    "Edward Venables-Vernon-Harcourt"
+   ]
+  },
+  {
+   "evidence": [
+    "Edward Venables-Vernon-Harcourt",
+    "date of birth",
+    "10 October 1757"
+   ],
+   "subject_aliases": [
+    "Edward Venables-Vernon-Harcourt"
+   ],
+   "object_aliases": [
+    "10 October 1757"
+   ]
+  }
+ ],
+ "40e240ae0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Tremors 3: Back to Perfection",
+    "director",
+    "Brent Maddock"
+   ],
+   "subject_aliases": [
+    "Tremors 3: Back to Perfection"
+   ],
+   "object_aliases": [
+    "Brent Maddock"
+   ]
+  },
+  {
+   "evidence": [
+    "Brent Maddock",
+    "place of birth",
+    "American"
+   ],
+   "subject_aliases": [
+    "Brent Maddock"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "b8133a100bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "John Penn",
+    "father",
+    "William Penn"
+   ],
+   "subject_aliases": [
+    "John Penn",
+    "John Penn (\"the American\")",
+    "John Penn the American"
+   ],
+   "object_aliases": [
+    "William Penn"
+   ]
+  },
+  {
+   "evidence": [
+    "William Penn",
+    "place of birth",
+    "London"
+   ],
+   "subject_aliases": [
+    "William Penn"
+   ],
+   "object_aliases": [
+    "Cockney",
+    "London",
+    "London, England",
+    "London, UK",
+    "London, United Kingdom",
+    "Londoner"
+   ]
+  }
+ ],
+ "5e60d12e0bda11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Antonio González Flores",
+    "mother",
+    "Lola Flores"
+   ],
+   "subject_aliases": [
+    "Antonio Flores",
+    "Antonio González Flores"
+   ],
+   "object_aliases": [
+    "Lola De Espana/La Faraona",
+    "Lola Flores"
+   ]
+  },
+  {
+   "evidence": [
+    "Lola Flores",
+    "place of birth",
+    "Jerez de la Frontera"
+   ],
+   "subject_aliases": [
+    "Lola De Espana/La Faraona",
+    "Lola Flores"
+   ],
+   "object_aliases": [
+    "Jerez de la Frontera",
+    "xerez"
+   ]
+  }
+ ],
+ "6ed3795a0bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Nemesis 2: Nebula",
+    "director",
+    "Albert Pyun"
+   ],
+   "subject_aliases": [
+    "Nemesis 2: Nebula"
+   ],
+   "object_aliases": [
+    "Albert Pyun"
+   ]
+  },
+  {
+   "evidence": [
+    "Albert Pyun",
+    "country of citizenship",
+    "America"
+   ],
+   "subject_aliases": [
+    "Albert Pyun"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "bac294180bdd11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Murtaza Nizam Shah I",
+    "father",
+    "Hussain Nizam Shah I"
+   ],
+   "subject_aliases": [
+    "Murtaza Nizam Shah I"
+   ],
+   "object_aliases": [
+    "Hussain Nizam Shah I"
+   ]
+  },
+  {
+   "evidence": [
+    "Hussain Nizam Shah I",
+    "country of citizenship",
+    "Ahmadnagar Sultanate"
+   ],
+   "subject_aliases": [
+    "Hussain Nizam Shah I"
+   ],
+   "object_aliases": [
+    "Ahmadnagar Sultanate"
+   ]
+  }
+ ],
+ "0dedb0de0bdc11eba7f7acde48001122": [
+  {
+   "evidence": [
+    "Snake in the Eagle's Shadow",
+    "director",
+    "Yuen Woo-ping"
+   ],
+   "subject_aliases": [
+    "Snake in the Eagle's Shadow"
+   ],
+   "object_aliases": [
+    "Yuen Woo-ping"
+   ]
+  },
+  {
+   "evidence": [
+    "Yuen Woo-ping",
+    "father",
+    "Yuen Siu-tien"
+   ],
+   "subject_aliases": [
+    "Yuen Woo-ping"
+   ],
+   "object_aliases": [
+    "Simon Yuen",
+    "Siu-tien Yuen",
+    "Yuan Xiaotian",
+    "Yuen Siu-tien"
+   ]
+  }
+ ],
+ "7e671272097711ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Al-Kafat",
+    "country",
+    "Syria"
+   ],
+   "subject_aliases": [
+    "Al-Kafat"
+   ],
+   "object_aliases": [
+    "Ba'athist Syria",
+    "SYR",
+    "Syria",
+    "Syrian",
+    "Syrian Arab Republic",
+    "sy",
+    "🇸🇾"
+   ]
+  },
+  {
+   "evidence": [
+    "Ali Kasun",
+    "country",
+    "Syria"
+   ],
+   "subject_aliases": [
+    "Ali Kasun"
+   ],
+   "object_aliases": [
+    "Ba'athist Syria",
+    "SYR",
+    "Syria",
+    "Syrian",
+    "Syrian Arab Republic",
+    "sy",
+    "🇸🇾"
+   ]
+  }
+ ],
+ "fc76b89a099011ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Fayette, Utah",
+    "country",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Fayette",
+    "Fayette, Utah"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Tiriz",
+    "country",
+    "Iran"
+   ],
+   "subject_aliases": [
+    "Tiriz"
+   ],
+   "object_aliases": [
+    "Iran",
+    "Irani",
+    "Iranian",
+    "Islamic Rep. Iran",
+    "Islamic Republic of Iran",
+    "Persia",
+    "Persian",
+    "Republic of Iran",
+    "ir",
+    "🇮🇷"
+   ]
+  }
+ ],
+ "016c84f508ab11ebbd81ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Eva Kurowski",
+    "country of citizenship",
+    "German"
+   ],
+   "subject_aliases": [
+    "Eva Kurowski"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  },
+  {
+   "evidence": [
+    "Sergey Lagodinsky",
+    "country of citizenship",
+    "German"
+   ],
+   "subject_aliases": [
+    "Sergey Lagodinsky"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  }
+ ],
+ "e23b081e08b711ebbd88ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Raleigh Kirby Godsey",
+    "country of citizenship",
+    "U.S."
+   ],
+   "subject_aliases": [
+    "Raleigh Kirby Godsey"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Vic Frank",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Vic Frank"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "b96acba808f911ebbdaaac1f6bf848b6": [
+  {
+   "evidence": [
+    "Blurt (magazine)",
+    "country of origin",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Blurt",
+    "Blurt (magazine)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Maui Nō Ka ʻOi Magazine",
+    "country of origin",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Maui No Ka 'Oi Magazine",
+    "Maui Nō Ka ʻOi Magazine"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "9041408408d811ebbd9cac1f6bf848b6": [
+  {
+   "evidence": [
+    "My Love, My Bride (2014 film)",
+    "country of origin",
+    "South Korea"
+   ],
+   "subject_aliases": [
+    "My Love, My Bride",
+    "My Love, My Bride (2014 film)"
+   ],
+   "object_aliases": [
+    "Daehan Minguk",
+    "KOR",
+    "Korea Republic",
+    "ROK",
+    "Rep. Korea",
+    "Republic of Great Han",
+    "Republic of Korea",
+    "Republic of South Korea",
+    "S. Korea",
+    "South Korea",
+    "South Korean",
+    "The Republic of Great Han",
+    "kr",
+    "🇰🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "His Mystery Girl",
+    "country of origin",
+    "American"
+   ],
+   "subject_aliases": [
+    "His Mystery Girl"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "e3d357bc08d511ebbd98ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Moredun Creek",
+    "country",
+    "Australia"
+   ],
+   "subject_aliases": [
+    "Moredun Creek"
+   ],
+   "object_aliases": [
+    "AU",
+    "AUS",
+    "Aussie",
+    "Australia",
+    "Australian",
+    "Australianb",
+    "Australien",
+    "British Colony of Australia",
+    "Commonwealth of Australia",
+    "Ozzie",
+    "Straya",
+    "au",
+    "🇦🇺"
+   ]
+  },
+  {
+   "evidence": [
+    "Tuggeranong Creek",
+    "country",
+    "Australia"
+   ],
+   "subject_aliases": [
+    "Tuggeranong Creek"
+   ],
+   "object_aliases": [
+    "AU",
+    "AUS",
+    "Aussie",
+    "Australia",
+    "Australian",
+    "Australianb",
+    "Australien",
+    "British Colony of Australia",
+    "Commonwealth of Australia",
+    "Ozzie",
+    "Straya",
+    "au",
+    "🇦🇺"
+   ]
+  }
+ ],
+ "993f941108c411ebbd8eac1f6bf848b6": [
+  {
+   "evidence": [
+    "High Life (2009 film)",
+    "country of origin",
+    "Canadian"
+   ],
+   "subject_aliases": [
+    "High Life",
+    "High Life (2009 film)"
+   ],
+   "object_aliases": [
+    "British North America",
+    "CA",
+    "CAN",
+    "CDN",
+    "Canada",
+    "Canadian",
+    "Canadien",
+    "Canadienne",
+    "Canuck",
+    "Dominion of Canada",
+    "One Law for the Woman",
+    "ca",
+    "can",
+    "🇨🇦"
+   ]
+  },
+  {
+   "evidence": [
+    "Route 132 (film)",
+    "country of origin",
+    "Canadian"
+   ],
+   "subject_aliases": [
+    "Route 132",
+    "Route 132 (film)"
+   ],
+   "object_aliases": [
+    "British North America",
+    "CA",
+    "CAN",
+    "CDN",
+    "Canada",
+    "Canadian",
+    "Canadien",
+    "Canadienne",
+    "Canuck",
+    "Dominion of Canada",
+    "One Law for the Woman",
+    "ca",
+    "can",
+    "🇨🇦"
+   ]
+  }
+ ],
+ "6a56c658096811ebbdafac1f6bf848b6": [
+  {
+   "evidence": [
+    "Prisoner of Paradise (2002 film)",
+    "country of origin",
+    "Canada"
+   ],
+   "subject_aliases": [
+    "Prisoner of Paradise",
+    "Prisoner of Paradise (2002 film)"
+   ],
+   "object_aliases": [
+    "British North America",
+    "CA",
+    "CAN",
+    "CDN",
+    "Canada",
+    "Canadian",
+    "Canadien",
+    "Canadienne",
+    "Canuck",
+    "Dominion of Canada",
+    "One Law for the Woman",
+    "ca",
+    "can",
+    "🇨🇦"
+   ]
+  },
+  {
+   "evidence": [
+    "Prisoner of Paradise (2002 film)",
+    "country of origin",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Bridge to Terabithia",
+    "Bridge to Terabithia (1985 film)",
+    "Prisoner of Paradise (2002 film)"
+   ],
+   "object_aliases": [
+    "British North America",
+    "CA",
+    "CAN",
+    "CDN",
+    "Canada",
+    "Canadian",
+    "Canadien",
+    "Canadienne",
+    "Canuck",
+    "Dominion of Canada",
+    "One Law for the Woman",
+    "United States",
+    "ca",
+    "can",
+    "🇨🇦"
+   ]
+  },
+  {
+   "evidence": [
+    "Bridge to Terabithia (1985 film)",
+    "country of origin",
+    "Canadian"
+   ],
+   "subject_aliases": [
+    "Bridge to Terabithia (1985 film)",
+    "Prisoner of Paradise",
+    "Prisoner of Paradise (2002 film)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "Canadian",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "9fac035e08c811ebbd92ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Gustav Dörr",
+    "country of citizenship",
+    "German"
+   ],
+   "subject_aliases": [
+    "Gustav Dörr"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  },
+  {
+   "evidence": [
+    "Bernd Förster",
+    "country of citizenship",
+    "German"
+   ],
+   "subject_aliases": [
+    "Bernd Förster"
+   ],
+   "object_aliases": [
+    "BRD",
+    "Bundesrepublik Deutschland",
+    "Deutschland",
+    "FRG",
+    "Federal Republic of Germany",
+    "GER",
+    "German",
+    "Germany",
+    "de",
+    "🇩🇪"
+   ]
+  }
+ ],
+ "d504bb68088511ebbd6dac1f6bf848b6": [
+  {
+   "evidence": [
+    "Dinosaur (band)",
+    "country of origin",
+    "British"
+   ],
+   "subject_aliases": [
+    "Dinosaur",
+    "Dinosaur (band)"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  },
+  {
+   "evidence": [
+    "Alaska (band)",
+    "country of origin",
+    "British"
+   ],
+   "subject_aliases": [
+    "Alaska",
+    "Alaska (band)",
+    "Alaskan",
+    "Innuit"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  }
+ ],
+ "3aa8382a08c011ebbd8aac1f6bf848b6": [
+  {
+   "evidence": [
+    "Beihang University",
+    "country",
+    "China"
+   ],
+   "subject_aliases": [
+    "Beihang University",
+    "Beijing University of Aeronautics and Astronautics"
+   ],
+   "object_aliases": [
+    "Asia Brewery",
+    "CHN",
+    "CN",
+    "China",
+    "Chinese",
+    "Chino",
+    "Communist China",
+    "PR China",
+    "PRC",
+    "People's Republic of China",
+    "cn",
+    "🇨🇳"
+   ]
+  },
+  {
+   "evidence": [
+    "Wuhan University of Science and Technology",
+    "country",
+    "China"
+   ],
+   "subject_aliases": [
+    "Wuhan University of Science and Technology"
+   ],
+   "object_aliases": [
+    "Asia Brewery",
+    "CHN",
+    "CN",
+    "China",
+    "Chinese",
+    "Chino",
+    "Communist China",
+    "PR China",
+    "PRC",
+    "People's Republic of China",
+    "cn",
+    "🇨🇳"
+   ]
+  }
+ ],
+ "92ae94d309bb11ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Allqamari",
+    "country",
+    "Bolivian"
+   ],
+   "subject_aliases": [
+    "Allqamari"
+   ],
+   "object_aliases": [
+    "BOL",
+    "Bolivia",
+    "Bolivian",
+    "Plurinational State of Bolivia",
+    "Republic of Bolivia",
+    "bo",
+    "bol",
+    "🇧🇴"
+   ]
+  },
+  {
+   "evidence": [
+    "Juch'uy Llallawa",
+    "country",
+    "Bolivian"
+   ],
+   "subject_aliases": [
+    "Juch'uy Llallawa"
+   ],
+   "object_aliases": [
+    "BOL",
+    "Bolivia",
+    "Bolivian",
+    "Plurinational State of Bolivia",
+    "Republic of Bolivia",
+    "bo",
+    "bol",
+    "🇧🇴"
+   ]
+  }
+ ],
+ "9523a3df088911ebbd6eac1f6bf848b6": [
+  {
+   "evidence": [
+    "David Elliot (illustrator)",
+    "country of citizenship",
+    "New Zealand"
+   ],
+   "subject_aliases": [
+    "David Elliot",
+    "David Elliot (illustrator)"
+   ],
+   "object_aliases": [
+    "Aotearoa",
+    "Dominion of New Zealand",
+    "Kiwi",
+    "NZ",
+    "NZL",
+    "New Zealand",
+    "New Zealander",
+    "Nz",
+    "nz",
+    "🇳🇿"
+   ]
+  },
+  {
+   "evidence": [
+    "Eustace William Ferguson",
+    "country of citizenship",
+    "New Zealand"
+   ],
+   "subject_aliases": [
+    "Eustace William Ferguson",
+    "Ferguson"
+   ],
+   "object_aliases": [
+    "Aotearoa",
+    "Dominion of New Zealand",
+    "Kiwi",
+    "NZ",
+    "NZL",
+    "New Zealand",
+    "New Zealander",
+    "Nz",
+    "nz",
+    "🇳🇿"
+   ]
+  }
+ ],
+ "037da85d08c611ebbd90ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Christopher Newton (criminal)",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Christopher Newton",
+    "Christopher Newton (criminal)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Frances M. Vega",
+    "country of citizenship",
+    "United States"
+   ],
+   "subject_aliases": [
+    "Frances M. Vega"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "95c89d31088e11ebbd70ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Ch'alla Quta",
+    "country",
+    "Bolivia"
+   ],
+   "subject_aliases": [
+    "Ch'alla Quta"
+   ],
+   "object_aliases": [
+    "BOL",
+    "Bolivia",
+    "Bolivian",
+    "Plurinational State of Bolivia",
+    "Republic of Bolivia",
+    "bo",
+    "bol",
+    "🇧🇴"
+   ]
+  },
+  {
+   "evidence": [
+    "Laram Quta (Sud Yungas)",
+    "country",
+    "Bolivia"
+   ],
+   "subject_aliases": [
+    "Laram Quta",
+    "Laram Quta (Sud Yungas)"
+   ],
+   "object_aliases": [
+    "BOL",
+    "Bolivia",
+    "Bolivian",
+    "Plurinational State of Bolivia",
+    "Republic of Bolivia",
+    "bo",
+    "bol",
+    "🇧🇴"
+   ]
+  }
+ ],
+ "ba0a418c089611ebbd76ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Churchill Island",
+    "country",
+    "Australia"
+   ],
+   "subject_aliases": [
+    "Churchill Island",
+    "Churchill Island, Victoria",
+    "Churchill Island, Victoria, Australia"
+   ],
+   "object_aliases": [
+    "AU",
+    "AUS",
+    "Aussie",
+    "Australia",
+    "Australian",
+    "Australianb",
+    "Australien",
+    "British Colony of Australia",
+    "Commonwealth of Australia",
+    "Ozzie",
+    "Straya",
+    "au",
+    "🇦🇺"
+   ]
+  },
+  {
+   "evidence": [
+    "Brisk Island",
+    "country",
+    "Australia"
+   ],
+   "subject_aliases": [
+    "Brisk Island"
+   ],
+   "object_aliases": [
+    "AU",
+    "AUS",
+    "Aussie",
+    "Australia",
+    "Australian",
+    "Australianb",
+    "Australien",
+    "British Colony of Australia",
+    "Commonwealth of Australia",
+    "Ozzie",
+    "Straya",
+    "au",
+    "🇦🇺"
+   ]
+  }
+ ],
+ "028c6ac3089011ebbd72ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Johnette Napolitano",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Johnette Napolitano"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Tony Mills (physician)",
+    "country of citizenship",
+    "America"
+   ],
+   "subject_aliases": [
+    "Tony Mills",
+    "Tony Mills (physician)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "a9bdb2a4099a11ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Mingzhu railway station",
+    "country",
+    "China"
+   ],
+   "subject_aliases": [
+    "Mingzhu railway station"
+   ],
+   "object_aliases": [
+    "Asia Brewery",
+    "CHN",
+    "CN",
+    "China",
+    "Chinese",
+    "Chino",
+    "Communist China",
+    "PR China",
+    "PRC",
+    "People's Republic of China",
+    "cn",
+    "🇨🇳"
+   ]
+  },
+  {
+   "evidence": [
+    "Changzhou North railway station",
+    "country",
+    "China"
+   ],
+   "subject_aliases": [
+    "Changzhou North railway station",
+    "Changzhoubei Railway Station"
+   ],
+   "object_aliases": [
+    "Asia Brewery",
+    "CHN",
+    "CN",
+    "China",
+    "Chinese",
+    "Chino",
+    "Communist China",
+    "PR China",
+    "PRC",
+    "People's Republic of China",
+    "cn",
+    "🇨🇳"
+   ]
+  }
+ ],
+ "2d0d9d95098e11ebbdb0ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Morassa",
+    "country",
+    "Iran"
+   ],
+   "subject_aliases": [
+    "Morassa"
+   ],
+   "object_aliases": [
+    "Iran",
+    "Irani",
+    "Iranian",
+    "Islamic Rep. Iran",
+    "Islamic Republic of Iran",
+    "Persia",
+    "Persian",
+    "Republic of Iran",
+    "ir",
+    "🇮🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "Mamati",
+    "country",
+    "Georgia"
+   ],
+   "subject_aliases": [
+    "Mamati"
+   ],
+   "object_aliases": [
+    "Anton Chekhov's The Duel",
+    "Buzzard",
+    "GE",
+    "GEO",
+    "Georgia",
+    "Georgia (country)",
+    "Georgian",
+    "Goober-Grabber",
+    "Republic of Georgia",
+    "Sand-Hiller",
+    "🇬🇪"
+   ]
+  }
+ ],
+ "05a2dec4088811ebbd6eac1f6bf848b6": [
+  {
+   "evidence": [
+    "Just Getting Started (film)",
+    "director",
+    "Ron Shelton"
+   ],
+   "subject_aliases": [
+    "Just Getting Started",
+    "Just Getting Started (film)",
+    "Villa Capri"
+   ],
+   "object_aliases": [
+    "Ron Shelton"
+   ]
+  },
+  {
+   "evidence": [
+    "The Dove's Lost Necklace",
+    "director",
+    "Nacer Khemir"
+   ],
+   "subject_aliases": [
+    "Dove's Lost Necklace",
+    "The Dove's Lost Necklace"
+   ],
+   "object_aliases": [
+    "Nacer Khemir"
+   ]
+  },
+  {
+   "evidence": [
+    "Ron Shelton",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Ron Shelton"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Nacer Khemir",
+    "country of citizenship",
+    "Tunisia"
+   ],
+   "subject_aliases": [
+    "Nacer Khemir"
+   ],
+   "object_aliases": [
+    "Republic of Tunisia",
+    "TUN",
+    "Tunisia",
+    "Tunisian",
+    "Tunisian Republic",
+    "Tūnis",
+    "al-Jumhūriyyah at-Tūnisiyyah",
+    "tn",
+    "🇹🇳"
+   ]
+  }
+ ],
+ "1a6b4170087e11ebbd6bac1f6bf848b6": [
+  {
+   "evidence": [
+    "Xuoi nguoc duong tran",
+    "director",
+    "Linh Nga"
+   ],
+   "subject_aliases": [
+    "Xuoi nguoc duong tran"
+   ],
+   "object_aliases": [
+    "Lina Linh Nga",
+    "Linh Nga",
+    "Nguyễn Linh Nga"
+   ]
+  },
+  {
+   "evidence": [
+    "Street Corner (1948 film)",
+    "director",
+    "Albert H. Kelley"
+   ],
+   "subject_aliases": [
+    "Street Corner",
+    "Street Corner (1948 film)"
+   ],
+   "object_aliases": [
+    "Albert H. Kelley"
+   ]
+  },
+  {
+   "evidence": [
+    "Linh Nga",
+    "country of citizenship",
+    "Vietnamese"
+   ],
+   "subject_aliases": [
+    "Lina Linh Nga",
+    "Linh Nga",
+    "Nguyễn Linh Nga"
+   ],
+   "object_aliases": [
+    "Socialist Republic of Vietnam",
+    "VIE",
+    "VN",
+    "Viet Nam",
+    "Vietnam",
+    "Vietnamese",
+    "🇻🇳"
+   ]
+  },
+  {
+   "evidence": [
+    "Linh Nga",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Albert H. Kelley",
+    "Linh Nga"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Albert H. Kelley",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Albert H. Kelley",
+    "Lina Linh Nga",
+    "Linh Nga",
+    "Nguyễn Linh Nga"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "f889e59408d111ebbd95ac1f6bf848b6": [
+  {
+   "evidence": [
+    "French Fried Vacation 3",
+    "director",
+    "Patrice Leconte"
+   ],
+   "subject_aliases": [
+    "Bronzés 3: Amis pour la vie",
+    "French Fried Vacation 3",
+    "Friends Forever",
+    "Les Bronzés 3"
+   ],
+   "object_aliases": [
+    "Patrice Leconte"
+   ]
+  },
+  {
+   "evidence": [
+    "The Man and the Moment",
+    "director",
+    "George Fitzmaurice"
+   ],
+   "subject_aliases": [
+    "Man and the Moment",
+    "The Man and the Moment"
+   ],
+   "object_aliases": [
+    "George Fitzmaurice"
+   ]
+  },
+  {
+   "evidence": [
+    "Patrice Leconte",
+    "country of citizenship",
+    "French"
+   ],
+   "subject_aliases": [
+    "Patrice Leconte"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "George Fitzmaurice",
+    "country of citizenship",
+    "French"
+   ],
+   "subject_aliases": [
+    "George Fitzmaurice"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  }
+ ],
+ "4e891cbc086411ebbd5eac1f6bf848b6": [
+  {
+   "evidence": [
+    "Strange Idols",
+    "director",
+    "Bernard Durning"
+   ],
+   "subject_aliases": [
+    "Strange Idols"
+   ],
+   "object_aliases": [
+    "Bernard Durning"
+   ]
+  },
+  {
+   "evidence": [
+    "Havana (film)",
+    "director",
+    "Sydney Pollack"
+   ],
+   "subject_aliases": [
+    "Havana",
+    "Havana (film)"
+   ],
+   "object_aliases": [
+    "Sydney Irwin Pollack",
+    "Sydney Pollack"
+   ]
+  },
+  {
+   "evidence": [
+    "Bernard Durning",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Bernard Durning"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Sydney Pollack",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Sydney Irwin Pollack",
+    "Sydney Pollack"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "de57c68408b611ebbd88ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Christine of the Hungry Heart",
+    "director",
+    "George Archainbaud"
+   ],
+   "subject_aliases": [
+    "Christine of the Hungry Heart"
+   ],
+   "object_aliases": [
+    "George Archainbaud"
+   ]
+  },
+  {
+   "evidence": [
+    "Vagabond (1985 film)",
+    "director",
+    "Agnès Varda"
+   ],
+   "subject_aliases": [
+    "Sans toit ni loi",
+    "Vagabond",
+    "Vagabond (1985 film)"
+   ],
+   "object_aliases": [
+    "Agnes Varda",
+    "Agnès Varda",
+    "Agnés Varda"
+   ]
+  },
+  {
+   "evidence": [
+    "George Archainbaud",
+    "country of citizenship",
+    "French"
+   ],
+   "subject_aliases": [
+    "George Archainbaud"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "George Archainbaud",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Agnes Varda",
+    "Agnès Varda",
+    "Agnés Varda",
+    "George Archainbaud"
+   ],
+   "object_aliases": [
+    "American",
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  },
+  {
+   "evidence": [
+    "Agnès Varda",
+    "country of citizenship",
+    "French"
+   ],
+   "subject_aliases": [
+    "Agnès Varda",
+    "George Archainbaud"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "French",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "b8fc068408b111ebbd85ac1f6bf848b6": [
+  {
+   "evidence": [
+    "The Great Train Robbery (1941 film)",
+    "director",
+    "Joseph Kane"
+   ],
+   "subject_aliases": [
+    "Great Train Robbery",
+    "The Great Train Robbery",
+    "The Great Train Robbery (1941 film)"
+   ],
+   "object_aliases": [
+    "Joseph Kane"
+   ]
+  },
+  {
+   "evidence": [
+    "The Eternal City (1923 film)",
+    "director",
+    "George Fitzmaurice"
+   ],
+   "subject_aliases": [
+    "Eternal City",
+    "The Eternal City",
+    "The Eternal City (1923 film)"
+   ],
+   "object_aliases": [
+    "George Fitzmaurice"
+   ]
+  },
+  {
+   "evidence": [
+    "Joseph Kane",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Joseph Kane"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "George Fitzmaurice",
+    "country of citizenship",
+    "French"
+   ],
+   "subject_aliases": [
+    "George Fitzmaurice"
+   ],
+   "object_aliases": [
+    "FR",
+    "FRA",
+    "France",
+    "French",
+    "French Republic",
+    "Frenchman",
+    "Frenchwoman",
+    "La France",
+    "Republic of France",
+    "République française",
+    "fr",
+    "🇫🇷"
+   ]
+  }
+ ],
+ "e40339fc08ab11ebbd82ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Dark River (2017 film)",
+    "director",
+    "Clio Barnard"
+   ],
+   "subject_aliases": [
+    "Dark River",
+    "Dark River (2017 film)"
+   ],
+   "object_aliases": [
+    "Clio Barnard"
+   ]
+  },
+  {
+   "evidence": [
+    "Mahler (film)",
+    "director",
+    "Ken Russell"
+   ],
+   "subject_aliases": [
+    "Mahler",
+    "Mahler (film)"
+   ],
+   "object_aliases": [
+    "Henry Kenneth Alfred \"Ken\" Russell",
+    "Henry Kenneth Alfred Russell",
+    "Ken Russell"
+   ]
+  },
+  {
+   "evidence": [
+    "Clio Barnard",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "Clio Barnard"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  },
+  {
+   "evidence": [
+    "Ken Russell",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "Henry Kenneth Alfred \"Ken\" Russell",
+    "Henry Kenneth Alfred Russell",
+    "Ken Russell"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  }
+ ],
+ "df3322da08dc11ebbd9dac1f6bf848b6": [
+  {
+   "evidence": [
+    "When Lovers Part",
+    "director",
+    "Sidney Olcott"
+   ],
+   "subject_aliases": [
+    "When Lovers Part"
+   ],
+   "object_aliases": [
+    "Sidney Olcott"
+   ]
+  },
+  {
+   "evidence": [
+    "Ladies in Distress",
+    "director",
+    "Gus Meins"
+   ],
+   "subject_aliases": [
+    "Ladies in Distress"
+   ],
+   "object_aliases": [
+    "Gus Meins"
+   ]
+  },
+  {
+   "evidence": [
+    "Sidney Olcott",
+    "country of citizenship",
+    "Canadian"
+   ],
+   "subject_aliases": [
+    "Sidney Olcott"
+   ],
+   "object_aliases": [
+    "British North America",
+    "CA",
+    "CAN",
+    "CDN",
+    "Canada",
+    "Canadian",
+    "Canadien",
+    "Canadienne",
+    "Canuck",
+    "Dominion of Canada",
+    "One Law for the Woman",
+    "ca",
+    "can",
+    "🇨🇦"
+   ]
+  },
+  {
+   "evidence": [
+    "Gus Meins",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Gus Meins"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "019842fc089111ebbd72ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Trapeze (film)",
+    "director",
+    "Carol Reed"
+   ],
+   "subject_aliases": [
+    "Trapeze",
+    "Trapeze (film)"
+   ],
+   "object_aliases": [
+    "Carol Reed",
+    "Sir Carol Reed"
+   ]
+  },
+  {
+   "evidence": [
+    "The Nude Bomb",
+    "director",
+    "Clive Donner"
+   ],
+   "subject_aliases": [
+    "Nude Bomb",
+    "The Nude Bomb"
+   ],
+   "object_aliases": [
+    "Clive Donner"
+   ]
+  },
+  {
+   "evidence": [
+    "Carol Reed",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "Carol Reed",
+    "Sir Carol Reed"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  },
+  {
+   "evidence": [
+    "Clive Donner",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "Clive Donner"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  }
+ ],
+ "1d38646108e611ebbda4ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Kangaroo Jack",
+    "director",
+    "David McNally"
+   ],
+   "subject_aliases": [
+    "Kangaroo Jack"
+   ],
+   "object_aliases": [
+    "David McNally",
+    "David McNally (director)"
+   ]
+  },
+  {
+   "evidence": [
+    "Executive Action (film)",
+    "director",
+    "David Miller"
+   ],
+   "subject_aliases": [
+    "Executive Action",
+    "Executive Action (film)"
+   ],
+   "object_aliases": [
+    "David Miller",
+    "David Miller (director)"
+   ]
+  },
+  {
+   "evidence": [
+    "David McNally (director)",
+    "country of citizenship",
+    "British"
+   ],
+   "subject_aliases": [
+    "David McNally",
+    "David McNally (director)"
+   ],
+   "object_aliases": [
+    "British",
+    "GBR",
+    "U.K.",
+    "UK",
+    "Uk",
+    "United Kingdom",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "🇬🇧"
+   ]
+  },
+  {
+   "evidence": [
+    "David Miller (director)",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "David Miller",
+    "David Miller (director)"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "59054cad08b311ebbd86ac1f6bf848b6": [
+  {
+   "evidence": [
+    "Happiness of Three Women",
+    "director",
+    "William Desmond Taylor"
+   ],
+   "subject_aliases": [
+    "Happiness of Three Women"
+   ],
+   "object_aliases": [
+    "William Desmond Taylor",
+    "William Taylor"
+   ]
+  },
+  {
+   "evidence": [
+    "Percy (1925 film)",
+    "director",
+    "Roy William Neill"
+   ],
+   "subject_aliases": [
+    "Percy",
+    "Percy (1925 film)"
+   ],
+   "object_aliases": [
+    "Roy Neill",
+    "Roy William Neill"
+   ]
+  },
+  {
+   "evidence": [
+    "William Desmond Taylor",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "William Desmond Taylor",
+    "William Taylor"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  },
+  {
+   "evidence": [
+    "Roy William Neill",
+    "country of citizenship",
+    "Irish"
+   ],
+   "subject_aliases": [
+    "Roy Neill",
+    "Roy William Neill"
+   ],
+   "object_aliases": [
+    "Chill Factor",
+    "Eire",
+    "Hibernia",
+    "IE",
+    "IRL",
+    "Ireland",
+    "Ireland, Republic of",
+    "Irish",
+    "Irishman",
+    "Irishwoman",
+    "Republic of Ireland",
+    "Southern Ireland",
+    "ie",
+    "ireland",
+    "Éire",
+    "🇮🇪"
+   ]
+  },
+  {
+   "evidence": [
+    "Roy William Neill",
+    "country of citizenship",
+    "American"
+   ],
+   "subject_aliases": [
+    "Roy Neill",
+    "Roy William Neill"
+   ],
+   "object_aliases": [
+    "America",
+    "American",
+    "U.S.",
+    "U.S.A.",
+    "US",
+    "US of A",
+    "USA",
+    "United States",
+    "United States of America",
+    "the US",
+    "the USA",
+    "the United States",
+    "the United States of America",
+    "🇺🇸"
+   ]
+  }
+ ],
+ "67d898240bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "John II of Namur",
+    "father",
+    "John I, Marquis of Namur"
+   ],
+   "subject_aliases": [
+    "John II of Namur",
+    "John II, Marquis of Namur"
+   ],
+   "object_aliases": [
+    "John I, Marquis of Namur"
+   ]
+  },
+  {
+   "evidence": [
+    "John I, Marquis of Namur",
+    "mother",
+    "Isabelle of Luxembourg"
+   ],
+   "subject_aliases": [
+    "John I, Marquis of Namur"
+   ],
+   "object_aliases": [
+    "Isabelle of Luxembourg"
+   ]
+  }
+ ],
+ "74c6f7200baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Robert Sidney, 1st Earl of Leicester",
+    "father",
+    "Henry Sidney"
+   ],
+   "subject_aliases": [
+    "Robert Sidney, 1st Earl of Leicester"
+   ],
+   "object_aliases": [
+    "Henry Sidney"
+   ]
+  },
+  {
+   "evidence": [
+    "Henry Sidney",
+    "father",
+    "Sir William Sidney"
+   ],
+   "subject_aliases": [
+    "Henry Sidney"
+   ],
+   "object_aliases": [
+    "Sir William Sidney"
+   ]
+  }
+ ],
+ "2204f9ba0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Tomigusuku Seiryō",
+    "father",
+    "Tomigusuku Seizoku"
+   ],
+   "subject_aliases": [
+    "Mō Taiun",
+    "Tomigusuku Seiryō"
+   ],
+   "object_aliases": [
+    "Mō Keiso",
+    "Tomigusuku Seizoku"
+   ]
+  },
+  {
+   "evidence": [
+    "Tomigusuku Seizoku",
+    "father",
+    "Tomigusuku Seishō"
+   ],
+   "subject_aliases": [
+    "Mō Keiso",
+    "Tomigusuku Seizoku"
+   ],
+   "object_aliases": [
+    "Mō Ryūbun",
+    "Tomigusuku Seishō",
+    "Tomigusuku Ueekata Seishō"
+   ]
+  }
+ ],
+ "1851c6f40bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Louis d'Armagnac, Duke of Nemours",
+    "father",
+    "Jacques d'Armagnac, Duke of Nemours"
+   ],
+   "subject_aliases": [
+    "Louis d'Armagnac, Duke of Nemours"
+   ],
+   "object_aliases": [
+    "Jacques d'Armagnac",
+    "Jacques d'Armagnac, Duke of Nemours"
+   ]
+  },
+  {
+   "evidence": [
+    "Jacques d'Armagnac",
+    "father",
+    "Bernard d'Armagnac, Count of Pardiac"
+   ],
+   "subject_aliases": [
+    "Jacques d'Armagnac",
+    "Jacques d'Armagnac, Duke of Nemours"
+   ],
+   "object_aliases": [
+    "Bernard d'Armagnac, Count of Pardiac"
+   ]
+  }
+ ],
+ "67d667340bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "William Stanley",
+    "sibling",
+    "Thomas Stanley"
+   ],
+   "subject_aliases": [
+    "William Stanley",
+    "William Stanley (Battle of Bosworth)"
+   ],
+   "object_aliases": [
+    "Thomas Stanley",
+    "Thomas Stanley, 1st Earl of Derby"
+   ]
+  },
+  {
+   "evidence": [
+    "Thomas Stanley, 1st Earl of Derby",
+    "spouse",
+    "Lady Margaret Beaufort"
+   ],
+   "subject_aliases": [
+    "Thomas Stanley",
+    "Thomas Stanley, 1st Earl of Derby"
+   ],
+   "object_aliases": [
+    "Lady Margaret Beaufort",
+    "Lady Stafford",
+    "Margaret Beaufort, Countess of Derby",
+    "Margaret Beaufort, Countess of Richmond",
+    "Margaret, Countess of Richmond"
+   ]
+  }
+ ],
+ "d03796320baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Margaret of Valois",
+    "spouse",
+    "Henry IV of France"
+   ],
+   "subject_aliases": [
+    "Margaret of Valois",
+    "Marguerite d'Angoulême",
+    "Marguerite de Valois"
+   ],
+   "object_aliases": [
+    "Good King Henry",
+    "Henri IV",
+    "Henri de Bourbon",
+    "Henri-Quatre",
+    "Henry IV",
+    "Henry IV of France",
+    "Henry the Great",
+    "King Henry IV of France",
+    "King of France Henri IV",
+    "King of France Henry IV",
+    "King of Navarre Henry IV",
+    "Le Vert Galant",
+    "re di Francia Henri IV",
+    "roi de France Henri IV",
+    "the Verdant Gallant"
+   ]
+  },
+  {
+   "evidence": [
+    "Henry IV",
+    "mother",
+    "Jeanne d'Albret"
+   ],
+   "subject_aliases": [
+    "Good King Henry",
+    "Henri IV",
+    "Henri de Bourbon",
+    "Henri-Quatre",
+    "Henry IV",
+    "Henry IV of France",
+    "Henry the Great",
+    "King Henry IV of France",
+    "King of France Henri IV",
+    "King of France Henry IV",
+    "King of Navarre Henry IV",
+    "Le Vert Galant",
+    "re di Francia Henri IV",
+    "roi de France Henri IV",
+    "the Verdant Gallant"
+   ],
+   "object_aliases": [
+    "Jeanne III",
+    "Jeanne III of Navarre",
+    "Jeanne d'Albret",
+    "Joan III"
+   ]
+  }
+ ],
+ "6dd659b40bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Ian Lionel Malcolm Leslie, 21st Earl of Rothes",
+    "father",
+    "20th Earl"
+   ],
+   "subject_aliases": [
+    "Ian Leslie, 21st Earl of Rothes",
+    "Ian Lionel Malcolm Leslie",
+    "Ian Lionel Malcolm Leslie, 21st Earl of Rothes"
+   ],
+   "object_aliases": [
+    "20th Earl",
+    "Malcolm Leslie",
+    "Malcolm Leslie, 20th Earl of Rothes"
+   ]
+  },
+  {
+   "evidence": [
+    "Malcolm Leslie, 20th Earl of Rothes",
+    "father",
+    "Norman Leslie, 19th Earl of Rothes"
+   ],
+   "subject_aliases": [
+    "20th Earl",
+    "Malcolm Leslie",
+    "Malcolm Leslie, 20th Earl of Rothes"
+   ],
+   "object_aliases": [
+    "Norman Leslie, 19th Earl of Rothes"
+   ]
+  }
+ ],
+ "ace961ec0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Shepseskare",
+    "father",
+    "Neferefre"
+   ],
+   "subject_aliases": [
+    "Shepseskare",
+    "Shepseskare Isi"
+   ],
+   "object_aliases": [
+    "Neferefre",
+    "Neferefre Isi",
+    "Ranefer",
+    "Raneferef"
+   ]
+  },
+  {
+   "evidence": [
+    "Neferefre",
+    "mother",
+    "Khentkaus II"
+   ],
+   "subject_aliases": [
+    "Neferefre",
+    "Neferefre Isi",
+    "Ranefer",
+    "Raneferef"
+   ],
+   "object_aliases": [
+    "Khentkaus II"
+   ]
+  }
+ ],
+ "36170fba0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Frederick of Antioch",
+    "father",
+    "Frederick II"
+   ],
+   "subject_aliases": [
+    "Frederick of Antioch"
+   ],
+   "object_aliases": [
+    "Emperador del Sacro Imperio Romano Germanico Federico II",
+    "Emperador del Sacro Imperio Romano Germánico Federico II",
+    "Emperor of Germany Friedrich II",
+    "FEDERICO II di Svevia, imperatore, re di Sicilia e di Gerusalemme, re dei Romani",
+    "Federico II",
+    "Frederick II",
+    "Frederick II, Holy Roman Emperor",
+    "Frederick of Hohenstaufen",
+    "Friedrich II",
+    "Friedrich II von Hohenstaufen",
+    "Holy Roman Emperor Frederick II",
+    "Holy Roman Emperor Frederick II of Hohenstaufen",
+    "Kaiser Friedrich II. Heiliges Römisches Reich",
+    "King of Sicily Federico I",
+    "King of Sicily Federigo I",
+    "King of Sicily Frederick I",
+    "King of Sicily and Holy Roman Emperor Frederick II",
+    "empereur germanique Frederic II",
+    "empereur germanique Frédéric II",
+    "imperatore del Sacro romano impero e re di Sicilia Friedrich II",
+    "of Hohenstaufen, Holy Roman Emperor Frederick II"
+   ]
+  },
+  {
+   "evidence": [
+    "Frederick II, Holy Roman Emperor",
+    "mother",
+    "Constance"
+   ],
+   "subject_aliases": [
+    "Emperador del Sacro Imperio Romano Germanico Federico II",
+    "Emperador del Sacro Imperio Romano Germánico Federico II",
+    "Emperor of Germany Friedrich II",
+    "FEDERICO II di Svevia, imperatore, re di Sicilia e di Gerusalemme, re dei Romani",
+    "Federico II",
+    "Frederick II",
+    "Frederick II, Holy Roman Emperor",
+    "Frederick of Hohenstaufen",
+    "Friedrich II",
+    "Friedrich II von Hohenstaufen",
+    "Holy Roman Emperor Frederick II",
+    "Holy Roman Emperor Frederick II of Hohenstaufen",
+    "Kaiser Friedrich II. Heiliges Römisches Reich",
+    "King of Sicily Federico I",
+    "King of Sicily Federigo I",
+    "King of Sicily Frederick I",
+    "King of Sicily and Holy Roman Emperor Frederick II",
+    "empereur germanique Frederic II",
+    "empereur germanique Frédéric II",
+    "imperatore del Sacro romano impero e re di Sicilia Friedrich II",
+    "of Hohenstaufen, Holy Roman Emperor Frederick II"
+   ],
+   "object_aliases": [
+    "Constance",
+    "Constance, Queen of Sicily"
+   ]
+  }
+ ],
+ "181db6e40baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Felix V",
+    "father",
+    "Amadeus VII, Count of Savoy"
+   ],
+   "subject_aliases": [
+    "Amadeus VIII of Savoy",
+    "Amadeus VIII, Duke of Savoy",
+    "Felix V"
+   ],
+   "object_aliases": [
+    "Amadeus VII, Count of Savoy"
+   ]
+  },
+  {
+   "evidence": [
+    "Amadeus VII, Count of Savoy",
+    "father",
+    "Amadeus VI, Count of Savoy"
+   ],
+   "subject_aliases": [
+    "Amadeus VII, Count of Savoy"
+   ],
+   "object_aliases": [
+    "Amadeus VI, Count of Savoy"
+   ]
+  }
+ ],
+ "5ff45ef00baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Joseph I",
+    "father",
+    "Leopold I"
+   ],
+   "subject_aliases": [
+    "Emperor of Germany Joseph",
+    "Holy Roman Emperor Joseph I",
+    "Josef I",
+    "Joseph I",
+    "Joseph I, Holy Roman Emperor",
+    "Joseph Ier empereur germanique",
+    "Kaiser Joseph I. Heiliges Römisches Reich",
+    "King of Hungary Joseph",
+    "imperatore del Sacro romano impero Joseph I"
+   ],
+   "object_aliases": [
+    "Emperor of Germany Leopold I",
+    "Holy Roman Emperor Leopold I",
+    "Kaiser Leopold I. Heiliges Römisches Reich",
+    "King of Hungary Lipot I",
+    "King of Hungary Lipót I",
+    "Leopold I",
+    "Leopold I, Holy Roman Emperor",
+    "Leopold Ignaz Joseph Balthasar Felician",
+    "empereur germanique Leopold I",
+    "empereur germanique Léopold I",
+    "imperatore del Sacro romano impero Leopold I"
+   ]
+  },
+  {
+   "evidence": [
+    "Leopold I",
+    "father",
+    "Ferdinand III"
+   ],
+   "subject_aliases": [
+    "Emperor of Germany Leopold I",
+    "Holy Roman Emperor Leopold I",
+    "Kaiser Leopold I. Heiliges Römisches Reich",
+    "King of Hungary Lipot I",
+    "King of Hungary Lipót I",
+    "Leopold I",
+    "Leopold I, Holy Roman Emperor",
+    "Leopold Ignaz Joseph Balthasar Felician",
+    "empereur germanique Leopold I",
+    "empereur germanique Léopold I",
+    "imperatore del Sacro romano impero Leopold I"
+   ],
+   "object_aliases": [
+    "Emperor of Germany Ferdinand III",
+    "Ferdinand III",
+    "Ferdinand III, Holy Roman Emperor",
+    "Holy Roman Emperor Ferdinand III",
+    "Kaiser Ferdinand III. Heiliges Römisches Reich",
+    "King Ferdinand III of Hungary",
+    "King of Bohemia Ferdinand III",
+    "King of Hungary Ferdinand III",
+    "empereur germanique Ferdinand III",
+    "imperatore del Sacro romano impero Ferdinand III",
+    "keizer van het Duitse Rijk Ferdinand III"
+   ]
+  }
+ ],
+ "593a648c0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "John of Bourbon (John I/VII, Count of La Marche",
+    "father",
+    "James I"
+   ],
+   "subject_aliases": [
+    "John I, Count of La Marche",
+    "John of Bourbon (John I/VII, Count of La Marche"
+   ],
+   "object_aliases": [
+    "James I",
+    "James I, Count of La Marche"
+   ]
+  },
+  {
+   "evidence": [
+    "James I",
+    "father",
+    "Louis I"
+   ],
+   "subject_aliases": [
+    "James I",
+    "James I, Count of La Marche"
+   ],
+   "object_aliases": [
+    "Louis I",
+    "Louis I, Duke of Bourbon"
+   ]
+  }
+ ],
+ "c7ea6b080baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Flavia Julia Constantia",
+    "mother",
+    "Flavia Maximiana Theodora"
+   ],
+   "subject_aliases": [
+    "Flavia Julia Constantia"
+   ],
+   "object_aliases": [
+    "Flavia Maximiana Theodora"
+   ]
+  },
+  {
+   "evidence": [
+    "Flavia Maximiana Theodora",
+    "mother",
+    "Eutropia"
+   ],
+   "subject_aliases": [
+    "Flavia Maximiana Theodora"
+   ],
+   "object_aliases": [
+    "Eutropia",
+    "Eutròpia"
+   ]
+  }
+ ],
+ "9ff14fea0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Adelaide of Normandy",
+    "sibling",
+    "William the Conqueror"
+   ],
+   "subject_aliases": [
+    "Adelaide of Normandy",
+    "Adeliza"
+   ],
+   "object_aliases": [
+    "Guillaume de Normandie",
+    "Guillaume le Batard",
+    "Guillaume le Bâtard",
+    "Guillaume le Conquerant",
+    "Guillaume le Conquérant",
+    "King of England William I",
+    "King of England and Duke of Normandy William I",
+    "King of England and Duke of Normandy William the Conqueror",
+    "William I",
+    "William I of England",
+    "William of Normandy",
+    "William the Bastard",
+    "William the Conqueror",
+    "William, King of the Normans",
+    "der Eroberer Wilhelm"
+   ]
+  },
+  {
+   "evidence": [
+    "William the Conqueror",
+    "mother",
+    "Herleva"
+   ],
+   "subject_aliases": [
+    "Guillaume de Normandie",
+    "Guillaume le Batard",
+    "Guillaume le Bâtard",
+    "Guillaume le Conquerant",
+    "Guillaume le Conquérant",
+    "King of England William I",
+    "King of England and Duke of Normandy William I",
+    "King of England and Duke of Normandy William the Conqueror",
+    "William I",
+    "William I of England",
+    "William of Normandy",
+    "William the Bastard",
+    "William the Conqueror",
+    "William, King of the Normans",
+    "der Eroberer Wilhelm"
+   ],
+   "object_aliases": [
+    "Arlette de Falaise",
+    "Herleva"
+   ]
+  }
+ ],
+ "8d4ce1380baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "\"Freiherr\" Günther Hubertus von Reibnitz",
+    "child",
+    "Princess Michael of Kent"
+   ],
+   "subject_aliases": [
+    "\"Freiherr\" Günther Hubertus von Reibnitz",
+    "Günther Hubertus Baron von Reibnitz",
+    "Günther von Reibnitz"
+   ],
+   "object_aliases": [
+    "Marie Christine von Reibnitz",
+    "Marie-Christine Agnes Hedwig Ida Baronin von Reibnitz",
+    "Princess Michael of Kent"
+   ]
+  },
+  {
+   "evidence": [
+    "Princess Michael of Kent",
+    "spouse",
+    "Prince Michael of Kent"
+   ],
+   "subject_aliases": [
+    "Marie Christine von Reibnitz",
+    "Marie-Christine Agnes Hedwig Ida Baronin von Reibnitz",
+    "Princess Michael of Kent"
+   ],
+   "object_aliases": [
+    "Michael George Charles Franklin",
+    "Prince Michael of Kent"
+   ]
+  }
+ ],
+ "3f5194f00bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Prince Harald of Schaumburg-Lippe",
+    "mother",
+    "Princess Feodora of Denmark"
+   ],
+   "subject_aliases": [
+    "Harald Christian Leopold Gustav Prinz zu Schaumburg-Lippe",
+    "Prince Harald of Schaumburg-Lippe"
+   ],
+   "object_aliases": [
+    "Princess Feodora of Denmark"
+   ]
+  },
+  {
+   "evidence": [
+    "Princess Feodora of Denmark",
+    "father",
+    "Prince Harald of Denmark"
+   ],
+   "subject_aliases": [
+    "Princess Feodora of Denmark"
+   ],
+   "object_aliases": [
+    "Prince Harald of Denmark"
+   ]
+  }
+ ],
+ "140b2d380bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Robert de Brus, 4th Lord of Annandale",
+    "father",
+    "William de Brus, 3rd Lord of Annandale"
+   ],
+   "subject_aliases": [
+    "Robert de Brus, 4th Lord of Annandale"
+   ],
+   "object_aliases": [
+    "William de Brus, 3rd Lord of Annandale"
+   ]
+  },
+  {
+   "evidence": [
+    "William de Brus, 3rd Lord of Annandale",
+    "sibling",
+    "Robert III de Brus"
+   ],
+   "subject_aliases": [
+    "William de Brus, 3rd Lord of Annandale"
+   ],
+   "object_aliases": [
+    "Robert III de Brus"
+   ]
+  }
+ ],
+ "0a6ef71e0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Guy of Ibelin",
+    "father",
+    "John of Ibelin"
+   ],
+   "subject_aliases": [
+    "Guy of Ibelin",
+    "Guy of Ibelin (died 1304)"
+   ],
+   "object_aliases": [
+    "John of Ibelin",
+    "John of Ibelin (jurist)"
+   ]
+  },
+  {
+   "evidence": [
+    "John of Ibelin",
+    "father",
+    "Philip of Ibelin"
+   ],
+   "subject_aliases": [
+    "John of Ibelin",
+    "John of Ibelin (jurist)"
+   ],
+   "object_aliases": [
+    "Felipe de Ibelin",
+    "Felipe de Ibelín",
+    "Philip of Ibelin",
+    "Philip of Ibelin (1180–1227)"
+   ]
+  }
+ ],
+ "574200c20bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Caroline Campbell, Duchess of Argyll",
+    "father",
+    "George Villiers"
+   ],
+   "subject_aliases": [
+    "Caroline Campbell, Duchess of Argyll"
+   ],
+   "object_aliases": [
+    "George Bussey Villiers",
+    "George Bussy Villiers",
+    "George Villiers",
+    "George Villiers, 4th Earl of Jersey"
+   ]
+  },
+  {
+   "evidence": [
+    "George Villiers, 4th Earl of Jersey",
+    "mother",
+    "Anne Egerton"
+   ],
+   "subject_aliases": [
+    "George Bussey Villiers",
+    "George Bussy Villiers",
+    "George Villiers",
+    "George Villiers, 4th Earl of Jersey"
+   ],
+   "object_aliases": [
+    "Anne Egerton",
+    "Anne Russell, Duchess of Bedford"
+   ]
+  }
+ ],
+ "4294270e0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "King Píng of Chu",
+    "father",
+    "King Gong of Chu"
+   ],
+   "subject_aliases": [
+    "Chu Pingwang",
+    "Chupingwang",
+    "King Ping of Chu",
+    "King Píng of Chu",
+    "Mi Qiji",
+    "Xiong Ju",
+    "Xiong Qiji"
+   ],
+   "object_aliases": [
+    "Chu Gong Wang",
+    "King Gong of Chu",
+    "Xiong Shen"
+   ]
+  },
+  {
+   "evidence": [
+    "King Gong of Chu",
+    "father",
+    "King Zhuang of Chu"
+   ],
+   "subject_aliases": [
+    "Chu Gong Wang",
+    "King Gong of Chu",
+    "Xiong Shen"
+   ],
+   "object_aliases": [
+    "Chu Zhuang Wang",
+    "Chu Zhuangwang",
+    "Chuzhuangwang",
+    "King Zhuang of Chu",
+    "Mi Lv",
+    "Xiong Lv",
+    "Xiong Lü"
+   ]
+  }
+ ],
+ "421ca5940bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Roger de Clifford, 5th Baron de Clifford",
+    "father",
+    "Robert de Clifford, 3rd Baron de Clifford"
+   ],
+   "subject_aliases": [
+    "Roger Clifford, 5th Baron Clifford",
+    "Roger de Clifford, 5th Baron de Clifford"
+   ],
+   "object_aliases": [
+    "Robert Clifford, 3rd Baron Clifford",
+    "Robert de Clifford, 3rd Baron de Clifford"
+   ]
+  },
+  {
+   "evidence": [
+    "Robert de Clifford, 3rd Baron de Clifford",
+    "sibling",
+    "Roger de Clifford, 2nd Baron de Clifford"
+   ],
+   "subject_aliases": [
+    "Robert Clifford, 3rd Baron Clifford",
+    "Robert de Clifford, 3rd Baron de Clifford"
+   ],
+   "object_aliases": [
+    "Roger Clifford, 2nd Baron Clifford",
+    "Roger de Clifford, 2nd Baron de Clifford"
+   ]
+  }
+ ],
+ "cb2449d80baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Bertha of Hereford",
+    "mother",
+    "Sibyl de Neufmarché"
+   ],
+   "subject_aliases": [
+    "Bertha de Pitres",
+    "Bertha of Hereford"
+   ],
+   "object_aliases": [
+    "Sibyl de Neufmarche",
+    "Sibyl de Neufmarché"
+   ]
+  },
+  {
+   "evidence": [
+    "Sibyl de Neufmarché",
+    "father",
+    "Bernard de Neufmarché"
+   ],
+   "subject_aliases": [
+    "Sibyl de Neufmarche",
+    "Sibyl de Neufmarché"
+   ],
+   "object_aliases": [
+    "Bernard de Neufmarche",
+    "Bernard de Neufmarché"
+   ]
+  }
+ ],
+ "77fd1ca20bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Ferdinand Zvonimir von Habsburg",
+    "father",
+    "Karl von Habsburg"
+   ],
+   "subject_aliases": [
+    "Ferdinand Zvonimir von Habsburg"
+   ],
+   "object_aliases": [
+    "Karl von Habsburg"
+   ]
+  },
+  {
+   "evidence": [
+    "Karl von Habsburg",
+    "mother",
+    "Princess Regina of Saxe-Meiningen"
+   ],
+   "subject_aliases": [
+    "Karl von Habsburg"
+   ],
+   "object_aliases": [
+    "Crown Princess Regina of Austria",
+    "Princess Regina of Saxe-Meiningen"
+   ]
+  }
+ ],
+ "169e179a0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Hye",
+    "father",
+    "Seong"
+   ],
+   "subject_aliases": [
+    "Hye",
+    "Hye of Baekje"
+   ],
+   "object_aliases": [
+    "Seong",
+    "Seong of Baekje"
+   ]
+  },
+  {
+   "evidence": [
+    "Seong",
+    "father",
+    "Muryeong"
+   ],
+   "subject_aliases": [
+    "Seong",
+    "Seong of Baekje"
+   ],
+   "object_aliases": [
+    "Muryeong",
+    "Muryeong of Baekje"
+   ]
+  }
+ ],
+ "78c31f420bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Edward Wingfield, 2nd Viscount Powerscourt",
+    "father",
+    "Richard Wingfield, 1st Viscount Powerscourt"
+   ],
+   "subject_aliases": [
+    "Edward Wingfield, 2nd Viscount Powerscourt"
+   ],
+   "object_aliases": [
+    "Richard Wingfield, 1st Viscount Powerscourt",
+    "Richard Wingfield, 1st Viscount Powerscourt (third creation)"
+   ]
+  },
+  {
+   "evidence": [
+    "Richard Wingfield, 1st Viscount Powerscourt",
+    "mother",
+    "Eleanor Gore"
+   ],
+   "subject_aliases": [
+    "Richard Wingfield, 1st Viscount Powerscourt",
+    "Richard Wingfield, 1st Viscount Powerscourt (third creation)"
+   ],
+   "object_aliases": [
+    "Eleanor Gore"
+   ]
+  }
+ ],
+ "654dbe680bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Hermann Otto I of Limburg-Styrum",
+    "father",
+    "Jobst of Limburg"
+   ],
+   "subject_aliases": [
+    "Hermann Otto I of Limburg-Styrum"
+   ],
+   "object_aliases": [
+    "Jobst of Limburg"
+   ]
+  },
+  {
+   "evidence": [
+    "Jobst of Limburg",
+    "father",
+    "Hermann Georg of Limburg"
+   ],
+   "subject_aliases": [
+    "Jobst of Limburg"
+   ],
+   "object_aliases": [
+    "Hermann Georg of Limburg"
+   ]
+  }
+ ],
+ "29bd8c0c0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "William II de Ferrers, 4th Earl of Derby",
+    "father",
+    "William de Ferrers, 3rd Earl of Derby"
+   ],
+   "subject_aliases": [
+    "William II de Ferrers, 4th Earl of Derby",
+    "William de Ferrers, 4th Earl of Derby"
+   ],
+   "object_aliases": [
+    "William I de Ferrers, 3rd Earl of Derby",
+    "William de Ferrers, 3rd Earl of Derby"
+   ]
+  },
+  {
+   "evidence": [
+    "William de Ferrers, 3rd Earl of Derby",
+    "father",
+    "Robert de Ferrers, 2nd Earl of Derby"
+   ],
+   "subject_aliases": [
+    "William I de Ferrers, 3rd Earl of Derby",
+    "William de Ferrers, 3rd Earl of Derby"
+   ],
+   "object_aliases": [
+    "Robert de Ferrers, 2nd Earl of Derby"
+   ]
+  }
+ ],
+ "7bbfd9ac0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Ingeborg of Holstein",
+    "mother",
+    "Catherine Elisabeth of Brunswick-Lüneburg"
+   ],
+   "subject_aliases": [
+    "Ingeborg of Holstein"
+   ],
+   "object_aliases": [
+    "Catherine Elisabeth of Brunswick-Lüneburg"
+   ]
+  },
+  {
+   "evidence": [
+    "Catherine Elisabeth of Brunswick-Lüneburg",
+    "father",
+    "Magnus II, Duke of Brunswick-Lüneburg"
+   ],
+   "subject_aliases": [
+    "Catherine Elisabeth of Brunswick-Lüneburg"
+   ],
+   "object_aliases": [
+    "Magnus II, Duke of Brunswick-Lüneburg"
+   ]
+  }
+ ],
+ "08de5d000baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "John III, Duke of Cleves",
+    "father",
+    "John II, Duke of Cleves"
+   ],
+   "subject_aliases": [
+    "John III, Duke of Cleves"
+   ],
+   "object_aliases": [
+    "John II, Duke of Cleves"
+   ]
+  },
+  {
+   "evidence": [
+    "John II, Duke of Cleves",
+    "mother",
+    "Elizabeth of Nevers"
+   ],
+   "subject_aliases": [
+    "John II, Duke of Cleves"
+   ],
+   "object_aliases": [
+    "Elizabeth of Burgundy",
+    "Elizabeth of Nevers"
+   ]
+  }
+ ],
+ "f3c57d120baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Gauhar Ara Begum",
+    "father",
+    "Shah Jahan"
+   ],
+   "subject_aliases": [
+    "Gauhar Ara Begum",
+    "Gauharara Begum"
+   ],
+   "object_aliases": [
+    "Emperor of India Shah Jahan",
+    "Emperor of India Shah Jehan",
+    "Emperor of India Shahjahan",
+    "Großmogul Schah Dschahan Mogulreich",
+    "Prince Khurram",
+    "Shah Jahan",
+    "Shah, Emperor of India Jahan",
+    "Shah, Emperor of India Jehan",
+    "Shahabuddin Muhammad Shah Jahan",
+    "empereur moghol Shahjahan",
+    "mogol-keizer van India Shah Jahan"
+   ]
+  },
+  {
+   "evidence": [
+    "Shah Jahan",
+    "father",
+    "Jahangir"
+   ],
+   "subject_aliases": [
+    "Emperor of India Shah Jahan",
+    "Emperor of India Shah Jehan",
+    "Emperor of India Shahjahan",
+    "Großmogul Schah Dschahan Mogulreich",
+    "Prince Khurram",
+    "Shah Jahan",
+    "Shah, Emperor of India Jahan",
+    "Shah, Emperor of India Jehan",
+    "Shahabuddin Muhammad Shah Jahan",
+    "empereur moghol Shahjahan",
+    "mogol-keizer van India Shah Jahan"
+   ],
+   "object_aliases": [
+    "Emperor of Hindustan Jahangir",
+    "Großmogul Jahangir Mogulreich",
+    "Jahangir",
+    "Jehangir",
+    "Nur al-Dīn MuỌhammad Jahāngīr Gūrkānī",
+    "Nur-ud-din Mohammad Salim",
+    "empereur moghol de l'Inde Jahangīr"
+   ]
+  }
+ ],
+ "1f3da3b60bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "James Tuchet, 7th Earl of Castlehaven",
+    "father",
+    "James Tuchet, 6th Earl of Castlehaven"
+   ],
+   "subject_aliases": [
+    "James Tuchet, 7th Earl of Castlehaven"
+   ],
+   "object_aliases": [
+    "James Tuchet, 6th Earl of Castlehaven"
+   ]
+  },
+  {
+   "evidence": [
+    "James Tuchet, 6th Earl of Castlehaven",
+    "father",
+    "James Tuchet, 5th Earl of Castlehaven"
+   ],
+   "subject_aliases": [
+    "James Tuchet, 6th Earl of Castlehaven"
+   ],
+   "object_aliases": [
+    "James Tuchet, 5th Earl of Castlehaven"
+   ]
+  }
+ ],
+ "fc00ac4a0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Walter Aston, 4th Lord Aston of Forfar",
+    "father",
+    "Walter Aston, 3rd Lord Aston of Forfar"
+   ],
+   "subject_aliases": [
+    "Walter Aston, 4th Lord Aston of Forfar"
+   ],
+   "object_aliases": [
+    "Walter Aston, 3rd Lord Aston of Forfar"
+   ]
+  },
+  {
+   "evidence": [
+    "Walter Aston, 3rd Lord Aston of Forfar",
+    "father",
+    "Walter Aston, 2nd Lord Aston of Forfar"
+   ],
+   "subject_aliases": [
+    "Walter Aston, 3rd Lord Aston of Forfar"
+   ],
+   "object_aliases": [
+    "Walter Aston, 2nd Lord Aston of Forfar"
+   ]
+  }
+ ],
+ "e6435d1c0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Princess Luise Dorothea of Prussia",
+    "mother",
+    "Elisabeth Henriette of Hesse-Kassel"
+   ],
+   "subject_aliases": [
+    "Luise",
+    "Princess Luise Dorothea of Prussia"
+   ],
+   "object_aliases": [
+    "Elisabeth Henriette of Hesse-Kassel"
+   ]
+  },
+  {
+   "evidence": [
+    "Elisabeth Henriette of Hesse-Kassel",
+    "father",
+    "William VI, Landgrave of Hesse-Kassel"
+   ],
+   "subject_aliases": [
+    "Elisabeth Henriette of Hesse-Kassel"
+   ],
+   "object_aliases": [
+    "William VI, Landgrave of Hesse-Kassel"
+   ]
+  }
+ ],
+ "8cdd86760baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Diarmait Ua Briain",
+    "father",
+    "Toirdelbach Ua Briain"
+   ],
+   "subject_aliases": [
+    "Dermot, King of Munster",
+    "Diarmait Ua Briain"
+   ],
+   "object_aliases": [
+    "Tairrdelbach I, High King of Ireland",
+    "Toirdelbach Ua Briain"
+   ]
+  },
+  {
+   "evidence": [
+    "Toirdelbach Ua Briain",
+    "father",
+    "Tadc mac Briain"
+   ],
+   "subject_aliases": [
+    "Tairrdelbach I, High King of Ireland",
+    "Toirdelbach Ua Briain"
+   ],
+   "object_aliases": [
+    "Tadc (?)",
+    "Tadc mac Briain",
+    "Teige (Terence) (?)"
+   ]
+  }
+ ],
+ "82e88a160bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Theobald II, Count of Champagne",
+    "father",
+    "Stephen II"
+   ],
+   "subject_aliases": [
+    "Great",
+    "The Great",
+    "Theobald II of Champagne",
+    "Theobald II, Count of Champagne",
+    "Theobald IV de Blois"
+   ],
+   "object_aliases": [
+    "Etienne Henri",
+    "Stephen",
+    "Stephen II",
+    "Stephen II Henry",
+    "Stephen II, Count of Blois",
+    "Stephen, Count of Blois",
+    "Étienne Henri"
+   ]
+  },
+  {
+   "evidence": [
+    "Stephen II",
+    "father",
+    "Theobald III"
+   ],
+   "subject_aliases": [
+    "Etienne Henri",
+    "Stephen",
+    "Stephen II",
+    "Stephen II Henry",
+    "Stephen II, Count of Blois",
+    "Stephen, Count of Blois",
+    "Étienne Henri"
+   ],
+   "object_aliases": [
+    "Theobald III",
+    "Theobald III, Count of Blois",
+    "Thibaud III de Blois"
+   ]
+  }
+ ],
+ "21fa6dce0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Argishti I , was the sixth known king of Urartu",
+    "child",
+    "Sarduri II"
+   ],
+   "subject_aliases": [
+    "Argishti I , was the sixth known king of Urartu",
+    "Argishti I of Urartu",
+    "Argishtish I"
+   ],
+   "object_aliases": [
+    "Sarduri II"
+   ]
+  },
+  {
+   "evidence": [
+    "Sarduri II",
+    "child",
+    "Rusa I"
+   ],
+   "subject_aliases": [
+    "Sarduri II"
+   ],
+   "object_aliases": [
+    "Rusa I",
+    "Rusas I"
+   ]
+  }
+ ],
+ "7b163c8a0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Abdullah III Al-Salim Al-Sabah",
+    "father",
+    "Salim Al-Mubarak Al-Sabah"
+   ],
+   "subject_aliases": [
+    "Abdullah Al-Salem Al-Mubarak Al-Sabah",
+    "Abdullah Al-Salim Al-Sabah",
+    "Abdullah III Al-Salim Al-Sabah"
+   ],
+   "object_aliases": [
+    "Salim Al-Mubarak Al-Sabah"
+   ]
+  },
+  {
+   "evidence": [
+    "Salim Al-Mubarak Al-Sabah",
+    "sibling",
+    "Jaber II Al-Sabah"
+   ],
+   "subject_aliases": [
+    "Salim Al-Mubarak Al-Sabah"
+   ],
+   "object_aliases": [
+    "Jaber II Al-Sabah"
+   ]
+  }
+ ],
+ "d282955e0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Maria Sophia Elisabeth of Neuburg",
+    "spouse",
+    "Peter II"
+   ],
+   "subject_aliases": [
+    "Maria Sofia of Neuburg",
+    "Maria Sophia Elisabeth of Neuburg",
+    "Maria Sophia of Neuburg"
+   ],
+   "object_aliases": [
+    "King of Portugal Pedro II",
+    "King of Portugal Peter II",
+    "King of Portugal Petrus II",
+    "Peter II",
+    "Peter II of Portugal",
+    "Prince, son of João IV, King of Portugal Pedro I",
+    "Unico Pedro",
+    "king of Portugal Peter II",
+    "roi de Portugal Pierre II"
+   ]
+  },
+  {
+   "evidence": [
+    "Peter II",
+    "mother",
+    "Luisa de Guzmán"
+   ],
+   "subject_aliases": [
+    "King of Portugal Pedro II",
+    "King of Portugal Peter II",
+    "King of Portugal Petrus II",
+    "Peter II",
+    "Peter II of Portugal",
+    "Prince, son of João IV, King of Portugal Pedro I",
+    "Unico Pedro",
+    "king of Portugal Peter II",
+    "roi de Portugal Pierre II"
+   ],
+   "object_aliases": [
+    "Luisa de Guzman",
+    "Luisa de Guzmán"
+   ]
+  }
+ ],
+ "6615041e0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Volodar of Peremyshl",
+    "father",
+    "Rostislav of Tmutarakan"
+   ],
+   "subject_aliases": [
+    "Volodar of Peremyshl"
+   ],
+   "object_aliases": [
+    "Rostislav of Tmutarakan"
+   ]
+  },
+  {
+   "evidence": [
+    "Rostislav of Tmutarakan",
+    "father",
+    "Vladimir of Novgorod"
+   ],
+   "subject_aliases": [
+    "Rostislav of Tmutarakan"
+   ],
+   "object_aliases": [
+    "Vladimir Yaroslavich",
+    "Vladimir of Novgorod"
+   ]
+  }
+ ],
+ "d727cfa20baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Philip of Navarre, Count of Longueville",
+    "mother",
+    "Joan II of Navarre"
+   ],
+   "subject_aliases": [
+    "Philip of Navarre, Count of Longueville",
+    "Philip, Count of Longueville"
+   ],
+   "object_aliases": [
+    "Joan II of Navarre"
+   ]
+  },
+  {
+   "evidence": [
+    "Joan II of Navarre",
+    "father",
+    "Louis X of France"
+   ],
+   "subject_aliases": [
+    "Joan II of Navarre"
+   ],
+   "object_aliases": [
+    "Louis X of France",
+    "the Headstrong",
+    "the Quarreler",
+    "the Stubborn"
+   ]
+  }
+ ],
+ "ddacf7580baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Edward I of England",
+    "father",
+    "Henry III"
+   ],
+   "subject_aliases": [
+    "Edward I",
+    "Edward I of England",
+    "Edward Longshanks",
+    "Hammer of the Scots",
+    "Hammer of the Scots Edward",
+    "King of England Edward I",
+    "König Eduard I. England",
+    "Malleus Scotorum Edward",
+    "re d'Inghilterra Edward I",
+    "roi d'Angleterre Édouard I"
+   ],
+   "object_aliases": [
+    "Henry III",
+    "Henry III of England",
+    "Henry of Winchester"
+   ]
+  },
+  {
+   "evidence": [
+    "Henry III",
+    "spouse",
+    "Eleanor of Provence"
+   ],
+   "subject_aliases": [
+    "Henry III",
+    "Henry III of England",
+    "Henry of Winchester"
+   ],
+   "object_aliases": [
+    "Eleanor of Provence"
+   ]
+  }
+ ],
+ "116073780baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Margaret Holles, Duchess of Newcastle-upon-Tyne",
+    "child",
+    "Lady Henrietta Cavendish Holles"
+   ],
+   "subject_aliases": [
+    "Margaret Holles, Duchess of Newcastle-upon-Tyne"
+   ],
+   "object_aliases": [
+    "Henrietta Cavendish-Holles",
+    "Henrietta Harley, Countess of Oxford and Countess Mortimer",
+    "Lady Henrietta Cavendish Holles"
+   ]
+  },
+  {
+   "evidence": [
+    "Lady Henrietta Cavendish Holles",
+    "father",
+    "John Holles, 1st Duke of Newcastle"
+   ],
+   "subject_aliases": [
+    "Henrietta Cavendish-Holles",
+    "Henrietta Harley, Countess of Oxford and Countess Mortimer",
+    "Lady Henrietta Cavendish Holles"
+   ],
+   "object_aliases": [
+    "John Holles, 1st Duke of Newcastle"
+   ]
+  }
+ ],
+ "4b6b7f4e0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "David Barry, 1st Earl of Barrymore",
+    "father",
+    "David de Barry, 5th Viscount Buttevant"
+   ],
+   "subject_aliases": [
+    "David Barry, 1st Earl of Barrymore"
+   ],
+   "object_aliases": [
+    "David de Barry, 5th Viscount Buttevant"
+   ]
+  },
+  {
+   "evidence": [
+    "David de Barry, 5th Viscount Buttevant",
+    "mother",
+    "Ellen MacCarthy"
+   ],
+   "subject_aliases": [
+    "David de Barry, 5th Viscount Buttevant"
+   ],
+   "object_aliases": [
+    "Ellen MacCarthy"
+   ]
+  }
+ ],
+ "37490a640baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "John I, Count Palatine of Simmern",
+    "father",
+    "Frederick I, Count Palatine of Simmern"
+   ],
+   "subject_aliases": [
+    "John I, Count Palatine of Simmern"
+   ],
+   "object_aliases": [
+    "Frederick I, Count Palatine of Simmern",
+    "Friedrich I."
+   ]
+  },
+  {
+   "evidence": [
+    "Frederick I, Count Palatine of Simmern",
+    "spouse",
+    "Margaret of Guelders"
+   ],
+   "subject_aliases": [
+    "Frederick I, Count Palatine of Simmern",
+    "Friedrich I."
+   ],
+   "object_aliases": [
+    "Margaret of Guelders",
+    "Margaret of Guelders (1436–1486)"
+   ]
+  }
+ ],
+ "a9f090fa0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Richard de Montfort",
+    "father",
+    "Simon I de Montfort"
+   ],
+   "subject_aliases": [
+    "Richard de Montfort"
+   ],
+   "object_aliases": [
+    "Simon I de Montfort"
+   ]
+  },
+  {
+   "evidence": [
+    "Simon I de Montfort",
+    "father",
+    "Amaury I de Montfort"
+   ],
+   "subject_aliases": [
+    "Simon I de Montfort"
+   ],
+   "object_aliases": [
+    "Amaury I de Montfort",
+    "Amaury I of Montfort"
+   ]
+  }
+ ],
+ "eb63d1060bae11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Marcus Vinicius",
+    "spouse",
+    "Julia Livilla"
+   ],
+   "subject_aliases": [
+    "Marcus Vinicius",
+    "Marcus Vinicius (consul 30)"
+   ],
+   "object_aliases": [
+    "Julia Caesaris filia",
+    "Julia Germanici Caesaris filia Livia",
+    "Julia Livia",
+    "Julia Livia, daughter of Germanicus Caesar",
+    "Julia Livilla",
+    "Júlia Livil·la",
+    "Livia",
+    "Livilla"
+   ]
+  },
+  {
+   "evidence": [
+    "Julia Livilla",
+    "father",
+    "Germanicus"
+   ],
+   "subject_aliases": [
+    "Julia Caesaris filia",
+    "Julia Germanici Caesaris filia Livia",
+    "Julia Livia",
+    "Julia Livia, daughter of Germanicus Caesar",
+    "Julia Livilla",
+    "Júlia Livil·la",
+    "Livia",
+    "Livilla"
+   ],
+   "object_aliases": [
+    "Germanico",
+    "Germanico Giulio Cesare",
+    "Germanicus",
+    "Germanicus Caesar",
+    "Germanicus Julius Caesar",
+    "Nero Claudius Drusus",
+    "Nero Claudius Germanicus",
+    "Tiberius Claudius Nero"
+   ]
+  }
+ ],
+ "d60529440baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Nawrahta of Kanni",
+    "father",
+    "Thihathu"
+   ],
+   "subject_aliases": [
+    "Nawrahta of Kanni"
+   ],
+   "object_aliases": [
+    "Thihathu"
+   ]
+  },
+  {
+   "evidence": [
+    "Thihathu",
+    "sibling",
+    "Yazathingyan"
+   ],
+   "subject_aliases": [
+    "Thihathu"
+   ],
+   "object_aliases": [
+    "Yazathingyan"
+   ]
+  }
+ ],
+ "f16f2e820baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Maria Salviati",
+    "father",
+    "Jacopo Salviati"
+   ],
+   "subject_aliases": [
+    "Maria Salviati"
+   ],
+   "object_aliases": [
+    "Jacopo Salviati"
+   ]
+  },
+  {
+   "evidence": [
+    "Jacopo Salviati",
+    "spouse",
+    "Lucrezia de' Medici"
+   ],
+   "subject_aliases": [
+    "Jacopo Salviati"
+   ],
+   "object_aliases": [
+    "Lucrezia Maria Romola de' Medici",
+    "Lucrezia de' Medici",
+    "Lucrezia de' Medici (1470–1553)"
+   ]
+  }
+ ],
+ "41bbec360bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Konoe Tsunehiro",
+    "child",
+    "Konoe Motosaki"
+   ],
+   "subject_aliases": [
+    "Konoe Tsunehiro"
+   ],
+   "object_aliases": [
+    "Konoe Motosaki"
+   ]
+  },
+  {
+   "evidence": [
+    "Konoe Motosaki",
+    "child",
+    "Konoe Tadahiro"
+   ],
+   "subject_aliases": [
+    "Konoe Motosaki"
+   ],
+   "object_aliases": [
+    "Konoe Tadahiro"
+   ]
+  }
+ ],
+ "da4671700baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Pheidon I",
+    "father",
+    "Temenus"
+   ],
+   "subject_aliases": [
+    "Pheidon I"
+   ],
+   "object_aliases": [
+    "Temenus"
+   ]
+  },
+  {
+   "evidence": [
+    "Temenus",
+    "father",
+    "Aristomachus"
+   ],
+   "subject_aliases": [
+    "Temenus"
+   ],
+   "object_aliases": [
+    "Aristomachus"
+   ]
+  }
+ ],
+ "233a58480baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Hōjō Akitoki",
+    "father",
+    "Kanezawa Sanetoki"
+   ],
+   "subject_aliases": [
+    "Hojo Akitoki",
+    "Hōjō Akitoki",
+    "Kanesawa Akitoki"
+   ],
+   "object_aliases": [
+    "Hojo Sanetoki",
+    "Houjou Sanetoki",
+    "Hōjō Sanetoki",
+    "Kanesawa Sanetoki",
+    "Kanezawa Sanetoki"
+   ]
+  },
+  {
+   "evidence": [
+    "Kanezawa Sanetoki",
+    "father",
+    "Hōjō Saneyasu"
+   ],
+   "subject_aliases": [
+    "Hojo Sanetoki",
+    "Houjou Sanetoki",
+    "Hōjō Sanetoki",
+    "Kanesawa Sanetoki",
+    "Kanezawa Sanetoki"
+   ],
+   "object_aliases": [
+    "Hojo Saneyasu",
+    "Hōjō Saneyasu",
+    "Kanesawa Saneyasu"
+   ]
+  }
+ ],
+ "67d605640bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Eunseong Kim",
+    "doctoral advisor",
+    "Moses H. W. Chan"
+   ],
+   "subject_aliases": [
+    "Eunseong Kim"
+   ],
+   "object_aliases": [
+    "Moses H. W. Chan"
+   ]
+  },
+  {
+   "evidence": [
+    "Moses H. W. Chan",
+    "employer",
+    "Pennsylvania State University"
+   ],
+   "subject_aliases": [
+    "Moses H. W. Chan"
+   ],
+   "object_aliases": [
+    "PSU",
+    "Penn State",
+    "Penn State University",
+    "Pennsylvania State University"
+   ]
+  }
+ ],
+ "4c070b620bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Felipe de Marichalar y Borbón",
+    "mother",
+    "Infanta Elena"
+   ],
+   "subject_aliases": [
+    "Felipe Juan Froilan De Marichalar Y De Borbon",
+    "Felipe Juan Froilan de Marichalar y Borbon",
+    "Felipe Juan Froilan de Todos los Santos de Marichalar y de Borbón",
+    "Felipe Juan Froilán de Marichalar y Borbón",
+    "Felipe de Marichalar y Borbón",
+    "Froilán"
+   ],
+   "object_aliases": [
+    "Elena Maria Isabela Dominica de Silas de Borbón y Grecia, Infanta de España",
+    "Infanta Elena",
+    "Infanta Elena, Duchess of Lugo"
+   ]
+  },
+  {
+   "evidence": [
+    "Infanta Elena",
+    "mother",
+    "Queen Sofía of Spain"
+   ],
+   "subject_aliases": [
+    "Elena Maria Isabela Dominica de Silas de Borbón y Grecia, Infanta de España",
+    "Infanta Elena",
+    "Infanta Elena, Duchess of Lugo"
+   ],
+   "object_aliases": [
+    "Queen Sofia of Spain",
+    "Queen Sofía of Spain",
+    "Sophía zu Schleswig-Holstein-Sonderburg-Glücksburg, Princess of Greece and Denmark"
+   ]
+  }
+ ],
+ "6a8c06a00bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Margaret Hughes",
+    "spouse",
+    "Prince Rupert of the Rhine"
+   ],
+   "subject_aliases": [
+    "Margaret Hewes",
+    "Margaret Hughes",
+    "Peg Hughes"
+   ],
+   "object_aliases": [
+    "Count Palatine of the Rhine, Duke of Bavaria, 1st Duke of Cumberland, 1st Earl of Holderness Rupert",
+    "Herzog von Bayern Ruprecht Pfalzgraf bei Rhein",
+    "Pfalzgraf Ruprecht",
+    "Prince Palatine of the Rhine Rupert",
+    "Prince Palatine of the Rhine Ruprecht",
+    "Prince Robert",
+    "Prince Rupert du Rhin",
+    "Prince Rupert of the Rhine",
+    "Prince Ruprecht",
+    "Prince of Bavaria Prince Palatine of The Rhine Rupert",
+    "Prince of Bavaria Prince Palatine of The Rhine Ruprecht",
+    "Prince of Bavaria Rupert",
+    "Prince of Bavaria Ruprecht",
+    "Prince, Count Palatine Robert",
+    "Prince, Count Palatine Rupert",
+    "prince palatin Rupert",
+    "von der Pfalz Rupert",
+    "von der Pfalz, principe Ruprecht"
+   ]
+  },
+  {
+   "evidence": [
+    "Prince Rupert of the Rhine",
+    "father",
+    "Frederick V"
+   ],
+   "subject_aliases": [
+    "Count Palatine of the Rhine, Duke of Bavaria, 1st Duke of Cumberland, 1st Earl of Holderness Rupert",
+    "Herzog von Bayern Ruprecht Pfalzgraf bei Rhein",
+    "Pfalzgraf Ruprecht",
+    "Prince Palatine of the Rhine Rupert",
+    "Prince Palatine of the Rhine Ruprecht",
+    "Prince Robert",
+    "Prince Rupert du Rhin",
+    "Prince Rupert of the Rhine",
+    "Prince Ruprecht",
+    "Prince of Bavaria Prince Palatine of The Rhine Rupert",
+    "Prince of Bavaria Prince Palatine of The Rhine Ruprecht",
+    "Prince of Bavaria Rupert",
+    "Prince of Bavaria Ruprecht",
+    "Prince, Count Palatine Robert",
+    "Prince, Count Palatine Rupert",
+    "prince palatin Rupert",
+    "von der Pfalz Rupert",
+    "von der Pfalz, principe Ruprecht"
+   ],
+   "object_aliases": [
+    "Count Palatine Fredericke V",
+    "Elector Palatine Frederick V",
+    "Elector Palatine Friedrich V",
+    "Falcký Fridrich",
+    "Frederick V",
+    "Frederick V of the Palatinate",
+    "King of Bohemia Frederick I",
+    "King of Bohemia Fridrich I",
+    "King of Bohemia Friedrich I",
+    "Winter King",
+    "Winterkoning",
+    "the Winter King Frederick"
+   ]
+  }
+ ],
+ "18dadca00bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "George Augustus Frederick Cochrane",
+    "father",
+    "Thomas Cochrane, 8th Earl of Dundonald"
+   ],
+   "subject_aliases": [
+    "George Augustus Frederick Cochrane",
+    "George Cochrane",
+    "George Cochrane (politician)",
+    "Hon. George Augustus Frederick Cochrane"
+   ],
+   "object_aliases": [
+    "Thomas Cochrane, 8th Earl of Dundonald"
+   ]
+  },
+  {
+   "evidence": [
+    "Thomas Cochrane, 8th Earl of Dundonald",
+    "father",
+    "William Cochrane"
+   ],
+   "subject_aliases": [
+    "Thomas Cochrane, 8th Earl of Dundonald"
+   ],
+   "object_aliases": [
+    "William Cochrane"
+   ]
+  }
+ ],
+ "03f2846e0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Robert Tilson Deane, 1st Baron Muskerry",
+    "father",
+    "Robert Deane"
+   ],
+   "subject_aliases": [
+    "Robert Deane, 1st Baron Muskerry",
+    "Robert Tilson Deane, 1st Baron Muskerry"
+   ],
+   "object_aliases": [
+    "Robert Deane",
+    "Sir Robert Deane, 5th Baronet"
+   ]
+  },
+  {
+   "evidence": [
+    "Robert Deane",
+    "father",
+    "Sir Matthew Deane, 3rd Baronet"
+   ],
+   "subject_aliases": [
+    "Robert Deane",
+    "Sir Robert Deane, 5th Baronet"
+   ],
+   "object_aliases": [
+    "Sir Matthew Deane, 3rd Baronet"
+   ]
+  }
+ ],
+ "05b5c1e00baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Sancha of Castile, Queen of Aragon",
+    "father",
+    "Emperor"
+   ],
+   "subject_aliases": [
+    "Sancha Kastylijska",
+    "Sancha of Castile",
+    "Sancha of Castile, Queen of Aragon"
+   ],
+   "object_aliases": [
+    "Alfonso VII of Leon and Castile",
+    "Alfonso VII of León and Castile",
+    "Emperor",
+    "the Emperor"
+   ]
+  },
+  {
+   "evidence": [
+    "Emperor",
+    "mother",
+    "Urraca of León"
+   ],
+   "subject_aliases": [
+    "Alfonso VII of Leon and Castile",
+    "Alfonso VII of León and Castile",
+    "Emperor",
+    "the Emperor"
+   ],
+   "object_aliases": [
+    "Urraca of Leon",
+    "Urraca of León"
+   ]
+  }
+ ],
+ "56d3a3a20bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Friedrich Karl of Limburg Stirum",
+    "father",
+    "Otto Leopold of Limburg Stirum"
+   ],
+   "subject_aliases": [
+    "Friedrich Karl of Limburg Stirum"
+   ],
+   "object_aliases": [
+    "Otto Leopold of Limburg Stirum"
+   ]
+  },
+  {
+   "evidence": [
+    "Otto Leopold of Limburg Stirum",
+    "father",
+    "Hermann Otto II of Limburg Stirum"
+   ],
+   "subject_aliases": [
+    "Otto Leopold of Limburg Stirum"
+   ],
+   "object_aliases": [
+    "Hermann Otto II of Limburg Stirum"
+   ]
+  }
+ ],
+ "8da9b95c0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "John II of Luxembourg, Count of Ligny",
+    "father",
+    "John of Luxembourg, Lord of Beauvoir"
+   ],
+   "subject_aliases": [
+    "John II of Luxembourg, Count of Ligny"
+   ],
+   "object_aliases": [
+    "John of Luxembourg, Lord of Beauvoir"
+   ]
+  },
+  {
+   "evidence": [
+    "John of Luxembourg, Lord of Beauvoir",
+    "mother",
+    "Mahaut de Châtillon"
+   ],
+   "subject_aliases": [
+    "John of Luxembourg, Lord of Beauvoir"
+   ],
+   "object_aliases": [
+    "Mahaut de Châtillon"
+   ]
+  }
+ ],
+ "77cecc800bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Charles Stuart, 1st (or 5th) Earl of Lennox",
+    "father",
+    "Matthew Stewart, 4th Earl of Lennox"
+   ],
+   "subject_aliases": [
+    "Charles Stuart",
+    "Charles Stuart, 1st (or 5th) Earl of Lennox",
+    "Charles Stuart, 1st Earl of Lennox"
+   ],
+   "object_aliases": [
+    "Matthew II",
+    "Matthew Stewart, 4th Earl of Lennox"
+   ]
+  },
+  {
+   "evidence": [
+    "Matthew Stewart, 4th Earl of Lennox",
+    "mother",
+    "Elizabeth Stewart"
+   ],
+   "subject_aliases": [
+    "Matthew II",
+    "Matthew Stewart, 4th Earl of Lennox"
+   ],
+   "object_aliases": [
+    "Elizabeth Stewart"
+   ]
+  }
+ ],
+ "c8c299420baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Catherine of Lancaster",
+    "father",
+    "John of Gaunt"
+   ],
+   "subject_aliases": [
+    "Catherine of Lancaster"
+   ],
+   "object_aliases": [
+    "John of Gaunt",
+    "John of Gaunt, 1st Duke of Lancaster"
+   ]
+  },
+  {
+   "evidence": [
+    "John of Gaunt",
+    "father",
+    "Edward III of England"
+   ],
+   "subject_aliases": [
+    "John of Gaunt",
+    "John of Gaunt, 1st Duke of Lancaster"
+   ],
+   "object_aliases": [
+    "Edward III",
+    "Edward III of England",
+    "Edward of Windsor"
+   ]
+  }
+ ],
+ "37f634be0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Baldwin I of Jerusalem",
+    "mother",
+    "Ida of Lorraine"
+   ],
+   "subject_aliases": [
+    "Baldwin I",
+    "Baldwin I of Jerusalem"
+   ],
+   "object_aliases": [
+    "Ida of Lorraine"
+   ]
+  },
+  {
+   "evidence": [
+    "Ida of Lorraine",
+    "sibling",
+    "Godfrey IV, Duke of Lower Lorraine"
+   ],
+   "subject_aliases": [
+    "Ida of Lorraine"
+   ],
+   "object_aliases": [
+    "Godfrey IV, Duke of Lower Lorraine",
+    "Godfrey the Hunchback"
+   ]
+  }
+ ],
+ "9884af040baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Odon of Poznań",
+    "father",
+    "Mieszko III the Old"
+   ],
+   "subject_aliases": [
+    "Odon of Poznań"
+   ],
+   "object_aliases": [
+    "Mieszko III Stary",
+    "Mieszko III the Old"
+   ]
+  },
+  {
+   "evidence": [
+    "Mieszko III the Old",
+    "father",
+    "Bolesław III Wrymouth"
+   ],
+   "subject_aliases": [
+    "Mieszko III Stary",
+    "Mieszko III the Old"
+   ],
+   "object_aliases": [
+    "Bolesław III Wrymouth"
+   ]
+  }
+ ],
+ "b58f86e60baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Empress Yang",
+    "spouse",
+    "Lü Zuan"
+   ],
+   "subject_aliases": [
+    "Empress Yang",
+    "Empress Yang (Lü Zuan's wife)"
+   ],
+   "object_aliases": [
+    "Lü Zuan"
+   ]
+  },
+  {
+   "evidence": [
+    "Lü Zuan",
+    "father",
+    "Lü Guang"
+   ],
+   "subject_aliases": [
+    "Lü Zuan"
+   ],
+   "object_aliases": [
+    "Lü Guang"
+   ]
+  }
+ ],
+ "9b5d493e0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Nicu Ceaușescu",
+    "mother",
+    "Elena Ceaușescu"
+   ],
+   "subject_aliases": [
+    "Nicu Ceausescu",
+    "Nicu Ceauşescu",
+    "Nicu Ceaușescu"
+   ],
+   "object_aliases": [
+    "Elena Ceausescu",
+    "Elena Ceauşescu",
+    "Elena Ceaușescu"
+   ]
+  },
+  {
+   "evidence": [
+    "Elena Ceaușescu",
+    "spouse",
+    "Nicolae Ceaușescu"
+   ],
+   "subject_aliases": [
+    "Elena Ceausescu",
+    "Elena Ceauşescu",
+    "Elena Ceaușescu"
+   ],
+   "object_aliases": [
+    "Nicolae Ceausescu",
+    "Nicolae Ceauşescu",
+    "Nicolae Ceaușescu"
+   ]
+  }
+ ],
+ "f194d7a40baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Walram, Count of Jülich",
+    "father",
+    "William IV, Count of Jülich"
+   ],
+   "subject_aliases": [
+    "Walram, Count of Jülich"
+   ],
+   "object_aliases": [
+    "William IV, Count of Jülich"
+   ]
+  },
+  {
+   "evidence": [
+    "William IV, Count of Jülich",
+    "mother",
+    "Mathilde of Limburg"
+   ],
+   "subject_aliases": [
+    "William IV, Count of Jülich"
+   ],
+   "object_aliases": [
+    "Mathilde of Limburg"
+   ]
+  }
+ ],
+ "bd46e5d20baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Amaury de Montfort",
+    "mother",
+    "Alix de Montmorency"
+   ],
+   "subject_aliases": [
+    "Amaury VII of Montfort",
+    "Amaury de Montfort",
+    "Amaury de Montfort (died 1241)"
+   ],
+   "object_aliases": [
+    "Alix de Montmorency"
+   ]
+  },
+  {
+   "evidence": [
+    "Alix de Montmorency",
+    "father",
+    "Bouchard V de Montmorency"
+   ],
+   "subject_aliases": [
+    "Alix de Montmorency"
+   ],
+   "object_aliases": [
+    "Bouchard V de Montmorency"
+   ]
+  }
+ ],
+ "897586180bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Prince Radu of Romania",
+    "spouse",
+    "Margareta of Romania"
+   ],
+   "subject_aliases": [
+    "Prince Radu of Romania"
+   ],
+   "object_aliases": [
+    "Margareta of Romania"
+   ]
+  },
+  {
+   "evidence": [
+    "Margareta of Romania",
+    "mother",
+    "Queen Anne of Romania"
+   ],
+   "subject_aliases": [
+    "Margareta of Romania"
+   ],
+   "object_aliases": [
+    "Anne Antoinette Françoise Charlotte Zita Marguerite of Bourbon-Parma",
+    "Queen Anne of Romania"
+   ]
+  }
+ ],
+ "5bb4b70e0baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Maria Josepha of Bavaria",
+    "mother",
+    "Maria Amalia of Austria"
+   ],
+   "subject_aliases": [
+    "Maria Josepha of Bavaria"
+   ],
+   "object_aliases": [
+    "Maria Amalia of Austria",
+    "Maria Amalia, Holy Roman Empress"
+   ]
+  },
+  {
+   "evidence": [
+    "Maria Amalia of Austria",
+    "mother",
+    "Wilhelmine Amalia of Brunswick-Lüneburg"
+   ],
+   "subject_aliases": [
+    "Maria Amalia of Austria",
+    "Maria Amalia, Holy Roman Empress"
+   ],
+   "object_aliases": [
+    "Empress consort of Joseph I Wilhelmina Amalia",
+    "Empress, consort of Joseph I, Holy Roman Emperor Wilhelmina Amalia",
+    "Wilhelmine Amalia of Brunswick-Lüneburg"
+   ]
+  }
+ ],
+ "4fa9d2780baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Marie, Countess of Eu",
+    "father",
+    "Raoul II of Lusignan"
+   ],
+   "subject_aliases": [
+    "Marie of Lusignan",
+    "Marie, Countess of Eu"
+   ],
+   "object_aliases": [
+    "Raoul II of Lusignan"
+   ]
+  },
+  {
+   "evidence": [
+    "Raoul II of Lusignan",
+    "mother",
+    "Alix, Countess of Eu"
+   ],
+   "subject_aliases": [
+    "Raoul II of Lusignan"
+   ],
+   "object_aliases": [
+    "Adelaide, Countess of Eu",
+    "Alice, Countess of Eu",
+    "Alix d’ Eu",
+    "Alix, Countess of Eu"
+   ]
+  }
+ ],
+ "ad5f66c60baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Lord Xinling",
+    "father",
+    "King Zhao of Wei"
+   ],
+   "subject_aliases": [
+    "Lord Xinling"
+   ],
+   "object_aliases": [
+    "King Zhao of Wei"
+   ]
+  },
+  {
+   "evidence": [
+    "King Zhao of Wei",
+    "father",
+    "King Xiang of Wei"
+   ],
+   "subject_aliases": [
+    "King Zhao of Wei"
+   ],
+   "object_aliases": [
+    "King Xiang of Wei",
+    "Wei Si"
+   ]
+  }
+ ],
+ "4a0422f00bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Prince Hubertus of Prussia",
+    "mother",
+    "Duchess Cecilie of Mecklenburg-Schwerin"
+   ],
+   "subject_aliases": [
+    "Hubertus",
+    "Prince Hubertus of Prussia"
+   ],
+   "object_aliases": [
+    "Duchess Cecilie of Mecklenburg-Schwerin"
+   ]
+  },
+  {
+   "evidence": [
+    "Duchess Cecilie of Mecklenburg-Schwerin",
+    "father",
+    "Frederick Francis III, Grand Duke of Mecklenburg-Schwerin"
+   ],
+   "subject_aliases": [
+    "Duchess Cecilie of Mecklenburg-Schwerin"
+   ],
+   "object_aliases": [
+    "Frederick Francis III, Grand Duke of Mecklenburg-Schwerin"
+   ]
+  }
+ ],
+ "4aa187080baf11ebab90acde48001122": [
+  {
+   "evidence": [
+    "Edward I of England",
+    "father",
+    "Henry III"
+   ],
+   "subject_aliases": [
+    "Edward I",
+    "Edward I of England",
+    "Edward Longshanks",
+    "Hammer of the Scots",
+    "Hammer of the Scots Edward",
+    "King of England Edward I",
+    "König Eduard I. England",
+    "Malleus Scotorum Edward",
+    "re d'Inghilterra Edward I",
+    "roi d'Angleterre Édouard I"
+   ],
+   "object_aliases": [
+    "Henry III",
+    "Henry III of England",
+    "Henry of Winchester"
+   ]
+  },
+  {
+   "evidence": [
+    "Henry III",
+    "mother",
+    "Isabella of Angoulême"
+   ],
+   "subject_aliases": [
+    "Henry III",
+    "Henry III of England",
+    "Henry of Winchester"
+   ],
+   "object_aliases": [
+    "Isabella of Angouleme",
+    "Isabella of Angoulême",
+    "Isabelle d'Angoulême"
+   ]
+  }
+ ],
+ "62ab4e000bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Elene (1753 – 17 June 1786) was a Georgia",
+    "child",
+    "Solomon II of Imereti"
+   ],
+   "subject_aliases": [
+    "Elene (1753 – 17 June 1786) was a Georgia",
+    "Elene batonishvili",
+    "Princess Elene of Georgia"
+   ],
+   "object_aliases": [
+    "Solomon II of Imereti"
+   ]
+  },
+  {
+   "evidence": [
+    "Solomon II of Imereti",
+    "father",
+    "Prince Archil of Imereti"
+   ],
+   "subject_aliases": [
+    "Solomon II of Imereti"
+   ],
+   "object_aliases": [
+    "Prince Archil of Imereti"
+   ]
+  }
+ ],
+ "54a7772a0bb011ebab90acde48001122": [
+  {
+   "evidence": [
+    "Sir John Vanden-Bempde-Johnstone, 2nd Baronet",
+    "father",
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Baronet"
+   ],
+   "subject_aliases": [
+    "John Vanden-Bempde-Johnstone",
+    "Sir John Vanden-Bempde-Johnstone, 2nd Baronet",
+    "Sir John Vanden-Bempde-Johnstone, 2nd Bt."
+   ],
+   "object_aliases": [
+    "Richard Johnstone",
+    "Richard Vanden-Bempde-Johnstone",
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Baronet",
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Bt."
+   ]
+  },
+  {
+   "evidence": [
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Baronet",
+    "father",
+    "John Johnstone"
+   ],
+   "subject_aliases": [
+    "Richard Johnstone",
+    "Richard Vanden-Bempde-Johnstone",
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Baronet",
+    "Sir Richard Vanden-Bempde-Johnstone, 1st Bt."
+   ],
+   "object_aliases": [
+    "John Johnstone",
+    "Lieut.-Col. John Johnstone"
+   ]
+  }
+ ]
+}

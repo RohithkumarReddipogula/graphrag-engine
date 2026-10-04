@@ -72,3 +72,12 @@ def test_gold_triples_map_to_the_subject_paragraph():
          "gold_chunk_ids": ["Film A (1990 film)", "Jane Doe"]}
     triples, unmapped = gold_triples([q, q], corpus)
     assert [t["chunk_id"] for t in triples] == ["Film A (1990 film)"] and unmapped == 1
+
+
+def test_aliases_let_a_country_match_its_demonym():
+    gold = [{"subject": "Michael X", "relation": "country of citizenship", "object": "Hungarian", "chunk_id": "c",
+             "subject_aliases": ["Michael X"], "object_aliases": ["Hungarian", "Hungary"]}]
+    extracted = [{"subject": "Michael X", "relation": "country of citizenship", "object": "Hungary"}]
+    assert score(extracted, gold, 90)["overall"]["recalled"] == 1
+    no_alias = [{**gold[0], "object_aliases": ["Hungarian"]}]
+    assert score(extracted, no_alias, 90)["overall"]["recalled"] == 0

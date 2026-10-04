@@ -22,6 +22,8 @@ from graphrag.extraction.schema import ENTITY_TYPES, RELATIONS, BatchExtraction,
 from graphrag.llm.client import CachedLLM
 
 BATCH_SIZE = 8
+# v1 (pilot 1, commit 06f195b) had no OTHER rule and no adjective rule; see results/m2/pilot_v1.json.
+PROMPT_VERSION = "v2"
 
 SYSTEM = f"""You extract a knowledge graph from Wikipedia paragraphs.
 
@@ -31,8 +33,13 @@ For each paragraph, independently of the others:
    {", ".join(ENTITY_TYPES)}. Description: at most 12 words, taken from the paragraph.
 2. List the facts it states as relations (subject, relation, object), using only these relations:
 {chr(10).join(f"   - {name}: {desc}" for name, desc in RELATIONS.items())}
-   Use OTHER with a short other_label for an important fact that fits none of them.
+   If a fact fits one of these relations, you must use that relation. Use OTHER, with a short
+   other_label, only for an important fact that fits none of them. Never use OTHER for a fact that a
+   listed relation covers, and never put a relation name into the object or the other_label.
    Follow the direction given above (subject -> object).
+   Facts stated through an adjective or a description count as stated. A nationality adjective
+   ("a French village", "a Polish-born British actor") states the country or the country of
+   citizenship; give the country (France; Poland and United Kingdom).
    For date relations, the object is the date as written in the paragraph.
    Subject and object must be entity names from step 1, except date objects.
 Only state what the paragraph says. Do not use outside knowledge. Return every chunk_id you were given."""
@@ -72,9 +79,11 @@ class QuotaExhausted(RuntimeError):
 
 
 def _is_retryable(exc: Exception) -> bool:
-    """Rate limits (429) and temporary server overload (500, 503) are worth waiting for."""
+    """Rate limits (429), temporary server overload (500, 502, 503) and stalled calls are worth retrying."""
     text = str(exc)
-    return any(code in text for code in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "500 INTERNAL"))
+    return any(code in text for code in (
+        "429", "RESOURCE_EXHAUSTED", "500", "502", "503", "UNAVAILABLE", "TIMEOUT", "timed out",
+    ))
 
 
 def _is_daily_quota(exc: Exception) -> bool:
@@ -121,3 +130,33 @@ def extract_batch(llm: CachedLLM, batch: list[dict], stats: RunStats, max_quota_
             last_error = f"{type(exc).__name__}: {str(exc)[:300]}"
     stats.failed.append({"chunk_ids": [c["id"] for c in batch], "error": last_error})
     return None
+
+
+def merge_stats(parts: list[RunStats]) -> RunStats:
+    total = RunStats()
+    for p in parts:
+        total.batches += p.batches
+        total.ok += p.ok
+        total.retried += p.retried
+        total.failed += p.failed
+        total.live_calls += p.live_calls
+        total.input_tokens += p.input_tokens
+        total.output_tokens += p.output_tokens
+        total.cost_usd += p.cost_usd
+    return total
+
+
+def extract_many(llm: CachedLLM, batches: dict[int, list[dict]], workers: int = 4) -> tuple[dict[int, BatchExtraction | None], RunStats]:
+    """Extract several batches in parallel threads. Each batch is an independent cached call, so the
+    results do not depend on the number of workers. Each task keeps its own RunStats (merged at the end).
+    A QuotaExhausted in any task is re-raised after the running tasks finish; cached work is kept."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def one(item):
+        i, batch = item
+        st = RunStats(batches=1)
+        return i, extract_batch(llm, batch, st), st
+
+    with ThreadPoolExecutor(workers) as pool:
+        results = list(pool.map(one, sorted(batches.items())))
+    return {i: parsed for i, parsed, _ in results}, merge_stats([st for _, _, st in results])
