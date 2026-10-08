@@ -1,0 +1,36 @@
+{
+ "judge_version": "v2",
+ "same_direction": {
+  "pairs": 24,
+  "judged_same": 23,
+  "gate": 22,
+  "pass": true,
+  "verdicts": {
+   "same": 23,
+   "different": 1
+  }
+ },
+ "different_direction": {
+  "pairs": 8,
+  "judged_different": 8,
+  "gate": "all",
+  "pass": true,
+  "by_category": {
+   "United States vs United Kingdom": {
+    "different": 3
+   },
+   "Cannes vs Berlin vs Moscow film festivals": {
+    "different": 4
+   },
+   "Mexico vs Mexico City": {
+    "different": 1
+   }
+  }
+ },
+ "cost": {
+  "calls": 4,
+  "live_calls": 4,
+  "cost_usd": 0.000986
+ },
+ "remaining_credit_usd": 6.570916
+}

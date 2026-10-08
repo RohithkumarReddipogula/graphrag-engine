@@ -198,6 +198,11 @@ Method:
    - no merge below `t_low`.
 4. Union-find with the never-merge checks; every merge records its reason (rule or LLM) and score.
    Stable surrogate ids and an alias table are kept.
+5. After run 1 failed (`results/m3/run1_flawed/README.md`), approved on 2026-10-08: judge prompt v2 states
+   each mention's role in its paragraph (subject, or only mentioned in a paragraph about something else)
+   and says to judge the named entity, not the paragraph's subject; a cannot-link rule refuses any merge
+   that joins two clusters containing a pair judged "different"; merges are applied most confident first
+   (E5 cosine, highest first, ties by pair ids). Pilot for v2 in `results/m3/pilot_v2.json`.
 
 Tuning and reporting are kept apart:
 - Paragraphs are split by a seeded hash into tune (30%) and report (70%). A pair belongs to the split of

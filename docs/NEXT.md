@@ -9,8 +9,9 @@ Last updated: 2026-10-08. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
   run summary in `results/m2/extraction_run.json`, strict dev scores in
   `results/m2/extraction_scores.json`). Hand check 28 of 30 correct.
 - M3: plan and quality bar approved (`docs/PLAN.md`, M3); auto-merge is off (every candidate pair is
-  judged by the LLM); the pilot is in `results/m3/pilot.json`. **M3 run 1 failed** (section 2). Nothing
-  is running now.
+  judged by the LLM). **M3 run 1 failed** (section 2). Steps 1 to 4 of section 3 are done (judge prompt
+  v2, cannot-link, fixed merge order, two-direction pilot); the pilot passed both gates
+  (`results/m3/pilot_v2.json`). Step 5, the full re-run, waits for approval. Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 
@@ -41,7 +42,7 @@ Two causes:
 The pilot did not catch this: its "different" cases were genuinely different entities, and it did not
 test mention-vs-page pairs that should be "same".
 
-## 3. Approved next steps for M3 (do these tomorrow, in order)
+## 3. Approved next steps for M3 (steps 1 to 4 done on 2026-10-08; step 5 waits for approval)
 
 1. Judge prompt v2 with explicit roles. Each side states its role: "A is the subject of its paragraph"
    or "A is mentioned in a paragraph about <title>". The prompt says to judge only the named entity:

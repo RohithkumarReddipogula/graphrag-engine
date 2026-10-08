@@ -1,5 +1,5 @@
-"""M3 full run: the LLM judges every candidate pair (auto-merge off, approved 2026-10-08), then
-union-find clustering with the never-merge rule, cluster statistics, bridge link recall before and after
+"""M3 full run: the LLM judges every candidate pair (auto-merge off, approved 2026-10-08) with judge
+prompt v2, then union-find clustering with the never-merge rules (two pages; cannot-link), cluster statistics, bridge link recall before and after
 M3, and the two hand-check sheets.
 
 Writes results/m3/decisions.jsonl, results/m3/clusters.jsonl, results/m3/resolution_run.json,
@@ -21,7 +21,7 @@ from graphrag.resolution import handcheck
 from graphrag.resolution.candidates import candidate_pairs
 from graphrag.resolution.cluster import cluster
 from graphrag.resolution.embed_mentions import embed_mentions
-from graphrag.resolution.judge import PAIRS_PER_CALL, judge_batch
+from graphrag.resolution.judge import JUDGE_VERSION, PAIRS_PER_CALL, judge_batch
 from graphrag.resolution.labels import bridge_links
 from graphrag.resolution.mentions import build_mentions
 
@@ -84,7 +84,8 @@ def main() -> None:
 
     # 2. Clusters.
     same = [(r["a"], r["b"], r["cos"]) for r in rows if r["verdict"] == "same"]
-    cl = cluster(mentions, same)
+    different = [(r["a"], r["b"]) for r in rows if r["verdict"] == "different"]
+    cl = cluster(mentions, same, different)
     write_jsonl(out / "clusters.jsonl", [{"mention": m.id, "cluster": cl.cluster_of[m.id], "name": m.name,
                                           "type": m.type, "is_page": m.is_page} for m in mentions])
     sizes = Counter({cid: len(ids) for cid, ids in cl.members.items()})
@@ -132,7 +133,9 @@ def main() -> None:
         "llm": {"calls": len(calls), "live_calls": sum(not c.cached for c in calls), "batches_failed_twice": failed,
                 "input_tokens": sum(c.input_tokens for c in calls), "output_tokens": sum(c.output_tokens for c in calls),
                 "cost_usd_live": round(sum(c.cost_usd for c in calls if not c.cached), 6)},
-        "merges_applied": len(cl.applied), "merges_rejected_two_pages": len(cl.rejected),
+        "judge_version": JUDGE_VERSION,
+        "merges_applied": len(cl.applied),
+        "merges_rejected": dict(Counter(reason for _, _, reason in cl.rejected)),
         "clusters": {"total": len(cl.members), "with_2_or_more_mentions": sum(v >= 2 for v in sizes.values()),
                      "singletons": sum(v == 1 for v in sizes.values()), "with_a_page": len(page_clusters),
                      "largest": [{"cluster": cid, "mentions": n, "names": top_names(cl.members[cid])}
@@ -144,7 +147,7 @@ def main() -> None:
         "seconds": round(time.time() - t0),
     }
     (out / "resolution_run.json").write_text(json.dumps(run, indent=1, ensure_ascii=False) + "\n")
-    print(json.dumps({k: run[k] for k in ("verdicts", "llm", "merges_applied", "merges_rejected_two_pages",
+    print(json.dumps({k: run[k] for k in ("verdicts", "llm", "merges_applied", "merges_rejected",
                                           "clusters", "non_page_mentions_linked_to_a_page", "bridge_link_recall")},
                      indent=1, ensure_ascii=False))
 

@@ -76,7 +76,7 @@ def test_chains_never_join_two_pages():
     res = cluster(ms, [("p1::0", "x::1", 0.99), ("x::1", "y::1", 0.95), ("p2::0", "y::1", 0.90)])
     assert res.cluster_of["x::1"] == res.cluster_of["y::1"] == "P1"
     assert res.cluster_of["p2::0"] == "P2"
-    assert res.rejected == [("p2::0", "y::1")]
+    assert res.rejected == [("p2::0", "y::1", "two_pages")]
 
 
 def test_cluster_ids_are_stable_and_singletons_stay_alone():
@@ -86,3 +86,34 @@ def test_cluster_ids_are_stable_and_singletons_stay_alone():
     res = cluster(ms, [("a::1", "b::1", 0.9)])
     assert res.cluster_of["a::1"] == res.cluster_of["b::1"] == "m:a::1"
     assert res.members["m:c::1"] == ["c::1"]
+
+
+def test_cannot_link_blocks_a_chain_that_contradicts_a_different_verdict():
+    from graphrag.resolution.cluster import cluster
+
+    ms = [m("us::1", "A", "United States", "PLACE"), m("x::1", "B", "US", "PLACE"),
+          m("uk::1", "C", "United Kingdom", "PLACE")]
+    # x=us and x=uk were both judged "same" (wrongly), but us vs uk was judged "different"
+    res = cluster(ms, [("us::1", "x::1", 0.95), ("uk::1", "x::1", 0.90)], [("uk::1", "us::1")])
+    assert res.cluster_of["us::1"] == res.cluster_of["x::1"] != res.cluster_of["uk::1"]
+    assert res.rejected == [("uk::1", "x::1", "cannot_link")]
+
+
+def test_merge_order_is_most_confident_first_then_ids():
+    from graphrag.resolution.cluster import merge_order
+
+    edges = [("b", "c", 0.80), ("a", "d", 0.95), ("a", "c", 0.80)]
+    assert merge_order(edges) == [("a", "d", 0.95), ("a", "c", 0.80), ("b", "c", 0.80)]
+
+
+def test_judge_prompt_states_each_mentions_role():
+    from graphrag.resolution.judge import JUDGE_VERSION, batch_prompt
+
+    corpus = {"MacKenzie Scott": {"title": "MacKenzie Scott", "text": "She was married to Jeff Bezos."},
+              "Jeff Bezos": {"title": "Jeff Bezos", "text": "Jeff Bezos founded Amazon."}}
+    a = m("MacKenzie Scott::2", "MacKenzie Scott", "Jeff Bezos")
+    b = m("Jeff Bezos::0", "Jeff Bezos", "Jeff Bezos", page=True)
+    text = batch_prompt([("p1", a, b)], corpus)
+    assert 'ROLE: mentioned (the paragraph is about "MacKenzie Scott")' in text
+    assert "ROLE: subject (the paragraph is about this entity)" in text
+    assert JUDGE_VERSION == "v2"

@@ -1,6 +1,6 @@
-"""LLM check for borderline pairs (docs/PLAN.md, M3, step 3). gpt-oss-120b on the pinned endpoint,
+"""LLM check for candidate pairs (docs/PLAN.md, M3, step 3). gpt-oss-120b on the pinned endpoint,
 strict JSON output, PAIRS_PER_CALL pairs per call. Each pair shows both mentions with name, type,
-description and their source paragraph. Verdicts: same, different, unsure. Unsure means don't merge.
+description, their role in their paragraph (subject or only mentioned) and the paragraph. Verdicts: same, different, unsure. Unsure means don't merge.
 Invalid output is retried once (separately cached); a batch that fails twice gets "unsure" for every pair.
 """
 
@@ -17,15 +17,27 @@ PAIRS_PER_CALL = 10
 PARAGRAPH_WORDS = 120
 VERDICTS = ("same", "different", "unsure")
 
-SYSTEM = """You decide whether two entity mentions from Wikipedia paragraphs refer to the same real-world
-entity (the same person, film, place, organisation or work).
+# v1 (run 1, results/m3/run1_flawed/): no roles; the LLM judged the paragraph's subject instead of the
+# mentioned entity. v2: every mention states its role in its paragraph.
+JUDGE_VERSION = "v2"
 
-For each pair you get, for both mentions: the name, a type, a short description and the paragraph it
-comes from. Use the paragraphs: dates, roles, relatives, countries and titles tell different people or
-works with the same name apart. Two different films or people can share a name.
+SYSTEM = """You decide whether two entity mentions refer to the same real-world entity (the same person,
+film, place, organisation or work).
 
-Answer "same" only if the paragraphs make it clear they are the same entity. Answer "different" if they
-are clearly different. Otherwise answer "unsure". Give a reason of at most 15 words.
+For each pair you get, for mention A and mention B: the name, a type, a short description, the mention's
+ROLE in its paragraph, and the paragraph text.
+- ROLE "subject": the paragraph is about this entity.
+- ROLE "mentioned": the entity is only named inside a paragraph about something else. The paragraph's
+  facts (born, married, directed, son of, located in) are mostly about the paragraph's subject, not
+  about the mentioned entity. Judge the mentioned entity itself, by its name, type and description,
+  and use the paragraph only for what it says about that named entity.
+
+Example: "Mary Smith" mentioned in a paragraph about her husband John Smith, and the page whose subject
+is Mary Smith, are the same entity if the details fit, even though the first paragraph is about John.
+
+Answer "same" only if the two mentions clearly refer to the same entity. Answer "different" if they
+clearly do not (for example two different people who share a name). Otherwise answer "unsure". Give a
+reason of at most 15 words.
 Return exactly one decision for every pair_id you were given."""
 
 
@@ -59,14 +71,19 @@ def _para(m: Mention, corpus: dict[str, dict]) -> str:
     return f"[{c['title']}] {text}"
 
 
+def role(m: Mention, corpus: dict[str, dict]) -> str:
+    title = corpus[m.chunk_id]["title"]
+    return "subject (the paragraph is about this entity)" if m.is_page else f'mentioned (the paragraph is about "{title}")'
+
+
+def _side(label: str, m: Mention, corpus: dict[str, dict]) -> str:
+    return (f"{label}: {m.name} ({m.type}), {m.description}\n"
+            f"   ROLE: {role(m, corpus)}\n"
+            f"   paragraph: {_para(m, corpus)}")
+
+
 def batch_prompt(pairs: list[tuple[str, Mention, Mention]], corpus: dict[str, dict]) -> str:
-    blocks = []
-    for pid, a, b in pairs:
-        blocks.append(
-            f"pair_id: {pid}\n"
-            f"A: {a.name} ({a.type}) - {a.description}\n   paragraph: {_para(a, corpus)}\n"
-            f"B: {b.name} ({b.type}) - {b.description}\n   paragraph: {_para(b, corpus)}"
-        )
+    blocks = [f"pair_id: {pid}\n{_side('A', a, corpus)}\n{_side('B', b, corpus)}" for pid, a, b in pairs]
     return "Pairs:\n\n" + "\n\n---\n\n".join(blocks)
 
 
