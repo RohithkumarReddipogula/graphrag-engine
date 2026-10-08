@@ -1,0 +1,114 @@
+{
+ "thresholds": {
+  "t_low": 0.85,
+  "t_low_rule": "5th percentile of E5 cosine over tune-split dev bridge links, rounded down to 0.01",
+  "tune_bridge_links": 24,
+  "tune_bridge_link_cos_percentiles_5_25_50": [
+   0.8513,
+   0.8917,
+   0.9121
+  ],
+  "t_high": "not set: dev gold triples give no same-name negatives, so see t_high_options",
+  "fuzzy_min": 85,
+  "name_gate": 60,
+  "exact_k": 3
+ },
+ "candidates": {
+  "total": 17309,
+  "by_kind": {
+   "exact name, single page": 8875,
+   "embedding + name gate": 6287,
+   "fuzzy name": 2127,
+   "exact name, 2+ pages": 20
+  },
+  "by_split": {
+   "report": 14844,
+   "tune": 2465
+  }
+ },
+ "pilot": {
+  "pairs": 93,
+  "calls": 10,
+  "batches_failed_twice": 0,
+  "live_calls": 10,
+  "input_tokens": 29324,
+  "output_tokens": 11578,
+  "cost_usd": 0.003053,
+  "cost_per_pair_usd": 3.283e-05,
+  "verdicts_by_stratum": {
+   "embedding + name gate": {
+    "same": 3,
+    "different": 17,
+    "unsure": 0
+   },
+   "exact name, 2+ pages": {
+    "same": 0,
+    "different": 3,
+    "unsure": 0
+   },
+   "exact single-page cos 0.00-0.85": {
+    "same": 8,
+    "different": 2,
+    "unsure": 0
+   },
+   "exact single-page cos 0.85-0.88": {
+    "same": 8,
+    "different": 2,
+    "unsure": 0
+   },
+   "exact single-page cos 0.88-0.90": {
+    "same": 8,
+    "different": 2,
+    "unsure": 0
+   },
+   "exact single-page cos 0.90-0.92": {
+    "same": 10,
+    "different": 0,
+    "unsure": 0
+   },
+   "exact single-page cos 0.92-1.00": {
+    "same": 9,
+    "different": 1,
+    "unsure": 0
+   },
+   "fuzzy name": {
+    "same": 2,
+    "different": 18,
+    "unsure": 0
+   }
+  }
+ },
+ "t_high_options": [
+  {
+   "t_high": 0.85,
+   "auto_merged": 8251,
+   "llm_pairs": 9058,
+   "projected_usd": 0.297
+  },
+  {
+   "t_high": 0.88,
+   "auto_merged": 6780,
+   "llm_pairs": 10529,
+   "projected_usd": 0.346
+  },
+  {
+   "t_high": 0.9,
+   "auto_merged": 5668,
+   "llm_pairs": 11641,
+   "projected_usd": 0.382
+  },
+  {
+   "t_high": 0.92,
+   "auto_merged": 4574,
+   "llm_pairs": 12735,
+   "projected_usd": 0.418
+  },
+  {
+   "t_high": 1.01,
+   "auto_merged": 0,
+   "llm_pairs": 17309,
+   "projected_usd": 0.568
+  }
+ ],
+ "remaining_credit_usd": 7.166556
+}
