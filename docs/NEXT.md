@@ -9,9 +9,11 @@ Last updated: 2026-10-08. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
   run summary in `results/m2/extraction_run.json`, strict dev scores in
   `results/m2/extraction_scores.json`). Hand check 28 of 30 correct.
 - M3: plan and quality bar approved (`docs/PLAN.md`, M3); auto-merge is off (every candidate pair is
-  judged by the LLM). **M3 run 1 failed** (section 2). Steps 1 to 4 of section 3 are done (judge prompt
-  v2, cannot-link, fixed merge order, two-direction pilot); the pilot passed both gates
-  (`results/m3/pilot_v2.json`). Step 5, the full re-run, waits for approval. Nothing is running now.
+  judged by the LLM). M3 run 1 failed (section 2). Steps 1 to 5 of section 3 are done: judge prompt v2,
+  cannot-link, fixed merge order, two-direction pilot (passed, `results/m3/pilot_v2.json`) and the full
+  re-run (`results/m3/resolution_run.json`). **Waiting for the two hand checks**
+  (`results/m3/merge_handcheck.md`, `results/m3/duplicate_handcheck.md`) and for the decision on
+  bridge links in section 3a. Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 
@@ -42,7 +44,7 @@ Two causes:
 The pilot did not catch this: its "different" cases were genuinely different entities, and it did not
 test mention-vs-page pairs that should be "same".
 
-## 3. Approved next steps for M3 (steps 1 to 4 done on 2026-10-08; step 5 waits for approval)
+## 3. Approved next steps for M3 (all done on 2026-10-08)
 
 1. Judge prompt v2 with explicit roles. Each side states its role: "A is the subject of its paragraph"
    or "A is mentioned in a paragraph about <title>". The prompt says to judge only the named entity:
@@ -69,6 +71,30 @@ split, never-merge rule for page entities, quality bar (at least 48 of 50 merges
 after at most half of before), test questions never used.
 
 Before M5, also decide the open questions in section 7.
+
+## 3a. M3 re-run results and open points
+
+Numbers from `results/m3/resolution_run.json` and `results/m3/bridge_link_changes.json`:
+- 17,309 pairs judged (8,671 same, 8,398 different, 240 unsure); 22 batches failed twice (unsure); 0
+  error batches; live cost 0.43 USD (the first 600 batches came from the cache of the stopped attempt).
+- 3,120 merges applied; 1,673 refused by cannot-link, 16 for joining two pages. 10,830 clusters, 1,613
+  with 2 or more mentions; 742 non-page mentions linked to a page. Run 1's false merges are gone
+  (United States and United Kingdom are separate clusters).
+- Bridge link recall on the report split: 0.83 before (exact name matching, 57 of 69), 0.80 after M3
+  (55 of 69). M3 lost 5 exact-name links and gained 3 that exact matching cannot find (name variants
+  such as "Kaneto Shindō" / "Kaneto Shindo"). Of the 5 lost, 4 are the old role confusion, now rarer
+  ("Abel Ferry" mentioned in a film's paragraph vs his page: "one is a person, the other a film"), and
+  1 was judged same but blocked by cannot-link.
+- The first re-run attempt stalled after 250 batches on an uncaught error in one batch; fixed (any 5xx,
+  408 and 429 are retried; a batch error marks only that batch unsure and is logged in
+  `results/m3/judge_errors.jsonl`) and restarted from the cache.
+
+Open:
+1. Hand checks: merge precision (bar: at least 48 of 50) and duplicate rate (bar: after at most half of
+   before), in the two sheets above.
+2. Decision on bridge links for M4: keep the M3 clusters as they are and, in M4, also add exact-title
+   links (mention name equals exactly one page title) as a separate, labelled edge type, or accept the
+   M3 clusters alone.
 
 ## 4. History of the M2 pilots
 

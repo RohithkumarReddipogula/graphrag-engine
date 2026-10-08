@@ -1,0 +1,302 @@
+[
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Richard Lester",
+  "a": "Richard Lester::0",
+  "b": "Royal Flash (film)::6"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Bagatora railway station::1",
+  "a": "Bagatora railway station::1",
+  "b": "Hassan Zee::1"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Bayezid II::6",
+  "a": "Pere Portabella::1",
+  "b": "Vladimir Feldman::9"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Euphrosina Heldina von Dieffenau::4",
+  "a": "Euphrosina Heldina von Dieffenau::4",
+  "b": "Sigismund III Vasa::15"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Dead Man's Letters",
+  "a": "Dead Man's Letters::0",
+  "b": "Dead Man's Letters::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Eye of the Eagle 2: Inside the Enemy::3",
+  "a": "Ikaw ang Pag-ibig::7",
+  "b": "Trinidad Tecson::2"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Elisabeth of Nassau-Dillenburg, Countess of Wied::1",
+  "a": "Elisabeth of Nassau-Dillenburg, Countess of Wied::1",
+  "b": "William I, Count of Nassau-Dillenburg::1"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Nacer Khemir",
+  "a": "El Haimoune::1",
+  "b": "Nacer Khemir::0"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Francis Jacob Harper::1",
+  "a": "John Penn (\"the American\")::2",
+  "b": "William Penn::8"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Dark River (2017 film)::8",
+  "a": "Dark River (2017 film)::8",
+  "b": "Robert de Brus, 1st Lord of Annandale::4"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Jeff Bezos::1",
+  "a": "Jeff Bezos::1",
+  "b": "MacKenzie Bezos::3"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Beihang University::3",
+  "a": "Gu Changwei::3",
+  "b": "Where Are We Going, Dad? (film)::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Sancha of Aragon, Countess of Toulouse::1",
+  "a": "Sancha of Aragon, Countess of Toulouse::1",
+  "b": "Sancha of Aragon, Countess of Toulouse::11"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Patrick Kilpatrick",
+  "a": "Patrick Kilpatrick::0",
+  "b": "Patrick Kilpatrick::1"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Benjamin Nash::1",
+  "a": "Edgbaston High School::2",
+  "b": "Jim O'Connolly::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Baroness Gösta von dem Bussche-Haddenhausen::4",
+  "a": "Wesley Barresi::2",
+  "b": "William Louis, Count of Nassau-Dillenburg::4"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Nefertiti::4",
+  "a": "Nefertiti::4",
+  "b": "Sennedjem::4"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Say One for Me (album)::4",
+  "a": "Say One for Me (album)::4",
+  "b": "The Tender Trap (film)::3"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Neferefre::1",
+  "a": "Neferefre::1",
+  "b": "Neferefre::2"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Hōjō Akitoki::3",
+  "a": "Hōjō Akitoki::3",
+  "b": "Kanezawa Sanetoki::6"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Margareta of Romania::1",
+  "a": "Marie of Romania::24",
+  "b": "Nicholas Medforth-Mills::3"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Henry Page Croft, 1st Baron Croft::1",
+  "a": "Philip May::2",
+  "b": "Violet Grantham::4"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Cesare Canevari",
+  "a": "Cesare Canevari::0",
+  "b": "Un tango dalla Russia::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Beihang University::10",
+  "a": "Beihang University::10",
+  "b": "Perseus Karlström::4"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Pierre Caron (director)::1",
+  "a": "Pierre Caron (director)::1",
+  "b": "Prashant Shah::7"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Archie Mayo",
+  "a": "Archie Mayo::0",
+  "b": "Archie Mayo::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Archduke Carl Christian of Austria::3",
+  "a": "By the Grace of God (film)::6",
+  "b": "Infanta Maria Josepha of Portugal::4"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "John Vanden-Bempde-Johnstone",
+  "a": "Henry Nevill, 3rd Marquess of Abergavenny::3",
+  "b": "John Vanden-Bempde-Johnstone::0"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Robert Clifford, 4th Baron Clifford",
+  "a": "Robert Clifford, 3rd Baron Clifford::10",
+  "b": "Robert Clifford, 4th Baron Clifford::0"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:The Eternal City (1915 film)::2",
+  "a": "The Eternal City (1915 film)::2",
+  "b": "The Little Train Robbery::2"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Thomas Stanley, 1st Earl of Derby",
+  "a": "Thomas Stanley, 1st Earl of Derby::0",
+  "b": "William Stanley (Battle of Bosworth)::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "Marie Leszczyńska",
+  "a": "Louis, Dauphin of France (son of Louis XV)::2",
+  "b": "Marie Leszczyńska::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Carson City (film)::10",
+  "a": "George Amy::1",
+  "b": "Wings for the Eagle::9"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:John Vanden-Bempde-Johnstone::4",
+  "a": "John Vanden-Bempde-Johnstone::4",
+  "b": "Lord George Paget::3"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Duchess Cecilie of Mecklenburg-Schwerin::14",
+  "a": "Frederick II Eugene, Duke of Württemberg::3",
+  "b": "Frederick Louis of Württemberg (heir apparent)::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:A. Edward Sutherland::7",
+  "a": "Julian Gloag::3",
+  "b": "Night at the Museum: Secret of the Tomb::12"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:A. J. Sylvester::8",
+  "a": "A. J. Sylvester::8",
+  "b": "David Lloyd George::18"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Layneker Zafra",
+  "a": "Layneker Zafra::0",
+  "b": "Layneker Zafra::1"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:24 Hours to Kill::7",
+  "a": "Catherine Beauclerk, Duchess of St Albans::2",
+  "b": "Robert William Jackson::3"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "Andre DeToth",
+  "a": "Carson City (film)::1",
+  "b": "Gold for the Caesars::3"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Harcourt Vanden-Bempde-Johnstone, 1st Baron Derwent::2",
+  "a": "Harcourt Vanden-Bempde-Johnstone, 1st Baron Derwent::2",
+  "b": "John Vanden-Bempde-Johnstone::6"
+ },
+ {
+  "stratum": "direct, same name",
+  "cluster": "m:Henri Christophe::20",
+  "a": "Henri Christophe::20",
+  "b": "James Whale::21"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Bernard VII, Count of Armagnac::1",
+  "a": "Bernard VII, Count of Armagnac::1",
+  "b": "John III, Count of Armagnac::1"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Manuel Torre",
+  "a": "Manuel Torre::0",
+  "b": "Manuel Torre::1"
+ },
+ {
+  "stratum": "mention linked to page",
+  "cluster": "Riccardo Schicchi",
+  "a": "Riccardo Schicchi::0",
+  "b": "Telefono rosso::2"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Abel Ferry::1",
+  "a": "Alain Robbe-Grillet::1",
+  "b": "Theobald II, Count of Champagne::14"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Akbank::1",
+  "a": "Akbank::1",
+  "b": "Doğan Media Group::2"
+ },
+ {
+  "stratum": "indirect (through a chain)",
+  "cluster": "m:Antonio Flores (footballer)::1",
+  "a": "Encounters in the Deep::8",
+  "b": "Viridiana::8"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Duke Franz Joseph in Bavaria::3",
+  "a": "Duke Franz Joseph in Bavaria::3",
+  "b": "Matilda of Habsburg::5"
+ },
+ {
+  "stratum": "direct, different name",
+  "cluster": "m:Arnold Page::5",
+  "a": "Arnold Page::5",
+  "b": "George Baden-Powell::7"
+ }
+]

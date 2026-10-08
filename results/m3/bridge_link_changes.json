@@ -1,0 +1,87 @@
+{
+ "split": "report",
+ "lost": 5,
+ "gained": 3,
+ "changes": [
+  {
+   "change": "lost",
+   "relation": "father",
+   "mention": "Archduke Carl Ludwig of Austria",
+   "mention_paragraph": "Archduke Carl Christian of Austria",
+   "page": "Archduke Carl Ludwig of Austria (1918–2007)",
+   "direct_verdict": "different",
+   "reason": "Father vs son, separate persons",
+   "linked_through_chain": false
+  },
+  {
+   "change": "lost",
+   "relation": "director",
+   "mention": "Abel Ferry",
+   "mention_paragraph": "High Lane (film)",
+   "page": "Abel Ferry",
+   "direct_verdict": "different",
+   "reason": "One is a person, the other a film.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "gained",
+   "relation": "director",
+   "mention": "Robert A. Stemmle",
+   "mention_paragraph": "Heinz in the Moon",
+   "page": "Robert A. Stemmle",
+   "direct_verdict": "same",
+   "reason": "Both refer to director Robert A. Stemmle.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "lost",
+   "relation": "director",
+   "mention": "Gorman Bechard",
+   "mention_paragraph": "What Did You Expect? (film)",
+   "page": "Gorman Bechard",
+   "direct_verdict": "different",
+   "reason": "Person vs documentary film; different.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "gained",
+   "relation": "director",
+   "mention": "Kaneto Shindō",
+   "mention_paragraph": "The Naked Island",
+   "page": "Kaneto Shindo",
+   "direct_verdict": "same",
+   "reason": "Same director, name variant.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "lost",
+   "relation": "father",
+   "mention": "Barom Reachea V",
+   "mention_paragraph": "Kaev Hua II",
+   "page": "Barom Reachea V",
+   "direct_verdict": "different",
+   "reason": "Father and son, separate historical individuals.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "gained",
+   "relation": "father",
+   "mention": "Walter IV of Brienne",
+   "mention_paragraph": "John, Count of Brienne",
+   "page": "Walter IV, Count of Brienne",
+   "direct_verdict": "same",
+   "reason": "Both mention Walter IV, Count of Brienne, father of John.",
+   "linked_through_chain": false
+  },
+  {
+   "change": "lost",
+   "relation": "father",
+   "mention": "Edward de Vere, 17th Earl of Oxford",
+   "mention_paragraph": "Susan de Vere, Countess of Montgomery",
+   "page": "Edward de Vere, 17th Earl of Oxford",
+   "direct_verdict": "same",
+   "reason": "both refer to Edward de Vere, father of Susan",
+   "linked_through_chain": false
+  }
+ ]
+}
