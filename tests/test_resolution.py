@@ -65,3 +65,24 @@ def test_judge_validation_requires_every_pair_id_and_a_known_verdict():
     bad = {"decisions": [{"pair_id": "p1", "verdict": "maybe", "reason": "r"}]}
     with pytest.raises(ValueError):
         validate(json.dumps(bad), ["p1"])
+
+
+def test_chains_never_join_two_pages():
+    from graphrag.resolution.cluster import cluster
+
+    ms = [m("p1::0", "P1", "Louis", page=True), m("p2::0", "P2", "Louis", page=True),
+          m("x::1", "X", "Louis"), m("y::1", "Y", "Louis")]
+    # x=p1 (strongest), x=y, y=p2: the last edge would join P1 and P2 through x and y
+    res = cluster(ms, [("p1::0", "x::1", 0.99), ("x::1", "y::1", 0.95), ("p2::0", "y::1", 0.90)])
+    assert res.cluster_of["x::1"] == res.cluster_of["y::1"] == "P1"
+    assert res.cluster_of["p2::0"] == "P2"
+    assert res.rejected == [("p2::0", "y::1")]
+
+
+def test_cluster_ids_are_stable_and_singletons_stay_alone():
+    from graphrag.resolution.cluster import cluster
+
+    ms = [m("b::1", "B", "Jane"), m("a::1", "A", "Jane"), m("c::1", "C", "Other")]
+    res = cluster(ms, [("a::1", "b::1", 0.9)])
+    assert res.cluster_of["a::1"] == res.cluster_of["b::1"] == "m:a::1"
+    assert res.members["m:c::1"] == ["c::1"]

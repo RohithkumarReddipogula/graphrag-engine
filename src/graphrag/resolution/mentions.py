@@ -58,3 +58,9 @@ def build_mentions(extraction_rows: list[dict], corpus: dict[str, dict]) -> list
                 description=e.get("description", ""), is_page=(k == page_idx), split=split_of(cid),
             ))
     return out
+
+
+def pair_split(a: Mention, b: Mention) -> str:
+    """A pair is tune only if every non-page mention in it comes from a tune paragraph; else report."""
+    side = [x for x in (a, b) if not x.is_page]
+    return "tune" if side and all(x.split == "tune" for x in side) else "report"

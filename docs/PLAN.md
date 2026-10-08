@@ -220,6 +220,13 @@ Quality bar (judged on the report split):
   half of before.
 - When unsure, do not merge.
 
+Decided after the pilot (2026-10-08): auto-merge is off. Dev gold triples give no same-name negatives,
+so `t_high` cannot be tuned from gold, and the pilot showed identical-name pairs judged different even at
+cosine 1.0 (two different "Louis, Dauphin of France"). Every candidate pair is judged by the LLM.
+The merge hand check samples pairs of mentions from inside the final clusters, so merges made
+indirectly through union-find chains are checked too. Strata: direct same-name, direct different-name,
+indirect, and mention-to-page links; within a stratum a cluster is picked uniformly before a pair.
+
 Reported, not part of the bar:
 - Bridge link recall on the report half of the dev questions, before M3 (exact normalised name matching
   only) and after M3: the share of gold bridge facts (for example film -> director, where the director
@@ -229,6 +236,9 @@ Reported, not part of the bar:
 bridge link recall before and after, and the thresholds used.
 
 ### M4: Graph build + graph retrieval
+- Hub nodes: resolved entities that are mentioned very often (countries such as France, Italy, United
+  States) become hubs. Graph retrieval must cap or down-rank hubs (for example by degree), so that paths
+  through them do not flood the context.
 - Load resolved entities and relations into Neo4j with `source_chunk_ids` and `confidence`.
 - Entity linking from question → seed nodes.
 - ≤ 2-hop expansion with per-node edge cap; path scoring from the seed; serialise top paths as cited facts.
