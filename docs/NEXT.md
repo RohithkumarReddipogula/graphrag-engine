@@ -4,19 +4,25 @@ Last updated: 2026-10-04. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 
 ## 1. Where we are
 
-- M0, M1 and M2 are done.
+- M0, M1 and M2 are done. M3 plan and quality bar approved (section 2).
 - M2: the whole corpus is extracted with prompt v3 and post-processed (`results/m2/extractions.jsonl`,
   run summary in `results/m2/extraction_run.json`, strict dev scores in
   `results/m2/extraction_scores.json`). Hand check 28 of 30 correct.
 
 ## 2. Next step: M3 entity resolution
 
-1. Same-name entities ("Albert II", the two "Adam's Rib" films) must not be merged because the name
-   matches; use the source paragraph (`chunk_id`) and the description.
-2. Plan in `docs/PLAN.md`, M3: normalise, candidate pairs by embedding of name + description within the
-   same type, LLM check only for borderline pairs, merge only when sure; measure the duplicate rate on
-   about 100 hand-labelled entities and the precision of about 50 merges.
-3. Decide the judge-limit and single-hop re-check questions in section 6 before M5.
+Plan and quality bar approved on 2026-10-08; full text in `docs/PLAN.md`, M3. In short:
+- page entities (paragraph subjects) are identified by `chunk_id` and never merge with each other, so
+  same-name pages ("Albert II", the two "Adam's Rib" films) stay apart;
+- thresholds are tuned on the tune split (30% of paragraphs) with dev question gold triples only, never
+  test questions; every reported number comes from the report split (70%);
+- bar: at least 48 of 50 hand-checked merges correct; duplicate rate on 60 hand-labelled mentions (up
+  to 5 candidates each) after at most half of before; unsure means don't merge;
+- reported as well: bridge link recall before M3 (exact name matching) and after M3;
+- pilot of about 100 borderline LLM pairs first; show the pilot cost, the projection and the tuned
+  thresholds before the full LLM run.
+
+Also decide the judge-limit and single-hop re-check questions in section 6 before M5.
 
 ## 3. History of the M2 pilots
 

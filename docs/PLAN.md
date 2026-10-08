@@ -171,19 +171,62 @@ If all three pass, the full corpus is extracted. If not, one more prompt fix on 
 **Done when:** extraction for the whole corpus is cached, and `results/m2/extraction_scores.json` exists.
 
 ### M3: Entity resolution
-- Normalise (case, punctuation, suffixes like "(film)", "Jr.").
-- Candidate pairs: same coarse type, embedding of `name + description`, top-k neighbours above a threshold.
-- LLM check only for pairs in a borderline band. Unsure → keep separate.
-- Assign stable surrogate IDs; keep an alias table.
-- Measure: duplicate rate on a hand-labelled sample of ~100 entities (before/after), and **precision on a
-  hand-checked sample of ~50 merges**.
+Approved on 2026-10-08, before any M3 numbers existed.
 
-- Same-name entities must not be merged because the name matches. Prompt v3 names a paragraph's
-  subject by its title without the bracketed part, so different entities can share a name
-  ("Albert II", the 1923 and 1949 "Adam's Rib"). Merging uses the source paragraph (`chunk_id`) and the
-  description, never the name alone.
+Entities:
+- Page entities: the subject of each paragraph, identified by its `chunk_id`, never by its name.
+  Different paragraph titles are different Wikipedia pages, so two page entities never merge.
+- Mentions: every other extracted entity. A mention is linked to a page entity, or clustered with other
+  mentions of the same thing that has no page, or left alone.
 
-**Done when:** `results/m3/resolution_report.md` shows both numbers and the thresholds used.
+Method:
+1. Normalise names: lowercase, drop the bracketed part, drop punctuation, collapse spaces. Titles such
+   as "Dr." or "Sir" are not stripped by rule.
+2. Candidate pairs, only between compatible types (PERSON, PLACE, ORG strict; FILM and WORK
+   compatible with each other; OTHER compatible with every type), if any of: (a) identical normalised
+   names; (b) rapidfuzz ratio of at least 85; (c) among the 10 nearest neighbours by E5 embedding of
+   `name: description`, above a lower cutoff `t_low`.
+3. Decision per pair:
+   - never merge: two page entities; or a merge that would put two different page entities into one
+     cluster (checked on every union, so A=B and B=C cannot join two pages through C);
+   - auto-merge: identical normalised name, compatible type, description similarity at least
+     `t_high`, and the name matches at most one page;
+   - LLM check (gpt-oss-120b, pinned endpoint, strict JSON) for everything in between: fuzzy-only names,
+     identical names with dissimilar descriptions, mentions whose name matches two or more pages. The
+     LLM sees both names, types, descriptions and both source paragraphs and answers same, different
+     or unsure. Unsure means don't merge;
+   - no merge below `t_low`.
+4. Union-find with the never-merge checks; every merge records its reason (rule or LLM) and score.
+   Stable surrogate ids and an alias table are kept.
+
+Tuning and reporting are kept apart:
+- Paragraphs are split by a seeded hash into tune (30%) and report (70%). A pair belongs to the split of
+  its mention's paragraph.
+- `t_low` and `t_high` are tuned only on tune-split pairs, against labels from **dev question gold
+  triples only. Test questions are never used for tuning or for any M3 number.** Positives: dev gold
+  triples whose object has its own paragraph (the mention should link to that page). Negatives: pairs
+  across the 24 page titles that are shared by more than one paragraph.
+- Every reported number comes from the report split only.
+- A pilot of about 100 borderline pairs runs first, with the measured cost per pair and a projection for
+  the full LLM run, shown together with the tuned thresholds before the full run.
+
+Quality bar (judged on the report split):
+- Merge precision: at least 48 of 50 seeded-random merges correct, with every kind of merge represented
+  (rule-based and LLM-decided). Each merge is shown with both mentions and their paragraphs.
+- Duplicate rate before and after, both reported: 60 seeded-random mentions, each shown with up to 5
+  candidates chosen independently of the resolver (by name and embedding similarity); the labeller
+  marks which are the same entity. Before = share of mentions with at least one same-entity mention
+  elsewhere; after = share where some of those are still in a different cluster. Target: after at most
+  half of before.
+- When unsure, do not merge.
+
+Reported, not part of the bar:
+- Bridge link recall on the report half of the dev questions, before M3 (exact normalised name matching
+  only) and after M3: the share of gold bridge facts (for example film -> director, where the director
+  has a paragraph) whose mention is linked to the right page entity.
+
+**Done when:** `results/m3/resolution_report.md` shows the merge precision, both duplicate rates, the
+bridge link recall before and after, and the thresholds used.
 
 ### M4: Graph build + graph retrieval
 - Load resolved entities and relations into Neo4j with `source_chunk_ids` and `confidence`.
