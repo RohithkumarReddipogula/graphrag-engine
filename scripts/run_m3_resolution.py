@@ -21,7 +21,7 @@ from graphrag.resolution import handcheck
 from graphrag.resolution.candidates import candidate_pairs
 from graphrag.resolution.cluster import cluster
 from graphrag.resolution.embed_mentions import embed_mentions
-from graphrag.resolution.judge import JUDGE_VERSION, PAIRS_PER_CALL, judge_batch
+from graphrag.resolution.judge import JUDGE_VERSION, PAIRS_PER_CALL, Decision, judge_batch
 from graphrag.resolution.labels import bridge_links
 from graphrag.resolution.mentions import build_mentions
 
@@ -57,8 +57,19 @@ def main() -> None:
     t0 = time.time()
     decisions, calls, failed = {}, [], 0
 
+    errors = []
+
     def run(batch):
-        return batch, judge_batch(llm, [(pid, by[p.a], by[p.b]) for pid, p in batch], corpus)
+        """A batch that hits an unexpected error does not stop the run: its pairs count as "unsure"
+        (no merge) and the error is logged. Quota exhaustion still stops the run."""
+        try:
+            return batch, judge_batch(llm, [(pid, by[p.a], by[p.b]) for pid, p in batch], corpus)
+        except QuotaExhausted:
+            raise
+        except Exception as exc:  # noqa: BLE001 - logged and counted below
+            errors.append({"pair_ids": [pid for pid, _ in batch], "error": f"{type(exc).__name__}: {str(exc)[:500]}"})
+            unsure = {pid: Decision(pair_id=pid, verdict="unsure", reason="error, not judged") for pid, _ in batch}
+            return batch, (unsure, [], False)
 
     try:
         with ThreadPoolExecutor(args.workers) as pool:
@@ -70,12 +81,13 @@ def main() -> None:
                 failed += not ok
                 if done % 50 == 0 or done == len(batches):
                     print(f"[{time.time() - t0:6.0f}s] {done}/{len(batches)} batches  live calls "
-                          f"{sum(not c.cached for c in calls)}  failed {failed}  "
+                          f"{sum(not c.cached for c in calls)}  failed {failed}  errors {len(errors)}  "
                           f"cost {sum(c.cost_usd for c in calls if not c.cached):.4f} USD", flush=True)
     except QuotaExhausted as exc:
         print("STOPPED:", str(exc)[:300], "(finished batches are cached; re-run to resume)", flush=True)
         raise SystemExit(1)
 
+    write_jsonl(out / "judge_errors.jsonl", errors)
     rows = []
     for pid, p in items:
         d = decisions[pid]
@@ -131,6 +143,7 @@ def main() -> None:
         "candidate_pairs": len(pairs),
         "verdicts": dict(Counter(r["verdict"] for r in rows)),
         "llm": {"calls": len(calls), "live_calls": sum(not c.cached for c in calls), "batches_failed_twice": failed,
+                "batches_with_errors": len(errors),
                 "input_tokens": sum(c.input_tokens for c in calls), "output_tokens": sum(c.output_tokens for c in calls),
                 "cost_usd_live": round(sum(c.cost_usd for c in calls if not c.cached), 6)},
         "judge_version": JUDGE_VERSION,

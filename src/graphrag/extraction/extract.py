@@ -13,6 +13,7 @@ model and endpoint as the generator.
 """
 
 import json
+import re
 import time
 from dataclasses import dataclass, field
 from typing import Callable
@@ -108,12 +109,16 @@ class QuotaExhausted(RuntimeError):
     """Daily quota used up, or the provider stayed unavailable: stop now and resume from the cache later."""
 
 
+_RETRYABLE_STATUS = re.compile(r"\b(408|429|5\d\d)\b")
+
+
 def _is_retryable(exc: Exception) -> bool:
-    """Rate limits (429), temporary server overload (500, 502, 503) and stalled calls are worth retrying."""
+    """Request timeout (408), rate limits (429), any server or gateway error (5xx, including 504 and 524)
+    and stalled calls are worth retrying."""
     text = str(exc)
-    return any(code in text for code in (
-        "429", "RESOURCE_EXHAUSTED", "500", "502", "503", "UNAVAILABLE", "TIMEOUT", "timed out",
-    ))
+    return bool(_RETRYABLE_STATUS.search(text)) or any(
+        marker in text for marker in ("RESOURCE_EXHAUSTED", "UNAVAILABLE", "TIMEOUT", "timed out")
+    )
 
 
 def _is_daily_quota(exc: Exception) -> bool:

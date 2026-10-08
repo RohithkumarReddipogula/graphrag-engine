@@ -115,4 +115,7 @@ def test_timeouts_and_overload_are_retryable():
     assert _is_retryable(llm_client.CallTimeout("TIMEOUT: OpenRouter call exceeded 600 s"))
     assert _is_retryable(httpx.ReadTimeout("The read operation timed out"))
     assert _is_retryable(RuntimeError("503 Service Unavailable"))
+    assert _is_retryable(RuntimeError("524 from OpenRouter: b'error code: 524'"))
+    assert _is_retryable(RuntimeError("504 Gateway Timeout")) and _is_retryable(RuntimeError("408 Request Timeout"))
     assert not _is_retryable(RuntimeError("401 Unauthorized"))
+    assert not _is_retryable(RuntimeError("400 Bad Request: 5000 tokens"))   # "5000" is not a status code
