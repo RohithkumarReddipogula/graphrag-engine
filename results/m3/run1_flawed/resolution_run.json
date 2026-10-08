@@ -1,0 +1,130 @@
+{
+ "thresholds": {
+  "t_low": 0.85,
+  "t_high": "off (every candidate pair judged by the LLM)"
+ },
+ "mentions": 13950,
+ "page_entities": 2048,
+ "candidate_pairs": 17309,
+ "verdicts": {
+  "same": 3628,
+  "different": 13558,
+  "unsure": 123
+ },
+ "llm": {
+  "calls": 1751,
+  "live_calls": 1751,
+  "batches_failed_twice": 12,
+  "input_tokens": 5447417,
+  "output_tokens": 2300186,
+  "cost_usd_live": 0.592586
+ },
+ "merges_applied": 2558,
+ "merges_rejected_two_pages": 34,
+ "clusters": {
+  "total": 11392,
+  "with_2_or_more_mentions": 1312,
+  "singletons": 10080,
+  "with_a_page": 2048,
+  "largest": [
+   {
+    "cluster": "m:24 Hours to Kill::7",
+    "mentions": 117,
+    "names": [
+     "United States",
+     "United Kingdom"
+    ]
+   },
+   {
+    "cluster": "m:Adela of Champagne::5",
+    "mentions": 60,
+    "names": [
+     "France",
+     "French"
+    ]
+   },
+   {
+    "cluster": "m:A Girl from Hunan::3",
+    "mentions": 51,
+    "names": [
+     "Cannes Film Festival",
+     "Berlin International Film Festival",
+     "Moscow International Film Festival"
+    ]
+   },
+   {
+    "cluster": "m:Dame Tu Amor (song)::6",
+    "mentions": 45,
+    "names": [
+     "United States"
+    ]
+   },
+   {
+    "cluster": "m:Ammoru::16",
+    "mentions": 39,
+    "names": [
+     "India"
+    ]
+   },
+   {
+    "cluster": "m:Addio, figlio mio!::2",
+    "mentions": 33,
+    "names": [
+     "Italy"
+    ]
+   },
+   {
+    "cluster": "m:205 – Room of Fear::4",
+    "mentions": 23,
+    "names": [
+     "Germany",
+     "German"
+    ]
+   },
+   {
+    "cluster": "m:Anna of Stolberg-Wernigerode::3",
+    "mentions": 20,
+    "names": [
+     "Germany"
+    ]
+   },
+   {
+    "cluster": "m:Guy de Montfort, Count of Nola::3",
+    "mentions": 19,
+    "names": [
+     "England"
+    ]
+   },
+   {
+    "cluster": "m:Encounters in the Deep::8",
+    "mentions": 18,
+    "names": [
+     "Mexico",
+     "Mexico City"
+    ]
+   }
+  ]
+ },
+ "non_page_mentions_linked_to_a_page": 730,
+ "non_page_mentions": 11902,
+ "bridge_link_recall": {
+  "report": {
+   "links": 69,
+   "no_mention_extracted": 4,
+   "before_exact_name": 57,
+   "after_m3": 35,
+   "recall_before": 0.8261,
+   "recall_after": 0.5072
+  },
+  "tune": {
+   "links": 25,
+   "no_mention_extracted": 1,
+   "before_exact_name": 22,
+   "after_m3": 13,
+   "recall_before": 0.88,
+   "recall_after": 0.52
+  }
+ },
+ "remaining_credit_usd": 6.575904,
+ "seconds": 6470
+}
