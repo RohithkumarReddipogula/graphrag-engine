@@ -1,0 +1,36 @@
+{
+ "judge": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "endpoint": "parasail/fp8",
+  "prompt": "graphrag.eval.judge.SYSTEM (as M5)"
+ },
+ "items": [
+  {
+   "item_id": "dev:d09a3e680baf11ebab90acde48001122",
+   "question_id": "d09a3e680baf11ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is Mara Branković's mother-in-law?",
+   "gold": "Emine Hatun",
+   "accepted": [
+    "Emine Hatun"
+   ],
+   "prediction": "Valide Sultan Emine Hatun",
+   "verdict": "correct",
+   "reason": "Alias matches gold answer"
+  },
+  {
+   "item_id": "dev:347300820bb011ebab90acde48001122",
+   "question_id": "347300820bb011ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is Infanta Isabel Fernanda Of Spain's mother?",
+   "gold": "Princess Luisa Carlotta of Naples and Sicily",
+   "accepted": [
+    "Princess Luisa Carlotta of Naples and Sicily"
+   ],
+   "prediction": "Princess Louise Charlotte of Bourbon‑Two Sicilies",
+   "verdict": "correct",
+   "reason": "Alias matches gold answer"
+  }
+ ],
+ "cost_usd": 0
+}
