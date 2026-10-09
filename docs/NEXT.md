@@ -21,8 +21,10 @@ Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
   [+0.173, +0.269] over 375 test questions; the pre-registered expectation (CI above 0) is met. Judge
   (llama-3.3-70b on parasail/fp8) hand check: 29 of 30 agree (`results/m5/judge_handcheck_scores.json`).
   Full report: `BENCHMARK.md`, generated from the results files.
-- Next: M6 packaging (README with the dev and test results, read-only API, simple graph view), see
-  `docs/PLAN.md`. Nothing is running now.
+- M6 is done: README rewritten for first readers, read-only API (`graphrag.api`, venv only) and a static
+  graph view (`docs/graph_view/`). Every LLM call behind a result went through OpenRouter; the unused
+  Gemini path was removed (`results/spend/gemini_audit.json`).
+- Optional next: M7 (`neo4j-graphrag` as a third system), see `docs/PLAN.md`. Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 

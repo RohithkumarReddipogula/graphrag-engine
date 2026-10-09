@@ -1,0 +1,3174 @@
+{
+ "description": "Graph paths that the GraphRAG system (graph_plus_chunks_g0.5) used as facts for 20 dev questions of 2WikiMultihopQA; answers from the committed dev run (results/m4).",
+ "source": "github.com/RohithkumarReddipogula/graphrag-engine",
+ "licence": "Code MIT; entity names and relation labels derived from Wikipedia and Wikidata via 2WikiMultihopQA",
+ "nodes": [
+  {
+   "id": "A Light Woman",
+   "label": "A Light Woman",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Adrian Brunel",
+   "label": "Adrian Brunel",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Aldri annet enn bråk",
+   "label": "Aldri annet enn bråk",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "All Over the Guy",
+   "label": "All Over the Guy",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Altid ballade",
+   "label": "Altid ballade",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Anne Fontaine",
+   "label": "Anne Fontaine",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Anurag Singh (director)",
+   "label": "Anurag Singh",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Bernard VII, Count of Armagnac",
+   "label": "Bernard VII",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Beth Willman",
+   "label": "Beth Willman",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Billy Two Hats",
+   "label": "Billy Two Hats",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Bolesław the Elder",
+   "label": "Bolesław the Elder",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Bonne of Armagnac",
+   "label": "Bonne of Armagnac",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Bonne of Berry",
+   "label": "Bonne of Berry",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "By the Grace of God (film)",
+   "label": "By the Grace of God",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "By the Grace of God (song)",
+   "label": "By the Grace of God",
+   "type": "WORK",
+   "is_page": true
+  },
+  {
+   "id": "Cattle King",
+   "label": "Cattle King",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Chilperic I",
+   "label": "Chilperic I",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Cowards (1970 film)",
+   "label": "Cowards",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Daniel Périgaud",
+   "label": "Daniel Périgaud",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Dead Man",
+   "label": "Dead Man",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Disco Singh",
+   "label": "Disco Singh",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Edith Carlmar",
+   "label": "Edith Carlmar",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Eleni Gabre-Madhin",
+   "label": "Eleni Gabre-Madhin",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Elva Dryer",
+   "label": "Elva Dryer",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Etan Boritzer",
+   "label": "Etan Boritzer",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Freakin' Beautiful World",
+   "label": "Freakin' Beautiful World",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Fredegund",
+   "label": "Fredegund",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "God's Gift to Women",
+   "label": "God's Gift to Women",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Golmaal Again",
+   "label": "Golmaal Again",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Henry III, Count of Bar",
+   "label": "Henry III, Count of Bar",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Hüma Hatun",
+   "label": "Hüma Hatun",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "I Cover the Underworld",
+   "label": "I Cover the Underworld",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain",
+   "label": "Infanta Isabel Fernanda of Spain",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "J. Searle Dawley",
+   "label": "J. Searle Dawley",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Jack Clayton",
+   "label": "Jack Clayton",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Jack Nelson (actor)",
+   "label": "Jack Nelson",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Jacques d'Armagnac",
+   "label": "Jacques d' Armagnac, Duke of Nemours",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Janma Janmada Anubandha",
+   "label": "Janma Janmada Anubandha",
+   "type": "WORK",
+   "is_page": true
+  },
+  {
+   "id": "Jarmo Lampela",
+   "label": "Jarmo Lampela",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Jean d'Armagnac, Duke of Nemours",
+   "label": "Jean d' Armagnac, Duke of Nemours",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Jean-Marie Poiré",
+   "label": "Jean-Marie Poiré",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Joan of Bar, Countess of Surrey",
+   "label": "Joan of Bar, Countess of Surrey",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Laetitia du Couëdic",
+   "label": "Laetitia du Couëdic",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Les Misérables (1917 film)",
+   "label": "Les Misérables",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Ma femme s'appelle Maurice",
+   "label": "Ma femme s'appelle Maurice",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Mara Branković",
+   "label": "Mara Branković",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Maria Isabel of Braganza",
+   "label": "Maria Isabel of Braganza",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Mercedes of Orléans",
+   "label": "Mercedes of Orléans",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Michael Curtiz",
+   "label": "Michael Curtiz",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Murad II",
+   "label": "Murad II",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Nathalie...",
+   "label": "Nathalie...",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "Our Mother's House",
+   "label": "Our Mother's House",
+   "type": "WORK",
+   "is_page": true
+  },
+  {
+   "id": "Place of birth",
+   "label": "Place of birth",
+   "type": "OTHER",
+   "is_page": true
+  },
+  {
+   "id": "R. G. Springsteen",
+   "label": "R. G. Springsteen",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Rachel Feldman",
+   "label": "Rachel Feldman",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Rohit Shetty",
+   "label": "Rohit Shetty",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Shankar Nag",
+   "label": "Shankar Nag",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Simon Nuchtern",
+   "label": "Simon Nuchtern",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Tay Garnett",
+   "label": "Tay Garnett",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Ted Kotcheff",
+   "label": "Ted Kotcheff",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "The Better 'Ole (1926 film)",
+   "label": "The Better 'Ole",
+   "type": "FILM",
+   "is_page": true
+  },
+  {
+   "id": "The Fighting Hombre",
+   "label": "The Fighting Hombre",
+   "type": "WORK",
+   "is_page": true
+  },
+  {
+   "id": "Theobald II, Count of Bar",
+   "label": "Theobald II, Count of Bar",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Wenceslaus I of Legnica",
+   "label": "Wenceslaus I, Duke of Legnica",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "Wenceslaus of Niemodlin",
+   "label": "Wenceslaus",
+   "type": "PERSON",
+   "is_page": true
+  },
+  {
+   "id": "m:A Girl from Hunan::3",
+   "label": "Cannes Film Festival",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:A Girl from Hunan::4",
+   "label": "United States",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Absolute Evil::5",
+   "label": "69th Berlin International Film Festival",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Adam Richman::2",
+   "label": "United States",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Adela of Champagne::5",
+   "label": "France",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Albert Capellani::20",
+   "label": "Les Misérables",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Aldri annet enn bråk::2",
+   "label": "Oslo",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Alix, Countess of Eu::10",
+   "label": "France",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:All Over the Guy::1",
+   "label": "Julie Davis",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Altid ballade::3",
+   "label": "Aldri annet enn bråk",
+   "type": "FILM",
+   "is_page": false
+  },
+  {
+   "id": "m:Ammayi Kosam::10",
+   "label": "India",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Anders Lundqvist::1",
+   "label": "Sweden",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Archduke Carl Christian of Austria::3",
+   "label": "Belgium",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Archduke Carl Ludwig of Austria (1918–2007)::4",
+   "label": "Brussels",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Beth Willman::1",
+   "label": "Large Synoptic Survey Telescope",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Beth Willman::2",
+   "label": "Haverford College",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Billy Two Hats::2",
+   "label": "Gregory Peck",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Billy Two Hats::3",
+   "label": "Jack Warden",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Billy Two Hats::4",
+   "label": "Desi Arnaz, Jr.",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Billy Two Hats::5",
+   "label": "Israel",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Bolesław the Elder::5",
+   "label": "Niemodlin",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Bommalattam (2008 film)::3",
+   "label": "Nana Patekar",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:By the Grace of God (film)::3",
+   "label": "Denis Ménochet",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:By the Grace of God (film)::4",
+   "label": "Swann Arlaud",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:By the Grace of God (song)::1",
+   "label": "Katy Perry",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:By the Grace of God (song)::3",
+   "label": "Greg Wells",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:By the Grace of God (song)::4",
+   "label": "Russell Brand",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Carson City (film)::10",
+   "label": "Warner Bros.",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Cattle King::4",
+   "label": "Guns of Wyoming",
+   "type": "FILM",
+   "is_page": false
+  },
+  {
+   "id": "m:Chilperic I::2",
+   "label": "Clotaire I",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Chilperic I::3",
+   "label": "Aregund",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Cowards (1970 film)::3",
+   "label": "Love-In '72",
+   "type": "FILM",
+   "is_page": false
+  },
+  {
+   "id": "m:Daniel Périgaud::2",
+   "label": "1968 Summer Olympics",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::1",
+   "label": "Jim Jarmusch",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::12",
+   "label": "Robert Mitchum",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::4",
+   "label": "Billy Bob Thornton",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::5",
+   "label": "Iggy Pop",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::7",
+   "label": "John Hurt",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Dead Man::9",
+   "label": "Lance Henriksen",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Diego Fernández de Cáceres y Ovando::2",
+   "label": "Spain",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::10",
+   "label": "Do Knot Disturb",
+   "type": "FILM",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::12",
+   "label": "Haripad Bandwala",
+   "type": "FILM",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::13",
+   "label": "Shree Venkatesh Films",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::2",
+   "label": "Diljit Dosanjh",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::3",
+   "label": "Surveen Chawla",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Disco Singh::6",
+   "label": "New Delhi",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Eleni Gabre-Madhin::5",
+   "label": "Switzerland",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Elva Dryer::1",
+   "label": "Del Norte, Colorado",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Elvira Willman::2",
+   "label": "Finland",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Enga Amma Rani::4",
+   "label": "Ilaiyaraaja",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Etan Boritzer::2",
+   "label": "What is?",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Freakin' Beautiful World::5",
+   "label": "Jussi Awards",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Fredegund::3",
+   "label": "Chlothar II",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Fredegund::5",
+   "label": "Brunhilda",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:God's Gift to Women::2",
+   "label": "Frank Fay",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:God's Gift to Women::3",
+   "label": "Laura LaPlante",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:God's Gift to Women::4",
+   "label": "Joan Blondell",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:God's Gift to Women::5",
+   "label": "The Devil Was Sick",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Golmaal Again::12",
+   "label": "Prakash Raj",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Golmaal Again::8",
+   "label": "Shreyas Talpade",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::10",
+   "label": "Frederick II of Sicily",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::2",
+   "label": "Jeanne de Toucy",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::3",
+   "label": "Frederick III, Duke of Lorraine",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::4",
+   "label": "Joan I of Navarre",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::6",
+   "label": "Eleanor",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Henry III, Count of Bar::9",
+   "label": "Charles II of Naples",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Hüma Hatun::1",
+   "label": "Murad II",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Infanta Isabel Fernanda of Spain::2",
+   "label": "Princess Louise Charlotte of Bourbon‑Two Sicilies",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Infanta Isabel Fernanda of Spain::3",
+   "label": "Ignatius de Gurowski",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Infanta Isabel Fernanda of Spain::5",
+   "label": "Paris",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Jacques d'Armagnac::1",
+   "label": "Bernard d'Armagnac",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Jacques d'Armagnac::5",
+   "label": "Louise of Anjou",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Janma Janmada Anubandha::2",
+   "label": "Anant Nag",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Janma Janmada Anubandha::3",
+   "label": "Jayanthi",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Janma Janmada Anubandha::4",
+   "label": "Jayamala",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Janma Janmada Anubandha::5",
+   "label": "Manjula",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Jean d'Armagnac, Duke of Nemours::8",
+   "label": "Yolande de La Haye",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Jean d'Armagnac, Duke of Nemours::9",
+   "label": "Louis, Count of Guise",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Joan of Bar, Countess of Surrey::2",
+   "label": "Henry III, Count of Bar",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:José Francisco de Paula Señan::2",
+   "label": "Americas",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Julian Gloag::1",
+   "label": "Our Mother’s House",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:Laetitia du Couëdic::10",
+   "label": "Hermès",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Laetitia du Couëdic::11",
+   "label": "JustWorld international",
+   "type": "ORG",
+   "is_page": false
+  },
+  {
+   "id": "m:Laetitia du Couëdic::15",
+   "label": "Kevin Staut",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Les Misérables (1917 film)::6",
+   "label": "Hardee Kirkland",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Ma femme s'appelle Maurice::3",
+   "label": "Régis Laspalès",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Ma femme s'appelle Maurice::4",
+   "label": "Philippe Chevallier",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Ma femme s'appelle Maurice::5",
+   "label": "Götz Otto",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Mara Branković::1",
+   "label": "Đurađ (George) Branković",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Mara Branković::2",
+   "label": "Eirene Kantakouzene",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Mara Branković::7",
+   "label": "Kalamarija",
+   "type": "OTHER",
+   "is_page": false
+  },
+  {
+   "id": "m:Mercedes of Orléans::4",
+   "label": "Infanta Luisa Fernanda of Spain",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Murad II::2",
+   "label": "Mehmed I",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Murad II::3",
+   "label": "Valide Sultan Emine Hatun",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Our Mother's House::3",
+   "label": "Pamela Franklin",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Our Mother's House::4",
+   "label": "Phoebe Nicholls",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Our Mother's House::6",
+   "label": "Yootha Joyce",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Our Mother's House::7",
+   "label": "Jeremy Brooks",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:R. G. Springsteen::4",
+   "label": "director",
+   "type": "OTHER",
+   "is_page": false
+  },
+  {
+   "id": "m:Simon Nuchtern::4",
+   "label": "Cowards",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:The Better 'Ole (1926 film)::5",
+   "label": "The Better 'Ole (musical)",
+   "type": "WORK",
+   "is_page": false
+  },
+  {
+   "id": "m:The Better 'Ole (1926 film)::6",
+   "label": "Sydney Chaplin",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:The Better 'Ole (1926 film)::7",
+   "label": "Harold Goodwin",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Wenceslaus I of Legnica::6",
+   "label": "King Wenceslaus II of Bohemia",
+   "type": "PERSON",
+   "is_page": false
+  },
+  {
+   "id": "m:Wenceslaus of Niemodlin::2",
+   "label": "Gliwice",
+   "type": "PLACE",
+   "is_page": false
+  },
+  {
+   "id": "m:Wenceslaus of Niemodlin::4",
+   "label": "Euphemia",
+   "type": "PERSON",
+   "is_page": false
+  }
+ ],
+ "links": [
+  {
+   "id": "A Light Woman|director|Adrian Brunel",
+   "source": "A Light Woman",
+   "target": "Adrian Brunel",
+   "label": "director",
+   "source_chunk_ids": [
+    "A Light Woman"
+   ]
+  },
+  {
+   "id": "Aldri annet enn bråk|OTHER: setting|m:Aldri annet enn bråk::2",
+   "source": "Aldri annet enn bråk",
+   "target": "m:Aldri annet enn bråk::2",
+   "label": "OTHER: setting",
+   "source_chunk_ids": [
+    "Aldri annet enn bråk"
+   ]
+  },
+  {
+   "id": "Aldri annet enn bråk|editor|Edith Carlmar",
+   "source": "Aldri annet enn bråk",
+   "target": "Edith Carlmar",
+   "label": "editor",
+   "source_chunk_ids": [
+    "Aldri annet enn bråk"
+   ]
+  },
+  {
+   "id": "Aldri annet enn bråk|same entity (exact title)|m:Altid ballade::3",
+   "source": "Aldri annet enn bråk",
+   "target": "m:Altid ballade::3",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "All Over the Guy|country of origin|m:A Girl from Hunan::4",
+   "source": "All Over the Guy",
+   "target": "m:A Girl from Hunan::4",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "All Over the Guy"
+   ]
+  },
+  {
+   "id": "All Over the Guy|director|m:All Over the Guy::1",
+   "source": "All Over the Guy",
+   "target": "m:All Over the Guy::1",
+   "label": "director",
+   "source_chunk_ids": [
+    "All Over the Guy"
+   ]
+  },
+  {
+   "id": "Altid ballade|OTHER: remake of|Aldri annet enn bråk",
+   "source": "Altid ballade",
+   "target": "Aldri annet enn bråk",
+   "label": "OTHER: remake of",
+   "source_chunk_ids": [
+    "Aldri annet enn bråk"
+   ]
+  },
+  {
+   "id": "Beth Willman|OTHER: associate professor at|m:Beth Willman::2",
+   "source": "Beth Willman",
+   "target": "m:Beth Willman::2",
+   "label": "OTHER: associate professor at",
+   "source_chunk_ids": [
+    "Beth Willman"
+   ]
+  },
+  {
+   "id": "Beth Willman|OTHER: deputy director of|m:Beth Willman::1",
+   "source": "Beth Willman",
+   "target": "m:Beth Willman::1",
+   "label": "OTHER: deputy director of",
+   "source_chunk_ids": [
+    "Beth Willman"
+   ]
+  },
+  {
+   "id": "Beth Willman|country of citizenship|m:Adam Richman::2",
+   "source": "Beth Willman",
+   "target": "m:Adam Richman::2",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Beth Willman"
+   ]
+  },
+  {
+   "id": "Billy Two Hats|OTHER: filmed on location in|m:Billy Two Hats::5",
+   "source": "Billy Two Hats",
+   "target": "m:Billy Two Hats::5",
+   "label": "OTHER: filmed on location in",
+   "source_chunk_ids": [
+    "Billy Two Hats"
+   ]
+  },
+  {
+   "id": "Billy Two Hats|director|Ted Kotcheff",
+   "source": "Billy Two Hats",
+   "target": "Ted Kotcheff",
+   "label": "director",
+   "source_chunk_ids": [
+    "Billy Two Hats"
+   ]
+  },
+  {
+   "id": "Bolesław the Elder|has part|m:Bolesław the Elder::5",
+   "source": "Bolesław the Elder",
+   "target": "m:Bolesław the Elder::5",
+   "label": "has part",
+   "source_chunk_ids": [
+    "Bolesław the Elder"
+   ]
+  },
+  {
+   "id": "Bonne of Armagnac|father|Bernard VII, Count of Armagnac",
+   "source": "Bonne of Armagnac",
+   "target": "Bernard VII, Count of Armagnac",
+   "label": "father",
+   "source_chunk_ids": [
+    "Bonne of Armagnac"
+   ]
+  },
+  {
+   "id": "Bonne of Armagnac|mother|Bonne of Berry",
+   "source": "Bonne of Armagnac",
+   "target": "Bonne of Berry",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Bonne of Armagnac"
+   ]
+  },
+  {
+   "id": "By the Grace of God (film)|OTHER: cast member|m:By the Grace of God (film)::3",
+   "source": "By the Grace of God (film)",
+   "target": "m:By the Grace of God (film)::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "By the Grace of God (film)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (film)|OTHER: cast member|m:By the Grace of God (film)::4",
+   "source": "By the Grace of God (film)",
+   "target": "m:By the Grace of God (film)::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "By the Grace of God (film)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (film)|OTHER: premiered at|m:Absolute Evil::5",
+   "source": "By the Grace of God (film)",
+   "target": "m:Absolute Evil::5",
+   "label": "OTHER: premiered at",
+   "source_chunk_ids": [
+    "By the Grace of God (film)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (film)|country of origin|m:Alix, Countess of Eu::10",
+   "source": "By the Grace of God (film)",
+   "target": "m:Alix, Countess of Eu::10",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "By the Grace of God (film)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (film)|country of origin|m:Archduke Carl Christian of Austria::3",
+   "source": "By the Grace of God (film)",
+   "target": "m:Archduke Carl Christian of Austria::3",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "By the Grace of God (film)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (song)|OTHER: inspired by|m:By the Grace of God (song)::4",
+   "source": "By the Grace of God (song)",
+   "target": "m:By the Grace of God (song)::4",
+   "label": "OTHER: inspired by",
+   "source_chunk_ids": [
+    "By the Grace of God (song)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (song)|creator|m:By the Grace of God (song)::1",
+   "source": "By the Grace of God (song)",
+   "target": "m:By the Grace of God (song)::1",
+   "label": "creator",
+   "source_chunk_ids": [
+    "By the Grace of God (song)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (song)|creator|m:By the Grace of God (song)::3",
+   "source": "By the Grace of God (song)",
+   "target": "m:By the Grace of God (song)::3",
+   "label": "creator",
+   "source_chunk_ids": [
+    "By the Grace of God (song)"
+   ]
+  },
+  {
+   "id": "By the Grace of God (song)|performer|m:By the Grace of God (song)::1",
+   "source": "By the Grace of God (song)",
+   "target": "m:By the Grace of God (song)::1",
+   "label": "performer",
+   "source_chunk_ids": [
+    "By the Grace of God (song)"
+   ]
+  },
+  {
+   "id": "Cattle King|OTHER: alternative title|m:Cattle King::4",
+   "source": "Cattle King",
+   "target": "m:Cattle King::4",
+   "label": "OTHER: alternative title",
+   "source_chunk_ids": [
+    "Cattle King"
+   ]
+  },
+  {
+   "id": "Cattle King|director|Tay Garnett",
+   "source": "Cattle King",
+   "target": "Tay Garnett",
+   "label": "director",
+   "source_chunk_ids": [
+    "Cattle King"
+   ]
+  },
+  {
+   "id": "Chilperic I|father|m:Chilperic I::2",
+   "source": "Chilperic I",
+   "target": "m:Chilperic I::2",
+   "label": "father",
+   "source_chunk_ids": [
+    "Chilperic I"
+   ]
+  },
+  {
+   "id": "Chilperic I|mother|m:Chilperic I::3",
+   "source": "Chilperic I",
+   "target": "m:Chilperic I::3",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Chilperic I"
+   ]
+  },
+  {
+   "id": "Cowards (1970 film)|OTHER: screened at|m:A Girl from Hunan::3",
+   "source": "Cowards (1970 film)",
+   "target": "m:A Girl from Hunan::3",
+   "label": "OTHER: screened at",
+   "source_chunk_ids": [
+    "Cowards (1970 film)"
+   ]
+  },
+  {
+   "id": "Cowards (1970 film)|director|Simon Nuchtern",
+   "source": "Cowards (1970 film)",
+   "target": "Simon Nuchtern",
+   "label": "director",
+   "source_chunk_ids": [
+    "Cowards (1970 film)"
+   ]
+  },
+  {
+   "id": "Cowards (1970 film)|same entity (exact title)|m:Simon Nuchtern::4",
+   "source": "Cowards (1970 film)",
+   "target": "m:Simon Nuchtern::4",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "Daniel Périgaud|OTHER: competitor|m:Daniel Périgaud::2",
+   "source": "Daniel Périgaud",
+   "target": "m:Daniel Périgaud::2",
+   "label": "OTHER: competitor",
+   "source_chunk_ids": [
+    "Daniel Périgaud"
+   ]
+  },
+  {
+   "id": "Dead Man|OTHER: cast member|m:Dead Man::12",
+   "source": "Dead Man",
+   "target": "m:Dead Man::12",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|OTHER: cast member|m:Dead Man::4",
+   "source": "Dead Man",
+   "target": "m:Dead Man::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|OTHER: cast member|m:Dead Man::5",
+   "source": "Dead Man",
+   "target": "m:Dead Man::5",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|OTHER: cast member|m:Dead Man::7",
+   "source": "Dead Man",
+   "target": "m:Dead Man::7",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|OTHER: cast member|m:Dead Man::9",
+   "source": "Dead Man",
+   "target": "m:Dead Man::9",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|country of origin|m:A Girl from Hunan::4",
+   "source": "Dead Man",
+   "target": "m:A Girl from Hunan::4",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Dead Man|director|m:Dead Man::1",
+   "source": "Dead Man",
+   "target": "m:Dead Man::1",
+   "label": "director",
+   "source_chunk_ids": [
+    "Dead Man"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: cast member|m:Disco Singh::2",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::2",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: cast member|m:Disco Singh::3",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: loosely based on|m:Disco Singh::10",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::10",
+   "label": "OTHER: loosely based on",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: produced by|m:Disco Singh::13",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::13",
+   "label": "OTHER: produced by",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: remade as|m:Disco Singh::12",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::12",
+   "label": "OTHER: remade as",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|OTHER: shooting began|m:Disco Singh::6",
+   "source": "Disco Singh",
+   "target": "m:Disco Singh::6",
+   "label": "OTHER: shooting began",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Disco Singh|director|Anurag Singh (director)",
+   "source": "Disco Singh",
+   "target": "Anurag Singh (director)",
+   "label": "director",
+   "source_chunk_ids": [
+    "Disco Singh"
+   ]
+  },
+  {
+   "id": "Eleni Gabre-Madhin|country of citizenship|m:Eleni Gabre-Madhin::5",
+   "source": "Eleni Gabre-Madhin",
+   "target": "m:Eleni Gabre-Madhin::5",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Eleni Gabre-Madhin"
+   ]
+  },
+  {
+   "id": "Elva Dryer|country of citizenship|m:Adam Richman::2",
+   "source": "Elva Dryer",
+   "target": "m:Adam Richman::2",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Elva Dryer"
+   ]
+  },
+  {
+   "id": "Elva Dryer|place of birth|m:Elva Dryer::1",
+   "source": "Elva Dryer",
+   "target": "m:Elva Dryer::1",
+   "label": "place of birth",
+   "source_chunk_ids": [
+    "Elva Dryer"
+   ]
+  },
+  {
+   "id": "Freakin' Beautiful World|OTHER: writer|Jarmo Lampela",
+   "source": "Freakin' Beautiful World",
+   "target": "Jarmo Lampela",
+   "label": "OTHER: writer",
+   "source_chunk_ids": [
+    "Freakin' Beautiful World"
+   ]
+  },
+  {
+   "id": "Freakin' Beautiful World|award received|m:Freakin' Beautiful World::5",
+   "source": "Freakin' Beautiful World",
+   "target": "m:Freakin' Beautiful World::5",
+   "label": "award received",
+   "source_chunk_ids": [
+    "Freakin' Beautiful World"
+   ]
+  },
+  {
+   "id": "Freakin' Beautiful World|country of origin|m:Elvira Willman::2",
+   "source": "Freakin' Beautiful World",
+   "target": "m:Elvira Willman::2",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "Freakin' Beautiful World"
+   ]
+  },
+  {
+   "id": "Freakin' Beautiful World|director|Jarmo Lampela",
+   "source": "Freakin' Beautiful World",
+   "target": "Jarmo Lampela",
+   "label": "director",
+   "source_chunk_ids": [
+    "Freakin' Beautiful World"
+   ]
+  },
+  {
+   "id": "Fredegund|OTHER: feud with|m:Fredegund::5",
+   "source": "Fredegund",
+   "target": "m:Fredegund::5",
+   "label": "OTHER: feud with",
+   "source_chunk_ids": [
+    "Fredegund"
+   ]
+  },
+  {
+   "id": "Fredegund|OTHER: regent for|m:Fredegund::3",
+   "source": "Fredegund",
+   "target": "m:Fredegund::3",
+   "label": "OTHER: regent for",
+   "source_chunk_ids": [
+    "Fredegund"
+   ]
+  },
+  {
+   "id": "Fredegund|child|m:Fredegund::3",
+   "source": "Fredegund",
+   "target": "m:Fredegund::3",
+   "label": "child",
+   "source_chunk_ids": [
+    "Fredegund"
+   ]
+  },
+  {
+   "id": "Fredegund|spouse|Chilperic I",
+   "source": "Fredegund",
+   "target": "Chilperic I",
+   "label": "spouse",
+   "source_chunk_ids": [
+    "Fredegund"
+   ]
+  },
+  {
+   "id": "God's Gift to Women|OTHER: based on|m:God's Gift to Women::5",
+   "source": "God's Gift to Women",
+   "target": "m:God's Gift to Women::5",
+   "label": "OTHER: based on",
+   "source_chunk_ids": [
+    "God's Gift to Women"
+   ]
+  },
+  {
+   "id": "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::2",
+   "source": "God's Gift to Women",
+   "target": "m:God's Gift to Women::2",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "God's Gift to Women"
+   ]
+  },
+  {
+   "id": "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::3",
+   "source": "God's Gift to Women",
+   "target": "m:God's Gift to Women::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "God's Gift to Women"
+   ]
+  },
+  {
+   "id": "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::4",
+   "source": "God's Gift to Women",
+   "target": "m:God's Gift to Women::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "God's Gift to Women"
+   ]
+  },
+  {
+   "id": "God's Gift to Women|director|Michael Curtiz",
+   "source": "God's Gift to Women",
+   "target": "Michael Curtiz",
+   "label": "director",
+   "source_chunk_ids": [
+    "God's Gift to Women"
+   ]
+  },
+  {
+   "id": "Golmaal Again|OTHER: cast member|m:Bommalattam (2008 film)::3",
+   "source": "Golmaal Again",
+   "target": "m:Bommalattam (2008 film)::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Golmaal Again"
+   ]
+  },
+  {
+   "id": "Golmaal Again|OTHER: cast member|m:Golmaal Again::12",
+   "source": "Golmaal Again",
+   "target": "m:Golmaal Again::12",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Golmaal Again"
+   ]
+  },
+  {
+   "id": "Golmaal Again|OTHER: cast member|m:Golmaal Again::8",
+   "source": "Golmaal Again",
+   "target": "m:Golmaal Again::8",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Golmaal Again"
+   ]
+  },
+  {
+   "id": "Golmaal Again|country of origin|m:Ammayi Kosam::10",
+   "source": "Golmaal Again",
+   "target": "m:Ammayi Kosam::10",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "Golmaal Again"
+   ]
+  },
+  {
+   "id": "Golmaal Again|director|Rohit Shetty",
+   "source": "Golmaal Again",
+   "target": "Rohit Shetty",
+   "label": "director",
+   "source_chunk_ids": [
+    "Golmaal Again"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|OTHER: assisted against Frederick II|m:Henry III, Count of Bar::9",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::9",
+   "label": "OTHER: assisted against Frederick II",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|OTHER: marriage linked to Philip IV|m:Henry III, Count of Bar::4",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::4",
+   "label": "OTHER: marriage linked to Philip IV",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|OTHER: opposed invading forces|m:Henry III, Count of Bar::10",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::10",
+   "label": "OTHER: opposed invading forces",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|OTHER: served|m:Henry III, Count of Bar::3",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::3",
+   "label": "OTHER: served",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|father|Theobald II, Count of Bar",
+   "source": "Henry III, Count of Bar",
+   "target": "Theobald II, Count of Bar",
+   "label": "father",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|mother|m:Henry III, Count of Bar::2",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::2",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Henry III, Count of Bar|same entity (exact title)|m:Joan of Bar, Countess of Surrey::2",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Joan of Bar, Countess of Surrey::2",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "Henry III, Count of Bar|spouse|m:Henry III, Count of Bar::6",
+   "source": "Henry III, Count of Bar",
+   "target": "m:Henry III, Count of Bar::6",
+   "label": "spouse",
+   "source_chunk_ids": [
+    "Henry III, Count of Bar"
+   ]
+  },
+  {
+   "id": "Hüma Hatun|spouse|m:Hüma Hatun::1",
+   "source": "Hüma Hatun",
+   "target": "m:Hüma Hatun::1",
+   "label": "spouse",
+   "source_chunk_ids": [
+    "Hüma Hatun"
+   ]
+  },
+  {
+   "id": "I Cover the Underworld|director|R. G. Springsteen",
+   "source": "I Cover the Underworld",
+   "target": "R. G. Springsteen",
+   "label": "director",
+   "source_chunk_ids": [
+    "I Cover the Underworld"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|OTHER: eloped with|m:Infanta Isabel Fernanda of Spain::3",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Infanta Isabel Fernanda of Spain::3",
+   "label": "OTHER: eloped with",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|OTHER: settled in|m:Archduke Carl Ludwig of Austria (1918–2007)::4",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Archduke Carl Ludwig of Austria (1918–2007)::4",
+   "label": "OTHER: settled in",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|country of citizenship|m:Diego Fernández de Cáceres y Ovando::2",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Diego Fernández de Cáceres y Ovando::2",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|educated at|m:Infanta Isabel Fernanda of Spain::5",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Infanta Isabel Fernanda of Spain::5",
+   "label": "educated at",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|mother|m:Infanta Isabel Fernanda of Spain::2",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Infanta Isabel Fernanda of Spain::2",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "Infanta Isabel Fernanda of Spain|spouse|m:Infanta Isabel Fernanda of Spain::3",
+   "source": "Infanta Isabel Fernanda of Spain",
+   "target": "m:Infanta Isabel Fernanda of Spain::3",
+   "label": "spouse",
+   "source_chunk_ids": [
+    "Infanta Isabel Fernanda of Spain"
+   ]
+  },
+  {
+   "id": "J. Searle Dawley|place of birth|m:Elva Dryer::1",
+   "source": "J. Searle Dawley",
+   "target": "m:Elva Dryer::1",
+   "label": "place of birth",
+   "source_chunk_ids": [
+    "J. Searle Dawley"
+   ]
+  },
+  {
+   "id": "Jacques d'Armagnac|father|m:Jacques d'Armagnac::1",
+   "source": "Jacques d'Armagnac",
+   "target": "m:Jacques d'Armagnac::1",
+   "label": "father",
+   "source_chunk_ids": [
+    "Jacques d'Armagnac"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|OTHER: cast member|Shankar Nag",
+   "source": "Janma Janmada Anubandha",
+   "target": "Shankar Nag",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::2",
+   "source": "Janma Janmada Anubandha",
+   "target": "m:Janma Janmada Anubandha::2",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::3",
+   "source": "Janma Janmada Anubandha",
+   "target": "m:Janma Janmada Anubandha::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::4",
+   "source": "Janma Janmada Anubandha",
+   "target": "m:Janma Janmada Anubandha::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::5",
+   "source": "Janma Janmada Anubandha",
+   "target": "m:Janma Janmada Anubandha::5",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|composer|m:Enga Amma Rani::4",
+   "source": "Janma Janmada Anubandha",
+   "target": "m:Enga Amma Rani::4",
+   "label": "composer",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|director|Shankar Nag",
+   "source": "Janma Janmada Anubandha",
+   "target": "Shankar Nag",
+   "label": "director",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Janma Janmada Anubandha|producer|Shankar Nag",
+   "source": "Janma Janmada Anubandha",
+   "target": "Shankar Nag",
+   "label": "producer",
+   "source_chunk_ids": [
+    "Janma Janmada Anubandha"
+   ]
+  },
+  {
+   "id": "Jean d'Armagnac, Duke of Nemours|father|Jacques d'Armagnac",
+   "source": "Jean d'Armagnac, Duke of Nemours",
+   "target": "Jacques d'Armagnac",
+   "label": "father",
+   "source_chunk_ids": [
+    "Jean d'Armagnac, Duke of Nemours"
+   ]
+  },
+  {
+   "id": "Jean d'Armagnac, Duke of Nemours|mother|m:Jacques d'Armagnac::5",
+   "source": "Jean d'Armagnac, Duke of Nemours",
+   "target": "m:Jacques d'Armagnac::5",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Jean d'Armagnac, Duke of Nemours"
+   ]
+  },
+  {
+   "id": "Jean d'Armagnac, Duke of Nemours|sibling|m:Jean d'Armagnac, Duke of Nemours::9",
+   "source": "Jean d'Armagnac, Duke of Nemours",
+   "target": "m:Jean d'Armagnac, Duke of Nemours::9",
+   "label": "sibling",
+   "source_chunk_ids": [
+    "Jean d'Armagnac, Duke of Nemours"
+   ]
+  },
+  {
+   "id": "Jean d'Armagnac, Duke of Nemours|spouse|m:Jean d'Armagnac, Duke of Nemours::8",
+   "source": "Jean d'Armagnac, Duke of Nemours",
+   "target": "m:Jean d'Armagnac, Duke of Nemours::8",
+   "label": "spouse",
+   "source_chunk_ids": [
+    "Jean d'Armagnac, Duke of Nemours"
+   ]
+  },
+  {
+   "id": "Joan of Bar, Countess of Surrey|father|m:Joan of Bar, Countess of Surrey::2",
+   "source": "Joan of Bar, Countess of Surrey",
+   "target": "m:Joan of Bar, Countess of Surrey::2",
+   "label": "father",
+   "source_chunk_ids": [
+    "Joan of Bar, Countess of Surrey"
+   ]
+  },
+  {
+   "id": "Laetitia du Couëdic|OTHER: ambassador|m:Laetitia du Couëdic::10",
+   "source": "Laetitia du Couëdic",
+   "target": "m:Laetitia du Couëdic::10",
+   "label": "OTHER: ambassador",
+   "source_chunk_ids": [
+    "Laetitia du Couëdic"
+   ]
+  },
+  {
+   "id": "Laetitia du Couëdic|OTHER: ambassador|m:Laetitia du Couëdic::11",
+   "source": "Laetitia du Couëdic",
+   "target": "m:Laetitia du Couëdic::11",
+   "label": "OTHER: ambassador",
+   "source_chunk_ids": [
+    "Laetitia du Couëdic"
+   ]
+  },
+  {
+   "id": "Laetitia du Couëdic|OTHER: mentor|m:Laetitia du Couëdic::15",
+   "source": "Laetitia du Couëdic",
+   "target": "m:Laetitia du Couëdic::15",
+   "label": "OTHER: mentor",
+   "source_chunk_ids": [
+    "Laetitia du Couëdic"
+   ]
+  },
+  {
+   "id": "Laetitia du Couëdic|country of citizenship|m:Adela of Champagne::5",
+   "source": "Laetitia du Couëdic",
+   "target": "m:Adela of Champagne::5",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Laetitia du Couëdic"
+   ]
+  },
+  {
+   "id": "Laetitia du Couëdic|country of citizenship|m:Eleni Gabre-Madhin::5",
+   "source": "Laetitia du Couëdic",
+   "target": "m:Eleni Gabre-Madhin::5",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "Laetitia du Couëdic"
+   ]
+  },
+  {
+   "id": "Les Misérables (1917 film)|OTHER: cast member|m:Les Misérables (1917 film)::6",
+   "source": "Les Misérables (1917 film)",
+   "target": "m:Les Misérables (1917 film)::6",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Les Misérables (1917 film)"
+   ]
+  },
+  {
+   "id": "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::3",
+   "source": "Ma femme s'appelle Maurice",
+   "target": "m:Ma femme s'appelle Maurice::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Ma femme s'appelle Maurice"
+   ]
+  },
+  {
+   "id": "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::4",
+   "source": "Ma femme s'appelle Maurice",
+   "target": "m:Ma femme s'appelle Maurice::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Ma femme s'appelle Maurice"
+   ]
+  },
+  {
+   "id": "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::5",
+   "source": "Ma femme s'appelle Maurice",
+   "target": "m:Ma femme s'appelle Maurice::5",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Ma femme s'appelle Maurice"
+   ]
+  },
+  {
+   "id": "Ma femme s'appelle Maurice|country of origin|m:Alix, Countess of Eu::10",
+   "source": "Ma femme s'appelle Maurice",
+   "target": "m:Alix, Countess of Eu::10",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "Ma femme s'appelle Maurice"
+   ]
+  },
+  {
+   "id": "Ma femme s'appelle Maurice|director|Jean-Marie Poiré",
+   "source": "Ma femme s'appelle Maurice",
+   "target": "Jean-Marie Poiré",
+   "label": "director",
+   "source_chunk_ids": [
+    "Ma femme s'appelle Maurice"
+   ]
+  },
+  {
+   "id": "Mara Branković|OTHER: entered harem of|Murad II",
+   "source": "Mara Branković",
+   "target": "Murad II",
+   "label": "OTHER: entered harem of",
+   "source_chunk_ids": [
+    "Mara Branković"
+   ]
+  },
+  {
+   "id": "Mara Branković|father|m:Mara Branković::1",
+   "source": "Mara Branković",
+   "target": "m:Mara Branković::1",
+   "label": "father",
+   "source_chunk_ids": [
+    "Mara Branković"
+   ]
+  },
+  {
+   "id": "Mara Branković|mother|m:Mara Branković::2",
+   "source": "Mara Branković",
+   "target": "m:Mara Branković::2",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Mara Branković"
+   ]
+  },
+  {
+   "id": "Mercedes of Orléans|mother|m:Mercedes of Orléans::4",
+   "source": "Mercedes of Orléans",
+   "target": "m:Mercedes of Orléans::4",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Mercedes of Orléans"
+   ]
+  },
+  {
+   "id": "Murad II|father|m:Murad II::2",
+   "source": "Murad II",
+   "target": "m:Murad II::2",
+   "label": "father",
+   "source_chunk_ids": [
+    "Murad II"
+   ]
+  },
+  {
+   "id": "Murad II|mother|m:Murad II::3",
+   "source": "Murad II",
+   "target": "m:Murad II::3",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Murad II"
+   ]
+  },
+  {
+   "id": "Murad II|same entity (exact title)|m:Hüma Hatun::1",
+   "source": "Murad II",
+   "target": "m:Hüma Hatun::1",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "Nathalie...|country of origin|m:Alix, Countess of Eu::10",
+   "source": "Nathalie...",
+   "target": "m:Alix, Countess of Eu::10",
+   "label": "country of origin",
+   "source_chunk_ids": [
+    "Nathalie..."
+   ]
+  },
+  {
+   "id": "Nathalie...|director|Anne Fontaine",
+   "source": "Nathalie...",
+   "target": "Anne Fontaine",
+   "label": "director",
+   "source_chunk_ids": [
+    "Nathalie..."
+   ]
+  },
+  {
+   "id": "Our Mother's House|OTHER: cast member|m:Our Mother's House::3",
+   "source": "Our Mother's House",
+   "target": "m:Our Mother's House::3",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Our Mother's House"
+   ]
+  },
+  {
+   "id": "Our Mother's House|OTHER: cast member|m:Our Mother's House::4",
+   "source": "Our Mother's House",
+   "target": "m:Our Mother's House::4",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Our Mother's House"
+   ]
+  },
+  {
+   "id": "Our Mother's House|OTHER: screenplay writer|m:Our Mother's House::7",
+   "source": "Our Mother's House",
+   "target": "m:Our Mother's House::7",
+   "label": "OTHER: screenplay writer",
+   "source_chunk_ids": [
+    "Our Mother's House"
+   ]
+  },
+  {
+   "id": "Our Mother's House|OTHER: supporting cast|m:Our Mother's House::6",
+   "source": "Our Mother's House",
+   "target": "m:Our Mother's House::6",
+   "label": "OTHER: supporting cast",
+   "source_chunk_ids": [
+    "Our Mother's House"
+   ]
+  },
+  {
+   "id": "Our Mother's House|director|Jack Clayton",
+   "source": "Our Mother's House",
+   "target": "Jack Clayton",
+   "label": "director",
+   "source_chunk_ids": [
+    "Our Mother's House"
+   ]
+  },
+  {
+   "id": "Our Mother's House|same entity (exact title)|m:Julian Gloag::1",
+   "source": "Our Mother's House",
+   "target": "m:Julian Gloag::1",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "Place of birth|OTHER: concept of Heimatort used for place of origin|m:Eleni Gabre-Madhin::5",
+   "source": "Place of birth",
+   "target": "m:Eleni Gabre-Madhin::5",
+   "label": "OTHER: concept of Heimatort used for place of origin",
+   "source_chunk_ids": [
+    "Place of birth"
+   ]
+  },
+  {
+   "id": "Place of birth|OTHER: concept of domicile of mother used since 1947|m:Anders Lundqvist::1",
+   "source": "Place of birth",
+   "target": "m:Anders Lundqvist::1",
+   "label": "OTHER: concept of domicile of mother used since 1947",
+   "source_chunk_ids": [
+    "Place of birth"
+   ]
+  },
+  {
+   "id": "Place of birth|OTHER: jus soli determines nationality|m:José Francisco de Paula Señan::2",
+   "source": "Place of birth",
+   "target": "m:José Francisco de Paula Señan::2",
+   "label": "OTHER: jus soli determines nationality",
+   "source_chunk_ids": [
+    "Place of birth"
+   ]
+  },
+  {
+   "id": "R. G. Springsteen|country of citizenship|m:Adam Richman::2",
+   "source": "R. G. Springsteen",
+   "target": "m:Adam Richman::2",
+   "label": "country of citizenship",
+   "source_chunk_ids": [
+    "R. G. Springsteen"
+   ]
+  },
+  {
+   "id": "R. G. Springsteen|occupation|m:R. G. Springsteen::4",
+   "source": "R. G. Springsteen",
+   "target": "m:R. G. Springsteen::4",
+   "label": "occupation",
+   "source_chunk_ids": [
+    "R. G. Springsteen"
+   ]
+  },
+  {
+   "id": "Rachel Feldman|occupation|m:R. G. Springsteen::4",
+   "source": "Rachel Feldman",
+   "target": "m:R. G. Springsteen::4",
+   "label": "occupation",
+   "source_chunk_ids": [
+    "Rachel Feldman"
+   ]
+  },
+  {
+   "id": "The Better 'Ole (1926 film)|OTHER: cast member|m:The Better 'Ole (1926 film)::6",
+   "source": "The Better 'Ole (1926 film)",
+   "target": "m:The Better 'Ole (1926 film)::6",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "The Better 'Ole (1926 film)"
+   ]
+  },
+  {
+   "id": "The Better 'Ole (1926 film)|OTHER: cast member|m:The Better 'Ole (1926 film)::7",
+   "source": "The Better 'Ole (1926 film)",
+   "target": "m:The Better 'Ole (1926 film)::7",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "The Better 'Ole (1926 film)"
+   ]
+  },
+  {
+   "id": "The Better 'Ole (1926 film)|publisher|m:Carson City (film)::10",
+   "source": "The Better 'Ole (1926 film)",
+   "target": "m:Carson City (film)::10",
+   "label": "publisher",
+   "source_chunk_ids": [
+    "The Better 'Ole (1926 film)"
+   ]
+  },
+  {
+   "id": "The Better 'Ole (1926 film)|same entity (exact title)|m:The Better 'Ole (1926 film)::5",
+   "source": "The Better 'Ole (1926 film)",
+   "target": "m:The Better 'Ole (1926 film)::5",
+   "label": "same entity (exact title)",
+   "source_chunk_ids": []
+  },
+  {
+   "id": "The Fighting Hombre|director|Jack Nelson (actor)",
+   "source": "The Fighting Hombre",
+   "target": "Jack Nelson (actor)",
+   "label": "director",
+   "source_chunk_ids": [
+    "The Fighting Hombre"
+   ]
+  },
+  {
+   "id": "Wenceslaus I of Legnica|OTHER: named after|m:Wenceslaus I of Legnica::6",
+   "source": "Wenceslaus I of Legnica",
+   "target": "m:Wenceslaus I of Legnica::6",
+   "label": "OTHER: named after",
+   "source_chunk_ids": [
+    "Wenceslaus I of Legnica"
+   ]
+  },
+  {
+   "id": "Wenceslaus of Niemodlin|OTHER: ruled|m:Bolesław the Elder::5",
+   "source": "Wenceslaus of Niemodlin",
+   "target": "m:Bolesław the Elder::5",
+   "label": "OTHER: ruled",
+   "source_chunk_ids": [
+    "Wenceslaus of Niemodlin"
+   ]
+  },
+  {
+   "id": "Wenceslaus of Niemodlin|OTHER: ruled|m:Wenceslaus of Niemodlin::2",
+   "source": "Wenceslaus of Niemodlin",
+   "target": "m:Wenceslaus of Niemodlin::2",
+   "label": "OTHER: ruled",
+   "source_chunk_ids": [
+    "Wenceslaus of Niemodlin"
+   ]
+  },
+  {
+   "id": "Wenceslaus of Niemodlin|father|Bolesław the Elder",
+   "source": "Wenceslaus of Niemodlin",
+   "target": "Bolesław the Elder",
+   "label": "father",
+   "source_chunk_ids": [
+    "Wenceslaus of Niemodlin"
+   ]
+  },
+  {
+   "id": "Wenceslaus of Niemodlin|mother|m:Wenceslaus of Niemodlin::4",
+   "source": "Wenceslaus of Niemodlin",
+   "target": "m:Wenceslaus of Niemodlin::4",
+   "label": "mother",
+   "source_chunk_ids": [
+    "Wenceslaus of Niemodlin"
+   ]
+  },
+  {
+   "id": "m:Altid ballade::3|director|Edith Carlmar",
+   "source": "m:Altid ballade::3",
+   "target": "Edith Carlmar",
+   "label": "director",
+   "source_chunk_ids": [
+    "Edith Carlmar"
+   ]
+  },
+  {
+   "id": "m:Billy Two Hats::2|OTHER: cast member|Billy Two Hats",
+   "source": "m:Billy Two Hats::2",
+   "target": "Billy Two Hats",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Billy Two Hats"
+   ]
+  },
+  {
+   "id": "m:Billy Two Hats::3|OTHER: cast member|Billy Two Hats",
+   "source": "m:Billy Two Hats::3",
+   "target": "Billy Two Hats",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Billy Two Hats"
+   ]
+  },
+  {
+   "id": "m:Billy Two Hats::4|OTHER: cast member|Billy Two Hats",
+   "source": "m:Billy Two Hats::4",
+   "target": "Billy Two Hats",
+   "label": "OTHER: cast member",
+   "source_chunk_ids": [
+    "Billy Two Hats"
+   ]
+  },
+  {
+   "id": "m:Cowards (1970 film)::3|OTHER: re‑issued title of|Cowards (1970 film)",
+   "source": "m:Cowards (1970 film)::3",
+   "target": "Cowards (1970 film)",
+   "label": "OTHER: re‑issued title of",
+   "source_chunk_ids": [
+    "Cowards (1970 film)"
+   ]
+  },
+  {
+   "id": "m:Etan Boritzer::2|creator|Etan Boritzer",
+   "source": "m:Etan Boritzer::2",
+   "target": "Etan Boritzer",
+   "label": "creator",
+   "source_chunk_ids": [
+    "Etan Boritzer"
+   ]
+  },
+  {
+   "id": "m:Mara Branković::7|OTHER: named after|Mara Branković",
+   "source": "m:Mara Branković::7",
+   "target": "Mara Branković",
+   "label": "OTHER: named after",
+   "source_chunk_ids": [
+    "Mara Branković"
+   ]
+  },
+  {
+   "id": "m:Simon Nuchtern::4|creator|Simon Nuchtern",
+   "source": "m:Simon Nuchtern::4",
+   "target": "Simon Nuchtern",
+   "label": "creator",
+   "source_chunk_ids": [
+    "Simon Nuchtern"
+   ]
+  }
+ ],
+ "questions": [
+  {
+   "id": "cd76b49608e911ebbda7ac1f6bf848b6",
+   "type": "comparison",
+   "question": "Are By The Grace Of God (Film) and A Texas Steer from the same country?",
+   "gold": "no",
+   "answer": "no",
+   "exact_match": true,
+   "facts": [
+    "By the Grace of God",
+    "By the Grace of God -creator-> Greg Wells",
+    "By the Grace of God -OTHER: cast member-> Swann Arlaud; By the Grace of God: publication date 20 February 2019",
+    "By the Grace of God -OTHER: premiered at-> 69th Berlin International Film Festival; By the Grace of God: publication date 20 February 2019",
+    "By the Grace of God -performer-> Katy Perry",
+    "By the Grace of God -OTHER: inspired by-> Russell Brand",
+    "By the Grace of God -OTHER: cast member-> Denis Ménochet; By the Grace of God: publication date 20 February 2019",
+    "By the Grace of God -country of origin-> France; By the Grace of God: publication date 20 February 2019",
+    "By the Grace of God -country of origin-> Belgium; By the Grace of God: publication date 20 February 2019",
+    "By the Grace of God -creator-> Katy Perry"
+   ],
+   "path_node_ids": [
+    "By the Grace of God (song)",
+    "m:By the Grace of God (song)::3",
+    "By the Grace of God (film)",
+    "m:By the Grace of God (film)::4",
+    "m:Absolute Evil::5",
+    "m:By the Grace of God (song)::1",
+    "m:By the Grace of God (song)::4",
+    "m:By the Grace of God (film)::3",
+    "m:Alix, Countess of Eu::10",
+    "m:Archduke Carl Christian of Austria::3"
+   ],
+   "path_link_ids": [
+    "By the Grace of God (song)|creator|m:By the Grace of God (song)::3",
+    "By the Grace of God (film)|OTHER: cast member|m:By the Grace of God (film)::4",
+    "By the Grace of God (film)|OTHER: premiered at|m:Absolute Evil::5",
+    "By the Grace of God (song)|performer|m:By the Grace of God (song)::1",
+    "By the Grace of God (song)|OTHER: inspired by|m:By the Grace of God (song)::4",
+    "By the Grace of God (film)|OTHER: cast member|m:By the Grace of God (film)::3",
+    "By the Grace of God (film)|country of origin|m:Alix, Countess of Eu::10",
+    "By the Grace of God (film)|country of origin|m:Archduke Carl Christian of Austria::3",
+    "By the Grace of God (song)|creator|m:By the Grace of God (song)::1"
+   ]
+  },
+  {
+   "id": "b728e70c094411ebbdaeac1f6bf848b6",
+   "type": "comparison",
+   "question": "Which film was released first, All Over The Guy or Dead Man?",
+   "gold": "Dead Man",
+   "answer": "Dead Man",
+   "exact_match": true,
+   "facts": [
+    "All Over the Guy -country of origin-> United States; All Over the Guy: publication date 2001",
+    "All Over the Guy: publication date 2001",
+    "All Over the Guy -director-> Julie Davis; All Over the Guy: publication date 2001",
+    "Dead Man -country of origin-> United States; Dead Man: publication date 1995",
+    "Dead Man -OTHER: cast member-> Billy Bob Thornton; Dead Man: publication date 1995",
+    "Dead Man -OTHER: cast member-> John Hurt; Dead Man: publication date 1995",
+    "Dead Man -OTHER: cast member-> Iggy Pop; Dead Man: publication date 1995",
+    "Dead Man -OTHER: cast member-> Lance Henriksen; Dead Man: publication date 1995",
+    "Dead Man -director-> Jim Jarmusch; Dead Man: publication date 1995",
+    "Dead Man -OTHER: cast member-> Robert Mitchum; Dead Man: publication date 1995"
+   ],
+   "path_node_ids": [
+    "All Over the Guy",
+    "m:A Girl from Hunan::4",
+    "m:All Over the Guy::1",
+    "Dead Man",
+    "m:Dead Man::4",
+    "m:Dead Man::7",
+    "m:Dead Man::5",
+    "m:Dead Man::9",
+    "m:Dead Man::1",
+    "m:Dead Man::12"
+   ],
+   "path_link_ids": [
+    "All Over the Guy|country of origin|m:A Girl from Hunan::4",
+    "All Over the Guy|director|m:All Over the Guy::1",
+    "Dead Man|country of origin|m:A Girl from Hunan::4",
+    "Dead Man|OTHER: cast member|m:Dead Man::4",
+    "Dead Man|OTHER: cast member|m:Dead Man::7",
+    "Dead Man|OTHER: cast member|m:Dead Man::5",
+    "Dead Man|OTHER: cast member|m:Dead Man::9",
+    "Dead Man|director|m:Dead Man::1",
+    "Dead Man|OTHER: cast member|m:Dead Man::12"
+   ]
+  },
+  {
+   "id": "60b8f042085f11ebbd5cac1f6bf848b6",
+   "type": "comparison",
+   "question": "Was Laetitia Du Couëdic or Daniel Périgaud born first?",
+   "gold": "Daniel Périgaud",
+   "answer": "Daniel Périgaud",
+   "exact_match": true,
+   "facts": [
+    "Laetitia du Couëdic -country of citizenship-> France; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic -OTHER: mentor-> Kevin Staut; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic -country of citizenship-> Switzerland; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic -OTHER: ambassador-> Hermès; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic -OTHER: ambassador-> JustWorld international; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic: date of birth 6 June 1996",
+    "Daniel Périgaud -OTHER: competitor-> 1968 Summer Olympics; Daniel Périgaud: date of birth 19 December 1943",
+    "Daniel Périgaud: date of birth 19 December 1943",
+    "Laetitia du Couëdic -country of citizenship-> Switzerland; Place of birth -OTHER: concept of Heimatort used for place of origin-> Switzerland; Laetitia du Couëdic: date of birth 6 June 1996",
+    "Laetitia du Couëdic -country of citizenship-> Switzerland; Eleni Gabre-Madhin -country of citizenship-> Switzerland; Laetitia du Couëdic: date of birth 6 June 1996"
+   ],
+   "path_node_ids": [
+    "Laetitia du Couëdic",
+    "m:Adela of Champagne::5",
+    "m:Laetitia du Couëdic::15",
+    "m:Eleni Gabre-Madhin::5",
+    "m:Laetitia du Couëdic::10",
+    "m:Laetitia du Couëdic::11",
+    "Daniel Périgaud",
+    "m:Daniel Périgaud::2",
+    "Place of birth",
+    "Eleni Gabre-Madhin"
+   ],
+   "path_link_ids": [
+    "Laetitia du Couëdic|country of citizenship|m:Adela of Champagne::5",
+    "Laetitia du Couëdic|OTHER: mentor|m:Laetitia du Couëdic::15",
+    "Laetitia du Couëdic|country of citizenship|m:Eleni Gabre-Madhin::5",
+    "Laetitia du Couëdic|OTHER: ambassador|m:Laetitia du Couëdic::10",
+    "Laetitia du Couëdic|OTHER: ambassador|m:Laetitia du Couëdic::11",
+    "Daniel Périgaud|OTHER: competitor|m:Daniel Périgaud::2",
+    "Place of birth|OTHER: concept of Heimatort used for place of origin|m:Eleni Gabre-Madhin::5",
+    "Eleni Gabre-Madhin|country of citizenship|m:Eleni Gabre-Madhin::5"
+   ]
+  },
+  {
+   "id": "8dcab52d092f11ebbdaeac1f6bf848b6",
+   "type": "comparison",
+   "question": "Are Les Misérables (1917 Film) and The Better 'Ole (1926 Film) both from the same country?",
+   "gold": "yes",
+   "answer": "yes",
+   "exact_match": true,
+   "facts": [
+    "The Better 'Ole: publication date 1926",
+    "The Better 'Ole -OTHER: cast member-> Sydney Chaplin; The Better 'Ole: publication date 1926",
+    "The Better 'Ole -OTHER: cast member-> Sydney Chaplin; The Better 'Ole (musical): publication date 1926",
+    "The Better 'Ole -publisher-> Warner Bros.; The Better 'Ole (musical): publication date 1926",
+    "The Better 'Ole -OTHER: cast member-> Harold Goodwin; The Better 'Ole: publication date 1926",
+    "The Better 'Ole -OTHER: cast member-> Harold Goodwin; The Better 'Ole (musical): publication date 1926",
+    "The Better 'Ole (musical): publication date 1926",
+    "The Better 'Ole -publisher-> Warner Bros.; The Better 'Ole: publication date 1926",
+    "Les Misérables",
+    "Les Misérables -OTHER: cast member-> Hardee Kirkland; Les Misérables: publication date December 3, 1917"
+   ],
+   "path_node_ids": [
+    "The Better 'Ole (1926 film)",
+    "m:The Better 'Ole (1926 film)::6",
+    "m:The Better 'Ole (1926 film)::5",
+    "m:Carson City (film)::10",
+    "m:The Better 'Ole (1926 film)::7",
+    "m:Albert Capellani::20",
+    "Les Misérables (1917 film)",
+    "m:Les Misérables (1917 film)::6"
+   ],
+   "path_link_ids": [
+    "The Better 'Ole (1926 film)|OTHER: cast member|m:The Better 'Ole (1926 film)::6",
+    "The Better 'Ole (1926 film)|same entity (exact title)|m:The Better 'Ole (1926 film)::5",
+    "The Better 'Ole (1926 film)|publisher|m:Carson City (film)::10",
+    "The Better 'Ole (1926 film)|OTHER: cast member|m:The Better 'Ole (1926 film)::7",
+    "Les Misérables (1917 film)|OTHER: cast member|m:Les Misérables (1917 film)::6"
+   ]
+  },
+  {
+   "id": "3408c15f08f411ebbdaaac1f6bf848b6",
+   "type": "comparison",
+   "question": "Do Beth Willman and Elva Dryer share the same nationality?",
+   "gold": "yes",
+   "answer": "yes",
+   "exact_match": true,
+   "facts": [
+    "Beth Willman",
+    "Beth Willman -country of citizenship-> United States",
+    "Elva Dryer -country of citizenship-> United States; Elva Dryer: date of birth September 26, 1971",
+    "Elva Dryer -place of birth-> Del Norte, Colorado; Elva Dryer: date of birth September 26, 1971",
+    "Elva Dryer: date of birth September 26, 1971",
+    "Beth Willman -OTHER: associate professor at-> Haverford College",
+    "Beth Willman -OTHER: deputy director of-> Large Synoptic Survey Telescope",
+    "Elva Dryer -place of birth-> Del Norte, Colorado; J. Searle Dawley -place of birth-> Del Norte, Colorado; Elva Dryer: date of birth September 26, 1971; J. Searle Dawley: date of birth May 13, 1877; J. Searle Dawley: date of death March 30, 1949"
+   ],
+   "path_node_ids": [
+    "Beth Willman",
+    "m:Adam Richman::2",
+    "Elva Dryer",
+    "m:Elva Dryer::1",
+    "m:Beth Willman::2",
+    "m:Beth Willman::1",
+    "J. Searle Dawley"
+   ],
+   "path_link_ids": [
+    "Beth Willman|country of citizenship|m:Adam Richman::2",
+    "Elva Dryer|country of citizenship|m:Adam Richman::2",
+    "Elva Dryer|place of birth|m:Elva Dryer::1",
+    "Beth Willman|OTHER: associate professor at|m:Beth Willman::2",
+    "Beth Willman|OTHER: deputy director of|m:Beth Willman::1",
+    "J. Searle Dawley|place of birth|m:Elva Dryer::1"
+   ]
+  },
+  {
+   "id": "d09a3e680baf11ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is Mara Branković's mother-in-law?",
+   "gold": "Emine Hatun",
+   "answer": "Valide Sultan Emine Hatun",
+   "exact_match": false,
+   "facts": [
+    "Mara Branković -father-> Đurađ (George) Branković; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Mara Branković -mother-> Eirene Kantakouzene; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Kalamarija -OTHER: named after-> Mara Branković; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Mara Branković -OTHER: entered harem of-> Murad II; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Mara Branković -OTHER: entered harem of-> Murad II; Murad II -father-> Mehmed I; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487",
+    "Mara Branković -OTHER: entered harem of-> Murad II; Hüma Hatun -spouse-> Murad II; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487; Hüma Hatun: date of birth 1410; Hüma Hatun: date of death September 1449",
+    "Mara Branković -OTHER: entered harem of-> Murad II; Murad II -mother-> Valide Sultan Emine Hatun; Mara Branković: date of birth c. 1416; Mara Branković: date of death 14 September 1487"
+   ],
+   "path_node_ids": [
+    "Mara Branković",
+    "m:Mara Branković::1",
+    "m:Mara Branković::2",
+    "m:Mara Branković::7",
+    "Murad II",
+    "m:Murad II::2",
+    "Hüma Hatun",
+    "m:Hüma Hatun::1",
+    "m:Murad II::3"
+   ],
+   "path_link_ids": [
+    "Mara Branković|father|m:Mara Branković::1",
+    "Mara Branković|mother|m:Mara Branković::2",
+    "m:Mara Branković::7|OTHER: named after|Mara Branković",
+    "Mara Branković|OTHER: entered harem of|Murad II",
+    "Murad II|father|m:Murad II::2",
+    "Hüma Hatun|spouse|m:Hüma Hatun::1",
+    "Murad II|same entity (exact title)|m:Hüma Hatun::1",
+    "Murad II|mother|m:Murad II::3"
+   ]
+  },
+  {
+   "id": "7bd965f20baf11ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is the paternal grandfather of Wenceslaus Of Niemodlin?",
+   "gold": "Bolko I of Opole",
+   "answer": "Bolko I of Opole",
+   "exact_match": true,
+   "facts": [
+    "Wenceslaus -OTHER: ruled-> Niemodlin; Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369",
+    "Wenceslaus -father-> Bolesław the Elder; Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369",
+    "Wenceslaus -mother-> Euphemia; Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369",
+    "Wenceslaus I, Duke of Legnica -OTHER: named after-> King Wenceslaus II of Bohemia; Wenceslaus I, Duke of Legnica: date of birth ca. 1318; Wenceslaus I, Duke of Legnica: date of death 2 June 1364",
+    "Niemodlin",
+    "King Wenceslaus II of Bohemia",
+    "Wenceslaus -OTHER: ruled-> Gliwice; Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369",
+    "Bolesław the Elder -has part-> Niemodlin",
+    "Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369",
+    "Wenceslaus -OTHER: ruled-> Niemodlin; Bolesław the Elder -has part-> Niemodlin; Wenceslaus: date of birth 1336/46; Wenceslaus: date of death June 1369"
+   ],
+   "path_node_ids": [
+    "Wenceslaus of Niemodlin",
+    "m:Bolesław the Elder::5",
+    "Bolesław the Elder",
+    "m:Wenceslaus of Niemodlin::4",
+    "m:Wenceslaus I of Legnica::6",
+    "Wenceslaus I of Legnica",
+    "m:Wenceslaus of Niemodlin::2"
+   ],
+   "path_link_ids": [
+    "Wenceslaus of Niemodlin|OTHER: ruled|m:Bolesław the Elder::5",
+    "Wenceslaus of Niemodlin|father|Bolesław the Elder",
+    "Wenceslaus of Niemodlin|mother|m:Wenceslaus of Niemodlin::4",
+    "Wenceslaus I of Legnica|OTHER: named after|m:Wenceslaus I of Legnica::6",
+    "Wenceslaus of Niemodlin|OTHER: ruled|m:Wenceslaus of Niemodlin::2",
+    "Bolesław the Elder|has part|m:Bolesław the Elder::5"
+   ]
+  },
+  {
+   "id": "3a148dcc0baf11ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is the mother-in-law of Fredegund?",
+   "gold": "Aregund",
+   "answer": "Aregund",
+   "exact_match": true,
+   "facts": [
+    "Fredegund -spouse-> Chilperic I; Fredegund: date of death 8 December 597; Chilperic I: date of birth c. 539; Chilperic I: date of death September 584",
+    "Fredegund -OTHER: feud with-> Brunhilda; Fredegund: date of death 8 December 597",
+    "Fredegund -child-> Chlothar II; Fredegund: date of death 8 December 597",
+    "Fredegund -OTHER: regent for-> Chlothar II; Fredegund: date of death 8 December 597",
+    "Fredegund: date of death 8 December 597",
+    "Fredegund -spouse-> Chilperic I; Chilperic I -mother-> Aregund; Fredegund: date of death 8 December 597; Chilperic I: date of birth c. 539; Chilperic I: date of death September 584",
+    "Fredegund -spouse-> Chilperic I; Chilperic I -father-> Clotaire I; Fredegund: date of death 8 December 597; Chilperic I: date of birth c. 539; Chilperic I: date of death September 584"
+   ],
+   "path_node_ids": [
+    "Fredegund",
+    "Chilperic I",
+    "m:Fredegund::5",
+    "m:Fredegund::3",
+    "m:Chilperic I::3",
+    "m:Chilperic I::2"
+   ],
+   "path_link_ids": [
+    "Fredegund|spouse|Chilperic I",
+    "Fredegund|OTHER: feud with|m:Fredegund::5",
+    "Fredegund|child|m:Fredegund::3",
+    "Fredegund|OTHER: regent for|m:Fredegund::3",
+    "Chilperic I|mother|m:Chilperic I::3",
+    "Chilperic I|father|m:Chilperic I::2"
+   ]
+  },
+  {
+   "id": "347300820bb011ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is Infanta Isabel Fernanda Of Spain's mother?",
+   "gold": "Princess Luisa Carlotta of Naples and Sicily",
+   "answer": "Princess Louise Charlotte of Bourbon‑Two Sicilies",
+   "exact_match": false,
+   "facts": [
+    "Infanta Luisa Fernanda of Spain",
+    "Infanta Isabel Fernanda of Spain -mother-> Princess Louise Charlotte of Bourbon‑Two Sicilies; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain -educated at-> Paris; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain -country of citizenship-> Spain; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain -OTHER: settled in-> Brussels; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain -spouse-> Ignatius de Gurowski; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Infanta Isabel Fernanda of Spain -OTHER: eloped with-> Ignatius de Gurowski; Infanta Isabel Fernanda of Spain: date of birth 18 May 1821; Infanta Isabel Fernanda of Spain: date of death 8 May 1897",
+    "Mercedes of Orléans -mother-> Infanta Luisa Fernanda of Spain; Mercedes of Orléans: date of birth 24 June 1860; Mercedes of Orléans: date of death 26 June 1878",
+    "Maria Isabel of Braganza: date of birth 19 May 1797; Maria Isabel of Braganza: date of death 26 December 1818"
+   ],
+   "path_node_ids": [
+    "m:Mercedes of Orléans::4",
+    "Infanta Isabel Fernanda of Spain",
+    "m:Infanta Isabel Fernanda of Spain::2",
+    "m:Infanta Isabel Fernanda of Spain::5",
+    "m:Diego Fernández de Cáceres y Ovando::2",
+    "m:Archduke Carl Ludwig of Austria (1918–2007)::4",
+    "m:Infanta Isabel Fernanda of Spain::3",
+    "Mercedes of Orléans",
+    "Maria Isabel of Braganza"
+   ],
+   "path_link_ids": [
+    "Infanta Isabel Fernanda of Spain|mother|m:Infanta Isabel Fernanda of Spain::2",
+    "Infanta Isabel Fernanda of Spain|educated at|m:Infanta Isabel Fernanda of Spain::5",
+    "Infanta Isabel Fernanda of Spain|country of citizenship|m:Diego Fernández de Cáceres y Ovando::2",
+    "Infanta Isabel Fernanda of Spain|OTHER: settled in|m:Archduke Carl Ludwig of Austria (1918–2007)::4",
+    "Infanta Isabel Fernanda of Spain|spouse|m:Infanta Isabel Fernanda of Spain::3",
+    "Infanta Isabel Fernanda of Spain|OTHER: eloped with|m:Infanta Isabel Fernanda of Spain::3",
+    "Mercedes of Orléans|mother|m:Mercedes of Orléans::4"
+   ]
+  },
+  {
+   "id": "1c7876600bb011ebab90acde48001122",
+   "type": "inference",
+   "question": "Who is the paternal grandmother of Henry Iii, Count Of Bar?",
+   "gold": "Philippa of Dreux",
+   "answer": "Philippa of Dreux",
+   "exact_match": true,
+   "facts": [
+    "Henry III, Count of Bar -mother-> Jeanne de Toucy; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar -spouse-> Eleanor; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Joan of Bar, Countess of Surrey -father-> Henry III, Count of Bar; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302; Joan of Bar, Countess of Surrey: date of death 1361",
+    "Henry III, Count of Bar -father-> Theobald II, Count of Bar; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302; Theobald II, Count of Bar: date of birth 1221; Theobald II, Count of Bar: date of death October 1291",
+    "Henry III, Count of Bar -OTHER: served-> Frederick III, Duke of Lorraine; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar -father-> Theobald II, Count of Bar; Theobald II, Count of Bar: date of birth 1221; Theobald II, Count of Bar: date of death October 1291; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar -OTHER: marriage linked to Philip IV-> Joan I of Navarre; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar -OTHER: opposed invading forces-> Frederick II of Sicily; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302",
+    "Henry III, Count of Bar -OTHER: assisted against Frederick II-> Charles II of Naples; Henry III, Count of Bar: date of birth 1259; Henry III, Count of Bar: date of death September 1302"
+   ],
+   "path_node_ids": [
+    "Henry III, Count of Bar",
+    "m:Henry III, Count of Bar::2",
+    "m:Henry III, Count of Bar::6",
+    "Joan of Bar, Countess of Surrey",
+    "m:Joan of Bar, Countess of Surrey::2",
+    "Theobald II, Count of Bar",
+    "m:Henry III, Count of Bar::3",
+    "m:Henry III, Count of Bar::4",
+    "m:Henry III, Count of Bar::10",
+    "m:Henry III, Count of Bar::9"
+   ],
+   "path_link_ids": [
+    "Henry III, Count of Bar|mother|m:Henry III, Count of Bar::2",
+    "Henry III, Count of Bar|spouse|m:Henry III, Count of Bar::6",
+    "Joan of Bar, Countess of Surrey|father|m:Joan of Bar, Countess of Surrey::2",
+    "Henry III, Count of Bar|same entity (exact title)|m:Joan of Bar, Countess of Surrey::2",
+    "Henry III, Count of Bar|father|Theobald II, Count of Bar",
+    "Henry III, Count of Bar|OTHER: served|m:Henry III, Count of Bar::3",
+    "Henry III, Count of Bar|OTHER: marriage linked to Philip IV|m:Henry III, Count of Bar::4",
+    "Henry III, Count of Bar|OTHER: opposed invading forces|m:Henry III, Count of Bar::10",
+    "Henry III, Count of Bar|OTHER: assisted against Frederick II|m:Henry III, Count of Bar::9"
+   ]
+  },
+  {
+   "id": "d9189eae0bdc11eba7f7acde48001122",
+   "type": "compositional",
+   "question": "What is the place of birth of the director of film The Fighting Hombre?",
+   "gold": "Memphis, Tennessee",
+   "answer": "Memphis, Tennessee",
+   "exact_match": true,
+   "facts": [
+    "The Fighting Hombre -director-> Jack Nelson; The Fighting Hombre: publication date 1927; Jack Nelson: date of birth October 15, 1882; Jack Nelson: date of death November 10, 1948",
+    "The Fighting Hombre: publication date 1927",
+    "director",
+    "Place of birth",
+    "Rachel Feldman -occupation-> director; Rachel Feldman: date of birth August 22, 1954",
+    "R. G. Springsteen -occupation-> director; R. G. Springsteen: date of birth September 8, 1904; R. G. Springsteen: date of death December 9, 1989",
+    "What is? -creator-> Etan Boritzer; Etan Boritzer: date of birth 1950",
+    "Place of birth -OTHER: concept of Heimatort used for place of origin-> Switzerland",
+    "Place of birth -OTHER: jus soli determines nationality-> Americas",
+    "What is?"
+   ],
+   "path_node_ids": [
+    "The Fighting Hombre",
+    "Jack Nelson (actor)",
+    "m:R. G. Springsteen::4",
+    "Place of birth",
+    "Rachel Feldman",
+    "R. G. Springsteen",
+    "m:Etan Boritzer::2",
+    "Etan Boritzer",
+    "m:Eleni Gabre-Madhin::5",
+    "m:José Francisco de Paula Señan::2"
+   ],
+   "path_link_ids": [
+    "The Fighting Hombre|director|Jack Nelson (actor)",
+    "Rachel Feldman|occupation|m:R. G. Springsteen::4",
+    "R. G. Springsteen|occupation|m:R. G. Springsteen::4",
+    "m:Etan Boritzer::2|creator|Etan Boritzer",
+    "Place of birth|OTHER: concept of Heimatort used for place of origin|m:Eleni Gabre-Madhin::5",
+    "Place of birth|OTHER: jus soli determines nationality|m:José Francisco de Paula Señan::2"
+   ]
+  },
+  {
+   "id": "a594836a0bda11eba7f7acde48001122",
+   "type": "compositional",
+   "question": "What is the place of birth of the director of film Nathalie...?",
+   "gold": "Luxembourger",
+   "answer": "unknown",
+   "exact_match": false,
+   "facts": [
+    "Nathalie... -director-> Anne Fontaine; Nathalie...: publication date 2003; Anne Fontaine: date of birth 15 July 1959",
+    "Nathalie... -country of origin-> France; Nathalie...: publication date 2003",
+    "director",
+    "Nathalie...: publication date 2003",
+    "Place of birth",
+    "Rachel Feldman -occupation-> director; Rachel Feldman: date of birth August 22, 1954",
+    "What is? -creator-> Etan Boritzer; Etan Boritzer: date of birth 1950",
+    "Place of birth -OTHER: concept of Heimatort used for place of origin-> Switzerland",
+    "R. G. Springsteen -occupation-> director; R. G. Springsteen: date of birth September 8, 1904; R. G. Springsteen: date of death December 9, 1989",
+    "Place of birth -OTHER: concept of domicile of mother used since 1947-> Sweden"
+   ],
+   "path_node_ids": [
+    "Nathalie...",
+    "Anne Fontaine",
+    "m:Alix, Countess of Eu::10",
+    "m:R. G. Springsteen::4",
+    "Place of birth",
+    "Rachel Feldman",
+    "m:Etan Boritzer::2",
+    "Etan Boritzer",
+    "m:Eleni Gabre-Madhin::5",
+    "R. G. Springsteen",
+    "m:Anders Lundqvist::1"
+   ],
+   "path_link_ids": [
+    "Nathalie...|director|Anne Fontaine",
+    "Nathalie...|country of origin|m:Alix, Countess of Eu::10",
+    "Rachel Feldman|occupation|m:R. G. Springsteen::4",
+    "m:Etan Boritzer::2|creator|Etan Boritzer",
+    "Place of birth|OTHER: concept of Heimatort used for place of origin|m:Eleni Gabre-Madhin::5",
+    "R. G. Springsteen|occupation|m:R. G. Springsteen::4",
+    "Place of birth|OTHER: concept of domicile of mother used since 1947|m:Anders Lundqvist::1"
+   ]
+  },
+  {
+   "id": "5307443e0bda11eba7f7acde48001122",
+   "type": "compositional",
+   "question": "Where was the director of film Disco Singh born?",
+   "gold": "Jalandhar",
+   "answer": "unknown",
+   "exact_match": false,
+   "facts": [
+    "Disco Singh -OTHER: shooting began-> New Delhi; Disco Singh: publication date 11 April 2014",
+    "Disco Singh -director-> Anurag Singh; Disco Singh: publication date 11 April 2014",
+    "Disco Singh -OTHER: cast member-> Diljit Dosanjh; Disco Singh: publication date 11 April 2014",
+    "Disco Singh -OTHER: cast member-> Surveen Chawla; Disco Singh: publication date 11 April 2014",
+    "Disco Singh -OTHER: loosely based on-> Do Knot Disturb; Disco Singh: publication date 11 April 2014",
+    "Disco Singh -OTHER: produced by-> Shree Venkatesh Films; Disco Singh: publication date 11 April 2014",
+    "Disco Singh: publication date 11 April 2014",
+    "Disco Singh -OTHER: remade as-> Haripad Bandwala; Disco Singh: publication date 11 April 2014",
+    "director",
+    "Rachel Feldman -occupation-> director; Rachel Feldman: date of birth August 22, 1954"
+   ],
+   "path_node_ids": [
+    "Disco Singh",
+    "m:Disco Singh::6",
+    "Anurag Singh (director)",
+    "m:Disco Singh::2",
+    "m:Disco Singh::3",
+    "m:Disco Singh::10",
+    "m:Disco Singh::13",
+    "m:Disco Singh::12",
+    "m:R. G. Springsteen::4",
+    "Rachel Feldman"
+   ],
+   "path_link_ids": [
+    "Disco Singh|OTHER: shooting began|m:Disco Singh::6",
+    "Disco Singh|director|Anurag Singh (director)",
+    "Disco Singh|OTHER: cast member|m:Disco Singh::2",
+    "Disco Singh|OTHER: cast member|m:Disco Singh::3",
+    "Disco Singh|OTHER: loosely based on|m:Disco Singh::10",
+    "Disco Singh|OTHER: produced by|m:Disco Singh::13",
+    "Disco Singh|OTHER: remade as|m:Disco Singh::12",
+    "Rachel Feldman|occupation|m:R. G. Springsteen::4"
+   ]
+  },
+  {
+   "id": "22f512680bde11eba7f7acde48001122",
+   "type": "compositional",
+   "question": "Where was the place of death of Bonne Of Armagnac's father?",
+   "gold": "Paris",
+   "answer": "unknown",
+   "exact_match": false,
+   "facts": [
+    "Bonne of Armagnac -father-> Bernard VII; Bonne of Armagnac: date of birth 19 February 1399; Bonne of Armagnac: date of death 1430/35; Bernard VII: date of birth 1360; Bernard VII: date of death 12 June 1418",
+    "Bonne of Armagnac: date of birth 19 February 1399; Bonne of Armagnac: date of death 1430/35",
+    "Bonne of Armagnac -mother-> Bonne of Berry; Bonne of Armagnac: date of birth 19 February 1399; Bonne of Armagnac: date of death 1430/35; Bonne of Berry: date of birth 1362/1365; Bonne of Berry: date of death 30 December 1435",
+    "Bernard d'Armagnac",
+    "Jacques d' Armagnac, Duke of Nemours -father-> Bernard d'Armagnac; Jacques d' Armagnac, Duke of Nemours: date of birth 4 August 1477; Jacques d' Armagnac, Duke of Nemours: date of death 4 August 1477",
+    "Jean d' Armagnac, Duke of Nemours -mother-> Louise of Anjou; Jean d' Armagnac, Duke of Nemours: date of birth 1467; Jean d' Armagnac, Duke of Nemours: date of death 1500",
+    "Jean d' Armagnac, Duke of Nemours -father-> Jacques d' Armagnac, Duke of Nemours; Jean d' Armagnac, Duke of Nemours: date of birth 1467; Jean d' Armagnac, Duke of Nemours: date of death 1500; Jacques d' Armagnac, Duke of Nemours: date of birth 4 August 1477; Jacques d' Armagnac, Duke of Nemours: date of death 4 August 1477",
+    "Jean d' Armagnac, Duke of Nemours: date of birth 1467; Jean d' Armagnac, Duke of Nemours: date of death 1500",
+    "Jean d' Armagnac, Duke of Nemours -spouse-> Yolande de La Haye; Jean d' Armagnac, Duke of Nemours: date of birth 1467; Jean d' Armagnac, Duke of Nemours: date of death 1500",
+    "Jean d' Armagnac, Duke of Nemours -sibling-> Louis, Count of Guise; Jean d' Armagnac, Duke of Nemours: date of birth 1467; Jean d' Armagnac, Duke of Nemours: date of death 1500"
+   ],
+   "path_node_ids": [
+    "Bonne of Armagnac",
+    "Bernard VII, Count of Armagnac",
+    "Bonne of Berry",
+    "m:Jacques d'Armagnac::1",
+    "Jacques d'Armagnac",
+    "Jean d'Armagnac, Duke of Nemours",
+    "m:Jacques d'Armagnac::5",
+    "m:Jean d'Armagnac, Duke of Nemours::8",
+    "m:Jean d'Armagnac, Duke of Nemours::9"
+   ],
+   "path_link_ids": [
+    "Bonne of Armagnac|father|Bernard VII, Count of Armagnac",
+    "Bonne of Armagnac|mother|Bonne of Berry",
+    "Jacques d'Armagnac|father|m:Jacques d'Armagnac::1",
+    "Jean d'Armagnac, Duke of Nemours|mother|m:Jacques d'Armagnac::5",
+    "Jean d'Armagnac, Duke of Nemours|father|Jacques d'Armagnac",
+    "Jean d'Armagnac, Duke of Nemours|spouse|m:Jean d'Armagnac, Duke of Nemours::8",
+    "Jean d'Armagnac, Duke of Nemours|sibling|m:Jean d'Armagnac, Duke of Nemours::9"
+   ]
+  },
+  {
+   "id": "933e32ee0bdd11eba7f7acde48001122",
+   "type": "compositional",
+   "question": "Where was the director of film Cowards (1970 Film) born?",
+   "gold": "Belgian",
+   "answer": "Belgium",
+   "exact_match": true,
+   "facts": [
+    "Cowards -director-> Simon Nuchtern; Cowards: publication date 1970",
+    "Cowards: publication date 1970",
+    "Cowards -creator-> Simon Nuchtern; Cowards: publication date 1970",
+    "Cowards -OTHER: screened at-> Cannes Film Festival; Cowards: publication date 1970",
+    "Love-In '72 -OTHER: re‑issued title of-> Cowards; Cowards: publication date 1970",
+    "director",
+    "Rachel Feldman -occupation-> director; Rachel Feldman: date of birth August 22, 1954",
+    "R. G. Springsteen -occupation-> director; R. G. Springsteen: date of birth September 8, 1904; R. G. Springsteen: date of death December 9, 1989",
+    "R. G. Springsteen -occupation-> director; I Cover the Underworld -director-> R. G. Springsteen; R. G. Springsteen: date of birth September 8, 1904; R. G. Springsteen: date of death December 9, 1989; I Cover the Underworld: publication date May 19, 1955",
+    "R. G. Springsteen -occupation-> director; R. G. Springsteen -country of citizenship-> United States; R. G. Springsteen: date of birth September 8, 1904; R. G. Springsteen: date of death December 9, 1989"
+   ],
+   "path_node_ids": [
+    "Cowards (1970 film)",
+    "Simon Nuchtern",
+    "m:Simon Nuchtern::4",
+    "m:A Girl from Hunan::3",
+    "m:Cowards (1970 film)::3",
+    "m:R. G. Springsteen::4",
+    "Rachel Feldman",
+    "R. G. Springsteen",
+    "I Cover the Underworld",
+    "m:Adam Richman::2"
+   ],
+   "path_link_ids": [
+    "Cowards (1970 film)|director|Simon Nuchtern",
+    "m:Simon Nuchtern::4|creator|Simon Nuchtern",
+    "Cowards (1970 film)|same entity (exact title)|m:Simon Nuchtern::4",
+    "Cowards (1970 film)|OTHER: screened at|m:A Girl from Hunan::3",
+    "m:Cowards (1970 film)::3|OTHER: re‑issued title of|Cowards (1970 film)",
+    "Rachel Feldman|occupation|m:R. G. Springsteen::4",
+    "R. G. Springsteen|occupation|m:R. G. Springsteen::4",
+    "I Cover the Underworld|director|R. G. Springsteen",
+    "R. G. Springsteen|country of citizenship|m:Adam Richman::2"
+   ]
+  },
+  {
+   "id": "aeeccb8e08d811ebbd9cac1f6bf848b6",
+   "type": "bridge_comparison",
+   "question": "Which film whose director is younger, Golmaal Again or Ma Femme S'Appelle Maurice?",
+   "gold": "Golmaal Again",
+   "answer": "Golmaal Again",
+   "exact_match": true,
+   "facts": [
+    "Ma femme s'appelle Maurice -director-> Jean-Marie Poiré; Ma femme s'appelle Maurice: publication date 2002; Jean-Marie Poiré: date of birth 10 July 1945",
+    "Ma femme s'appelle Maurice -OTHER: cast member-> Régis Laspalès; Ma femme s'appelle Maurice: publication date 2002",
+    "Ma femme s'appelle Maurice -country of origin-> France; Ma femme s'appelle Maurice: publication date 2002",
+    "Ma femme s'appelle Maurice -OTHER: cast member-> Philippe Chevallier; Ma femme s'appelle Maurice: publication date 2002",
+    "Golmaal Again -country of origin-> India; Golmaal Again: publication date 20 October 2017",
+    "Golmaal Again -director-> Rohit Shetty; Golmaal Again: publication date 20 October 2017",
+    "Golmaal Again -OTHER: cast member-> Nana Patekar; Golmaal Again: publication date 20 October 2017",
+    "Golmaal Again -OTHER: cast member-> Prakash Raj; Golmaal Again: publication date 20 October 2017",
+    "Ma femme s'appelle Maurice -OTHER: cast member-> Götz Otto; Ma femme s'appelle Maurice: publication date 2002",
+    "Golmaal Again -OTHER: cast member-> Shreyas Talpade; Golmaal Again: publication date 20 October 2017"
+   ],
+   "path_node_ids": [
+    "Ma femme s'appelle Maurice",
+    "Jean-Marie Poiré",
+    "m:Ma femme s'appelle Maurice::3",
+    "m:Alix, Countess of Eu::10",
+    "m:Ma femme s'appelle Maurice::4",
+    "Golmaal Again",
+    "m:Ammayi Kosam::10",
+    "Rohit Shetty",
+    "m:Bommalattam (2008 film)::3",
+    "m:Golmaal Again::12",
+    "m:Ma femme s'appelle Maurice::5",
+    "m:Golmaal Again::8"
+   ],
+   "path_link_ids": [
+    "Ma femme s'appelle Maurice|director|Jean-Marie Poiré",
+    "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::3",
+    "Ma femme s'appelle Maurice|country of origin|m:Alix, Countess of Eu::10",
+    "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::4",
+    "Golmaal Again|country of origin|m:Ammayi Kosam::10",
+    "Golmaal Again|director|Rohit Shetty",
+    "Golmaal Again|OTHER: cast member|m:Bommalattam (2008 film)::3",
+    "Golmaal Again|OTHER: cast member|m:Golmaal Again::12",
+    "Ma femme s'appelle Maurice|OTHER: cast member|m:Ma femme s'appelle Maurice::5",
+    "Golmaal Again|OTHER: cast member|m:Golmaal Again::8"
+   ]
+  },
+  {
+   "id": "a1cdb240085811ebbd5bac1f6bf848b6",
+   "type": "bridge_comparison",
+   "question": "Which film has the director who is older, God'S Gift To Women or Aldri Annet Enn Bråk?",
+   "gold": "God'S Gift To Women",
+   "answer": "God's Gift to Women",
+   "exact_match": true,
+   "facts": [
+    "Aldri annet enn bråk -director-> Edith Carlmar; Aldri annet enn bråk: publication date 1954; Edith Carlmar: date of birth 15 November 1911; Edith Carlmar: date of death 17 May 2003",
+    "Aldri annet enn bråk -editor-> Edith Carlmar; Aldri annet enn bråk: publication date 1954; Edith Carlmar: date of birth 15 November 1911; Edith Carlmar: date of death 17 May 2003",
+    "God's Gift to Women -director-> Michael Curtiz; God's Gift to Women: publication date 1931; Michael Curtiz: date of birth December 24, 1886; Michael Curtiz: date of death April 11, 1962",
+    "Aldri annet enn bråk -OTHER: setting-> Oslo; Aldri annet enn bråk: publication date 1954",
+    "Altid ballade -OTHER: remake of-> Aldri annet enn bråk; Aldri annet enn bråk: publication date 1954; Altid ballade: publication date 1955",
+    "God's Gift to Women -OTHER: cast member-> Joan Blondell; God's Gift to Women: publication date 1931",
+    "God's Gift to Women -OTHER: cast member-> Laura LaPlante; God's Gift to Women: publication date 1931",
+    "Aldri annet enn bråk: publication date 1954",
+    "God's Gift to Women -OTHER: cast member-> Frank Fay; God's Gift to Women: publication date 1931",
+    "God's Gift to Women -OTHER: based on-> The Devil Was Sick; God's Gift to Women: publication date 1931"
+   ],
+   "path_node_ids": [
+    "Aldri annet enn bråk",
+    "Edith Carlmar",
+    "m:Altid ballade::3",
+    "God's Gift to Women",
+    "Michael Curtiz",
+    "m:Aldri annet enn bråk::2",
+    "Altid ballade",
+    "m:God's Gift to Women::4",
+    "m:God's Gift to Women::3",
+    "m:God's Gift to Women::2",
+    "m:God's Gift to Women::5"
+   ],
+   "path_link_ids": [
+    "m:Altid ballade::3|director|Edith Carlmar",
+    "Aldri annet enn bråk|same entity (exact title)|m:Altid ballade::3",
+    "Aldri annet enn bråk|editor|Edith Carlmar",
+    "God's Gift to Women|director|Michael Curtiz",
+    "Aldri annet enn bråk|OTHER: setting|m:Aldri annet enn bråk::2",
+    "Altid ballade|OTHER: remake of|Aldri annet enn bråk",
+    "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::4",
+    "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::3",
+    "God's Gift to Women|OTHER: cast member|m:God's Gift to Women::2",
+    "God's Gift to Women|OTHER: based on|m:God's Gift to Women::5"
+   ]
+  },
+  {
+   "id": "ca3e5ea408cc11ebbd93ac1f6bf848b6",
+   "type": "bridge_comparison",
+   "question": "Which film has the director born later, Freakin' Beautiful World or Billy Two Hats?",
+   "gold": "Freakin' Beautiful World",
+   "answer": "Freakin' Beautiful World",
+   "exact_match": true,
+   "facts": [
+    "Freakin' Beautiful World -director-> Jarmo Lampela; Freakin' Beautiful World: publication date 1997; Jarmo Lampela: date of birth 9 October 1964",
+    "Billy Two Hats -director-> Ted Kotcheff; Billy Two Hats: publication date 1974; Ted Kotcheff: date of birth April 7, 1931",
+    "Freakin' Beautiful World -OTHER: writer-> Jarmo Lampela; Freakin' Beautiful World: publication date 1997; Jarmo Lampela: date of birth 9 October 1964",
+    "Freakin' Beautiful World -country of origin-> Finland; Freakin' Beautiful World: publication date 1997",
+    "Billy Two Hats -OTHER: filmed on location in-> Israel; Billy Two Hats: publication date 1974",
+    "Desi Arnaz, Jr. -OTHER: cast member-> Billy Two Hats; Billy Two Hats: publication date 1974",
+    "Gregory Peck -OTHER: cast member-> Billy Two Hats; Billy Two Hats: publication date 1974",
+    "Freakin' Beautiful World -award received-> Jussi Awards; Freakin' Beautiful World: publication date 1997",
+    "Freakin' Beautiful World: publication date 1997",
+    "Jack Warden -OTHER: cast member-> Billy Two Hats; Billy Two Hats: publication date 1974"
+   ],
+   "path_node_ids": [
+    "Freakin' Beautiful World",
+    "Jarmo Lampela",
+    "Billy Two Hats",
+    "Ted Kotcheff",
+    "m:Elvira Willman::2",
+    "m:Billy Two Hats::5",
+    "m:Billy Two Hats::4",
+    "m:Billy Two Hats::2",
+    "m:Freakin' Beautiful World::5",
+    "m:Billy Two Hats::3"
+   ],
+   "path_link_ids": [
+    "Freakin' Beautiful World|director|Jarmo Lampela",
+    "Billy Two Hats|director|Ted Kotcheff",
+    "Freakin' Beautiful World|OTHER: writer|Jarmo Lampela",
+    "Freakin' Beautiful World|country of origin|m:Elvira Willman::2",
+    "Billy Two Hats|OTHER: filmed on location in|m:Billy Two Hats::5",
+    "m:Billy Two Hats::4|OTHER: cast member|Billy Two Hats",
+    "m:Billy Two Hats::2|OTHER: cast member|Billy Two Hats",
+    "Freakin' Beautiful World|award received|m:Freakin' Beautiful World::5",
+    "m:Billy Two Hats::3|OTHER: cast member|Billy Two Hats"
+   ]
+  },
+  {
+   "id": "4c6a905e088311ebbd6dac1f6bf848b6",
+   "type": "bridge_comparison",
+   "question": "Which film has the director died later, A Light Woman or Our Mother'S House?",
+   "gold": "Our Mother'S House",
+   "answer": "Our Mother'S House",
+   "exact_match": true,
+   "facts": [
+    "Our Mother's House -director-> Jack Clayton; Our Mother's House: publication date 1963; Our Mother's House: publication date 1967; Jack Clayton: date of birth 1 March 1921; Jack Clayton: date of death 26 February 1995",
+    "Our Mother's House -director-> Jack Clayton; Our Mother’s House: publication date 1963; Our Mother’s House: publication date 1967; Jack Clayton: date of birth 1 March 1921; Jack Clayton: date of death 26 February 1995",
+    "Our Mother's House -OTHER: supporting cast-> Yootha Joyce; Our Mother's House: publication date 1963; Our Mother's House: publication date 1967",
+    "Our Mother's House -OTHER: cast member-> Phoebe Nicholls; Our Mother's House: publication date 1963; Our Mother's House: publication date 1967",
+    "Our Mother's House -OTHER: screenplay writer-> Jeremy Brooks; Our Mother's House: publication date 1963; Our Mother's House: publication date 1967",
+    "Our Mother's House -OTHER: cast member-> Phoebe Nicholls; Our Mother’s House: publication date 1963; Our Mother’s House: publication date 1967",
+    "Our Mother's House -OTHER: supporting cast-> Yootha Joyce; Our Mother’s House: publication date 1963; Our Mother’s House: publication date 1967",
+    "Our Mother's House -OTHER: screenplay writer-> Jeremy Brooks; Our Mother’s House: publication date 1963; Our Mother’s House: publication date 1967",
+    "Our Mother's House -OTHER: cast member-> Pamela Franklin; Our Mother's House: publication date 1963; Our Mother's House: publication date 1967",
+    "A Light Woman -director-> Adrian Brunel; A Light Woman: publication date 1928; Adrian Brunel: date of birth 4 September 1892; Adrian Brunel: date of death 18 February 1958"
+   ],
+   "path_node_ids": [
+    "Our Mother's House",
+    "Jack Clayton",
+    "m:Julian Gloag::1",
+    "m:Our Mother's House::6",
+    "m:Our Mother's House::4",
+    "m:Our Mother's House::7",
+    "m:Our Mother's House::3",
+    "A Light Woman",
+    "Adrian Brunel"
+   ],
+   "path_link_ids": [
+    "Our Mother's House|director|Jack Clayton",
+    "Our Mother's House|same entity (exact title)|m:Julian Gloag::1",
+    "Our Mother's House|OTHER: supporting cast|m:Our Mother's House::6",
+    "Our Mother's House|OTHER: cast member|m:Our Mother's House::4",
+    "Our Mother's House|OTHER: screenplay writer|m:Our Mother's House::7",
+    "Our Mother's House|OTHER: cast member|m:Our Mother's House::3",
+    "A Light Woman|director|Adrian Brunel"
+   ]
+  },
+  {
+   "id": "1ee81a3c08c611ebbd90ac1f6bf848b6",
+   "type": "bridge_comparison",
+   "question": "Which film has the director born earlier, Cattle King or Janma Janmada Anubandha?",
+   "gold": "Cattle King",
+   "answer": "Cattle King",
+   "exact_match": true,
+   "facts": [
+    "Janma Janmada Anubandha -director-> Shankar Nag; Janma Janmada Anubandha: publication date 1980; Shankar Nag: date of birth 9 November 1954; Shankar Nag: date of death 30 September 1990",
+    "Janma Janmada Anubandha -producer-> Shankar Nag; Janma Janmada Anubandha: publication date 1980; Shankar Nag: date of birth 9 November 1954; Shankar Nag: date of death 30 September 1990",
+    "Janma Janmada Anubandha -OTHER: cast member-> Shankar Nag; Janma Janmada Anubandha: publication date 1980; Shankar Nag: date of birth 9 November 1954; Shankar Nag: date of death 30 September 1990",
+    "Janma Janmada Anubandha -OTHER: cast member-> Jayanthi; Janma Janmada Anubandha: publication date 1980",
+    "Janma Janmada Anubandha -OTHER: cast member-> Jayamala; Janma Janmada Anubandha: publication date 1980",
+    "Janma Janmada Anubandha -composer-> Ilaiyaraaja; Janma Janmada Anubandha: publication date 1980",
+    "Cattle King -director-> Tay Garnett; Cattle King: publication date 1963; Tay Garnett: date of birth June 13, 1894; Tay Garnett: date of death October 3, 1977",
+    "Janma Janmada Anubandha -OTHER: cast member-> Anant Nag; Janma Janmada Anubandha: publication date 1980",
+    "Janma Janmada Anubandha -OTHER: cast member-> Manjula; Janma Janmada Anubandha: publication date 1980",
+    "Cattle King -OTHER: alternative title-> Guns of Wyoming; Cattle King: publication date 1963"
+   ],
+   "path_node_ids": [
+    "Janma Janmada Anubandha",
+    "Shankar Nag",
+    "m:Janma Janmada Anubandha::3",
+    "m:Janma Janmada Anubandha::4",
+    "m:Enga Amma Rani::4",
+    "Cattle King",
+    "Tay Garnett",
+    "m:Janma Janmada Anubandha::2",
+    "m:Janma Janmada Anubandha::5",
+    "m:Cattle King::4"
+   ],
+   "path_link_ids": [
+    "Janma Janmada Anubandha|director|Shankar Nag",
+    "Janma Janmada Anubandha|producer|Shankar Nag",
+    "Janma Janmada Anubandha|OTHER: cast member|Shankar Nag",
+    "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::3",
+    "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::4",
+    "Janma Janmada Anubandha|composer|m:Enga Amma Rani::4",
+    "Cattle King|director|Tay Garnett",
+    "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::2",
+    "Janma Janmada Anubandha|OTHER: cast member|m:Janma Janmada Anubandha::5",
+    "Cattle King|OTHER: alternative title|m:Cattle King::4"
+   ]
+  }
+ ]
+}

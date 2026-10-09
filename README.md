@@ -146,6 +146,15 @@ curl -s "127.0.0.1:8000/entity/Ted%20Kotcheff"
 - No ingestion and no writes. `tests/test_pipeline_parity.py` checks that the API builds exactly the
   contexts of the committed dev run.
 
+Static graph view for a website (no backend): `docs/graph_view/subgraph.json` holds the graph paths the
+GraphRAG system used as facts for 20 dev questions (5 per question type), with their answers from the
+committed dev run, as nodes and links. `docs/graph_view/example.html` shows it with a force-graph library:
+
+```
+.venv/bin/python scripts/export_graph_view.py              # re-export (needs Neo4j; no LLM calls)
+python3 -m http.server 8001 --directory docs/graph_view    # then open http://localhost:8001/example.html
+```
+
 `scripts/run_m5_test.py` refuses to run again by design (run-once lock); the committed files in
 `results/m5/` are the test run. Every LLM call is cached on disk, so re-running a step costs nothing for
 calls that were already made.

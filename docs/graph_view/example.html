@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GraphRAG Engine: graph paths for 20 questions</title>
+<!--
+  Minimal static example for subgraph.json (no backend). Serve this folder over HTTP, for example:
+    python3 -m http.server 8001 --directory docs/graph_view
+  then open http://localhost:8001/example.html. Opening the file directly may block loading the JSON.
+  Graph library: force-graph (MIT), loaded from unpkg.
+-->
+<script src="https://unpkg.com/force-graph"></script>
+<style>
+  :root { --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --line: #d0d7de; --hl: #d1242f; --panel: #f6f8fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #30363d; --hl: #ff7b72; --panel: #161b22; }
+  }
+  body { margin: 0; font: 14px/1.45 system-ui, -apple-system, Segoe UI, sans-serif; background: var(--bg); color: var(--fg); }
+  header { padding: 12px 16px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 16px; margin: 0 0 8px; }
+  select { max-width: 100%; padding: 4px; font: inherit; background: var(--panel); color: var(--fg); border: 1px solid var(--line); }
+  main { display: flex; flex-wrap: wrap; }
+  #graph { flex: 1 1 600px; min-height: 520px; }
+  aside { flex: 0 1 380px; padding: 12px 16px; background: var(--panel); border-left: 1px solid var(--line); overflow-wrap: anywhere; }
+  .muted { color: var(--muted); }
+  .ok { font-weight: 600; }
+  ul { padding-left: 18px; }
+  li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Graph paths the GraphRAG system used to answer 20 questions</h1>
+  <select id="question"></select>
+</header>
+<main>
+  <div id="graph"></div>
+  <aside id="details"><p class="muted">Loading subgraph.json ...</p></aside>
+</main>
+<script>
+const TYPE_COLOURS = { PERSON: "#0969da", FILM: "#8250df", WORK: "#bf8700", PLACE: "#1a7f37", ORG: "#cf222e", OTHER: "#6e7781" };
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+fetch("subgraph.json").then(r => r.json()).then(data => {
+  const select = document.getElementById("question");
+  data.questions.forEach((q, i) => {
+    const opt = document.createElement("option");
+    opt.value = i;
+    opt.textContent = `${q.type}: ${q.question}`;
+    select.appendChild(opt);
+  });
+
+  let activeNodes = new Set(), activeLinks = new Set();
+  const graph = ForceGraph()(document.getElementById("graph"))
+    .graphData({ nodes: data.nodes, links: data.links })
+    .nodeId("id")
+    .nodeLabel(n => `${n.label} (${n.type})`)
+    .nodeVal(n => (n.is_page ? 4 : 1.5))
+    .nodeColor(n => (activeNodes.size && !activeNodes.has(n.id) ? "rgba(140,140,140,0.25)" : TYPE_COLOURS[n.type] || "#6e7781"))
+    .linkLabel(l => l.label)
+    .linkColor(l => (activeLinks.has(l.id) ? getComputedStyle(document.documentElement).getPropertyValue("--hl") : "rgba(140,140,140,0.35)"))
+    .linkWidth(l => (activeLinks.has(l.id) ? 2.5 : 0.6))
+    .linkDirectionalArrowLength(4)
+    .linkDirectionalArrowRelPos(1)
+    .nodeCanvasObjectMode(n => (activeNodes.has(n.id) ? "after" : undefined))
+    .nodeCanvasObject((n, ctx, scale) => {
+      ctx.font = `${11 / scale}px system-ui, sans-serif`;
+      ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue("--fg");
+      ctx.fillText(n.label, n.x + 6 / scale, n.y + 3 / scale);
+    });
+
+  function show(i) {
+    const q = data.questions[i];
+    activeNodes = new Set(q.path_node_ids);
+    activeLinks = new Set(q.path_link_ids);
+    graph.nodeColor(graph.nodeColor()).linkColor(graph.linkColor()).linkWidth(graph.linkWidth());
+    document.getElementById("details").innerHTML = `
+      <p><strong>${escapeHtml(q.question)}</strong></p>
+      <p>Gold answer: ${escapeHtml(q.gold)}<br>
+         System answer: <span class="ok">${escapeHtml(q.answer)}</span>
+         <span class="muted">(${q.exact_match ? "exact match" : "not an exact match"})</span></p>
+      <p class="muted">Facts from the graph, as given to the model:</p>
+      <ul>${q.facts.map(f => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
+      <p class="muted">Question type: ${escapeHtml(q.type)}. Dev split of 2WikiMultihopQA.</p>`;
+    const first = data.nodes.find(n => n.id === q.path_node_ids[0]);
+    if (first && first.x !== undefined) graph.centerAt(first.x, first.y, 600).zoom(3, 600);
+  }
+
+  select.addEventListener("change", e => show(+e.target.value));
+  show(0);
+}).catch(err => {
+  document.getElementById("details").innerHTML =
+    `<p>Could not load subgraph.json (${escapeHtml(err.message)}). Serve this folder over HTTP; see the comment at the top of this file.</p>`;
+});
+</script>
+</body>
+</html>

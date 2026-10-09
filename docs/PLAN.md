@@ -538,7 +538,9 @@ Plain ASCII, numbered contents, no collapsible sections, short plain footer (CLA
   left after M5: about 5.78 USD.
 
 **Done when:** the README shows the test headline rendered from `results/m5/`, the API answers `/health`,
-`/ask` and `/entity/{id}` locally with tests passing, and `docs/graph_view/subgraph.json` exists.
+`/ask` and `/entity/{id}` locally with tests passing, and `docs/graph_view/subgraph.json` exists. Done on
+2026-10-09: README rewritten (numbers rendered from results files), read-only API from the venv with a
+parity test against the committed dev contexts, and `docs/graph_view/subgraph.json` with `example.html`.
 
 ### M7: Optional: `neo4j-graphrag` as a third system
 Same corpus, same generator, same budget, same eval.
