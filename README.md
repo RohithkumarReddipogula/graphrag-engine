@@ -1,218 +1,165 @@
 # GraphRAG Engine
 
-Status: work in progress. Milestones M0 to M4 are complete: data, a strong hybrid retrieval baseline,
-a closed-book baseline, entity and relation extraction, entity resolution, and graph retrieval, all
-measured on the dev split. The single test run (M5) is next. No test-split numbers exist yet.
+Does a knowledge graph built from the same documents help a language model answer multi-hop questions,
+compared with a strong hybrid retriever, when the comparison is measured honestly? This project answers
+that on 2WikiMultihopQA: it builds a knowledge graph from the corpus with an LLM, resolves entities,
+retrieves facts and paragraphs through the graph, and compares the answers with a closed-book model and
+with the hybrid retriever from my MSc thesis, on a test split that was run once with a pre-registered
+primary result.
 
 ## Contents
 
-1. What this is
-2. Plan and milestones
-3. Data
-4. Baseline system (M1)
-5. M1 results on the dev split
-6. Reproducing
-7. Limitations so far
+1. Headline result
+2. How the result was protected
+3. What went wrong and how I fixed it
+4. Architecture
+5. How to reproduce
+6. Limitations
+7. Cost and LLM providers
 8. Data, code and licences
-9. Work in progress
 
-## 1. What this is
+## 1. Headline result
 
-This project measures when a knowledge graph helps retrieval-augmented question answering on multi-hop
-questions, and when it does not. It compares, on the same questions, corpus, generator and context
-budget:
+<!-- BEGIN m5-headline -->
+Source: `results/m5/test_summary.json`. Test split, 375 questions, run once. EM = exact match (official 2Wiki scoring with aliases), 95% bootstrap CI. Unknown = the system abstained (scores 0).
 
-- a closed-book model (no retrieval),
-- a strong hybrid retrieval baseline (BM25 + dense + reranker, the retriever from my MSc thesis),
-- graph-based retrieval over a knowledge graph built from the same corpus (next milestones).
+| System | EM, all 375 [95% CI] | EM, multi-hop 300 [95% CI] | Unknown rate |
+|---|---|---|---|
+| Closed-book (no retrieval) | 0.31 [0.26, 0.35] | 0.34 [0.29, 0.39] | 0.30 |
+| Hybrid retriever (baseline) | 0.57 [0.51, 0.62] | 0.48 [0.43, 0.54] | 0.36 |
+| GraphRAG: graph + chunks (pre-registered system) | 0.79 [0.74, 0.83] | 0.76 [0.71, 0.81] | 0.15 |
+| Graph only | 0.79 [0.75, 0.83] | 0.76 [0.71, 0.81] | 0.12 |
 
-Design choices that keep the comparison honest:
+Primary result (one, fixed before the run): paired EM difference, GraphRAG minus hybrid, over all 375 test questions: **+0.22 [+0.17, +0.27]**. Pre-registered expectation (95% CI above 0): **met**.
 
-- The benchmark is 2WikiMultihopQA, which has real multi-hop questions with checked answers.
-- The language models have likely seen Wikipedia. The headline numbers are therefore reported on the
-  questions the closed-book model gets wrong, next to the numbers for all questions.
-- Every system may answer "unknown" when the context does not contain the answer. That scores 0. Every
-  results table shows the unknown rate and the accuracy on answered questions next to EM.
-- All tuning happens on the dev split. The test split is run once, with frozen settings.
-- Every number in this README is rendered from a committed file under `data/` or `results/` by
-  `scripts/render_tables.py`.
+Pre-specified secondary result, the 260 questions the model gets wrong without retrieval: +0.22 [+0.16, +0.28].
+<!-- END m5-headline -->
 
-## 2. Plan and milestones
+The full benchmark, with per-type results, the retrieval metrics, an LLM judge with its hand check, dev vs
+test and an error analysis, is in `BENCHMARK.md`.
 
-The full plan and every design decision are in `docs/PLAN.md`.
+## 2. How the result was protected
 
-| Milestone | Content | Status |
+- Pre-registered before the test run: one primary result (the paired EM difference above) and its
+  expected direction (GraphRAG beats the hybrid retriever, with the 95% CI above 0), recorded in
+  `docs/PLAN.md` before any test answer existed. The result is reported as it came out.
+- Every choice (retrieval configuration, entity-resolution threshold, graph share of the context) was
+  made on the dev split. Quality bars for each milestone were written down before their results existed.
+- The test split was run once, at the git tag `m5-frozen`. The run script refuses to start if code or
+  data differ from that tag, and a run-once lock (`results/m5/TEST_RUN.lock`, status finished) stops it
+  from running again.
+- Every system answers with the same generator, prompt and context budget, and may answer "unknown"; the
+  unknown rate is reported next to every score.
+
+## 3. What went wrong and how I fixed it
+
+Entity resolution decides which mentions are the same real-world entity, with an LLM judging candidate
+pairs. The first full run (run 1) looked fine on cost and speed, but two checks against gold data showed
+it was wrong:
+
+1. The judge prompt showed each mention together with its paragraph, and the LLM judged the paragraph's
+   subject instead of the mentioned entity. "Jeff Bezos" mentioned in MacKenzie Scott's paragraph was
+   judged "husband and wife, separate persons" when compared with the Jeff Bezos page.
+2. Clustering had no cannot-link rule, so chains of "same" verdicts joined entities that the LLM had
+   explicitly judged different.
+
+The fix: a judge prompt that states each mention's role (subject of its paragraph, or only mentioned in
+it), a cannot-link rule checked on whole clusters, a pilot that tested both directions (known links must
+be judged "same", run 1's false merges must be judged "different"), and then a full re-run. Run 1 is
+kept in `results/m3/run1_flawed/` with an explanation.
+
+<!-- BEGIN m3-run1 -->
+Sources: `results/m3/run1_flawed/resolution_run.json`, `results/m3/resolution_run.json`, `results/m3/handcheck_scores.json`.
+
+|  | Run 1 (flawed) | Run 2 (fixed) |
 |---|---|---|
-| M0 | Environment: Neo4j in Docker, cached LLM clients, cost tracking | done |
-| M1 | Data, hybrid baseline, closed-book baseline, dev results | done |
-| M2 | Entity and relation extraction, scored against 2Wiki evidence triples | done |
-| M3 | Entity resolution (merge only when sure), measured by hand-checked samples | done |
-| M4 | Graph build and graph retrieval (path scoring from linked entities) | done |
-| M5 | One final run on the test split, judge scores, error analysis | next |
-| M6 | Packaging: read-only API and a simple graph view | planned |
-| M7 | Optional: `neo4j-graphrag` as a third system | optional |
+| Bridge links found (report split; exact name matching finds 57 of 69) | 35 of 69 | 55 of 69 |
+| Merges refused by cannot-link | rule did not exist | 1,673 |
+| Largest cluster | United States + United Kingdom | United States |
+| Hand-checked merges correct | not checked (sheets deleted) | 49 of 50 |
+<!-- END m3-run1 -->
 
-## 3. Data
+## 4. Architecture
+
+```
+Ingestion (once, over the whole corpus)
+
+  Wikipedia paragraphs --> entity and relation --> entity resolution --> Neo4j graph
+  (2WikiMultihopQA)        extraction (LLM,        (LLM judge on          Entity, REL, EXACT_TITLE,
+                           fixed relation list)    candidate pairs,       MENTIONED_IN, Chunk
+                                                   cannot-link rule)
+
+Answering a question
+
+  question --+--> hybrid retriever: BM25 + E5 dense, weighted fusion, reranker --> paragraphs --+
+             |                                                                                 |
+             +--> graph retrieval: seed entities, 2-hop paths, hubs capped --> cited facts ---+
+                                                                               + page paragraphs
+                                                                                               |
+                                    context (fixed token budget) <-----------------------------+
+                                                 |
+                                                 v
+                                    generator LLM --> short answer or "unknown"
+```
 
 <!-- BEGIN data-stats -->
-Source: `data/stats.json`.
-
-| Item | Value |
-|---|---|
-| Source | 2WikiMultihopQA validation split (12,576 questions), HF revision fe713bf |
-| Multi-hop questions | dev 100 (compositional 25, comparison 25, bridge_comparison 25, inference 25); test 300 |
-| Single-hop questions | dev 25, test 75 (generated from evidence triples) |
-| Corpus | 2,049 paragraphs, 154,414 words, median 47 words |
-| Distractors | 4 per question, pooled into one corpus |
-| Same paragraph in two tokenisations | 6 titles, merged |
-| Single-hop hand check | 4 errors in 30 checked questions (13%); rules tightened afterwards |
+Source: `data/stats.json`. Corpus: 2,049 Wikipedia paragraphs (2WikiMultihopQA, HF revision fe713bf). Dev: 100 multi-hop + 25 single-hop questions. Test: 300 multi-hop + 75 single-hop questions.
 <!-- END data-stats -->
 
-Details:
+## 5. How to reproduce
 
-- Dev and test questions are both drawn from the 2Wiki validation split, because the public test split
-  has no answers. Sampling is stratified by question type with a fixed seed.
-- Each question contributes its gold paragraphs and 4 random distractor paragraphs from its own
-  context; all of them are pooled into one corpus that every question is answered against.
-- Some paragraphs appear in 2Wiki in two tokenisations (spacing around punctuation). Those are merged
-  into one chunk, and gold paragraph ids point to the merged chunk.
-- Single-hop questions are generated from 2Wiki evidence triples with one template per single-valued
-  relation, and are only kept when the answer appears verbatim in the paragraph.
-
-## 4. Baseline system (M1)
-
-- Store: Neo4j (local, Docker). One chunk per paragraph, with E5 embeddings.
-- Sparse retrieval: BM25 (`rank_bm25`, k1 1.5, b 0.75), the tokenizer from my MSc thesis.
-- Dense retrieval: `intfloat/e5-base-v2` with the `query: ` and `passage: ` prefixes, exact cosine
-  search in Neo4j.
-- Fusion: min-max normalised weighted sum, `alpha * dense + (1 - alpha) * bm25`, with RRF as an
-  alternative. The configuration was chosen on dev by a rule fixed before the run.
-- Reranker: `BAAI/bge-reranker-base` over the fused top 30.
-- Generation: `openai/gpt-oss-120b` through OpenRouter, pinned to one upstream provider with fallbacks
-  disabled, temperature 0, the same reasoning effort for every system. Short answers only (an entity, a
-  date, yes/no, or "unknown"). Context budget: 1,500 tokens.
-- Scoring: exact match (EM) and F1 from the official 2Wiki evaluation script v1.1, with the gold answer
-  plus its Wikidata aliases accepted. 95% bootstrap confidence intervals.
-- Every LLM call is cached on disk and every paid call is logged with its provider, tokens and cost in
-  `results/spend/`.
-
-## 5. M1 results on the dev split
-
-<!-- BEGIN m1-tables -->
-Source: `results/m1/retrieval_dev.json`, dev split, 100 multi-hop + 25 single-hop questions.
-
-| Retriever | Multi-hop recall@5 | Multi-hop recall@10 | Multi-hop all gold in top 10 | Single-hop recall@2 |
-|---|---|---|---|---|
-| Chosen (no title, alpha 0.9), before rerank | 0.74 | 0.79 | 0.56 | 1.00 |
-| Chosen (no title, alpha 0.9), after rerank | 0.74 | 0.79 | 0.56 | 1.00 |
-| Thesis setting (title, alpha 0.7), before rerank | 0.74 | 0.78 | 0.54 | 1.00 |
-| Thesis setting (title, alpha 0.7), after rerank | 0.75 | 0.79 | 0.54 | 1.00 |
-
-Across all 24 retrieval configurations tried on dev, multi-hop all-gold-in-top-10 after rerank ranges from 0.48 to 0.56. With 100 questions, one question is 0.01, so these differences are within noise.
-
-Source: `results/m1/generation_dev.json`, dev split. Unknown = the system abstained (scores 0).
-
-Table: all dev questions.
-
-| System | Questions | n | EM [95% CI] | F1 | Unknown rate | Answered n | EM on answered |
-|---|---|---|---|---|---|---|---|
-| Closed-book (no retrieval) | multi-hop | 100 | 0.38 [0.28, 0.48] | 0.42 | 0.28 | 72 | 0.53 |
-| Closed-book (no retrieval) | single-hop | 25 | 0.20 [0.04, 0.36] | 0.47 | 0.00 | 25 | 0.20 |
-| Closed-book (no retrieval) | all | 125 | 0.34 [0.26, 0.43] | 0.43 | 0.22 | 97 | 0.44 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | multi-hop | 100 | 0.44 [0.34, 0.54] | 0.47 | 0.49 | 51 | 0.86 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | single-hop | 25 | 0.96 [0.88, 1.00] | 0.98 | 0.00 | 25 | 0.96 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | all | 125 | 0.54 [0.46, 0.63] | 0.57 | 0.39 | 76 | 0.89 |
-| Hybrid, thesis setting (title, alpha 0.7) | multi-hop | 100 | 0.44 [0.35, 0.54] | 0.48 | 0.48 | 52 | 0.85 |
-| Hybrid, thesis setting (title, alpha 0.7) | single-hop | 25 | 0.96 [0.88, 1.00] | 0.98 | 0.00 | 25 | 0.96 |
-| Hybrid, thesis setting (title, alpha 0.7) | all | 125 | 0.54 [0.46, 0.63] | 0.58 | 0.38 | 77 | 0.88 |
-
-Table: headline subset, questions the closed-book model gets wrong (n = 82).
-
-| System | Questions | n | EM [95% CI] | F1 | Unknown rate | Answered n | EM on answered |
-|---|---|---|---|---|---|---|---|
-| Closed-book (no retrieval) | multi-hop | 62 | 0.00 [0.00, 0.00] | 0.06 | 0.45 | 34 | 0.00 |
-| Closed-book (no retrieval) | single-hop | 20 | 0.00 [0.00, 0.00] | 0.34 | 0.00 | 20 | 0.00 |
-| Closed-book (no retrieval) | all | 82 | 0.00 [0.00, 0.00] | 0.13 | 0.34 | 54 | 0.00 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | multi-hop | 62 | 0.32 [0.21, 0.44] | 0.37 | 0.56 | 27 | 0.74 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | single-hop | 20 | 0.95 [0.85, 1.00] | 0.97 | 0.00 | 20 | 0.95 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | all | 82 | 0.48 [0.37, 0.59] | 0.52 | 0.43 | 47 | 0.83 |
-| Hybrid, thesis setting (title, alpha 0.7) | multi-hop | 62 | 0.31 [0.19, 0.42] | 0.36 | 0.56 | 27 | 0.70 |
-| Hybrid, thesis setting (title, alpha 0.7) | single-hop | 20 | 0.95 [0.85, 1.00] | 0.97 | 0.00 | 20 | 0.95 |
-| Hybrid, thesis setting (title, alpha 0.7) | all | 82 | 0.46 [0.35, 0.57] | 0.51 | 0.43 | 47 | 0.81 |
-
-Table: multi-hop questions by type.
-
-| System | Type | n | EM [95% CI] | Unknown rate | EM on answered |
-|---|---|---|---|---|---|
-| Closed-book (no retrieval) | comparison | 25 | 0.64 [0.44, 0.84] | 0.20 | 0.80 |
-| Closed-book (no retrieval) | inference | 25 | 0.32 [0.16, 0.52] | 0.20 | 0.40 |
-| Closed-book (no retrieval) | compositional | 25 | 0.16 [0.04, 0.32] | 0.44 | 0.29 |
-| Closed-book (no retrieval) | bridge_comparison | 25 | 0.40 [0.20, 0.60] | 0.28 | 0.56 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | comparison | 25 | 0.96 [0.88, 1.00] | 0.04 | 1.00 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | inference | 25 | 0.56 [0.36, 0.76] | 0.28 | 0.78 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | compositional | 25 | 0.24 [0.08, 0.40] | 0.64 | 0.67 |
-| Hybrid baseline (chosen: no title, alpha 0.9) | bridge_comparison | 25 | 0.00 [0.00, 0.00] | 1.00 | - |
-| Hybrid, thesis setting (title, alpha 0.7) | comparison | 25 | 0.96 [0.88, 1.00] | 0.04 | 1.00 |
-| Hybrid, thesis setting (title, alpha 0.7) | inference | 25 | 0.52 [0.32, 0.72] | 0.32 | 0.76 |
-| Hybrid, thesis setting (title, alpha 0.7) | compositional | 25 | 0.24 [0.08, 0.40] | 0.60 | 0.60 |
-| Hybrid, thesis setting (title, alpha 0.7) | bridge_comparison | 25 | 0.04 [0.00, 0.12] | 0.96 | 1.00 |
-
-Paired difference in EM, hybrid baseline minus closed-book, all 125 dev questions: +0.20 [+0.09, +0.31]. Hybrid baseline minus thesis setting: +0.00 [-0.02, +0.02].
-
-All gold paragraphs inside the packed context (multi-hop, hybrid baseline): 0.53. Mean context size: 1484 tokens.
-<!-- END m1-tables -->
-
-What these numbers say so far:
-
-- Retrieval clearly helps over closed-book, including on the questions the model cannot answer from
-  memory.
-- Comparison questions and the template single-hop questions are already handled by the baseline.
-- Bridge-comparison questions are where the baseline fails: the question names two films, but the
-  answer depends on their directors, whose pages are not named in the question and rarely reach the
-  context. The baseline then correctly abstains. This is the case graph traversal is meant to fix.
-- The reranker changes little, and the chosen retrieval configuration and the thesis setting give the
-  same QA results.
-
-## 6. Reproducing
-
-Requirements: Python 3.14, Docker, a Gemini API key and an OpenRouter API key.
+Requirements: Python 3.14, Docker (for Neo4j) and an OpenRouter API key with prepaid credit.
 
 ```
 python3.14 -m venv .venv
 .venv/bin/pip install -e ".[dev]"
-cp .env.example .env                    # fill in the keys and a Neo4j password
-docker compose up -d
+cp .env.example .env                              # fill in the OpenRouter key and a Neo4j password
+docker compose up -d                              # Neo4j
 .venv/bin/python scripts/check_env.py
-.venv/bin/python scripts/build_data.py           # download (pinned), sample, corpus, single-hop set
-.venv/bin/python scripts/build_answer_aliases.py # official alias file (pinned)
-.venv/bin/python scripts/load_corpus.py          # Neo4j + E5 embeddings
-.venv/bin/python scripts/run_m1_retrieval.py     # dev retrieval sweep
-.venv/bin/python scripts/run_m1_generation.py    # dev QA: closed-book and hybrid
-.venv/bin/python scripts/render_tables.py        # re-render the README tables
+.venv/bin/python scripts/build_data.py            # pinned download, sample, corpus, single-hop set
+.venv/bin/python scripts/build_answer_aliases.py  # official alias file (pinned)
+.venv/bin/python scripts/load_corpus.py           # paragraphs and E5 embeddings into Neo4j
+.venv/bin/python scripts/run_m2_extraction.py     # entity and relation extraction
+.venv/bin/python scripts/run_m3_resolution.py     # entity resolution
+.venv/bin/python scripts/build_graph.py           # graph into Neo4j
+.venv/bin/python scripts/run_m4_eval.py           # dev evaluation of all systems
+.venv/bin/python scripts/render_tables.py         # re-render the README number blocks
 .venv/bin/pytest
 ```
 
-## 7. Limitations so far
+`scripts/run_m5_test.py` refuses to run again by design (run-once lock); the committed files in
+`results/m5/` are the test run. Every LLM call is cached on disk, so re-running a step costs nothing for
+calls that were already made.
 
-- Pooled corpus: questions are answered against one pooled corpus of gold and distractor paragraphs.
-  This differs from the standard 2Wiki distractor setting, so absolute numbers are not directly
-  comparable with published leaderboards. The answer scoring is the official one.
-- Small samples: per-type results rest on 25 dev questions each, so the confidence intervals are wide.
-- Memorisation: the models have likely seen Wikipedia. The closed-book baseline and the
-  closed-book-wrong subset exist to account for that.
-- Single-hop questions are generated from templates, so their wording overlaps with the source
-  paragraph. That favours lexical retrieval such as BM25. The regenerated single-hop set has not been
-  hand-checked a second time.
-- Retrieval configuration: all configurations tried on dev are within noise of each other (section 5).
-- Answer aliases: some single-hop questions have no official entity ids that line up with their
-  evidence, so they are scored against the gold answer only.
-- Abstention: "unknown" scores 0. On two-way comparison questions a guess would often be right, so a
-  system that abstains can score below a system that guesses. The unknown rate is reported for that
-  reason.
-- Same model for extraction and generation: the knowledge graph is extracted with the same model
-  (`openai/gpt-oss-120b`, same pinned endpoint) that later answers the questions. Its extraction errors
-  and its answering errors may be correlated. The judge (`gemini-3.8-flash`) is a different model.
+## 6. Limitations
+
+- The corpus pools the gold and distractor paragraphs of all sampled questions, unlike the standard 2Wiki
+  distractor setting, so absolute numbers are not comparable with published leaderboards. The answer
+  scoring is the official one.
+- The same model extracts the graph and answers the questions, so their errors may be correlated.
+- The language models have likely seen Wikipedia; the closed-book baseline and the closed-book-wrong
+  subset account for that.
+- Per-type results rest on small samples; secondary comparisons are exploratory.
 - Aggregation questions are out of scope.
+- More, with numbers: `BENCHMARK.md`, section 9.
+
+## 7. Cost and LLM providers
+
+Every LLM call behind a result (entity and relation extraction, entity resolution, answer generation and
+the test-answer judge) went through OpenRouter with prepaid credit, each role pinned to one upstream
+provider with fallbacks disabled. Three early calls to a free Gemini tier (two connectivity checks and one
+pilot extraction batch, before the extractor was moved to OpenRouter; listed in
+`results/spend/gemini_audit.json`) contributed to no result; the Gemini path has since been removed.
+
+<!-- BEGIN cost -->
+Source: `results/m5/spend_snapshot.json`, taken from the spend ledger `results/spend/openrouter_calls.jsonl` (one row per paid call, with provider, tokens and cost).
+
+| Item | Cost (USD) |
+|---|---|
+| All OpenRouter calls, M0 to M5 | 1.82 (6,148 calls: DeepInfra 6,126, Parasail 22) |
+| of which the single test run | 0.112 |
+| of which the test-answer judge | 0.017 |
+<!-- END cost -->
 
 ## 8. Data, code and licences
 
@@ -228,17 +175,10 @@ docker compose up -d
 - Scoring code: `src/graphrag/eval/answers.py` is copied from the official 2Wiki evaluation script
   v1.1 under the Apache License 2.0, with the notice kept.
 - Models: `intfloat/e5-base-v2`, `BAAI/bge-reranker-base`, `openai/gpt-oss-120b` and
-  `gemini-3.8-flash` are used under their own licences and terms; see their model cards and provider
-  terms.
+  `meta-llama/llama-3.3-70b-instruct` are used under their own licences and terms; see their model
+  cards and provider terms.
 - Retriever design: from my MSc thesis repository, github.com/RohithkumarReddipogula/AI-Powered-Rag-System.
-
-## 9. Work in progress
-
-M2 to M4 are done on the dev split: extraction (`results/m2/extraction_scores.json`), entity resolution
-(`results/m3/resolution_report.md`) and graph retrieval (`results/m4/graph_report.md`). Their dev
-results will be added to this README together with the test results of M5, in the same table format,
-including the unknown rate. Next: M5, one run on the test split with frozen settings.
 
 ---
 
-Rohith Kumar Reddipogula, 2026. MIT License. Work in progress.
+Rohith Kumar Reddipogula, 2026. MIT License.

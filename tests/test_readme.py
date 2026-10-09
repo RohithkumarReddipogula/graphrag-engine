@@ -21,6 +21,6 @@ def test_readme_follows_writing_rules():
 
 def test_readme_tables_match_committed_results():
     r = _renderer()
-    for name, fn in [("data-stats", r.render_data), ("m1-tables", r.render)]:
+    for name, fn in r.BLOCKS.items():
         block = re.search(rf"<!-- BEGIN {name} -->\n(.*?)\n<!-- END {name} -->", README, re.S).group(1)
         assert block == fn(), f"README block {name} is stale; run scripts/render_tables.py"

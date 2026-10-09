@@ -1,0 +1,28 @@
+{
+ "checked_on": "2026-10-09",
+ "what": "every Gemini call in the local LLM cache (.cache/llm/gemini-3.8-flash)",
+ "calls": 3,
+ "cost_usd": 0.0,
+ "tier": "free",
+ "why_no_result_used_them": "the LLM cache key includes the model, so gpt-oss-120b results could not read a Gemini answer; every committed M2 file records openai/gpt-oss-120b as the extractor",
+ "entries": [
+  {
+   "kind": "connectivity check (scripts/check_env.py)",
+   "prompt_start": "Reply with the single word: ready",
+   "cached_at_utc": null,
+   "used_by_any_result": false
+  },
+  {
+   "kind": "connectivity check (scripts/check_env.py)",
+   "prompt_start": "Reply with the single word: ready",
+   "cached_at_utc": "2026-10-04T09:33:16+00:00",
+   "used_by_any_result": false
+  },
+  {
+   "kind": "M2 pilot extraction batch (before the extractor moved to OpenRouter)",
+   "prompt_start": "Paragraphs:\n\nchunk_id: 1971 Copa Liberta",
+   "cached_at_utc": "2026-10-04T10:41:41+00:00",
+   "used_by_any_result": false
+  }
+ ]
+}
