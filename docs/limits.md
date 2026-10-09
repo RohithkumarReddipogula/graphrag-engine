@@ -2,13 +2,18 @@
 
 | Role | Model id | Provider and access | Limits | Source |
 |---|---|---|---|---|
-| Judge | gemini-3.8-flash | Google AI Studio, free tier | not published; to be read in AI Studio (see below) | aistudio.google.com/rate-limit |
+| Judge (M5, proposed) | meta-llama/llama-3.3-70b-instruct | OpenRouter, pinned endpoint `parasail/fp8`, fallbacks disabled | Prepaid credit (shared) | openrouter.ai/settings/credits |
 | Extractor | openai/gpt-oss-120b | OpenRouter, same pinned endpoint as the generator | Prepaid credit (shared with the generator) | openrouter.ai/settings/credits |
 | Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
-Date the Gemini limits were read: TBD (must be read in AI Studio before the M5 judge runs). On
-2026-10-09 the values were sent as blank placeholders ("RPM ___, TPM ___, RPD ___"), so nothing was
-recorded; the real values are still needed before the judge runs.
+## Judge change (2026-10-09, before the test split was touched)
+
+The plan named `gemini-3.8-flash` on the Google AI Studio free tier as the M5 judge. Its free-tier limits
+are not published and could not be confirmed (section below). The judge now runs on OpenRouter with the
+prepaid credit only: `meta-llama/llama-3.3-70b-instruct` (a different model family than the gpt-oss
+generator and extractor), pinned to the `parasail/fp8` endpoint (fp8 weights, strict JSON-schema output,
+temperature supported), with fallbacks disabled. Price when chosen: 0.22 USD per million input tokens and
+0.50 USD per million output tokens. No judge scores exist on dev, so no dev judge scores need re-judging.
 
 ## Gemini free-tier limits: what was checked (2026-10-09)
 

@@ -344,8 +344,9 @@ M5 reports every system, including `graph_only`.
 
 ### M5: Final test run (once)
 
-**Approved on 2026-10-09** with two changes to the draft (one primary result; a pre-registered
-expectation, M5.3). Everything below was fixed before the test split was run.
+**Approved on 2026-10-09** with three changes to the draft: one primary result and a pre-registered
+expectation (M5.3), and a judge on OpenRouter instead of the Gemini free tier (M5.5). Everything below was
+fixed before the test split was touched.
 
 Test questions so far: their ids were read only to check that dev and test never overlap; their
 paragraphs are part of the shared corpus by design (M1), so M2 extraction and M3 resolution ran on them
@@ -402,9 +403,16 @@ run on any other commit or on a working tree with uncommitted changes.
 - Dev vs test side by side for every system, to show how optimistic dev was.
 
 #### M5.5 LLM judge
-- Model `gemini-3.8-flash`, a different model from the generator and extractor. Its free-tier limits
-  are not published (`docs/limits.md`); they must be read from AI Studio and recorded before the judge
-  runs.
+- Changed on 2026-10-09, before the test split was touched: the judge does not use the Gemini free tier.
+  It runs on OpenRouter with the prepaid credit only, on a model from a different family than the
+  generator and extractor (not gpt-oss), with a pinned provider and fallbacks disabled, like the
+  generator.
+- Proposed judge: `meta-llama/llama-3.3-70b-instruct` (Meta), endpoint `parasail/fp8`, temperature 0,
+  strict JSON-schema output, `allow_fallbacks: false` and `require_parameters: true`. The model, the
+  provider and the expected cost and time are shown again before the judge runs; the judge does not run
+  without approval.
+- No judge scores exist on dev: dev was scored with EM and F1 only, and the judge runs once, on test. So
+  there is no dev judge score to compare with; EM stays the primary metric.
 - What it judges: every test answer that is not "unknown" ("unknown" is incorrect without a judge call),
   deduplicated by (question, normalised answer) across systems. Projected from dev: about 530 unique
   answers out of 1,875.
@@ -413,10 +421,9 @@ run on any other commit or on a working tree with uncommitted changes.
   names the same entity or value as the gold answer, allowing other wording, spellings, aliases and date
   formats; an answer less specific than the question asks for is incorrect; unsure counts as incorrect
   and is reported separately. The judge does not see which system produced the answer.
-- 25 items per call, so about 22 calls. Cached; on a daily quota error the run stops and resumes from the
-  cache the next day. At 20 requests per day (the lowest figure claimed by a third party for this model)
-  it takes 2 days; at higher limits, minutes. Cost: 0 USD on the free tier.
-- If the free tier turns out too small to finish within 3 days, ask before changing the judge model.
+- 25 items per call, so about 22 calls; cached; invalid output retried once, then the items are marked
+  unsure and logged. Expected cost (at about 4,000 input and 1,000 output tokens per call) under 0.05
+  USD; expected time a few minutes.
 
 #### M5.6 Hand check of the judge (30 items)
 - 30 seeded-random judged items from the test answers, stratified: 10 where the judge says correct but
