@@ -1,0 +1,378 @@
+{
+ "judge": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "endpoint": "parasail/fp8",
+  "temperature": 0.0,
+  "items_per_call": 25,
+  "providers_seen": [
+   "Parasail"
+  ]
+ },
+ "items": {
+  "test_answers": 1875,
+  "unknown_answers_not_judged": 410,
+  "unique_items_judged": 525,
+  "verdicts": {
+   "incorrect": 147,
+   "correct": 377,
+   "unsure": 1
+  }
+ },
+ "calls": {
+  "calls": 22,
+  "live_calls": 22,
+  "batches_failed_twice": 0,
+  "input_tokens": 36119,
+  "output_tokens": 18205,
+  "cost_usd": 0.016681,
+  "seconds": 55
+ },
+ "systems": {
+  "closed_book": {
+   "groups": {
+    "comparison": {
+     "judge_accuracy": {
+      "mean": 0.6,
+      "ci_low": 0.4933,
+      "ci_high": 0.7067,
+      "n": 75
+     }
+    },
+    "inference": {
+     "judge_accuracy": {
+      "mean": 0.3333,
+      "ci_low": 0.2267,
+      "ci_high": 0.44,
+      "n": 75
+     }
+    },
+    "compositional": {
+     "judge_accuracy": {
+      "mean": 0.2,
+      "ci_low": 0.12,
+      "ci_high": 0.2933,
+      "n": 75
+     }
+    },
+    "bridge_comparison": {
+     "judge_accuracy": {
+      "mean": 0.4133,
+      "ci_low": 0.3067,
+      "ci_high": 0.5333,
+      "n": 75
+     }
+    },
+    "multi_hop": {
+     "judge_accuracy": {
+      "mean": 0.3867,
+      "ci_low": 0.3333,
+      "ci_high": 0.4433,
+      "n": 300
+     }
+    },
+    "single_hop": {
+     "judge_accuracy": {
+      "mean": 0.2533,
+      "ci_low": 0.16,
+      "ci_high": 0.36,
+      "n": 75
+     }
+    },
+    "all": {
+     "judge_accuracy": {
+      "mean": 0.36,
+      "ci_low": 0.312,
+      "ci_high": 0.4107,
+      "n": 375
+     }
+    }
+   },
+   "unsure": 0,
+   "em_vs_judge_on_answered": {
+    "em1_judge_correct": 115,
+    "em1_judge_incorrect": 0,
+    "em0_judge_correct": 20,
+    "em0_judge_incorrect": 127
+   }
+  },
+  "hybrid": {
+   "groups": {
+    "comparison": {
+     "judge_accuracy": {
+      "mean": 0.9733,
+      "ci_low": 0.9333,
+      "ci_high": 1.0,
+      "n": 75
+     }
+    },
+    "inference": {
+     "judge_accuracy": {
+      "mean": 0.6267,
+      "ci_low": 0.52,
+      "ci_high": 0.7333,
+      "n": 75
+     }
+    },
+    "compositional": {
+     "judge_accuracy": {
+      "mean": 0.48,
+      "ci_low": 0.3733,
+      "ci_high": 0.5867,
+      "n": 75
+     }
+    },
+    "bridge_comparison": {
+     "judge_accuracy": {
+      "mean": 0.0667,
+      "ci_low": 0.0133,
+      "ci_high": 0.1333,
+      "n": 75
+     }
+    },
+    "multi_hop": {
+     "judge_accuracy": {
+      "mean": 0.5367,
+      "ci_low": 0.48,
+      "ci_high": 0.5933,
+      "n": 300
+     }
+    },
+    "single_hop": {
+     "judge_accuracy": {
+      "mean": 0.9333,
+      "ci_low": 0.88,
+      "ci_high": 0.9867,
+      "n": 75
+     }
+    },
+    "all": {
+     "judge_accuracy": {
+      "mean": 0.616,
+      "ci_low": 0.568,
+      "ci_high": 0.664,
+      "n": 375
+     }
+    }
+   },
+   "unsure": 1,
+   "em_vs_judge_on_answered": {
+    "em1_judge_correct": 212,
+    "em1_judge_incorrect": 0,
+    "em0_judge_correct": 19,
+    "em0_judge_incorrect": 8
+   }
+  },
+  "graph_only": {
+   "groups": {
+    "comparison": {
+     "judge_accuracy": {
+      "mean": 0.9333,
+      "ci_low": 0.8667,
+      "ci_high": 0.9867,
+      "n": 75
+     }
+    },
+    "inference": {
+     "judge_accuracy": {
+      "mean": 0.8133,
+      "ci_low": 0.72,
+      "ci_high": 0.8933,
+      "n": 75
+     }
+    },
+    "compositional": {
+     "judge_accuracy": {
+      "mean": 0.6267,
+      "ci_low": 0.52,
+      "ci_high": 0.7333,
+      "n": 75
+     }
+    },
+    "bridge_comparison": {
+     "judge_accuracy": {
+      "mean": 0.8933,
+      "ci_low": 0.8133,
+      "ci_high": 0.96,
+      "n": 75
+     }
+    },
+    "multi_hop": {
+     "judge_accuracy": {
+      "mean": 0.8167,
+      "ci_low": 0.77,
+      "ci_high": 0.86,
+      "n": 300
+     }
+    },
+    "single_hop": {
+     "judge_accuracy": {
+      "mean": 0.9333,
+      "ci_low": 0.88,
+      "ci_high": 0.9867,
+      "n": 75
+     }
+    },
+    "all": {
+     "judge_accuracy": {
+      "mean": 0.84,
+      "ci_low": 0.8027,
+      "ci_high": 0.8773,
+      "n": 375
+     }
+    }
+   },
+   "unsure": 0,
+   "em_vs_judge_on_answered": {
+    "em1_judge_correct": 296,
+    "em1_judge_incorrect": 0,
+    "em0_judge_correct": 19,
+    "em0_judge_incorrect": 14
+   }
+  },
+  "graph_plus_chunks_g0.5": {
+   "groups": {
+    "comparison": {
+     "judge_accuracy": {
+      "mean": 0.9867,
+      "ci_low": 0.96,
+      "ci_high": 1.0,
+      "n": 75
+     }
+    },
+    "inference": {
+     "judge_accuracy": {
+      "mean": 0.72,
+      "ci_low": 0.6133,
+      "ci_high": 0.8133,
+      "n": 75
+     }
+    },
+    "compositional": {
+     "judge_accuracy": {
+      "mean": 0.68,
+      "ci_low": 0.5733,
+      "ci_high": 0.7867,
+      "n": 75
+     }
+    },
+    "bridge_comparison": {
+     "judge_accuracy": {
+      "mean": 0.8133,
+      "ci_low": 0.72,
+      "ci_high": 0.8933,
+      "n": 75
+     }
+    },
+    "multi_hop": {
+     "judge_accuracy": {
+      "mean": 0.8,
+      "ci_low": 0.7533,
+      "ci_high": 0.8433,
+      "n": 300
+     }
+    },
+    "single_hop": {
+     "judge_accuracy": {
+      "mean": 0.9333,
+      "ci_low": 0.88,
+      "ci_high": 0.9867,
+      "n": 75
+     }
+    },
+    "all": {
+     "judge_accuracy": {
+      "mean": 0.8267,
+      "ci_low": 0.7867,
+      "ci_high": 0.864,
+      "n": 375
+     }
+    }
+   },
+   "unsure": 0,
+   "em_vs_judge_on_answered": {
+    "em1_judge_correct": 295,
+    "em1_judge_incorrect": 0,
+    "em0_judge_correct": 15,
+    "em0_judge_incorrect": 10
+   }
+  },
+  "graph_plus_chunks_g0.5_no_exact_title": {
+   "groups": {
+    "comparison": {
+     "judge_accuracy": {
+      "mean": 0.9867,
+      "ci_low": 0.96,
+      "ci_high": 1.0,
+      "n": 75
+     }
+    },
+    "inference": {
+     "judge_accuracy": {
+      "mean": 0.7067,
+      "ci_low": 0.6,
+      "ci_high": 0.8133,
+      "n": 75
+     }
+    },
+    "compositional": {
+     "judge_accuracy": {
+      "mean": 0.6667,
+      "ci_low": 0.56,
+      "ci_high": 0.7733,
+      "n": 75
+     }
+    },
+    "bridge_comparison": {
+     "judge_accuracy": {
+      "mean": 0.7867,
+      "ci_low": 0.6933,
+      "ci_high": 0.88,
+      "n": 75
+     }
+    },
+    "multi_hop": {
+     "judge_accuracy": {
+      "mean": 0.7867,
+      "ci_low": 0.74,
+      "ci_high": 0.8333,
+      "n": 300
+     }
+    },
+    "single_hop": {
+     "judge_accuracy": {
+      "mean": 0.9333,
+      "ci_low": 0.88,
+      "ci_high": 0.9867,
+      "n": 75
+     }
+    },
+    "all": {
+     "judge_accuracy": {
+      "mean": 0.816,
+      "ci_low": 0.776,
+      "ci_high": 0.8533,
+      "n": 375
+     }
+    }
+   },
+   "unsure": 0,
+   "em_vs_judge_on_answered": {
+    "em1_judge_correct": 289,
+    "em1_judge_incorrect": 0,
+    "em0_judge_correct": 17,
+    "em0_judge_incorrect": 9
+   }
+  }
+ },
+ "primary_comparison_on_judge_metric": {
+  "comparison": "graph_plus_chunks_g0.5 vs hybrid",
+  "note": "secondary metric; EM stays primary",
+  "paired_difference": {
+   "mean": 0.2107,
+   "ci_low": 0.1653,
+   "ci_high": 0.2587,
+   "n": 375
+  }
+ },
+ "remaining_credit_usd": 5.775917
+}
