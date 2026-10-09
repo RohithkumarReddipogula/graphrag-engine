@@ -474,7 +474,10 @@ different model from the judge and the generator, reviewed by Rohith Kumar Reddi
 
 ### M6: Packaging
 
-**DRAFT (2026-10-09), awaiting approval. No M6 code is written before it is approved.**
+**Approved on 2026-10-09** with these choices: the API runs from the venv only (no Docker service for the
+API), and `docs/graph_view/example.html` is included. Added: the README states that every LLM call behind
+a result (extraction, entity resolution, generation, judge) went through OpenRouter with prepaid credit,
+with the total cost from the spend ledger; the unused Gemini path was removed first.
 
 Goal: small and focused on what a recruiter or hiring engineer sees first. No new experiments; every
 number in the README comes from committed results files.
@@ -511,9 +514,8 @@ Plain ASCII, numbered contents, no collapsible sections, short plain footer (CLA
 - The pipeline code moves into one library module used by the API; the committed M5 script is not
   changed. A parity test checks, without LLM calls, that the API builds exactly the same context chunk
   ids as the committed M4 dev run of `graph_plus_chunks_g0.5` for a few dev questions.
-- Runs locally: an `api` service in `docker-compose.yml` next to Neo4j (CPU image with PyTorch for E5 and
-  the reranker, so a few seconds per question and a large image), bound to localhost; also runnable from
-  the venv. The OpenRouter key comes from `.env` as now and is never logged.
+- Runs locally from the venv only (`uvicorn`, bound to localhost), with Neo4j from `docker compose` as now;
+  no Docker service for the API. The OpenRouter key comes from `.env` as now and is never logged.
 - Each `/ask` makes one cached generator call (about 0.00006 USD, from the M5 test run cost per call).
   Question length is capped; no other rate limiting, because it runs locally only.
 
@@ -526,12 +528,12 @@ Plain ASCII, numbered contents, no collapsible sections, short plain footer (CLA
   [{source, target, label, source_chunk_ids}], `questions` [{id, type, question, gold, answer, path_node_ids,
   path_link_ids}]. This node/link shape loads directly into common force-graph libraries. Entity names,
   relation labels and paragraph titles only, no paragraph text (licence notes kept in the README).
-- Optional: a minimal `docs/graph_view/example.html` showing the JSON with a force-graph library from a
+- Included: a minimal `docs/graph_view/example.html` showing the JSON with a force-graph library from a
   CDN, as a starting point for the website. No backend.
 
 #### M6.4 Effort and cost (estimate)
-- README: about 1 to 1.5 hours. API with Docker and tests: about 2 to 3 hours, plus a first image build of
-  about 10 to 15 minutes. Graph export: about 1 hour.
+- README: about 1 to 1.5 hours. API (venv) and tests: about 2 hours. Graph export and example page: about
+  1 hour.
 - LLM cost: README and graph export none; API smoke tests about 10 `/ask` calls, under 0.01 USD. Credit
   left after M5: about 5.78 USD.
 
