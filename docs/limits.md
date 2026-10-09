@@ -2,11 +2,21 @@
 
 | Role | Model id | Provider and access | Limits | Source |
 |---|---|---|---|---|
-| Judge | gemini-3.8-flash | Google AI Studio, free tier | RPM TBD, RPD TBD, TPM TBD | aistudio.google.com/rate-limit |
+| Judge | gemini-3.8-flash | Google AI Studio, free tier | not published; to be read in AI Studio (see below) | aistudio.google.com/rate-limit |
 | Extractor | openai/gpt-oss-120b | OpenRouter, same pinned endpoint as the generator | Prepaid credit (shared with the generator) | openrouter.ai/settings/credits |
 | Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
-Date the Gemini limits were read: TBD
+Date the Gemini limits were read: TBD (must be read in AI Studio before the M5 judge runs).
+
+## Gemini free-tier limits: what was checked (2026-10-09)
+
+- Google's rate-limit page (ai.google.dev/gemini-api/docs/rate-limits) gives no free-tier RPM, TPM or RPD
+  for gemini-3.8-flash. It says limits "can be viewed in Google AI Studio", that they are applied per
+  project (not per API key), and that daily quotas reset at midnight Pacific time. Its Batch API tables
+  start at Tier 1, so the batch mode is not available on the free tier.
+- Third-party pages conflict: one claims about 20 requests per day for gemini-3.8-flash; another says
+  the free-tier values are unpublished. Neither is verified.
+- The M5 judge plan (`docs/PLAN.md`, M5.5) is designed to finish even at 20 requests per day.
 
 ## Generator history
 

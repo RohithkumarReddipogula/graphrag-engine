@@ -1,6 +1,6 @@
 # Next steps
 
-Last updated: 2026-10-10. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
+Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
 
 ## 1. Where we are
 

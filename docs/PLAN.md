@@ -336,16 +336,126 @@ On the 100 dev multi-hop questions, 92 contain their first gold subject's name v
   configuration with 8 workers; under an hour in total.
 
 **Done when:** `results/m4/` has dev numbers for every system above against the M1 baseline, and the
-quality bar is judged in `results/m4/graph_report.md`. Done on 2026-10-10: all three criteria passed for
+quality bar is judged in `results/m4/graph_report.md`. Done on 2026-10-09: all three criteria passed for
 `graph_plus_chunks` at g = 0.5 (chosen by the fixed rule), so it goes to M5 as the GraphRAG system;
 numbers in `results/m4/graph_report.md`. On dev, `graph_only` scored higher than `graph_plus_chunks`
 on several metrics; the plan did not make `graph_only` eligible, so this is recorded and not acted on.
 M5 reports every system, including `graph_only`.
 
 ### M5: Final test run (once)
-- Freeze all config. Run every system on **test**, once.
-- EM/F1 + CIs by type, headline on the closed-book-wrong subset, judge scores, 30-item hand check.
-- `BENCHMARK.md`: tables, per-type breakdown, error analysis with real examples, limitations.
+
+**DRAFT (2026-10-09), awaiting approval. No M5 code is written and the test split is not touched before
+it is approved.**
+
+Test questions so far: their ids were read only to check that dev and test never overlap; their
+paragraphs are part of the shared corpus by design (M1), so M2 extraction and M3 resolution ran on them
+without the questions or answers. No system has seen a test question or answer.
+
+#### M5.1 Systems on test (run once, every one with the frozen settings in M5.2)
+1. `closed_book`
+2. `hybrid` (the M1 baseline)
+3. `graph_only`
+4. `graph_plus_chunks_g0.5` (the GraphRAG system chosen in M4)
+5. `graph_plus_chunks_g0.5_no_exact_title` (ablation)
+All on the 375 test questions: 300 multi-hop (75 per type) and 75 single-hop
+(`data/questions_test.jsonl`, `data/single_hop_test.jsonl`).
+
+#### M5.2 Frozen settings
+The code is frozen at a git tag `m5-frozen` on the commit that adds the M5 script; the script refuses to
+run on any other commit or on a working tree with uncommitted changes.
+- Data: `data/corpus.jsonl` (2,049 paragraphs), test files above, `data/answer_aliases.json`; seed 42.
+- Hybrid retriever: BM25 (`rank_bm25`, k1 1.5, b 0.75, thesis tokenizer) + `intfloat/e5-base-v2` dense
+  (exact cosine in Neo4j), weighted min-max fusion with **alpha 0.9, no title** (read from
+  `results/m1/retrieval_dev.json`, as in M1 and M4; the `HybridConfig` code defaults are the thesis
+  setting and are not used), 50 candidates per retriever, `BAAI/bge-reranker-base` over the fused top 30.
+- Generation: `openai/gpt-oss-120b` on OpenRouter endpoint `deepinfra/bf16`, fallbacks disabled,
+  temperature 0, reasoning effort medium; prompts `SYSTEM` and `SYSTEM_CLOSED_BOOK` in
+  `src/graphrag/generation.py`; 1,500-token context (o200k tokenizer), skip-and-continue packing;
+  abstention ("unknown" scores 0).
+- Graph: `results/m2/extractions.jsonl` (prompt v3, post-processed), `results/m3/clusters.jsonl` (judge
+  v2, cannot-link, `t_low` 0.85), the graph in Neo4j as built by `scripts/build_graph.py`
+  (`results/m4/graph_stats.json`); retrieval constants MAX_SEEDS 5, SEED_MIN_COS 0.85,
+  MIN_ALIAS_CHARS 3, MAX_NGRAM 12, MAX_NEIGHBOURS 20, HUB_DEGREE 25, TOP_PATHS 10; graph share g = 0.5.
+- Scoring: official 2Wiki v1.1 EM and F1 with Wikidata aliases; 95% percentile bootstrap, 10,000
+  resamples, seed 0.
+- Before running, the script checks that the Neo4j graph matches `results/m4/graph_stats.json` (entity,
+  REL, EXACT_TITLE and MENTIONED_IN counts) and stops if not.
+
+#### M5.3 Comparisons
+- Primary (approved in M4): `graph_plus_chunks_g0.5` vs `hybrid`, paired EM difference with 95%
+  bootstrap CI over all 375 test questions, and the same on the closed-book-wrong subset (the headline).
+- Secondary, reported as exploratory (several comparisons, no correction): `graph_only` vs `hybrid`;
+  `graph_plus_chunks_g0.5` vs `graph_only`; the ablation vs `graph_plus_chunks_g0.5`; every system vs
+  `closed_book`; per question type.
+
+#### M5.4 Metrics
+- Per system, per question type, for multi-hop, single-hop and all, and on the closed-book-wrong subset:
+  EM and F1 with 95% bootstrap CIs, unknown rate, number answered and EM on answered questions.
+- Paired bootstrap differences for the comparisons in M5.3.
+- Retrieval: multi-hop all-gold-in-context and bridge entity recall, as in M4.
+- Judge correctness (M5.5) as a secondary metric next to EM.
+- Dev vs test side by side for every system, to show how optimistic dev was.
+
+#### M5.5 LLM judge
+- Model `gemini-3.8-flash`, a different model from the generator and extractor. Its free-tier limits
+  are not published (`docs/limits.md`); they must be read from AI Studio and recorded before the judge
+  runs.
+- What it judges: every test answer that is not "unknown" ("unknown" is incorrect without a judge call),
+  deduplicated by (question, normalised answer) across systems. Projected from dev: about 530 unique
+  answers out of 1,875.
+- Input per item: the question, the gold answer and its accepted aliases, the system's answer. Output
+  (strict JSON): correct / incorrect / unsure and a reason of at most 15 words. Correct means the answer
+  names the same entity or value as the gold answer, allowing other wording, spellings, aliases and date
+  formats; an answer less specific than the question asks for is incorrect; unsure counts as incorrect
+  and is reported separately. The judge does not see which system produced the answer.
+- 25 items per call, so about 22 calls. Cached; on a daily quota error the run stops and resumes from the
+  cache the next day. At 20 requests per day (the lowest figure claimed by a third party for this model)
+  it takes 2 days; at higher limits, minutes. Cost: 0 USD on the free tier.
+- If the free tier turns out too small to finish within 3 days, ask before changing the judge model.
+
+#### M5.6 Hand check of the judge (30 items)
+- 30 seeded-random judged items from the test answers, stratified: 10 where the judge says correct but
+  EM is 0, 10 where the judge says incorrect, 10 where judge and EM agree on correct (fewer if a stratum
+  is smaller; the rest filled from the others).
+- The sheet shows the question, the gold answer and aliases, and the system's answer, but not the
+  judge's verdict or the system name; the verdicts and strata are in a separate key file.
+- Reported: agreement between the judge and the hand labels, overall and per stratum. Not a pass/fail
+  bar: if agreement is below 27 of 30, the judge metric is reported with that warning and EM stays the
+  primary metric.
+
+#### M5.7 BENCHMARK.md
+Generated from the M5 results files (no number typed by hand), plain ASCII, numbered contents:
+1. setup: data, systems, frozen settings and the `m5-frozen` commit;
+2. primary result: `graph_plus_chunks_g0.5` vs `hybrid` on test, all questions and the closed-book-wrong
+   subset;
+3. full results table per system and per question type (EM, F1, unknown rate, answered, EM on answered,
+   CIs);
+4. secondary comparisons and the exact-title ablation;
+5. retrieval metrics (all-gold-in-context, bridge entity recall);
+6. judge results and hand-check agreement;
+7. dev vs test;
+8. error analysis with real examples (seeded sample of graph failures, classified);
+9. limitations (from section 7 of this plan, M2 to M4 notes, judge agreement) and cost.
+
+#### M5.8 Run-once safeguard
+- `scripts/run_m5_test.py` is the only script that reads test questions for answering. It creates
+  `results/m5/TEST_RUN.lock` atomically (fails if it exists) with the start time, the `m5-frozen` commit
+  and a hash of every frozen setting.
+- If the lock exists with status "finished", the script refuses to run. If it exists with status
+  "running" (an interrupted run), it may resume only with the same commit and settings hash; every LLM
+  call is cached, so a resume cannot change any answer.
+- When the run ends, the lock is set to "finished" and committed together with the results.
+- Tests cover the lock: creation, refusal after "finished", refusal on a different commit or hash.
+
+#### M5.9 Cost and time
+- Generation: 5 systems x 375 = 1,875 calls; at the dev rate (`results/m1/generation_dev.json`, 375 calls
+  for 0.028 USD) about 0.14 USD; credit left 5.89 USD. Retrieval a few minutes; generation about 30
+  minutes with 8 workers.
+- Judge: 0 USD on the free tier; minutes to 2 days depending on the limits.
+- Hand checks: about 30 minutes of labelling.
+
+**Done when:** `results/m5/` holds the test results, the judge results and the hand-check agreement,
+`results/m5/TEST_RUN.lock` is "finished", and `BENCHMARK.md` is generated.
 
 ### M6: Packaging
 - README: problem, design decisions, how to reproduce, results, limitations (aggregation not handled,
