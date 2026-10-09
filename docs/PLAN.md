@@ -473,10 +473,70 @@ judge hand check 29 of 30 (`results/m5/judge_handcheck_scores.json`, first pass 
 different model from the judge and the generator, reviewed by Rohith Kumar Reddipogula).
 
 ### M6: Packaging
-- README: problem, design decisions, how to reproduce, results, limitations (aggregation not handled,
-  single-hop wording favours BM25, pooled-corpus setting differs from published 2Wiki setting).
-- Read-only FastAPI: `POST /query`, `GET /graph/{entity}`, `GET /health`. Simple graph view.
-- Optional: public read-only demo.
+
+**DRAFT (2026-10-09), awaiting approval. No M6 code is written before it is approved.**
+
+Goal: small and focused on what a recruiter or hiring engineer sees first. No new experiments; every
+number in the README comes from committed results files.
+
+#### M6.1 README rewrite
+Plain ASCII, numbered contents, no collapsible sections, short plain footer (CLAUDE.md). Sections:
+1. The question this project answers (one paragraph): does a knowledge graph built from the same
+   documents help an LLM answer multi-hop questions, compared with a strong hybrid retriever, when
+   measured honestly?
+2. Headline test result: one table for closed_book, hybrid, graph_plus_chunks_g0.5 and graph_only with
+   EM [95% CI] and unknown rate on all 375 test questions, plus the primary paired difference. Rendered
+   from `results/m5/test_summary.json` into marker blocks by `scripts/render_tables.py`, with a test that
+   fails if the README drifts from the file (as now). The M1 dev tables leave the README; full results
+   stay in `BENCHMARK.md`.
+3. How the result was protected: what was pre-registered (one primary result and its expected
+   direction), dev-only tuning, the test split run once at the `m5-frozen` tag with a run-once lock.
+4. What went wrong and how it was fixed: M3 run 1 (judge prompt confused the mention with its paragraph's
+   subject; no cannot-link check), with its numbers from `results/m3/run1_flawed/`, and the fix.
+5. ASCII architecture diagram (ingestion: corpus -> extraction -> entity resolution -> Neo4j graph;
+   query: question -> hybrid retriever and graph retrieval -> context -> generator -> answer with
+   citations).
+6. How to reproduce (commands), the API and the graph export (M6.2, M6.3).
+7. Limitations (short list, details in `BENCHMARK.md`).
+8. Total cost, rendered from `results/spend/openrouter_calls.jsonl`.
+9. Data, code and licences (kept from the current README).
+
+#### M6.2 Read-only API
+- FastAPI, three endpoints, frozen M5 configuration (`graph_plus_chunks_g0.5`); no ingestion, no writes:
+  - `GET /health`: Neo4j reachable, graph counts equal `results/m4/graph_stats.json`, models loaded.
+  - `POST /ask` `{question}` -> `{answer, unknown, facts: [{path, source_chunk_ids}], paragraphs: [{chunk_id,
+    title}], config: {commit, settings_hash}}`. Same retrieval, context packing, prompt and generator as M5.
+  - `GET /entity/{id}` -> name, aliases, type, dates with sources, `REL` neighbours with relation and
+    source chunks (capped at 50), `EXACT_TITLE` links, page paragraph.
+- The pipeline code moves into one library module used by the API; the committed M5 script is not
+  changed. A parity test checks, without LLM calls, that the API builds exactly the same context chunk
+  ids as the committed M4 dev run of `graph_plus_chunks_g0.5` for a few dev questions.
+- Runs locally: an `api` service in `docker-compose.yml` next to Neo4j (CPU image with PyTorch for E5 and
+  the reranker, so a few seconds per question and a large image), bound to localhost; also runnable from
+  the venv. The OpenRouter key comes from `.env` as now and is never logged.
+- Each `/ask` makes one cached generator call (about 0.00006 USD, from the M5 test run cost per call).
+  Question length is capped; no other rate limiting, because it runs locally only.
+
+#### M6.3 Static graph export for the portfolio website
+- About 20 dev questions, seeded: 5 per multi-hop type. Dev only; test questions are not exported.
+- For each: the question, the gold answer, the `graph_plus_chunks_g0.5` dev answer taken from
+  `results/m4/generation_dev_graph_plus_chunks_g0.5.jsonl` (no new LLM calls), and its top graph paths
+  recomputed deterministically (same code and constants, no LLM).
+- One JSON file, `docs/graph_view/subgraph.json`: `nodes` [{id, label, type, is_page}], `links`
+  [{source, target, label, source_chunk_ids}], `questions` [{id, type, question, gold, answer, path_node_ids,
+  path_link_ids}]. This node/link shape loads directly into common force-graph libraries. Entity names,
+  relation labels and paragraph titles only, no paragraph text (licence notes kept in the README).
+- Optional: a minimal `docs/graph_view/example.html` showing the JSON with a force-graph library from a
+  CDN, as a starting point for the website. No backend.
+
+#### M6.4 Effort and cost (estimate)
+- README: about 1 to 1.5 hours. API with Docker and tests: about 2 to 3 hours, plus a first image build of
+  about 10 to 15 minutes. Graph export: about 1 hour.
+- LLM cost: README and graph export none; API smoke tests about 10 `/ask` calls, under 0.01 USD. Credit
+  left after M5: about 5.78 USD.
+
+**Done when:** the README shows the test headline rendered from `results/m5/`, the API answers `/health`,
+`/ask` and `/entity/{id}` locally with tests passing, and `docs/graph_view/subgraph.json` exists.
 
 ### M7: Optional: `neo4j-graphrag` as a third system
 Same corpus, same generator, same budget, same eval.
