@@ -104,11 +104,11 @@ def _gemini_call(settings: Settings) -> ProviderCall:
     return call
 
 
-def _openrouter_call(settings: Settings, ledger: Path) -> ProviderCall:
+def _openrouter_call(settings: Settings, ledger: Path, pinned: str) -> ProviderCall:
+    """pinned: the OpenRouter endpoint tag, e.g. "deepinfra/bf16" (generator) or "parasail/fp8" (judge)."""
     if settings.openrouter_api_key is None:
         raise RuntimeError("OPENROUTER_API_KEY is not set in .env")
     headers = {"Authorization": f"Bearer {settings.openrouter_api_key.get_secret_value()}"}
-    pinned = settings.generator_provider            # e.g. "deepinfra/bf16"
     pinned_name = pinned.split("/")[0].lower()      # OpenRouter reports the provider name, e.g. "DeepInfra"
 
     def call(model: str, prompt: str, system: str | None, temperature: float, options: dict[str, Any]) -> ProviderResponse:
@@ -219,9 +219,14 @@ def make_llm(model: str, settings: Settings) -> CachedLLM:
     if model.startswith("gemini"):
         return CachedLLM(model, _gemini_call(settings), cache, backend="gemini")
     ledger = settings.results_dir / "spend" / "openrouter_calls.jsonl"
+    if model == settings.judge_model:
+        # The M5 judge: its own pinned endpoint, no reasoning parameter (the model has none, and with
+        # require_parameters on, sending one would make the call fail).
+        return CachedLLM(model, _openrouter_call(settings, ledger, settings.judge_provider), cache,
+                         backend=f"openrouter:{settings.judge_provider}")
     return CachedLLM(
         model,
-        _openrouter_call(settings, ledger),
+        _openrouter_call(settings, ledger, settings.generator_provider),
         cache,
         backend=f"openrouter:{settings.generator_provider}",
         defaults={"reasoning": {"effort": settings.generator_reasoning_effort}},

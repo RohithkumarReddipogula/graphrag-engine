@@ -24,8 +24,9 @@ def main() -> int:
         print(f"[fail] neo4j: {type(exc).__name__}: {exc}")
 
     for role, model in [
-        ("extractor/judge", settings.extractor_model),
+        ("extractor", settings.extractor_model),
         ("generator", settings.generator_model),
+        ("judge", settings.judge_model),
     ]:
         try:
             result = make_llm(model, settings).complete("Reply with the single word: ready")

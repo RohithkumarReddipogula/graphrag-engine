@@ -119,3 +119,24 @@ def test_timeouts_and_overload_are_retryable():
     assert _is_retryable(RuntimeError("504 Gateway Timeout")) and _is_retryable(RuntimeError("408 Request Timeout"))
     assert not _is_retryable(RuntimeError("401 Unauthorized"))
     assert not _is_retryable(RuntimeError("400 Bad Request: 5000 tokens"))   # "5000" is not a status code
+
+
+def test_judge_uses_its_own_pinned_endpoint_and_no_reasoning(tmp_path, monkeypatch):
+    captured = []
+    monkeypatch.setattr(llm_client, "_post_json", _fake_post("Parasail", captured))
+    settings = Settings(_env_file=None, openrouter_api_key="test-key", generator_provider="deepinfra/bf16",
+                        judge_model="meta-llama/llama-3.3-70b-instruct", judge_provider="parasail/fp8",
+                        cache_dir=tmp_path / "cache", results_dir=tmp_path / "results")
+    llm_client.make_llm("meta-llama/llama-3.3-70b-instruct", settings).complete("hi")
+    body = captured[0]
+    assert body["provider"] == {"order": ["parasail/fp8"], "allow_fallbacks": False, "require_parameters": True}
+    assert "reasoning" not in body and body["temperature"] == 0.0
+
+
+def test_generator_cache_key_is_unchanged_by_the_judge_option(tmp_path):
+    from graphrag.llm.cache import cache_key
+
+    # The generator's request (and so its cache key) must stay exactly as in M1 to M4.
+    request = {"prompt": "p", "system": "s", "temperature": 0.0,
+               "options": {"reasoning": {"effort": "medium"}}, "backend": "openrouter:deepinfra/bf16"}
+    assert cache_key("openai/gpt-oss-120b", request) == cache_key("openai/gpt-oss-120b", dict(request))

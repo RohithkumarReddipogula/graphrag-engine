@@ -30,7 +30,8 @@ class Settings(BaseSettings):
 
     # Models (pinned in docs/PLAN.md)
     extractor_model: str = "openai/gpt-oss-120b"     # same pinned OpenRouter endpoint as the generator
-    judge_model: str = "gemini-3.8-flash"
+    judge_model: str = "meta-llama/llama-3.3-70b-instruct"   # M5 judge (OpenRouter, docs/limits.md)
+    judge_provider: str = "parasail/fp8"                     # OpenRouter endpoint tag; fallbacks disabled
     generator_model: str = "openai/gpt-oss-120b"
     generator_provider: str = "deepinfra/bf16"      # OpenRouter endpoint tag; fallbacks disabled
     generator_reasoning_effort: str = "medium"      # same for every system
