@@ -1,4 +1,5 @@
-"""Thin, cached LLM clients. Gemini serves the extractor and judge, OpenRouter serves the generator.
+"""Thin, cached LLM clients. Every LLM call goes through OpenRouter with prepaid credit: the generator and
+extractor (gpt-oss-120b, pinned deepinfra/bf16) and the M5 judge (llama-3.3-70b, pinned parasail/fp8).
 
 There is deliberately no cross-provider fallback: if a quota runs out or the pinned OpenRouter provider is
 down, the call raises and the run is resumed later from the cache.
@@ -70,38 +71,6 @@ class LLMResult:
 
 # (model, prompt, system, temperature, provider-specific options) -> response
 ProviderCall = Callable[[str, str, str | None, float, dict[str, Any]], ProviderResponse]
-
-
-def _gemini_call(settings: Settings) -> ProviderCall:
-    from google import genai
-    from google.genai import types
-
-    if settings.gemini_api_key is None:
-        raise RuntimeError("GEMINI_API_KEY is not set in .env")
-    client = genai.Client(api_key=settings.gemini_api_key.get_secret_value())
-
-    def call(model: str, prompt: str, system: str | None, temperature: float, options: dict[str, Any]) -> ProviderResponse:
-        resp = client.models.generate_content(
-            model=model,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                system_instruction=system,
-                temperature=temperature,
-                # We never pass tools; disabling AFC also silences the SDK's per-call warning.
-                automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
-                **options,
-            ),
-        )
-        usage = resp.usage_metadata
-        return ProviderResponse(
-            text=resp.text or "",
-            model_version=resp.model_version or model,
-            input_tokens=(usage and usage.prompt_token_count) or 0,
-            output_tokens=((usage and usage.candidates_token_count) or 0) + ((usage and usage.thoughts_token_count) or 0),
-            provider="google-ai-studio",
-        )
-
-    return call
 
 
 def _openrouter_call(settings: Settings, ledger: Path, pinned: str) -> ProviderCall:
@@ -216,8 +185,6 @@ class CachedLLM:
 
 def make_llm(model: str, settings: Settings) -> CachedLLM:
     cache = DiskCache(settings.cache_dir / "llm")
-    if model.startswith("gemini"):
-        return CachedLLM(model, _gemini_call(settings), cache, backend="gemini")
     ledger = settings.results_dir / "spend" / "openrouter_calls.jsonl"
     if model == settings.judge_model:
         # The M5 judge: its own pinned endpoint, no reasoning parameter (the model has none, and with

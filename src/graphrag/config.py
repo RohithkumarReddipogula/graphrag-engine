@@ -12,11 +12,10 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file=ROOT / ".env", extra="ignore")
 
     # Secrets
-    gemini_api_key: SecretStr | None = None
     openrouter_api_key: SecretStr | None = None
     neo4j_password: SecretStr | None = None
 
-    @field_validator("gemini_api_key", "openrouter_api_key", "neo4j_password", mode="before")
+    @field_validator("openrouter_api_key", "neo4j_password", mode="before")
     @classmethod
     def _blank_is_missing(cls, value: object) -> object:
         # "KEY=" in .env arrives as an empty string; treat it as not set so the error says so.

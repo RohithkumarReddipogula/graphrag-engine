@@ -2,28 +2,20 @@
 
 | Role | Model id | Provider and access | Limits | Source |
 |---|---|---|---|---|
-| Judge (M5, proposed) | meta-llama/llama-3.3-70b-instruct | OpenRouter, pinned endpoint `parasail/fp8`, fallbacks disabled | Prepaid credit (shared) | openrouter.ai/settings/credits |
+| Judge (M5) | meta-llama/llama-3.3-70b-instruct | OpenRouter, pinned endpoint `parasail/fp8`, fallbacks disabled | Prepaid credit (shared) | openrouter.ai/settings/credits |
 | Extractor | openai/gpt-oss-120b | OpenRouter, same pinned endpoint as the generator | Prepaid credit (shared with the generator) | openrouter.ai/settings/credits |
 | Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
+Every LLM call behind a result goes through OpenRouter with prepaid credit; the spend ledger is
+`results/spend/openrouter_calls.jsonl`.
+
 ## Judge change (2026-10-09, before the test split was touched)
 
-The plan named `gemini-3.8-flash` on the Google AI Studio free tier as the M5 judge. Its free-tier limits
-are not published and could not be confirmed (section below). The judge now runs on OpenRouter with the
-prepaid credit only: `meta-llama/llama-3.3-70b-instruct` (a different model family than the gpt-oss
-generator and extractor), pinned to the `parasail/fp8` endpoint (fp8 weights, strict JSON-schema output,
-temperature supported), with fallbacks disabled. Price when chosen: 0.22 USD per million input tokens and
-0.50 USD per million output tokens. No judge scores exist on dev, so no dev judge scores need re-judging.
-
-## Gemini free-tier limits: what was checked (2026-10-09)
-
-- Google's rate-limit page (ai.google.dev/gemini-api/docs/rate-limits) gives no free-tier RPM, TPM or RPD
-  for gemini-3.8-flash. It says limits "can be viewed in Google AI Studio", that they are applied per
-  project (not per API key), and that daily quotas reset at midnight Pacific time. Its Batch API tables
-  start at Tier 1, so the batch mode is not available on the free tier.
-- Third-party pages conflict: one claims about 20 requests per day for gemini-3.8-flash; another says
-  the free-tier values are unpublished. Neither is verified.
-- The M5 judge plan (`docs/PLAN.md`, M5.5) is designed to finish even at 20 requests per day.
+History: the M2 extractor and the M5 judge were first planned on the Gemini free tier; both were moved to
+OpenRouter before producing any result (the extractor on 2026-10-04 after a 503 on the first pilot call,
+the judge on 2026-10-09 before the test split was touched). The judge is
+`meta-llama/llama-3.3-70b-instruct` (a different model family than the gpt-oss generator and extractor),
+pinned to `parasail/fp8` with fallbacks disabled.
 
 ## Generator history
 
@@ -31,14 +23,6 @@ temperature supported), with fallbacks disabled. Price when chosen: 0.22 USD per
    `model_not_found`, and the account's model list contains no Llama chat models.
 2. Planned next: `openai/gpt-oss-120b` on Groq's paid Developer tier. Developer upgrades are unavailable.
 3. Current (2026-10-04): `openai/gpt-oss-120b` through OpenRouter.
-
-## Extractor change (2026-10-04)
-
-The plan first named `gemini-3.8-flash` (free tier) as the extractor. The first pilot call returned
-503 "This model is currently experiencing high demand", and the free tier's daily limits are unknown, so
-the extraction could stall for days. The extractor is now `openai/gpt-oss-120b` on the same pinned
-OpenRouter endpoint as the generator, with strict JSON-schema output. The judge stays `gemini-3.8-flash`,
-so it differs from both. Pilot tokens, cost and the full-corpus projection: `results/m2/pilot.json`.
 
 ## Generator reproducibility settings
 
