@@ -1,6 +1,6 @@
 # Next steps
 
-Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
+Last updated: 2026-10-10. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
 
 ## 1. Where we are
 
@@ -13,7 +13,10 @@ Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
   60 hand-labelled mentions 0.40 before, 0.10 after (bar: at most half). Bridge link recall on the report
   split: 0.83 before (exact names), 0.80 after M3. Hand checks first drafted by Claude (a different model
   from the gpt-oss-120b judge), reviewed and corrected by Rohith Kumar Reddipogula.
-- Next: M4 (section 3b). Nothing is running now.
+- M4 is done (`results/m4/graph_report.md`, numbers from `results/m4/generation_dev.json`): graph built
+  and loaded into Neo4j (`results/m4/graph_stats.json`); `graph_plus_chunks` at g = 0.5 passed all three
+  criteria of the M4 quality bar on dev and goes to M5 as the GraphRAG system.
+- Next: M5, the single test run (section 3c). Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 
@@ -104,6 +107,28 @@ See `docs/PLAN.md`, M4. Notes already recorded there:
 - the deterministic post-processing of M2 relations is already applied in `results/m2/extractions.jsonl`.
 Before writing M4 code: propose the graph schema, the retrieval method and the M4 dev evaluation, and get
 them approved, as for M2 and M3.
+
+## 3c. After M4: points to decide before M5
+
+From `results/m4/graph_report.md` (dev only, optimistic because g was chosen on dev):
+- Quality bar for `graph_plus_chunks_g0.5`: multi-hop all-gold-in-context +0.15 over hybrid (bar +0.10);
+  paired EM difference over all 125 dev questions 0.18 [0.10, 0.26] (bar: CI low at least -0.05); EM on
+  bridge_comparison + compositional 0.60 vs hybrid 0.12 (bar: above hybrid). All pass.
+- `graph_only` scored higher than `graph_plus_chunks_g0.5` on dev (multi-hop EM 0.71 vs 0.67,
+  multi-hop all-gold-in-context 0.88 vs 0.68, bridge entity recall 0.91 vs 0.58), but lower on
+  comparison questions (0.84 vs 0.96). The approved plan did not make `graph_only` eligible as the
+  GraphRAG system; changing that now would be a choice made after seeing dev results. M5 reports every
+  system anyway, `graph_only` included.
+- The `EXACT_TITLE` ablation changed the context of only a few questions and made no meaningful
+  difference on dev.
+- `graph_plus_chunks` at g = 0.25 had lower all-gold-in-context than hybrid (0.50 vs 0.53): a small graph
+  share pushes out baseline chunks without adding enough graph paragraphs.
+
+Open before M5 (together with section 7):
+1. Confirm the M5 setup: test split once, every system (closed_book, hybrid, graph_only,
+   graph_plus_chunks_g0.5, the no-exact-title ablation), frozen config, judge `gemini-3.8-flash` on test
+   answers, 30-item hand check, `BENCHMARK.md`.
+2. The Gemini judge limits (section 7) must be known before the judge runs.
 
 ## 4. History of the M2 pilots
 

@@ -336,7 +336,11 @@ On the 100 dev multi-hop questions, 92 contain their first gold subject's name v
   configuration with 8 workers; under an hour in total.
 
 **Done when:** `results/m4/` has dev numbers for every system above against the M1 baseline, and the
-quality bar is judged in `results/m4/graph_report.md`.
+quality bar is judged in `results/m4/graph_report.md`. Done on 2026-10-10: all three criteria passed for
+`graph_plus_chunks` at g = 0.5 (chosen by the fixed rule), so it goes to M5 as the GraphRAG system;
+numbers in `results/m4/graph_report.md`. On dev, `graph_only` scored higher than `graph_plus_chunks`
+on several metrics; the plan did not make `graph_only` eligible, so this is recorded and not acted on.
+M5 reports every system, including `graph_only`.
 
 ### M5: Final test run (once)
 - Freeze all config. Run every system on **test**, once.

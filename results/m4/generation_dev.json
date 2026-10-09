@@ -1,0 +1,1923 @@
+{
+ "split": "dev",
+ "generator": {
+  "model": "openai/gpt-oss-120b",
+  "endpoint": "deepinfra/bf16",
+  "reasoning_effort": "medium",
+  "temperature": 0.0
+ },
+ "context_budget_tokens": 1500,
+ "scoring": "official 2Wiki v1.1 EM/F1, max over gold answer + Wikidata aliases and demonyms",
+ "ci": "95% percentile bootstrap, 10,000 resamples, seed 0",
+ "abstention": "every system may answer 'unknown'; it scores 0. unknown_rate and accuracy on answered questions are reported next to EM",
+ "systems": {
+  "closed_book": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.84,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.84,
+      "n": 25
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 20,
+      "em": 0.8,
+      "f1": 0.8
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.32,
+      "ci_low": 0.16,
+      "ci_high": 0.52,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4608,
+      "ci_low": 0.2901,
+      "ci_high": 0.635,
+      "n": 25
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 20,
+      "em": 0.4,
+      "f1": 0.576
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.16,
+      "ci_low": 0.04,
+      "ci_high": 0.32,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.1689,
+      "ci_low": 0.04,
+      "ci_high": 0.32,
+      "n": 25
+     },
+     "unknown_rate": 0.44,
+     "answered": {
+      "n": 14,
+      "em": 0.2857,
+      "f1": 0.3016
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "n": 25
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 18,
+      "em": 0.5556,
+      "f1": 0.5556
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.38,
+      "ci_low": 0.28,
+      "ci_high": 0.48,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.4174,
+      "ci_low": 0.3237,
+      "ci_high": 0.5132,
+      "n": 100
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 72,
+      "em": 0.5278,
+      "f1": 0.5797
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.2,
+      "ci_low": 0.04,
+      "ci_high": 0.36,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4722,
+      "ci_low": 0.3267,
+      "ci_high": 0.6233,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.2,
+      "f1": 0.4722
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.344,
+      "ci_low": 0.264,
+      "ci_high": 0.432,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.4284,
+      "ci_low": 0.3489,
+      "ci_high": 0.51,
+      "n": 125
+     },
+     "unknown_rate": 0.224,
+     "answered": {
+      "n": 97,
+      "em": 0.4433,
+      "f1": 0.552
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 9
+     },
+     "unknown_rate": 0.5556,
+     "answered": {
+      "n": 4,
+      "em": 0.0,
+      "f1": 0.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.207,
+      "ci_low": 0.0735,
+      "ci_high": 0.3582,
+      "n": 17
+     },
+     "unknown_rate": 0.2941,
+     "answered": {
+      "n": 12,
+      "em": 0.0,
+      "f1": 0.2933
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.0106,
+      "ci_low": 0.0,
+      "ci_high": 0.0317,
+      "n": 21
+     },
+     "unknown_rate": 0.5238,
+     "answered": {
+      "n": 10,
+      "em": 0.0,
+      "f1": 0.0222
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "unknown_rate": 0.4667,
+     "answered": {
+      "n": 8,
+      "em": 0.0,
+      "f1": 0.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.0603,
+      "ci_low": 0.0205,
+      "ci_high": 0.1098,
+      "n": 62
+     },
+     "unknown_rate": 0.4516,
+     "answered": {
+      "n": 34,
+      "em": 0.0,
+      "f1": 0.11
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.3402,
+      "ci_low": 0.2036,
+      "ci_high": 0.4819,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.0,
+      "f1": 0.3402
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.1286,
+      "ci_low": 0.0768,
+      "ci_high": 0.188,
+      "n": 82
+     },
+     "unknown_rate": 0.3415,
+     "answered": {
+      "n": 54,
+      "em": 0.0,
+      "f1": 0.1953
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ]
+  },
+  "hybrid": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.56,
+      "ci_low": 0.36,
+      "ci_high": 0.76,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.6595,
+      "ci_low": 0.4809,
+      "ci_high": 0.8249,
+      "n": 25
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 18,
+      "em": 0.7778,
+      "f1": 0.916
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.24,
+      "ci_low": 0.08,
+      "ci_high": 0.4,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.2667,
+      "ci_low": 0.1067,
+      "ci_high": 0.44,
+      "n": 25
+     },
+     "unknown_rate": 0.64,
+     "answered": {
+      "n": 9,
+      "em": 0.6667,
+      "f1": 0.7407
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 25
+     },
+     "unknown_rate": 1.0,
+     "answered": {
+      "n": 0,
+      "em": null,
+      "f1": null
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.44,
+      "ci_low": 0.34,
+      "ci_high": 0.54,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.4716,
+      "ci_low": 0.3774,
+      "ci_high": 0.567,
+      "n": 100
+     },
+     "unknown_rate": 0.49,
+     "answered": {
+      "n": 51,
+      "em": 0.8627,
+      "f1": 0.9246
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.98,
+      "ci_low": 0.94,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.96,
+      "f1": 0.98
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.544,
+      "ci_low": 0.456,
+      "ci_high": 0.632,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.5732,
+      "ci_low": 0.4867,
+      "ci_high": 0.6569,
+      "n": 125
+     },
+     "unknown_rate": 0.392,
+     "answered": {
+      "n": 76,
+      "em": 0.8947,
+      "f1": 0.9428
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.4706,
+      "ci_low": 0.2353,
+      "ci_high": 0.7059,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.617,
+      "ci_low": 0.4,
+      "ci_high": 0.8118,
+      "n": 17
+     },
+     "unknown_rate": 0.2941,
+     "answered": {
+      "n": 12,
+      "em": 0.6667,
+      "f1": 0.8741
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.1905,
+      "ci_low": 0.0476,
+      "ci_high": 0.381,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.2222,
+      "ci_low": 0.0635,
+      "ci_high": 0.4127,
+      "n": 21
+     },
+     "unknown_rate": 0.6667,
+     "answered": {
+      "n": 7,
+      "em": 0.5714,
+      "f1": 0.6667
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+     },
+     "unknown_rate": 1.0,
+     "answered": {
+      "n": 0,
+      "em": null,
+      "f1": null
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.3226,
+      "ci_low": 0.2097,
+      "ci_high": 0.4355,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.3735,
+      "ci_low": 0.2594,
+      "ci_high": 0.491,
+      "n": 62
+     },
+     "unknown_rate": 0.5645,
+     "answered": {
+      "n": 27,
+      "em": 0.7407,
+      "f1": 0.8576
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.975,
+      "ci_low": 0.925,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.95,
+      "f1": 0.975
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.4756,
+      "ci_low": 0.3659,
+      "ci_high": 0.5854,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.5202,
+      "ci_low": 0.4145,
+      "ci_high": 0.6258,
+      "n": 82
+     },
+     "unknown_rate": 0.4268,
+     "answered": {
+      "n": 47,
+      "em": 0.8298,
+      "f1": 0.9076
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.53,
+   "mean_context_tokens": 1484.0,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.2,
+    "ci_low": 0.088,
+    "ci_high": 0.312,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.1449,
+    "ci_low": 0.0437,
+    "ci_high": 0.2449,
+    "n": 125
+   }
+  },
+  "graph_only": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.84,
+      "ci_low": 0.68,
+      "ci_high": 0.96,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.86,
+      "ci_low": 0.72,
+      "ci_high": 0.98,
+      "n": 25
+     },
+     "unknown_rate": 0.12,
+     "answered": {
+      "n": 22,
+      "em": 0.9545,
+      "f1": 0.9773
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.84,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.735,
+      "ci_low": 0.5707,
+      "ci_high": 0.8827,
+      "n": 25
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 20,
+      "em": 0.8,
+      "f1": 0.9187
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4667,
+      "ci_low": 0.28,
+      "ci_high": 0.6467,
+      "n": 25
+     },
+     "unknown_rate": 0.4,
+     "answered": {
+      "n": 15,
+      "em": 0.6667,
+      "f1": 0.7778
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.71,
+      "ci_low": 0.62,
+      "ci_high": 0.8,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.7554,
+      "ci_low": 0.6722,
+      "ci_high": 0.8327,
+      "n": 100
+     },
+     "unknown_rate": 0.19,
+     "answered": {
+      "n": 81,
+      "em": 0.8765,
+      "f1": 0.9326
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.92,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.972,
+      "ci_low": 0.924,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.92,
+      "f1": 0.972
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.752,
+      "ci_low": 0.68,
+      "ci_high": 0.824,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.7987,
+      "ci_low": 0.7307,
+      "ci_high": 0.8629,
+      "n": 125
+     },
+     "unknown_rate": 0.152,
+     "answered": {
+      "n": 106,
+      "em": 0.8868,
+      "f1": 0.9419
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.6667,
+      "ci_low": 0.3333,
+      "ci_high": 0.8889,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.7222,
+      "ci_low": 0.4444,
+      "ci_high": 0.9444,
+      "n": 9
+     },
+     "unknown_rate": 0.2222,
+     "answered": {
+      "n": 7,
+      "em": 0.8571,
+      "f1": 0.9286
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.6471,
+      "ci_low": 0.4118,
+      "ci_high": 0.8824,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.7867,
+      "ci_low": 0.6112,
+      "ci_high": 0.9373,
+      "n": 17
+     },
+     "unknown_rate": 0.1176,
+     "answered": {
+      "n": 15,
+      "em": 0.7333,
+      "f1": 0.8916
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.381,
+      "ci_low": 0.1905,
+      "ci_high": 0.5714,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.4603,
+      "ci_low": 0.2619,
+      "ci_high": 0.6587,
+      "n": 21
+     },
+     "unknown_rate": 0.4286,
+     "answered": {
+      "n": 12,
+      "em": 0.6667,
+      "f1": 0.8056
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.9333,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.9333,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 15
+     },
+     "unknown_rate": 0.0667,
+     "answered": {
+      "n": 14,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.629,
+      "ci_low": 0.5,
+      "ci_high": 0.7419,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.7023,
+      "ci_low": 0.5942,
+      "ci_high": 0.8023,
+      "n": 62
+     },
+     "unknown_rate": 0.2258,
+     "answered": {
+      "n": 48,
+      "em": 0.8125,
+      "f1": 0.9071
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.9,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.965,
+      "ci_low": 0.905,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.9,
+      "f1": 0.965
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.6951,
+      "ci_low": 0.5976,
+      "ci_high": 0.7927,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.7664,
+      "ci_low": 0.6813,
+      "ci_high": 0.8486,
+      "n": 82
+     },
+     "unknown_rate": 0.1707,
+     "answered": {
+      "n": 68,
+      "em": 0.8382,
+      "f1": 0.9241
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.88,
+   "mean_context_tokens": 897.1,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.408,
+    "ci_low": 0.304,
+    "ci_high": 0.512,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.3704,
+    "ci_low": 0.271,
+    "ci_high": 0.4658,
+    "n": 125
+   },
+   "paired_diff_vs_hybrid_em": {
+    "mean": 0.208,
+    "ci_low": 0.12,
+    "ci_high": 0.304,
+    "n": 125
+   }
+  },
+  "graph_plus_chunks_g0.25": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.48,
+      "ci_low": 0.28,
+      "ci_high": 0.68,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.5776,
+      "ci_low": 0.391,
+      "ci_high": 0.751,
+      "n": 25
+     },
+     "unknown_rate": 0.36,
+     "answered": {
+      "n": 16,
+      "em": 0.75,
+      "f1": 0.9026
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.24,
+      "ci_low": 0.08,
+      "ci_high": 0.4,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.2933,
+      "ci_low": 0.1333,
+      "ci_high": 0.4667,
+      "n": 25
+     },
+     "unknown_rate": 0.64,
+     "answered": {
+      "n": 9,
+      "em": 0.6667,
+      "f1": 0.8148
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.8,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.64,
+      "ci_low": 0.44,
+      "ci_high": 0.8,
+      "n": 25
+     },
+     "unknown_rate": 0.32,
+     "answered": {
+      "n": 17,
+      "em": 0.9412,
+      "f1": 0.9412
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.58,
+      "ci_low": 0.48,
+      "ci_high": 0.67,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.6177,
+      "ci_low": 0.5247,
+      "ci_high": 0.7086,
+      "n": 100
+     },
+     "unknown_rate": 0.34,
+     "answered": {
+      "n": 66,
+      "em": 0.8788,
+      "f1": 0.936
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.92,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.972,
+      "ci_low": 0.924,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.92,
+      "f1": 0.972
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.648,
+      "ci_low": 0.568,
+      "ci_high": 0.728,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.6886,
+      "ci_low": 0.6097,
+      "ci_high": 0.7653,
+      "n": 125
+     },
+     "unknown_rate": 0.272,
+     "answered": {
+      "n": 91,
+      "em": 0.8901,
+      "f1": 0.9459
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.4118,
+      "ci_low": 0.1765,
+      "ci_high": 0.6471,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.5554,
+      "ci_low": 0.3397,
+      "ci_high": 0.7608,
+      "n": 17
+     },
+     "unknown_rate": 0.3529,
+     "answered": {
+      "n": 11,
+      "em": 0.6364,
+      "f1": 0.8583
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.1905,
+      "ci_low": 0.0476,
+      "ci_high": 0.381,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.254,
+      "ci_low": 0.0952,
+      "ci_high": 0.4444,
+      "n": 21
+     },
+     "unknown_rate": 0.6667,
+     "answered": {
+      "n": 7,
+      "em": 0.5714,
+      "f1": 0.7619
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.4667,
+      "ci_low": 0.2,
+      "ci_high": 0.7333,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.4667,
+      "ci_low": 0.2,
+      "ci_high": 0.7333,
+      "n": 15
+     },
+     "unknown_rate": 0.4667,
+     "answered": {
+      "n": 8,
+      "em": 0.875,
+      "f1": 0.875
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.4194,
+      "ci_low": 0.2903,
+      "ci_high": 0.5484,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.4802,
+      "ci_low": 0.3641,
+      "ci_high": 0.6007,
+      "n": 62
+     },
+     "unknown_rate": 0.4516,
+     "answered": {
+      "n": 34,
+      "em": 0.7647,
+      "f1": 0.8757
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.9,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.965,
+      "ci_low": 0.905,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.9,
+      "f1": 0.965
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.5366,
+      "ci_low": 0.4268,
+      "ci_high": 0.6463,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.5985,
+      "ci_low": 0.4953,
+      "ci_high": 0.7004,
+      "n": 82
+     },
+     "unknown_rate": 0.3415,
+     "answered": {
+      "n": 54,
+      "em": 0.8148,
+      "f1": 0.9088
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.5,
+   "mean_context_tokens": 1486.3,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.304,
+    "ci_low": 0.2,
+    "ci_high": 0.4,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.2602,
+    "ci_low": 0.1673,
+    "ci_high": 0.3512,
+    "n": 125
+   },
+   "paired_diff_vs_hybrid_em": {
+    "mean": 0.104,
+    "ci_low": 0.032,
+    "ci_high": 0.176,
+    "n": 125
+   }
+  },
+  "graph_plus_chunks_g0.5": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.52,
+      "ci_low": 0.32,
+      "ci_high": 0.72,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.615,
+      "ci_low": 0.4326,
+      "ci_high": 0.784,
+      "n": 25
+     },
+     "unknown_rate": 0.32,
+     "answered": {
+      "n": 17,
+      "em": 0.7647,
+      "f1": 0.9044
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.36,
+      "ci_low": 0.16,
+      "ci_high": 0.56,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4333,
+      "ci_low": 0.2467,
+      "ci_high": 0.6133,
+      "n": 25
+     },
+     "unknown_rate": 0.48,
+     "answered": {
+      "n": 13,
+      "em": 0.6923,
+      "f1": 0.8333
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.84,
+      "ci_low": 0.68,
+      "ci_high": 0.96,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.84,
+      "ci_low": 0.68,
+      "ci_high": 0.96,
+      "n": 25
+     },
+     "unknown_rate": 0.16,
+     "answered": {
+      "n": 21,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.67,
+      "ci_low": 0.57,
+      "ci_high": 0.76,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.7121,
+      "ci_low": 0.6247,
+      "ci_high": 0.7952,
+      "n": 100
+     },
+     "unknown_rate": 0.25,
+     "answered": {
+      "n": 75,
+      "em": 0.8933,
+      "f1": 0.9494
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.92,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.972,
+      "ci_low": 0.924,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.92,
+      "f1": 0.972
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.72,
+      "ci_low": 0.64,
+      "ci_high": 0.8,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.7641,
+      "ci_low": 0.692,
+      "ci_high": 0.8328,
+      "n": 125
+     },
+     "unknown_rate": 0.2,
+     "answered": {
+      "n": 100,
+      "em": 0.9,
+      "f1": 0.9551
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.5294,
+      "ci_low": 0.2941,
+      "ci_high": 0.7647,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.6691,
+      "ci_low": 0.4637,
+      "ci_high": 0.8588,
+      "n": 17
+     },
+     "unknown_rate": 0.2353,
+     "answered": {
+      "n": 13,
+      "em": 0.6923,
+      "f1": 0.875
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.3333,
+      "ci_low": 0.1429,
+      "ci_high": 0.5238,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.4206,
+      "ci_low": 0.2222,
+      "ci_high": 0.6111,
+      "n": 21
+     },
+     "unknown_rate": 0.4762,
+     "answered": {
+      "n": 11,
+      "em": 0.6364,
+      "f1": 0.803
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.7333,
+      "ci_low": 0.5333,
+      "ci_high": 0.9333,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.7333,
+      "ci_low": 0.5333,
+      "ci_high": 0.9333,
+      "n": 15
+     },
+     "unknown_rate": 0.2667,
+     "answered": {
+      "n": 11,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.5645,
+      "ci_low": 0.4355,
+      "ci_high": 0.6935,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.6324,
+      "ci_low": 0.5189,
+      "ci_high": 0.7477,
+      "n": 62
+     },
+     "unknown_rate": 0.3065,
+     "answered": {
+      "n": 43,
+      "em": 0.814,
+      "f1": 0.9118
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.9,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.965,
+      "ci_low": 0.905,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.9,
+      "f1": 0.965
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.6463,
+      "ci_low": 0.5366,
+      "ci_high": 0.7439,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.7135,
+      "ci_low": 0.6196,
+      "ci_high": 0.8022,
+      "n": 82
+     },
+     "unknown_rate": 0.2317,
+     "answered": {
+      "n": 63,
+      "em": 0.8413,
+      "f1": 0.9287
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.68,
+   "mean_context_tokens": 1485.6,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.376,
+    "ci_low": 0.272,
+    "ci_high": 0.48,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.3357,
+    "ci_low": 0.2359,
+    "ci_high": 0.4306,
+    "n": 125
+   },
+   "paired_diff_vs_hybrid_em": {
+    "mean": 0.176,
+    "ci_low": 0.096,
+    "ci_high": 0.264,
+    "n": 125
+   }
+  },
+  "graph_plus_chunks_g0.5_no_exact_title": {
+   "all_questions": {
+    "comparison": {
+     "em": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.96,
+      "ci_low": 0.88,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.04,
+     "answered": {
+      "n": 24,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.56,
+      "ci_low": 0.36,
+      "ci_high": 0.76,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.655,
+      "ci_low": 0.48,
+      "ci_high": 0.8176,
+      "n": 25
+     },
+     "unknown_rate": 0.28,
+     "answered": {
+      "n": 18,
+      "em": 0.7778,
+      "f1": 0.9097
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.36,
+      "ci_low": 0.16,
+      "ci_high": 0.56,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.4333,
+      "ci_low": 0.2467,
+      "ci_high": 0.6133,
+      "n": 25
+     },
+     "unknown_rate": 0.48,
+     "answered": {
+      "n": 13,
+      "em": 0.6923,
+      "f1": 0.8333
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.84,
+      "ci_low": 0.68,
+      "ci_high": 0.96,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.84,
+      "ci_low": 0.68,
+      "ci_high": 0.96,
+      "n": 25
+     },
+     "unknown_rate": 0.16,
+     "answered": {
+      "n": 21,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.68,
+      "ci_low": 0.59,
+      "ci_high": 0.77,
+      "n": 100
+     },
+     "f1": {
+      "mean": 0.7221,
+      "ci_low": 0.6355,
+      "ci_high": 0.804,
+      "n": 100
+     },
+     "unknown_rate": 0.24,
+     "answered": {
+      "n": 76,
+      "em": 0.8947,
+      "f1": 0.9501
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.92,
+      "ci_low": 0.8,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "f1": {
+      "mean": 0.972,
+      "ci_low": 0.924,
+      "ci_high": 1.0,
+      "n": 25
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 25,
+      "em": 0.92,
+      "f1": 0.972
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.728,
+      "ci_low": 0.648,
+      "ci_high": 0.808,
+      "n": 125
+     },
+     "f1": {
+      "mean": 0.7721,
+      "ci_low": 0.7005,
+      "ci_high": 0.8409,
+      "n": 125
+     },
+     "unknown_rate": 0.192,
+     "answered": {
+      "n": 101,
+      "em": 0.901,
+      "f1": 0.9555
+     }
+    }
+   },
+   "closed_book_wrong": {
+    "comparison": {
+     "em": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "f1": {
+      "mean": 0.8889,
+      "ci_low": 0.6667,
+      "ci_high": 1.0,
+      "n": 9
+     },
+     "unknown_rate": 0.1111,
+     "answered": {
+      "n": 8,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "inference": {
+     "em": {
+      "mean": 0.5294,
+      "ci_low": 0.2941,
+      "ci_high": 0.7647,
+      "n": 17
+     },
+     "f1": {
+      "mean": 0.6691,
+      "ci_low": 0.4637,
+      "ci_high": 0.8588,
+      "n": 17
+     },
+     "unknown_rate": 0.2353,
+     "answered": {
+      "n": 13,
+      "em": 0.6923,
+      "f1": 0.875
+     }
+    },
+    "compositional": {
+     "em": {
+      "mean": 0.3333,
+      "ci_low": 0.1429,
+      "ci_high": 0.5238,
+      "n": 21
+     },
+     "f1": {
+      "mean": 0.4206,
+      "ci_low": 0.2222,
+      "ci_high": 0.6111,
+      "n": 21
+     },
+     "unknown_rate": 0.4762,
+     "answered": {
+      "n": 11,
+      "em": 0.6364,
+      "f1": 0.803
+     }
+    },
+    "bridge_comparison": {
+     "em": {
+      "mean": 0.7333,
+      "ci_low": 0.5333,
+      "ci_high": 0.9333,
+      "n": 15
+     },
+     "f1": {
+      "mean": 0.7333,
+      "ci_low": 0.5333,
+      "ci_high": 0.9333,
+      "n": 15
+     },
+     "unknown_rate": 0.2667,
+     "answered": {
+      "n": 11,
+      "em": 1.0,
+      "f1": 1.0
+     }
+    },
+    "multi_hop": {
+     "em": {
+      "mean": 0.5645,
+      "ci_low": 0.4355,
+      "ci_high": 0.6935,
+      "n": 62
+     },
+     "f1": {
+      "mean": 0.6324,
+      "ci_low": 0.5189,
+      "ci_high": 0.7477,
+      "n": 62
+     },
+     "unknown_rate": 0.3065,
+     "answered": {
+      "n": 43,
+      "em": 0.814,
+      "f1": 0.9118
+     }
+    },
+    "single_hop": {
+     "em": {
+      "mean": 0.9,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "f1": {
+      "mean": 0.965,
+      "ci_low": 0.905,
+      "ci_high": 1.0,
+      "n": 20
+     },
+     "unknown_rate": 0.0,
+     "answered": {
+      "n": 20,
+      "em": 0.9,
+      "f1": 0.965
+     }
+    },
+    "all": {
+     "em": {
+      "mean": 0.6463,
+      "ci_low": 0.5366,
+      "ci_high": 0.7439,
+      "n": 82
+     },
+     "f1": {
+      "mean": 0.7135,
+      "ci_low": 0.6196,
+      "ci_high": 0.8022,
+      "n": 82
+     },
+     "unknown_rate": 0.2317,
+     "answered": {
+      "n": 63,
+      "em": 0.8413,
+      "f1": 0.9287
+     }
+    }
+   },
+   "providers": [
+    "DeepInfra"
+   ],
+   "multi_hop_all_gold_in_context": 0.68,
+   "mean_context_tokens": 1485.3,
+   "paired_diff_vs_closed_book_em": {
+    "mean": 0.384,
+    "ci_low": 0.28,
+    "ci_high": 0.48,
+    "n": 125
+   },
+   "paired_diff_vs_closed_book_f1": {
+    "mean": 0.3437,
+    "ci_low": 0.2473,
+    "ci_high": 0.4364,
+    "n": 125
+   },
+   "paired_diff_vs_hybrid_em": {
+    "mean": 0.184,
+    "ci_low": 0.104,
+    "ci_high": 0.264,
+    "n": 125
+   }
+  }
+ },
+ "closed_book_wrong_subset": {
+  "definition": "questions with closed_book EM = 0",
+  "n": 82
+ },
+ "retrieval": {
+  "hybrid": {
+   "multi_hop_all_gold_in_context": 0.53,
+   "bridge_entity_recall": 0.3134,
+   "bridge_questions": 67
+  },
+  "graph_only": {
+   "multi_hop_all_gold_in_context": 0.88,
+   "bridge_entity_recall": 0.9104,
+   "bridge_questions": 67
+  },
+  "graph_plus_chunks_g0.25": {
+   "multi_hop_all_gold_in_context": 0.5,
+   "bridge_entity_recall": 0.2985,
+   "bridge_questions": 67
+  },
+  "graph_plus_chunks_g0.5": {
+   "multi_hop_all_gold_in_context": 0.68,
+   "bridge_entity_recall": 0.5821,
+   "bridge_questions": 67
+  },
+  "graph_plus_chunks_g0.5_no_exact_title": {
+   "multi_hop_all_gold_in_context": 0.68,
+   "bridge_entity_recall": 0.5821,
+   "bridge_questions": 67
+  }
+ },
+ "g_selection": {
+  "options": [
+   0.25,
+   0.5
+  ],
+  "chosen_g": 0.5,
+  "chosen_system": "graph_plus_chunks_g0.5",
+  "rule": "highest multi-hop dev EM; ties by multi-hop all-gold-in-context; then 0.25"
+ },
+ "quality_bar": {
+  "system": "graph_plus_chunks_g0.5",
+  "1_retrieval_gain": {
+   "value": 0.15,
+   "min": 0.1,
+   "pass": true
+  },
+  "2_no_qa_regression": {
+   "paired_em_diff": {
+    "mean": 0.176,
+    "ci_low": 0.096,
+    "ci_high": 0.264,
+    "n": 125
+   },
+   "ci_low_min": -0.05,
+   "pass": true
+  },
+  "3_target_types_gain": {
+   "types": [
+    "bridge_comparison",
+    "compositional"
+   ],
+   "n": 50,
+   "em_graph": 0.6,
+   "em_hybrid": 0.12,
+   "em_graph_ci": {
+    "mean": 0.6,
+    "ci_low": 0.46,
+    "ci_high": 0.74,
+    "n": 50
+   },
+   "pass": true
+  },
+  "all_pass": true
+ },
+ "spend": {
+  "this_run_usd": 0.028463,
+  "openrouter_remaining_usd": 5.889086,
+  "retrieval_seconds": 141
+ }
+}
