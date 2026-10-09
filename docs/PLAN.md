@@ -244,6 +244,10 @@ the gpt-oss-120b judge) and reviewed and corrected by Rohith Kumar Reddipogula; 
 historical eras counts as one entity.
 
 ### M4: Graph build + graph retrieval
+
+**DRAFT (2026-10-09), awaiting approval. No M4 code is written before it is approved.**
+
+Already decided:
 - Exact-title links (decided on 2026-10-09, after seeing the report-split bridge link numbers in
   `results/m3/resolution_report.md`: 0.83 with exact name matching, 0.80 after M3, 5 links lost and 3
   gained): the M3 clusters are kept as they are, and the graph also gets exact-title links (a mention
@@ -251,14 +255,88 @@ historical eras counts as one entity.
   source of a link can be told apart and evaluated on its own. No M3 threshold, prompt or merge rule is
   changed.
 - Hub nodes: resolved entities that are mentioned very often (countries such as France, Italy, United
-  States) become hubs. Graph retrieval must cap or down-rank hubs (for example by degree), so that paths
-  through them do not flood the context.
-- Load resolved entities and relations into Neo4j with `source_chunk_ids` and `confidence`.
-- Entity linking from question → seed nodes.
-- ≤ 2-hop expansion with per-node edge cap; path scoring from the seed; serialise top paths as cited facts.
-- Three variants: graph-only, chunks-only, graph + chunks. Tune budget split and caps **on dev**.
+  States; concepts such as "suicide") become hubs. Graph retrieval must cap or down-rank hubs, so that
+  paths through them do not flood the context.
 
-**Done when:** `results/m4/` has dev numbers for all three variants vs the M1 baseline.
+Measured on the committed M2 and M3 outputs before drafting (no LLM calls): the graph would have 10,830
+entity nodes (M3 clusters), 8,033 distinct relation edges (3,021 of them `OTHER`), 2,392 date facts
+stored as properties, and 111 exact-title links that M3 did not already merge; 1,965 extracted relation
+triples have an endpoint that is not an extracted entity (for example an occupation string) and are
+dropped. Node degree: median 1, 99th percentile 12; 8 nodes above 25, one above 50 (United States, 111).
+On the 100 dev multi-hop questions, 92 contain their first gold subject's name verbatim.
+
+#### M4.1 Graph schema (Neo4j, same database as the M1 chunks)
+- Existing: `(:Document)-[:HAS_CHUNK]->(:Chunk)`.
+- `(:Entity {id, name, aliases, type, is_page, page_chunk_id, degree})`: one node per M3 cluster. `id` is
+  the M3 cluster id, `name` the most frequent mention name, `aliases` all mention names, `type` the most
+  frequent coarse type. Date facts are properties: `date_of_birth`, `date_of_death`,
+  `publication_date`, `inception`, each with its source chunk ids.
+- `(:Entity)-[:MENTIONED_IN {mention_id}]->(:Chunk)`: every mention of the cluster.
+- `(:Entity)-[:REL {type, other_label, source_chunk_ids, n_sources}]->(:Entity)`: M2 relations after
+  the M2 post-processing. Endpoints are resolved to the mention in the same paragraph (identical
+  normalised name, else rapidfuzz ratio at least 90), then to its M3 cluster. One edge per (subject,
+  type, object); `n_sources` counts the paragraphs that state it. No LLM confidence exists, so none is
+  stored.
+- `(:Entity)-[:EXACT_TITLE {mention_ids}]->(:Entity)`: from a cluster containing a non-page mention to the
+  page entity whose title has exactly the same normalised name, only when the two are different
+  clusters. A separate, labelled edge type; never merged into the M3 clusters.
+- The loader is idempotent and deterministic, like the M1 loader.
+
+#### M4.2 Graph retrieval
+- Seed entities (at most 5 per question), in this order:
+  1. entity names and aliases (at least 3 characters) found verbatim in the normalised question at word
+     boundaries, longest match first; page entities before other entities;
+  2. if fewer than 5 seeds, E5 nearest entities to the question (`query: ` prefix), cosine at least
+     0.85 (the M3 `t_low`, reused, not tuned again).
+- Expansion: up to 2 hops over `REL` edges in either direction. `EXACT_TITLE` edges are identity links:
+  following one does not count as a hop. Per node, at most 20 neighbours (most `n_sources` first, then
+  name).
+- Hubs: an entity with degree above 25 (the 99.9th percentile is 25.4) can be the end of a path but is
+  never passed through. Each intermediate node v multiplies the path score by 1 / log2(2 + degree(v)).
+- Path score: E5 cosine between the question and the path written out as text (for example "Heat
+  (film) -director-> Michael Mann; Michael Mann: date of birth 5 February 1943"), times the hub factors.
+  The 10 best paths are kept; ties broken by entity ids.
+- Graph context: the kept paths as cited facts ("Fact: ... [source: <chunk ids>]"), then the page
+  paragraphs of the entities on those paths, in path-score order.
+
+#### M4.3 Systems compared on dev (same generator, prompt, 1,500-token budget and abstention)
+- `closed_book` and `hybrid` from M1 (results reused from `results/m1/`, cached).
+- `graph_only`: graph context only.
+- `graph_plus_chunks`: graph context first, using a share g of the budget, then the hybrid baseline's
+  chunks fill the rest (paragraphs already included are skipped). g in {0.25, 0.5}.
+- Ablation: `graph_plus_chunks` at the chosen g without `EXACT_TITLE` edges.
+- Selection rule for g, fixed now: highest multi-hop dev EM; ties by multi-hop all-gold-in-context; then
+  0.25. The chosen configuration is frozen for M5.
+
+#### M4.4 Dev evaluation
+- Questions: the same 125 dev questions as M1 (100 multi-hop, 25 single-hop). Test questions are never
+  used in M4. Dev numbers are used for choices, so they are optimistic; M5 on test is the real estimate.
+- QA metrics, per question type and on the closed-book-wrong subset: EM and F1 (official 2Wiki v1.1 with
+  aliases), unknown rate, EM on answered questions, 95% bootstrap CIs, paired bootstrap differences
+  against `hybrid`.
+- Retrieval metrics: all gold paragraphs in the packed context (multi-hop); bridge entity recall: for
+  multi-hop dev questions whose gold evidence has a bridge entity (the object of one gold triple that is
+  the subject of another) with its own paragraph, the share where that paragraph is in the packed
+  context. Both are also computed for `hybrid` from its committed per-question contexts.
+- Quality bar, fixed now before any M4 result exists (judged for `graph_plus_chunks` at the chosen g):
+  1. retrieval gain: multi-hop all-gold-in-context at least 0.10 above `hybrid` (0.53 in
+     `results/m1/generation_dev.json`, so at least 0.63);
+  2. no QA regression: paired EM difference against `hybrid` over all 125 dev questions has a 95% CI lower
+     bound of at least -0.05;
+  3. gain where the graph should help: mean EM on bridge_comparison and compositional dev questions
+     together (50 questions) above `hybrid`.
+  If all three pass, `graph_plus_chunks` goes to M5 as the GraphRAG system. If not, it still goes to M5
+  and is reported as it is; at most one fix on dev is allowed, then decide. M5 reports every system.
+
+#### M4.5 Cost and time (estimate)
+- Graph build and retrieval use no LLM (E5 and Neo4j locally).
+- Generation: 4 new configurations x 125 dev questions = 500 calls. M1's 375 calls cost 0.028 USD
+  (`results/m1/generation_dev.json`), so about 0.04 USD; credit left 6.05 USD.
+- Time: graph build a few minutes; retrieval about 1 second per question; generation about 5 minutes per
+  configuration with 8 workers; under an hour in total.
+
+**Done when:** `results/m4/` has dev numbers for every system above against the M1 baseline, and the
+quality bar is judged in `results/m4/graph_report.md`.
 
 ### M5: Final test run (once)
 - Freeze all config. Run every system on **test**, once.
