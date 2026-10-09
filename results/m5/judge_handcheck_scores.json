@@ -1,0 +1,35 @@
+{
+ "labelling": "First pass drafted by Claude (a different model from the llama-3.3-70b judge and the gpt-oss-120b generator); reviewed by Rohith Kumar Reddipogula.",
+ "items": 30,
+ "agreement": 29,
+ "agreement_rate": 0.9667,
+ "warn_below": 27,
+ "warning": false,
+ "by_stratum": {
+  "judge correct, EM 0": {
+   "items": 10,
+   "agree": 10
+  },
+  "judge correct, EM 1": {
+   "items": 10,
+   "agree": 10
+  },
+  "judge incorrect": {
+   "items": 10,
+   "agree": 9
+  }
+ },
+ "flagged_by_labeller": [
+  23,
+  29
+ ],
+ "disagreements": [
+  {
+   "n": 20,
+   "stratum": "judge incorrect",
+   "judge": "incorrect",
+   "judge_reason": "Different title",
+   "hand": "correct (John Holles, 1st Duke of Newcastle, was also Earl of Clare: same person)"
+  }
+ ]
+}
