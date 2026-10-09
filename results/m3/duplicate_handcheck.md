@@ -18,7 +18,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Euphrosina Heldina von Dieffenau] Euphrosina Heldina von Dieffenau, or" Heldin"( died 1636), was a Swedish courtier. Originally from Germany, she became courtier to Catherine of Sweden, Countess Palatine of Kleeburg in 1590. After the death of Catherine's mother, Maria of the Palatinate- Simmern, she became the lady- in- waiting, nurse and in practice foster mother of Catherine. She were the confidant of Catherine and the two of them had a close relationship for the rest of their life, sometimes by letters, which are preserved. ...
 - Candidate 5: Germany (PLACE), part of her ancestry
   - Paragraph: [Princess Michael of Kent] Princess Michael of Kent (born Baroness Marie Christine von Reibnitz; 15 January 1945) is a member of the British royal family of German, Austrian and Hungarian descent. She is married to Prince Michael of Kent, a grandson of King George V. Princess Michael was an interior designer before becoming an author; she has written several books on European royalty. She does lecture tours as well as supporting her husband in his public duties.
-- Same entity as: 
+- Same entity as: none
 
 ## 2. Konoe Tsunehiro (PERSON)
 
@@ -34,7 +34,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Konoe Uchisaki] , son of regent Iehisa, was a" kugyō" or Japanese court noble of the Edo period( 1603 – 1868). He held regent positions kampaku from 1757 to 1762 and from 1772 to 1778 and sesshō from 1762 to 1772. He married a daughter of Tokugawa Muneharu, seventh head of Owari Domain, and an adopted daughter of Tokugawa Munetaka, fifth head of Mito Domain. With the former he had a son Konoe Tsunehiro, and with the latter he adopted a daughter ...
 - Candidate 5: Konoe Motosaki (PERSON), son of Konoe Tsunehiro
   - Paragraph: [Konoe Tsunehiro] , son of regent Uchisaki, was a "kugyō" or Japanese court noble of the Edo period (1603–1868). He did not hold regent positions kampaku and sessho. Konoe Motosaki was his son. He also adopted a daughter of Satsuma Shigehide, eighth head of Satsuma Domain, who later became a consort of shōgun Tokugawa Ienari.
-- Same entity as: 
+- Same entity as: 3, 4
 
 ## 3. Charles Stuart, 1st Earl of Lennox (PERSON)
 
@@ -50,7 +50,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Lord Bernard Gordon-Lennox] Major Lord Bernard Charles Gordon- Lennox( 1 May 1878 – 10 November 1914), was a British Army officer. Gordon- Lennox was the third son of Charles Gordon- Lennox, 7th Duke of Richmond, by his first wife Amy Mary, daughter of Percy Ricardo, of Bramley Park, Guildford, Surrey. Charles Gordon- Lennox, 8th Duke of Richmond and Brigadier- General Lord Esmé Gordon- Lennox were his elder brothers. He was educated at Eton and the Royal Military College, Sandhurst. He was a major ...
 - Candidate 5: Charles I of Naples (PERSON), husband
   - Paragraph: [Beatrice of Provence] Beatrice of Provence (c. 122923 September 1267), was ruling Countess of Provence and Forcalquier from 1245 until her death, as well as Countess of Anjou and Maine, Queen of Sicily and Naples by marriage to Charles I of Naples. She was the fourth and youngest daughter of Ramon Berenguer IV, Count of Provence and Forcalquier by his wife Beatrice, in turn daughter of Count Thomas I of Savoy and Margaret of Geneva.
-- Same entity as: 
+- Same entity as: 3
 
 ## 4. Kanezawa Sanetoki (PERSON)
 
@@ -60,7 +60,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Hōjō Akitoki] Hōjō Akitoki (1248 – 7 May 1301) was a Japanese military leader during the Kamakura period (1185–1333). He was the third head of the of the Hōjō clan. Akitoki was the son of Kanezawa Sanetoki and a daughter of Hōjō Masamura. In 1257 Akitoki had his "genpuku" coming-of-age ceremony under the "tokusō" Hōjō Tokiyori and took the name "Tokikata" . In 1260 he became a guard of the "shōgun"; he attended Prince Munetaka and studied poetry and other subjects. He ...
 - Candidate 2: Kanezawa (modern‑day Kanazawa) (PLACE), residence
   - Paragraph: [Kanezawa Sanetoki] , also called was the founder of the Kanazawa Bunko (Kanazawa Library). He was a member of the Kanezawa branch of the Hōjō clan. He was born to Hōjō Saneyasu in 1224. As his talent was discovered by his uncle Hōjō Yasutoki, Sanetoki was given important posts by four "shikken": Yasutoki, Tsunetoki, Tokiyori and Tokimune. He began his career as the head of "Kosamurai-dokoro" in 1234 and then became "Hikitsukeshu" in 1252 and "Hyojoshu" in 1253. Due to illness, he ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 5. Egypt (PLACE)
 
@@ -76,7 +76,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Empire M] Empire M( translit. Emberatoriet meem) is a 1972 Egyptian drama film directed by Hussein Kamal. The film was entered into the 8th Moscow International Film Festival in 1973. It was also selected as the Egyptian entry for the Best Foreign Language Film at the 46th Academy Awards, but was not accepted as a nominee.
 - Candidate 5: Egypt (PLACE), country of Shepseskare's nationality
   - Paragraph: [Shepseskare] Shepseskare or Shepseskara (Egyptian for "Noble is the Soul of Ra") was an Ancient Egyptian pharaoh, the fourth or fifth ruler of the Fifth Dynasty (2494–2345 BC) during the Old Kingdom period. Shepseskare lived in the mid-25th century BC and was probably the owner of an unfinished pyramid in Abusir, which was abandoned after a few weeks of work in the earliest stages of its construction. Following historical sources, Shepseskare was traditionally believed to have reigned for seven years, succeeding ...
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5 (FLAG: ancient and modern Egypt, counted as one country)
 
 ## 6. Way Down East (1920 film) (WORK)
 
@@ -92,7 +92,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Joseph R. Grismer] Joseph Rhode Grismer( November 4, 1849 – 1922) was an American stage actor, playwright, and theatrical director and producer. He was probably best remembered for his play" The New South" and for his revision of the Charlotte Blair Parker play" Way Down East".
 - Candidate 5: Way of the Dragon (FILM), original film
   - Paragraph: [Way of the Dragon 2] Way of the Dragon 2, also known as Bruce Le's Greatest Revenge, is a 1978 martial arts sequel to Way of the Dragon starring Bruce Le. The film is also considered to be a Bruceploitation film. Despite the title the film has more in common with the 1972 film" Fist of Fury". The film has received mixed to negative reviews.
-- Same entity as: 
+- Same entity as: 1
 
 ## 7. Gerli Padar (PERSON)
 
@@ -104,7 +104,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Secret Mark of D'Artagnan] The Secret Mark of D'Artagnan is a 1962 Italian- French adventure film written and directed by Siro Marcellini and starring George Nader and Magali Noël. The film is about the adventures of D'Artagnan in the year 1632, between" The Three Musketeers" and" Twenty Years After".
 - Candidate 3: GamesRadar (ORG), publisher of the ranking list
   - Paragraph: [Drunken Master] Drunken Master is a 1978 Hong Kong action comedy martial arts film directed by Yuen Woo- ping, and starring Jackie Chan, Yuen Siu -tien, and Hwang Jang- lee. The film was a success at the Hong Kong box office, earning two and a half times the amount of Chan's previous film," Snake in the Eagle's Shadow", which was also considered a successful film. It is an early example of the comedic kung fu genre for which Jackie Chan became famous. ...
-- Same entity as: 
+- Same entity as: none
 
 ## 8. House of Ascania (ORG)
 
@@ -120,7 +120,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Waldemar IV, Prince of Anhalt-Dessau] Waldemar IV, Prince of Anhalt- Dessau( died aft. 22 July 1417) was a German prince of the House of Ascania and ruler of the principality of Anhalt- Dessau. He was the eldest son of Sigismund I, Prince of Anhalt- Dessau, by his wife Judith, daughter of Gebhard XI, Count of Querfurt.
 - Candidate 5: House of Ascania (ORG), dynasty he belonged to
   - Paragraph: [Albert V, Prince of Anhalt-Dessau] Albert V, Prince of Anhalt-Dessau (died ca. 1469) was a German prince of the House of Ascania and ruler of the principality of Anhalt-Dessau. He was the fifth son of Sigismund I, Prince of Anhalt-Dessau, by his wife Judith, daughter of Gebhard XI, Count of Querfurt.
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5
 
 ## 9. Yerevan (PLACE)
 
@@ -136,7 +136,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Sarduri I] Sarduri I (ruled: 834 BC – 828 BC), also known as Sarduris, was a king of Urartu in Asia Minor. He was the son of Lutipri, the second monarch of Urartu. Sarduri I is most known for moving the capital of the Urartu kingdom to Tushpa (Van). This proved to be significant as Tushpa became the focal point of politics in the Near East. He was succeeded by his son, Ishpuini of Urartu, who then expanded the kingdom. The title ...
 - Candidate 5: Van (PLACE), modern name of Tushpa
   - Paragraph: [Sarduri II] Sarduri II (ruled: 764–735 BC) was a King of Urartu, succeeding his father Argishti I to the throne. The Urartian Kingdom was at its peak during his reign, campaigning successfully against several neighbouring powers, including Assyria. Sardur II was so confident in his power that he erected a massive wall at Tushpa (modern-day Van) with the following inscription: He was succeeded by his son, Rusa I.
-- Same entity as: 
+- Same entity as: none
 
 ## 10. Kodi Ramakrishna (PERSON)
 
@@ -144,7 +144,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Kodi Ramakrishna] Kodi Ramakrishna( 23 July 1949 – 22 February 2019) was an Indian film director and writer known for his works predominantly in Telugu cinema, and a few Tamil, Malayalam and Hindi films. One of the prolific film director in Telugu, Kodi Ramakrishna has directed a wide range of films, in a variety of genres such as drama films;" Intlo Ramayya Veedilo Krishnayya"( 1982)," Mangamma Gari Manavadu"( 1984)," Thalambralu"( 1986)," Aahuthi"( 1987)," Bharatamlo Bala Chandrudu"( 1988)," Station Master"( 1988)," Muddula Mavayya"( ...
 - Candidate 1: Kodi Ramakrishna (PERSON), writer and director
   - Paragraph: [Ammoru] Ammoru( translation:" Goddess") is a 1995 Indian Telugu- language hagiographical supernatural film written, and directed by Kodi Ramakrishna. The film was produced by Shyam Prasad Reddy under MS Arts Unit. The film stars Soundarya and Suresh in the lead roles with Ramireddy, Vadivukkarasi, Kallu Chidambaram and Babumohan portraying supporting roles. The film revolves around Bhavani, who is a devotee of goddess Ammoru, the rest of the film revolves around her devotion towards the goddess who saves her from evil forces. ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 11. What's New Pussycat? (FILM)
 
@@ -152,7 +152,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Clive Donner] Clive Stanley Donner( 21 January 1926 – 6 September 2010) was a British film director who was part of the British New Wave, directing films such as" The Caretaker Nothing But the BestWhat's New Pussycat? Here We Go Round the Mulberry Bush". He also directed television movies and commercials through the mid-1990s.
 - Candidate 1: What is? (WORK), illustrated children's book series
   - Paragraph: [Etan Boritzer] Etan Boritzer( born 1950) is an American writer of children ’s literature who is best known for his book" What is God?" first published in 1989. His best selling" What is?" illustrated children's book series on character education and difficult subjects for children is a popular teaching guide for parents, teachers and child- life professionals. Boritzer gained national critical acclaim after" What is God?" was published in 1989 although the book has caused controversy from religious fundamentalists for its universalist ...
-- Same entity as: 
+- Same entity as: none
 
 ## 12. Georgi Rusev (PERSON)
 
@@ -168,7 +168,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Happening (1967 film)] The Happening is a 1967 American crime comedy film directed by Elliot Silverstein, and starring Anthony Quinn, Michael Parks, George Maharis, Robert Walker Jr., Martha Hyer and Faye Dunaway. It tells the story of four hippies, who kidnap a retired Mafia mob boss, holding him for ransom. The film is an anti-establishment story that questions the values of Middle America and the older generation.
 - Candidate 5: Georg Tressler (PERSON), Vienna-born German film actor and director
   - Paragraph: [Georg Tressler] Georg Tressler( January 25, 1917 – January 6, 2007) was a Vienna- born German film actor and film director. Also known as George Tressler, Hans Tressler, Hans Dressler, Hans Georg Keil and Hans Sternbeck( per IMDb). The son of actor Otto Tressler, he began his acting career in the 1930s. George Tressler was drafted into the German army during World War II and served on the Russian Front. He became ill and was released from the service and returned to ...
-- Same entity as: 
+- Same entity as: none
 
 ## 13. Anna of Brandenburg (PERSON)
 
@@ -184,7 +184,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Hedwig of Legnica] Hedwig of Legnica( ca. 1351 – 1 August 1409) was a Polish princess and member of the Piast dynasty, in the Legnica branch. By marriage Hedwig was Duchess of Żagań. She was the fourth child and only daughter of Wenceslaus I, Duke of Legnica and his wife Anna, daughter of Casimir I, Duke of Cieszyn.
 - Candidate 5: Anna of Katzenelnbogen (PERSON), mother of Mathilde
   - Paragraph: [John II, Duke of Cleves] John II, "The Babymaker", Duke of Cleves, Count of Mark, (German: Johann II. " der Kindermacher", Herzog von Kleve, Graf von Mark) (13 April 1458 – 15 March 1521) was a son of John I, Duke of Cleves and Elizabeth of Nevers. He ruled Cleves from 1481 to his death in 1521. He was called "The Babymaker" since he fathered sixty-three illegitimate children before his marriage with Mathilde of Hesse in 1490. She was the daughter of Henry III, Landgrave ...
-- Same entity as: 
+- Same entity as: none
 
 ## 14. Kyōen Kobanzame (FILM)
 
@@ -192,7 +192,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Kyōen Kobanzame] There are two parts of the film: the first part and the second part. Both parts have the same staff and the same actors.
 - Candidate 1: Zareen Khan (PERSON), actress in ensemble cast
   - Paragraph: [Housefull 2] Housefull 2( also known as Housefull 2: The Dirty Dozen) is an 2012 Indian Hindi- language action comedy film directed by Sajid Khan and produced by Sajid Nadiadwala under the banner of Nadiadwala Grandson Entertainment. An uncredited remake of the Malayalam film" Mattupetti Machan", it is distributed by Eros International, with songs composed by Sajid – Wajid. " Housefull 2" is the second installment of the" Housefull film franchise". The film features an large ensemble cast of Akshay Kumar, John ...
-- Same entity as: 
+- Same entity as: none
 
 ## 15. Bodil Award (OTHER)
 
@@ -208,7 +208,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Agnès Varda] Agnès Varda (30 May 1928 – 29 March 2019) was a Belgian-born French film director, photographer and artist. Her work was pioneering for, and central to, the development of the widely influential French New Wave film movement of the 1950s and 1960s. Her films focused on achieving documentary realism, addressing feminist issues and producing other social commentary, with a distinctive experimental style. Varda's work employed location shooting in an era when the limitations of sound technology made it easier and ...
 - Candidate 5: Best Screenplay Award (OTHER), award at Ashdod International Film Festival
   - Paragraph: [P. Venu] P. Venu (8 November 1940 – 25 May 2011) was an Indian film director, producer and screenwriter with over 20 films to his credit. His directorial venture "Udhyogastha" in 1967 was the first ever multi-starrer film of South India. His work in Malayalam cinema was significant and most influential, covering all themes and genres over a career spanning 40 years. One of his most recognized film "C.I.D. Nazir" in 1971, revolutionized movie-making in the investigative genre in Malayalam cinema. Following ...
-- Same entity as: 
+- Same entity as: none
 
 ## 16. Steamer Passage (PLACE)
 
@@ -218,7 +218,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Adolphe Stoeber] Adolphe Stoeber, or Adolf Stöber (Strasbourg, 1810 - Mulhouse, 1892) was a French ecclesiastic and writer in German language from Alsace. He was Ehrenfried Stoeber's son and Auguste Stoeber's brother. He studied theology and was a Protestant priest in Metz (1832), Oberbronn (1836) and Mulhouse, where he was president at the Reformist Assembly. In 1838, he founded the publication Erwinia with his brother. This magazine dealt with Alsatian and Swiss legends in Alsatian.
 - Candidate 2: Star Maa (ORG), TV channel that airs Tollywood Squares
   - Paragraph: [Navdeep] Navdeep Pallapolu is an Indian film actor and television personality who stars predominantly in Telugu films along with a few Tamil films. He made his film debut in 2004 with the successful patriotic sports drama" Jai". He then starred in commercially successful films such as" Arinthum Ariyamalum"( 2005)," Gowtam SSC"( 2005)," Chandamama"( 2007), and" Arya 2"( 2009). After a series of box- office flops as the main lead, he starred as the main antagonist in" Baadshah"( 2013) and portrayed supporting ...
-- Same entity as: 
+- Same entity as: none
 
 ## 17. Joan of Bar, Countess of Surrey (PERSON)
 
@@ -234,7 +234,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Jeanne of Bar, Countess of Marle and Soissons] Jeanne de Bar, suo jure Countess of Marle and Soissons, Dame d' Oisy, Viscountess of Meaux, and Countess of Saint- Pol, of Brienne, de Ligny, and Conversano( 1415 – 14 May 1462) was a noble French heiress and Sovereign Countess. She was the only child of Robert of Bar, Count of Marle and Soissons, Sire d' Oisy, who was killed at the Battle of Agincourt when she was a baby, leaving her the sole heiress to his titles and estates. ...
 - Candidate 5: Henry III, Count of Bar (PERSON), Her father
   - Paragraph: [Joan of Bar, Countess of Surrey] Joan of Bar( died 1361) was a French- English noble. She acted as regent of the County of Bar from 1344 until 1353. She was a daughter of Henry III, Count of Bar and Eleanor of England, and niece of Edward II of England. She was unhappily married to John de Warenne, 7th Earl of Surrey. In 1345, Joan became the regent of Bar for her great- nephew Robert.
-- Same entity as: 
+- Same entity as: 1
 
 ## 18. Hwang Jang-lee (PERSON)
 
@@ -250,7 +250,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Edmund Barff] Edmund Barff (5 March 1833 – 29 June 1882) was a 19th-century Member of Parliament from the West Coast, New Zealand. Barff was born in the English county of Kent on 5 March 1833, probably at Lee (now part of Greater London), where he was baptised five months later. He first came to New Zealand to join the West Coast Gold Rush in the mid-1860s. The West Coast was initially part of the Canterbury Province and following a requisition in ...
 - Candidate 5: Yang Huan (PERSON), her father, Later Liang official
   - Paragraph: [Empress Yang (Lü Zuan's wife)] Empress Yang (楊皇后, personal name unknown) (died 401), formally Empress Mu (穆皇后, literally "the solemn empress"), was an empress of the Chinese/Di state Later Liang. Her husband was Lü Zuan (Emperor Ling). She was the daughter of the Later Liang official Yang Huan (楊桓), who was likely ethnically Han, and was described to be very beautiful. It is not known when she married Lü Zuan. When he was assassinated by his cousin Lü Chao (呂超) in 401, she initially tried ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 19. Elisabeth of Hesse-Marburg (PERSON)
 
@@ -266,7 +266,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [William I, Count of Nassau-Dillenburg] William I, Count of Nassau- Dillenburg( nicknamed" William the Rich",; 10 April 1487 – 6 October 1559) was a count of Nassau- Dillenburg from the House of Nassau. His nickname" the Rich" refers to him having many children. However, he owned a number of counties: Nassau- Dillenburg, Nassau- Siegen, Nassau- Dietz and Vianden. William was born in Dillenburg as the younger son of Count John V of Nassau- Dillenburg and Landgravine Elisabeth, daughter of Landgrave Henry III of Hesse- Marburg ...
 - Candidate 5: Elisabeth of Brabant-Aarschot (PERSON), mother of William V
   - Paragraph: [William V, Duke of Jülich] William V, Duke of Jülich( – 25/26 February 1361) was a German nobleman. Some authors call him William I, because he was the first" Duke of Jülich"; the earlier Williams had been" Count of Jülich". Other authors call the subject of this article" William VI"; they count the son and co-ruler of William IV as William V. William V was the eldest son of Gerhard V of Jülich and Elisabeth of Brabant- Aarschot, daughter of Godfrey of Brabant. William V ...
-- Same entity as: 
+- Same entity as: 4 (Landgravine Elisabeth, mother of William I of Nassau-Dillenburg)
 
 ## 20. Wild Wild West (FILM)
 
@@ -282,7 +282,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [André Téchiné] André Téchiné (born 13 March 1943) is a French screenwriter and film director. He has a long and distinguished career that places him among the most accomplished post-New Wave French film directors. Téchiné belongs to a second generation of French film critics associated with "Cahiers du cinéma" who followed François Truffaut, Claude Chabrol, Jean-Luc Godard and others from criticism into filmmaking. He is noted for his elegant and emotionally charged films that often delve into the complexities of emotions and ...
 - Candidate 5: Herbert West – Reanimator (WORK), 1922 serial novelette
   - Paragraph: [Re-Animator] Re- Animator( also known as H. P. Lovecraft's Re- Animator) is a 1985 American horror comedy film loosely based on the 1922 H. P. Lovecraft serial novelette" Herbert West – Reanimator". Directed by Stuart Gordon and produced by Brian Yuzna, the film stars Jeffrey Combs as Herbert West, a medical student who has invented a reagent which can re-animate deceased bodies. He and his classmate Dan Cain( Bruce Abbott) begin to test the serum on dead human bodies, and conflict ...
-- Same entity as: 
+- Same entity as: none
 
 ## 21. National School of Music at the CÉGEP of Granby, Québec (ORG)
 
@@ -298,7 +298,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [William Penn (cricketer)] William Penn( 29 August 1849 – 15 August 1921) was an English amateur cricketer who played for Kent County Cricket Club in the 1870s. Penn was born in Lee in Lewisham in south- east London, the son of John Penn, a manufacturer of marine engines at the John Penn and Sons works in Deptford and Greenwich. He was educated at Harrow School where he was in the cricket XI.
 - Candidate 5: The Perse School (ORG), school attended
   - Paragraph: [Harry Martindale Speechly] Harry Martindale Speechly (1 November 1866 – 17 March 1951) was a Canadian doctor. Speechly was the son of John Martindale Speechly, the first Bishop of Travancore and Cochin, India, and Mary Gray née Grove. He was born in Cochin on 1 November 1866. He was educated at Monkton Combe School and The Perse School and St John's College, Cambridge. He began his medical studies at London Hospital in 1884, graduating with the degrees of M.R.C.S. Eng. and L.R.C.P.Lon. Speechly ...
-- Same entity as: 
+- Same entity as: none
 
 ## 22. Leota Lorraine (PERSON)
 
@@ -314,7 +314,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Baldwin I of Jerusalem] Baldwin I , also known as Baldwin of Boulogne (1060s – 2April 1118), was the first count of Edessa from 1098 to 1100, and the first king of Jerusalem from 1100 to his death. Being the youngest son of Eustace II, Count of Boulogne, and Ida of Lorraine, he was destined for a church career, but he abandoned it and married a Norman noblewoman, Godehilde of Tosny. He received the County of Verdun in 1096, but he soon joined the ...
 - Candidate 5: Lorraine (PLACE), duchy later held by her father
   - Paragraph: [Marie Leszczyńska] Maria Karolina Zofia Felicja Leszczyńska (23 June 1703 – 24 June 1768), also known as Marie Leczinska , was a Polish princess and French queen consort. The daughter of King Stanisław Leszczyński—Stanislaus I of Poland (later Duke of Lorraine)–and Catherine Opalińska, she married King Louis XV of France and became queen consort of France. She served in that role for 42 years from 1725 until her death in 1768, the longest service of any queen of France, and was popular ...
-- Same entity as: 
+- Same entity as: none
 
 ## 23. Montenegro (PLACE)
 
@@ -330,7 +330,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Alessandro Vitelli] Alessandro Vitelli (1500 - 1554) was an Italian condottiero in the service of the Holy Roman Empire, the Papal States and the Grand Duchy of Tuscany. He was an illegitimate son of Paolo Vitelli and the second husband of Angela de' Rossi. He also became count of Montone, count of Citerna and lord of Amatrice. He was born in Città di Castello and died in Citerna.
 - Candidate 5: Monsters (WORK), song featuring Camellia Clouse and Skerik
   - Paragraph: [Calm Down Juanita (album)] Calm Down Juanita is the eponymous first album by psychedelic rock group Calm Down Juanita, released in 1998 through Echo Records. The album was recorded entirely at the Fremont House in Seattle, Washington on 4- track cassette. Ty Willman played keyboard and guitar and sang vocals, while Kevin Guess played drums, keyboard, and loops. This release features Sweet Water bassist Cole Peterson, who wrote one song on the album," Girlfriend", on which Willman's fellow Green Apple Quick Step member, Mari ...
-- Same entity as: 
+- Same entity as: none
 
 ## 24. Steve Jobs (PERSON)
 
@@ -346,14 +346,14 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Kangaroo Jack] Kangaroo Jack is a 2003 comedy film from Warner Bros., written by Steve Bing, Barry O'Brien and Scott Rosenberg, directed by David McNally, produced by Jerry Bruckheimer with music by Trevor Rabin and starring Jerry O'Connell, Anthony Anderson, Christopher Walken, Estella Warren, and Adam Garcia in an uncredited role as Kangaroo Jack. " Kangaroo Jack" was theatrically released on January 17, 2003. The film was panned by critics, who criticized the acting, directing and writing, especially for a family film, ...
 - Candidate 5: Steve Wilmans (PERSON), engineer, catalyst, co‑producer
   - Paragraph: [Calm Down Juanita (album)] Calm Down Juanita is the eponymous first album by psychedelic rock group Calm Down Juanita, released in 1998 through Echo Records. The album was recorded entirely at the Fremont House in Seattle, Washington on 4- track cassette. Ty Willman played keyboard and guitar and sang vocals, while Kevin Guess played drums, keyboard, and loops. This release features Sweet Water bassist Cole Peterson, who wrote one song on the album," Girlfriend", on which Willman's fellow Green Apple Quick Step member, Mari ...
-- Same entity as: 
+- Same entity as: none
 
 ## 25. Bridport (PLACE)
 
 - Mention: Bridport, constituency he represented in Parliament
   - Paragraph: [John Roger (died 1441)] John Roger of Bridport and Bryanston, Dorset, was an English Member of Parliament for Bridport in 1395, 1410 and May 1413 and for Dorset in December 1421. He died later in 1441.
 - Candidates: none found
-- Same entity as: 
+- Same entity as: none
 
 ## 26. Armin Brunner (PERSON)
 
@@ -369,7 +369,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Bonne of Armagnac] Bonne of Armagnac (19 February 1399 – 1430/35) was the eldest daughter of Bernard VII, Count of Armagnac and Constable of France, and his wife Bonne of Berry.
 - Candidate 5: Vera Carmi (PERSON), starring
   - Paragraph: [Farewell, My Beautiful Naples] Farewell, My Beautiful Naples( Italian: Addio, mia bella Napoli!) is a 1946 Italian musical melodrama film directed by Mario Bonnard and starring Fosco Giachetti, Vera Carmi and Clelia Matania. It is based on a 1910 play which had previously been made into a 1917 silent film of the same title. Location shooting took place around Naples, including at Pompeii, Amalfi and Capri.
-- Same entity as: 
+- Same entity as: none
 
 ## 27. Caroline Campbell, Duchess of Argyll (PERSON)
 
@@ -385,7 +385,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Mathilda Campbell, Duchess of Argyll] Mathilda Campbell, Duchess of Argyll( née Mathilda Coster Mortimer; 20 August 1925 — 5 June 1997) was a Scottish noblewoman. She was the third and final wife of Ian Campbell, 11th Duke of Argyll.
 - Candidate 5: Archibald Campbell, 1st Marquess of Argyll (PERSON), Scottish nobleman, politician, and peer, chief of Clan Campbell
   - Paragraph: [Archibald Campbell, 1st Marquess of Argyll] Archibald Campbell, 1st Marquess of Argyll, 8th Earl of Argyll, chief of Clan Campbell,( March 160727 May 1661) was a Scottish nobleman, politician, and peer. The" de facto" head of Scotland's government during most of the conflict of the 1640s and 50s known as the Wars of the Three Kingdoms, he was a major figure in the Covenanter movement that fought for the maintenance of the Presbyterian religion against the Stuart monarchy's attempts to impose episcopacy. He is often remembered ...
-- Same entity as: 
+- Same entity as: none
 
 ## 28. Brazil (PLACE)
 
@@ -401,7 +401,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [João da Mata] João da Mata is a 1923 Brazilian silent political drama film directed by Amilar Alves. The film premiered in Rio de Janeiro on October 9, 1923
 - Candidate 5: Brazil (PLACE), country of origin
   - Paragraph: [Love Me Forever or Never] Love Me Forever or Never is a 1986 Brazilian drama film directed by Arnaldo Jabor.
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5
 
 ## 29. United States (PLACE)
 
@@ -417,7 +417,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Young Diana] The Young Diana is a lost 1922 American silent drama film directed by Albert Capellani and Robert G. Vignola and written by Luther Reed. The film stars Marion Davies, Macklyn Arbuckle, Forrest Stanley, Gypsy O'Brien, and Pedro de Cordoba. It is based on the novel "The Young Diana" by Marie Corelli. The film was released on August 27, 1922, by Paramount Pictures.
 - Candidate 5: United States (PLACE), country where the film was released in 1974
   - Paragraph: [Oasis of Fear] Un posto ideale per uccidere, also known as Oasis of Fear and Dirty Pictures, or Deadly Trap( the film's video release title in West Germany), is a 1971 Italian giallo film directed by Umberto Lenzi and starring Irene Papas, Ornella Muti and Ray Lovelock. It was produced by Carlo Ponti. The film was released in the USA in 1974, and is available on video as both" Oasis of Fear" and" Dirty Pictures".
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5
 
 ## 30. Leigh Jason (PERSON)
 
@@ -433,7 +433,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Odd Job] The Odd Job is a 1978 British comedy film starring Monty Python member Graham Chapman. It tells the story of a man named Arthur Harris( Chapman) who is recently abandoned by his wife. He becomes so depressed that he hires an" odd job man" to kill him. Once his wife returns, Harris finds himself unable to cancel the contract. The concept was originally made as an episode of the London Weekend Television/ ITV series" Six Dates With Barker" in 1971, ...
 - Candidate 5: Jason Pace (PERSON), actor
   - Paragraph: [My Trip Back to the Dark Side] My Trip Back to the Dark Side is a 2014 thriller film directed by Shane Stanley. It is the sequel to" My Trip to the Dark Side". It stars Jason Pace, Sean Kanan, Betsy Russell, Courtney Gains, Sean Young, Alisa Reyes, Marlon Young, and Ron Masak.
-- Same entity as: 
+- Same entity as: 1
 
 ## 31. Bride of Re-Animator (FILM)
 
@@ -449,7 +449,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Bride of Re-Animator] Bride of Re- Animator is a 1990 American horror film directed by Brian Yuzna and was written by Yuzna, Rick Fry and Woody Keith. H. P. Lovecraft wrote the original serialized story, titled" Herbert West – Reanimator", from which the characters were derived. The plot roughly follows episodes" V. The Horror from the Shadows" and" VI. The Tomb- Legions" of the original. The film stars Bruce Abbott, Claude Earl Jones, Fabiana Udenio, David Gale, Kathleen Kinmont, and Jeffrey Combs. " ...
 - Candidate 5: Beyond Re-Animator (FILM), 2003 sequel
   - Paragraph: [Re-Animator] Re- Animator( also known as H. P. Lovecraft's Re- Animator) is a 1985 American horror comedy film loosely based on the 1922 H. P. Lovecraft serial novelette" Herbert West – Reanimator". Directed by Stuart Gordon and produced by Brian Yuzna, the film stars Jeffrey Combs as Herbert West, a medical student who has invented a reagent which can re-animate deceased bodies. He and his classmate Dan Cain( Bruce Abbott) begin to test the serum on dead human bodies, and conflict ...
-- Same entity as: 
+- Same entity as: 1, 4
 
 ## 32. Telly Savalas (PERSON)
 
@@ -457,7 +457,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Crooks and Coronets] Crooks and Coronets is a 1969 British crime comedy film and/ or heist movie written and directed by Jim O'Connolly. It starred Telly Savalas, Edith Evans, Warren Oates, Cesar Romero and Harry H. Corbett. The film was renamed as" Sophie's Place" for the US market.
 - Candidate 1: Lucas Till (PERSON), actor in the film.
   - Paragraph: [All Superheroes Must Die] All Superheroes Must Die( also known as Vs) is a 2011 American independent superhero film directed by and starring Jason Trost. It also stars James Remar, and Lucas Till. Filming took place in Los Angeles, California. " All Superheroes Must Die" premiered in Toronto, Ontario, at the Toronto After Dark Film Festival on October 26, 2011. The film received overwhelmingly negative reviews. A sequel," All Superheroes Must Die 2: The Last Superhero", was released on Jason Trost's YouTube channel.
-- Same entity as: 
+- Same entity as: none
 
 ## 33. Bull Durham (FILM)
 
@@ -471,7 +471,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [My Name Is Khan] My Name Is Khan is a 2010 Indian Hindi- language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles. The film was jointly produced by Dharma Productions and Red Chillies Entertainment and was distributed by FOX Star Entertainment, which had bought the rights for the film for a sum of, making it the most expensive Bollywood film of 2010. It is also the highest buy over ...
 - Candidate 4: Abu Dhabi (PLACE), emirate
   - Paragraph: [Fatima bint Mubarak Al Ketbi] Fatima bint Mubarak Al Ketbi is the third wife of Sheikh Zayed bin Sultan Al Nahyan, the founder and inaugural president of United Arab Emirates, and late emir( ruler) of Abu Dhabi. She is referred to as the mother of sheikhs and as the Mother of the UAE.
-- Same entity as: 
+- Same entity as: none
 
 ## 34. Philip I of Montfort, Lord of Tyre (PERSON)
 
@@ -487,7 +487,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Charles, Count of Valois] Charles of Valois (12 March 1270 – 16 December 1325), the third son of Philip III of France and Isabella of Aragon, was a member of the House of Capet and founder of the House of Valois, whose rule over France would start in 1328. Charles ruled several principalities. He held in appanage the counties of Valois, Alençon and Perche. Through his marriage to Margaret of Anjou, he became Count of Anjou and Maine. Through his marriage to Catherine I, ...
 - Candidate 5: Philip of Ibelin (PERSON), father of John of Ibelin (jurist)
   - Paragraph: [John of Ibelin (jurist)] John of Ibelin (1215 – December 1266), count of Jaffa and Ascalon, was a noted jurist and the author of the longest legal treatise from the Kingdom of Jerusalem. He was the son of Philip of Ibelin, bailli of the Kingdom of Cyprus, and Alice of Montbéliard, and was the nephew of John of Ibelin, the "Old Lord of Beirut". To distinguish him from his uncle and other members of the Ibelin family named John, he is sometimes called John ...
-- Same entity as: 
+- Same entity as: none
 
 ## 35. Love Me Forever (WORK)
 
@@ -503,7 +503,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [As Men Love] As Men Love is a lost 1917 American drama silent film directed by E. Mason Hopper, and written by Adele Harris and Lois Zellner. The film stars House Peters, Sr., Myrtle Stedman, Jack W. Johnston, and Helen Jerome Eddy. The film was released on March 29, 1917, by Paramount Pictures.
 - Candidate 5: It's Forever Springtime (FILM), 1950 Italian drama film directed by Renato Castellani
   - Paragraph: [It's Forever Springtime] It's Forever Springtime( Italian:" È primavera ...") is a 1950 Italian drama film directed by Renato Castellani.
-- Same entity as: 
+- Same entity as: none
 
 ## 36. Maria of Aragon (PERSON)
 
@@ -519,7 +519,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Isabella of Aragon, Queen of Germany] Isabella of Aragon( 1305 – 12 July 1330) was the daughter of James II of Aragon and his second wife Blanche of Anjou. Queen consort of Frederick I of Austria. She was a member of the House of Aragon
 - Candidate 5: Sancha of Aragon (PERSON), daughter of King Alfonso II of Aragon
   - Paragraph: [Sancha of Aragon, Countess of Toulouse] Sancha of Aragon( 1186–1241) was the daughter of King Alfonso II of Aragon and his wife, Sancha of Castile. Through her marriage to Raymond VII, Count of Toulouse in 1211, she acquired the titles Countess of Toulouse and Marquise of Provence from then until their divorce in 1241. Sancha's paternal grandparents were Ramon Berenguer IV, Count of Barcelona and Petronilla of Aragon; her maternal grandparents were Alfonso VII of León and Castile and Richeza of Poland, Queen of Castile. She ...
-- Same entity as: 
+- Same entity as: none
 
 ## 37. Ornäs (PERSON)
 
@@ -531,7 +531,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Philip of Montfort, Lord of Tyre] Philip Ι of Montfort,( d. 17 March 1270, Tyre) was Lord of La Ferté- Alais and Castres- en- Albigeois 1228 – 1270, Lord of Tyre 1246 – 1270, and Lord of Toron aft. 1240 – 1270. He was the son of Guy of Montfort and Helvis of Ibelin( daughter of Balian of Ibelin).
 - Candidate 3: Moors (OTHER), the Moors called him El Cid
   - Paragraph: [El Cid] Rodrigo Díaz de Vivar (10 July 1099) was a Castilian knight and warlord in medieval Spain. The Moors called him El Cid , which meant "the Lord" (probably from the original Arabic al-sayyid, السَّيِّد), and the Christians, El Campeador, which stood for "The Battlefielder,Outstanding Warrior," or "The one who stands out in the battlefield". He was born in Vivar del Cid, a town near the city of Burgos. After his death, he became Spain's celebrated national hero and the protagonist ...
-- Same entity as: 
+- Same entity as: none
 
 ## 38. Arsuf (PLACE)
 
@@ -547,14 +547,14 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Charles I of Anjou] Charles I (early 1226/12277 January 1285), commonly called Charles of Anjou, was a member of the royal Capetian dynasty and the founder of the second House of Anjou. He was Count of Provence (1246–85) and Forcalquier (1246–48, 1256–85) in the Holy Roman Empire, Count of Anjou and Maine (1246–85) in France; he was also King of Sicily (1266–85) and Prince of Achaea (1278–85). In 1272, he was proclaimed King of Albania; and in 1277 he purchased a claim to the ...
 - Candidate 5: Paris (PLACE), city of birth
   - Paragraph: [Claude Weisz] Claude Weisz is a French film director born in Paris.
-- Same entity as: 
+- Same entity as: none
 
 ## 39. Raphaël Lenglet (PERSON)
 
 - Mention: Raphaël Lenglet, born 21 October 1976, French actor
   - Paragraph: [Raphaël Lenglet] Raphaël Lenglet( born 21 October 1976) is a French actor. He is best known for his starring roles in French police television series. On" Les Bleus" he plays small- time hood turned rookie policeman, Alex Moreno and on" Candice Renoir" he portrays Capitaine Antoine Dumas. He is also known for his starring role as Guillaume in the 2009 French horror film," High Lane".
 - Candidates: none found
-- Same entity as: 
+- Same entity as: none
 
 ## 40. Eustace II, Count of Boulogne (PERSON)
 
@@ -570,7 +570,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Henry III, Count of Bar] Henry III of Bar (1259 – Naples, September 1302) was Count of Bar from 1291 to 1302. He was the son of Theobald II, Count of Bar and Jeanne de Toucy. Henry's introduction to military life came as he was made a knight in a conflict between his father and the Bishop of Metz. He then served Frederick III, Duke of Lorraine. He was preparing to go on crusade when his father died. In 1284 Joan I of Navarre, Countess ...
 - Candidate 5: Theobald II, Count of Champagne (PERSON), father‑in‑law
   - Paragraph: [Rotrou IV, Count of Perche] Rotrou IV (1135-1191), Count of Perche, son of Rotrou III, Count of Perche, and Hawise, daughter of Walter of Salisbury, and Sibilla de Chaworth. Rotrou was from the House of Châteaudun and descended from the Viscounts of Châteaudun. His mother was Hawise of Salisbury, a sister of Patrick of Salisbury, 1st Earl of Salisbury. Patrick’s sister Sibyll married John FitzGilbert, the Marshal of the Horses, whose son Henry was Bishop of Exeter and a knight in the service of Rotrou. ...
-- Same entity as: 
+- Same entity as: none
 
 ## 41. 2019 World Championships in Athletics (WORK)
 
@@ -586,7 +586,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Nayelly Hernández] Nayelly Hernández( born 23 February 1986) is a former Mexican female professional squash player. She has represented Mexico internationally in several international competitions including the Central American and Caribbean Games, Pan American Games, Women's World Team Squash Championships. Nayelly achieved her highest career ranking of 57 in October 2011 during the 2011 PSA World Tour. Her husband Chris Walker whose nationality is English is also a professional squash player. She joined the Trinity College in 2008 as the first Mexican ...
 - Candidate 5: May, 2019 (OTHER), date of honorary doctorate
   - Paragraph: [Jon Bokenkamp] Jon Bokenkamp is an American writer and producer best known for his role in writing the screenplay for "Taking LivesThe Call", and creating the NBC series "The Blacklist" along with . Bokenkamp was encouraged to enter a script writing competition by friend and fellow Nebraskan, Todd Nelson, creator of the Nebraska Coast Connection. After winning the competition, Jon landed an agent and his first paid assignment, rewriting a horror film for "Exorcist" director William Friedkin. Success allowed Bokenkamp to return ...
-- Same entity as: 
+- Same entity as: none
 
 ## 42. Portugal (PLACE)
 
@@ -602,7 +602,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Maria Isabel of Braganza] Maria Isabel of Braganza (Maria Isabel Francisca de Assis Antónia Carlota Joana Josefa Xavier de Paula Micaela Rafaela Isabel Gonzaga; 19 May 1797 – 26 December 1818) was an Infanta of Portugal who became the Queen of Spain as the second wife of Ferdinand VII of Spain.
 - Candidate 5: Portugal (PLACE), country
   - Paragraph: [Maria Sophia of Neuburg] Maria Sophia Elisabeth of Neuburg (6 August 1666 – 4 August 1699) was queen of Portugal as the wife of King Peter II from 1687 until her death in 1699. A popular queen, she was noted for her extraordinary generosity and for being the mother of the famously extravagant John V of Portugal.
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5 (FLAG: Portugal across eras, counted as one country)
 
 ## 43. Raymond L. Schrock (PERSON)
 
@@ -618,7 +618,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Carson City (film)] Carson City is a 1952 American Western film directed by Andre DeToth and starring Randolph Scott, Lucille Norman, and Raymond Massey. Based on a story by Sloan Nibley, the film is about a railroad construction engineer whose plans to build a railroad line between Nevada's Carson City and Virginia City are met with hostility by the locals, who feel the trains will attract outlaws. Filmed on location at Iverson Ranch, Bell Ranch, and Bronson Canyon in Griffith Park," Carson City" ...
 - Candidate 5: Raymond Griffith (PERSON), star of Badger’s features
   - Paragraph: [Clarence G. Badger] Clarence G. Badger( June 9, 1880 – June 17, 1964) was an American film director of feature films in the 1910s, 1920s and 1930s. His films include" It" and" Red Hair", more than a dozen features and shorts starring Will Rogers, and two features starring Raymond Griffith," Paths to Paradise" and" Hands Up!" He moved to Australia to direct" Rangle River"( 1936) and decided to retire there, only making one more feature," That Certain Something"( 1941).
-- Same entity as: 
+- Same entity as: 1
 
 ## 44. Cannes Film Festival (ORG)
 
@@ -634,7 +634,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [A Nice Neighbor] A Nice Neighbor is a 1979 Hungarian drama film directed by Zsolt Kézdi-Kovács. It competed in the Un Certain Regard section of the 1979 Cannes Film Festival.
 - Candidate 5: Cannes Film Festival (OTHER), festival where the film won the Jury Prize
   - Paragraph: [Goodbye to Language] Goodbye to Language is a 2014 French- Swiss 3D experimental narrative essay film written and directed by Jean- Luc Godard. It stars Héloïse Godet, Kamel Abdeli, Richard Chevallier, Zoé Bruneau, Jessica Erickson and Christian Grégori and was shot by cinematographer Fabrice Aragno. It is Godard's 42nd feature film and 121st film or video project. In the French- speaking parts of Switzerland where it was shot, the word" adieu" can mean both goodbye and hello. The film depicts a couple having ...
-- Same entity as: 
+- Same entity as: 2, 3, 4, 5
 
 ## 45. Gabriel Axel (PERSON)
 
@@ -650,7 +650,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Great Dome Robbery] The Great Dome Robbery is a 2002 crime drama film directed by Gabriel Range, based on the actual Millennium Dome raid of 2000.
 - Candidate 5: Gabriel Byrne (PERSON), actor
   - Paragraph: [Dead Man] Dead Man is a 1995 American Western film written and directed by Jim Jarmusch. It stars Johnny Depp, Gary Farmer, Billy Bob Thornton, Iggy Pop, Crispin Glover, John Hurt, Michael Wincott, Lance Henriksen, Gabriel Byrne, Mili Avital and Robert Mitchum( in his final film role). The film, dubbed a" Psychedelic Western" by its director, includes twisted and surreal elements of the Western genre. The film is shot entirely in monochrome. Neil Young composed the guitar- dominated soundtrack with portions he ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 46. Ilavarasi (PERSON)
 
@@ -666,7 +666,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Taxi to the Dark Side] Taxi to the Dark Side is a 2007 American documentary film directed by Alex Gibney, and produced by him, Eva Orner, and Susannah Shipman. It won the 2007 Academy Award for Best Documentary Feature. It focuses on the December 2002 killing of an Afghan taxi driver named Dilawar, who was beaten to death by American soldiers while being held in extrajudicial detention and interrogated at a black site at Bagram air base. It was part of the" Why Democracy?" series, ...
 - Candidate 5: Bavaria (PLACE), region of her birth
   - Paragraph: [Sophia of Bavaria] Sophia of Bavaria (1376 – 4 November 1428) was a Queen of Bohemia and the spouse of Wenceslaus, King of Bohemia and King of the Romans. She was briefly interim regent of Bohemia after the death of Wenceslaus in 1419.
-- Same entity as: 
+- Same entity as: none
 
 ## 47. Nadiadwala Grandson Entertainment (ORG)
 
@@ -682,7 +682,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Sajid Nadiadwala] Sajid Nadiadwala( born 18 February 1966) is an Indian film producer, director, and owner of Nadiadwala Grandson Entertainment. He is the grandson of filmmaker A K Nadiadwala, and has written and produced films including" Housefull"( 2010)," Baaghi"( 2016) to directing" Kick"( 2014) that brought him various debutant director awards. Sajid Nadiadwala always prefers working with the Khans and most of his closest collaborators are friends are Khans such as Salman Khan, Kabir Khan, Sajid Khan, Ahmed Khan etc.
 - Candidate 5: Red Chillies Entertainment (ORG), production company
   - Paragraph: [My Name Is Khan] My Name Is Khan is a 2010 Indian Hindi- language drama film directed by Karan Johar, produced by Hiroo Johar and Gauri Khan, and starring Shah Rukh Khan and Kajol in lead roles. The film was jointly produced by Dharma Productions and Red Chillies Entertainment and was distributed by FOX Star Entertainment, which had bought the rights for the film for a sum of, making it the most expensive Bollywood film of 2010. It is also the highest buy over ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 48. Arda (PERSON)
 
@@ -698,7 +698,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Martha of Armagnac] Martha of Armagnac( after 18 February 1347 – 23 October 1378) was the youngest child of John I of Armagnac and his second wife Beatrice of Clermont. She was the first wife of John I of Aragon but never became Queen consort of Aragon because she was outlived by her father- in- law Peter IV of Aragon.
 - Candidate 5: Nanda (PERSON), Toungoo king, descendant via Uzana
   - Paragraph: [Shin Hpa of Pagan] Shin Hpa was a queen consort of King Narathihapate of the Pagan Dynasty of Burma( Myanmar). She was the mother of King Kyawswa of Pagan; the paternal grandmother of King Uzana I of Pinya and Queen Saw Hnaung of Sagaing; and a great grandmother of King Swa Saw Ke of Ava. Through Uzana, she was an ancestor of Toungoo kings Mingyi Nyo, Tabinshwehti and Nanda. Through Saw Hnaung, she was an ancestor of Sagaing kings from Kyaswa to Tarabya II ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 49. Fly (WORK)
 
@@ -710,7 +710,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Fly Away, Young Man!] Fly Away, Young Man! ( Spanish: ¡ A volar joven!) is a 1947 Mexican comedy film directed by Miguel M. Delgado and starring Cantinflas, Julio Villarreal, Miroslava and Ángel Garasa. It was produced by Posa Films and distributed internationally by Columbia Pictures.
 - Candidate 3: Finlay (PERSON), father of Roger
   - Paragraph: [John de Seton] Sir John de Seton was a knight who took part in the War of Scottish Independence, as a supporter of Robert de Brus. He held lands in England and Scotland. Seton was a son of Sir John de Seton of Skelton, Cumberland and Erminia Lascelles. His brothers were Christopher and Humphrey de Seton. This branch of the Seton family had long served the Bruces in Yorkshire, Cumberland and Scotland. John performed fealty to King Edward I of England at Berwick ...
-- Same entity as: 
+- Same entity as: none
 
 ## 50. Lancashire League (ORG)
 
@@ -726,7 +726,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The Moths!] The Moths! were an English indie rock band from London. They made new wave and post-punk pop and had drawn comparisons with the Human League, Wire, the Buzzcocks and early Adam and the Ants.
 - Candidate 5: The Human League (ORG), English electropop/synth‑pop band formed in Sheffield in 1977
   - Paragraph: [The Human League] The Human League are an English electropop/ synth- pop band formed in Sheffield in 1977. Initially an experimental electronic outfit, the group signed to Virgin Records in 1979 and later attained widespread commercial success with their third album" Dare" in 1981. The album contained four hit singles, including the UK/ US number one hit" Do n't You Want Me." The band received the Brit Award for Best British Breakthrough Act in 1982. Further hits followed throughout the 1980s and into ...
-- Same entity as: 
+- Same entity as: none
 
 ## 51. California (PLACE)
 
@@ -742,7 +742,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [The G Filez] The G Filez is the third album by Vallejo, California rapper, Celly Cel. The album was released in 1998 and was Celly Cel's last studio album for Jive Records. This album was his first since Killa Kali. However, he appeared on multiple artist records such as Young Dre, D- Shot, B- Legit, Latino Velvet, and Messy Marv. Although not as successful as his previous album," Killa Kali", the album peaked at# 53 on the" Billboard" 200 and# 17 on the ...
 - Candidate 5: California (PLACE), state
   - Paragraph: [The Best of Celly Cel] The Best of Celly Cel is the first greatest hits album by Vallejo, California rapper, Celly Cel. The album was released in 1999 and was Celly Cel's last project for Jive Records.
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5
 
 ## 52. Anne Yelverton (PERSON)
 
@@ -758,7 +758,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [James Tuchet, 5th Earl of Castlehaven] James Tuchet, 5th Earl of Castlehaven( died 12 August 1700) was the son of Mervyn Tuchet, 4th Earl of Castlehaven and Mary Talbot. He succeeded his father as Earl of Castlehaven on 2 November 1686. He married Anne Pelson, daughter of Richard Pelson and his wife, née Anne Villiers, daughter of Christopher Villiers, 1st Earl of Anglesey. They had one son, James, who succeeded him as Earl of Castlehaven. He died of apoplexy. His gravestone is in the floor of ...
 - Candidate 5: Anne Pelson (PERSON), mother
   - Paragraph: [James Tuchet, 6th Earl of Castlehaven] James Tuchet, 6th Earl of Castlehaven (died 12 October 1740) was the son of James Tuchet, 5th Earl of Castlehaven and his wife Anne Pelson. He succeeded his father as Earl of Castlehaven and Baron Audley on 9 August 1700. He married, on 14 May 1722, Elizabeth Arundell (1693–1743), daughter of Henry Arundell, 5th Baron Arundell of Wardour and his wife, née Elizabeth Panton. They had two sons, and at least one daughter: He is buried at the church of ...
-- Same entity as: 
+- Same entity as: none
 
 ## 53. United States (PLACE)
 
@@ -774,7 +774,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Ben-Hur (1959 film)] Ben-Hur is a 1959 American epic historical drama film directed by William Wyler, produced by Sam Zimbalist, and starring Charlton Heston as the title character. A remake of , it was adapted from Lew Wallace's 1880 novel . The screenplay is credited to Karl Tunberg, but includes contributions from Maxwell Anderson, S. N. Behrman, Gore Vidal, and Christopher Fry. "Ben-Hur" had the largest budget ($15.175 million), as well as the largest sets built of any film produced at the time. ...
 - Candidate 5: United States (PLACE), country of origin
   - Paragraph: [Boston Blackie's Little Pal] Boston Blackie's Little Pal is a 1918 American silent drama film, directed by E. Mason Hopper. It stars Bert Lytell, Rhea Mitchell, and Rosemary Theby, and was released on August 26, 1918.
-- Same entity as: 
+- Same entity as: 1, 2, 3, 4, 5
 
 ## 54. William S. Burroughs (PERSON)
 
@@ -790,7 +790,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Ben-Hur (1959 film)] Ben-Hur is a 1959 American epic historical drama film directed by William Wyler, produced by Sam Zimbalist, and starring Charlton Heston as the title character. A remake of , it was adapted from Lew Wallace's 1880 novel . The screenplay is credited to Karl Tunberg, but includes contributions from Maxwell Anderson, S. N. Behrman, Gore Vidal, and Christopher Fry. "Ben-Hur" had the largest budget ($15.175 million), as well as the largest sets built of any film produced at the time. ...
 - Candidate 5: William Talbot (PERSON), adulterous lover of Frances
   - Paragraph: [Henry Scudamore, 3rd Duke of Beaufort] Henry Somerset-Scudamore, 3rd Duke of Beaufort (23 March 1707 – 26 February 1745) born Henry Somerset, was an English nobleman and peer. He was the elder son of Henry Somerset, 2nd Duke of Beaufort and his second wife, Rachel Noel. As his father's eldest son and heir to his father's title he was known as (styled) Marquess of Worcester, a courtesy title. On his father's death on 24 April 1714 he succeeded him and became 3rd Duke of Beaufort. At ...
-- Same entity as: 
+- Same entity as: none
 
 ## 55. Karl Gutzlaff (PERSON)
 
@@ -800,7 +800,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Coney Island Baby (film)] Coney Island Baby is a 2003 comedy- drama in which film producer Amy Hobby made her directorial debut. Karl Geary wrote the film and Tanya Ryno was the film's producer. The music was composed by Ryan Shore. The film was shot in Sligo, Ireland, which is known locally as" Coney Island". The film was screened at the Newport International Film Festival. Hobby won the Jury Award for" Best First Time Director". The film made its premiere television broadcast on the ...
 - Candidate 2: Karl Marx (PERSON), son‑in‑law of Ludwig von Westphalen
   - Paragraph: [Ludwig von Westphalen] Johann Ludwig von Westphalen( 11 July 1770 – 3 March 1842) was a liberal Prussian civil servant and the father- in- law of Karl Marx.
-- Same entity as: 
+- Same entity as: none
 
 ## 56. Shahab-ud-din Muhammad Khurram (PERSON)
 
@@ -812,7 +812,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Abd al-Muttalib] Abd al- Muttalib Shaybah ibn Hashim( c. 497 – 578) was the grandfather of Islamic prophet Muhammad.
 - Candidate 3: Muhammad (OTHER), spiritual figure claimed to be contacted
   - Paragraph: [Gerald Polley] Gerald A. Polley (January 29, 1947 – July 4, 2012) was a political campaigner, singer, animator and alleged psychic who resided in Bismarck, North Dakota. He was married to Linda Polley, who shares his political and religious views. Polley grew up in Maine before moving to North Dakota in 1999. He founded the religion of Spiritism, which according to him and his wife is based on a faith that originated 500,000 years ago on a planet named Hades and was ...
-- Same entity as: 
+- Same entity as: none
 
 ## 57. Octavius Vernon Harcourt (PERSON)
 
@@ -828,7 +828,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Robert Harcourt (Liberal politician)] Robert Venables Vernon Harcourt( 7 May 1878 – 8 September 1962) was a British diplomat, playwright, farmer and Liberal Party politician.
 - Candidate 5: Edward Harcourt (PERSON), father‑in‑law, Archbishop of York
   - Paragraph: [John Vanden-Bempde-Johnstone] Sir John Vanden-Bempde-Johnstone, 2nd Baronet (28 August 1799 – 24 February 1869) was a British Member of Parliament. Vanden-Bempde-Johnstone was the son of Sir Richard Vanden-Bempde-Johnstone, 1st Baronet. He succeeded as second Baronet in 1807, at the age of seven, on the death of his father. In 1830 he was elected to the House of Commons for Yorkshire as a Whig, a seat he held until the constituency was abolished in 1832. The latter year he was returned for Scarborough. ...
-- Same entity as: 
+- Same entity as: none
 
 ## 58. Alain Fournier (PERSON)
 
@@ -844,7 +844,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Alain Robbe-Grillet] Alain Robbe-Grillet (18 August 1922 – 18 February 2008) was a French writer and filmmaker. He was one of the figures most associated with the "Nouveau Roman" (new novel) trend of the 1960s, along with Nathalie Sarraute, Michel Butor and Claude Simon. Alain Robbe-Grillet was elected a member of the Académie française on 25 March 2004, succeeding Maurice Rheims at seat No. 32. He was married to Catherine Robbe-Grillet (née Rstakian).
 - Candidate 5: Alain Delon (PERSON), star
   - Paragraph: [The Assassination of Trotsky] The Assassination of Trotsky is a 1972 British historical drama film, directed by Joseph Losey with a screenplay by Nicholas Mosley. It stars Richard Burton as Leon Trotsky, as well as Romy Schneider and Alain Delon.
-- Same entity as: 
+- Same entity as: none
 
 ## 59. Mario Camus (PERSON)
 
@@ -860,7 +860,7 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [I, His Father] I, His Father( Italian: Io, suo padre) is a 1939 Italian sports comedy film directed by Mario Bonnard and starring Erminio Spalla, Mariella Lotti and Clara Calamai. It was shot at the Scalera Studios in Rome. The film's sets were designed by the art director Ottavio Scotti.
 - Candidate 5: Mario Bonnard (PERSON), Italian actor and film director
   - Paragraph: [Mario Bonnard] Mario Bonnard( 24 December 1889 – 22 March 1965) was an Italian actor and film director. Bonnard was born and died in Rome. He began his cinematic career as an actor becoming a popular romantic lead in numerous silent films made before World War I. In 1917 he ventured into film directing for the first time. Before the arrival of sound films he worked for a period in Germany in films directed by Luis Trenker. Back in Italy in 1932, ...
-- Same entity as: 
+- Same entity as: 1
 
 ## 60. Khiladi 420 (FILM)
 
@@ -870,4 +870,4 @@ for example "Same entity as: 1, 3", or "Same entity as: none".
   - Paragraph: [Uttam Gada] Uttam Ravji Gada( born 1948) is an Indian Gujarati and Hindi play and movie story, screenplay and dialogue writer. Uttam Gada found fame with his very long running play directed and enacted by Paresh Rawal called" Maharathi" which played in multiple languages and countries. He also wrote mainstream Bollywood movies such as" Khiladi 420" and" Yun Hota Toh Kya Hota". He was nominated for Best Screenplay for the film" Khiladi 420" in 2001 for the Screen Awards in India.
 - Candidate 2: Khiladi 420 (FILM), Vora’s directorial debut (2000)
   - Paragraph: [Neeraj Vora] Neeraj Vora (22 January 1963 – 14 December 2017) was an Indian film director, writer, actor and composer from Gujarat. He made a mark in Bollywood with his work as a writer for Aamir Khan's film "Rangeela". His directorial debut was "Khiladi 420" in 2000. Later in 2006, he wrote and directed "Phir Hera Pheri". He suffered a stroke in October 2016, putting him in coma. He was working on "Hera Pheri 3" before he went into coma and died ...
-- Same entity as: 
+- Same entity as: 1, 2

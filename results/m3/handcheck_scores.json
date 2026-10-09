@@ -1,0 +1,49 @@
+{
+ "labelling": "First pass drafted by Claude (a different model from the gpt-oss-120b judge); reviewed and corrected by Rohith Kumar Reddipogula. Rule used: the same country across historical eras counts as one entity.",
+ "merge_precision": {
+  "checked": 50,
+  "correct": 49,
+  "bar": 48,
+  "pass": true,
+  "by_stratum": {
+   "mention linked to page": {
+    "checked": 12,
+    "correct": 12
+   },
+   "direct, same name": {
+    "checked": 13,
+    "correct": 13
+   },
+   "direct, different name": {
+    "checked": 12,
+    "correct": 12
+   },
+   "indirect (through a chain)": {
+    "checked": 13,
+    "correct": 12
+   }
+  },
+  "wrong": [
+   {
+    "item": 13,
+    "stratum": "indirect (through a chain)",
+    "a": "Sancha of Aragon, Countess of Toulouse::1",
+    "b": "Sancha of Aragon, Countess of Toulouse::11",
+    "verdict": "WRONG: different people. A is King Alfonso II of Aragon (Sancha's father), B is Alfonso II, Count of Provence (her brother)."
+   }
+  ]
+ },
+ "duplicate_rate": {
+  "mentions": 60,
+  "before": 24,
+  "after": 6,
+  "rate_before": 0.4,
+  "rate_after": 0.1,
+  "bar": "after at most half of before",
+  "pass": true,
+  "same_entity_pairs": 58,
+  "same_entity_pairs_still_separate": 10,
+  "flagged_era_items": 2
+ },
+ "m3_passed": true
+}

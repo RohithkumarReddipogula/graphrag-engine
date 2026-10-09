@@ -238,9 +238,18 @@ Reported, not part of the bar:
   has a paragraph) whose mention is linked to the right page entity.
 
 **Done when:** `results/m3/resolution_report.md` shows the merge precision, both duplicate rates, the
-bridge link recall before and after, and the thresholds used.
+bridge link recall before and after, and the thresholds used. Done on 2026-10-09: M3 passed (report in
+`results/m3/resolution_report.md`). The hand checks were first drafted by Claude (a different model from
+the gpt-oss-120b judge) and reviewed and corrected by Rohith Kumar Reddipogula; the same country across
+historical eras counts as one entity.
 
 ### M4: Graph build + graph retrieval
+- Exact-title links (decided on 2026-10-09, after seeing the report-split bridge link numbers in
+  `results/m3/resolution_report.md`: 0.83 with exact name matching, 0.80 after M3, 5 links lost and 3
+  gained): the M3 clusters are kept as they are, and the graph also gets exact-title links (a mention
+  whose normalised name equals exactly one page title) as a separate, labelled edge type, so either
+  source of a link can be told apart and evaluated on its own. No M3 threshold, prompt or merge rule is
+  changed.
 - Hub nodes: resolved entities that are mentioned very often (countries such as France, Italy, United
   States) become hubs. Graph retrieval must cap or down-rank hubs (for example by degree), so that paths
   through them do not flood the context.

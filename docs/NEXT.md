@@ -1,6 +1,6 @@
 # Next steps
 
-Last updated: 2026-10-08. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
+Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CLAUDE.md`.
 
 ## 1. Where we are
 
@@ -8,12 +8,12 @@ Last updated: 2026-10-08. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 - M2: the whole corpus is extracted with prompt v3 and post-processed (`results/m2/extractions.jsonl`,
   run summary in `results/m2/extraction_run.json`, strict dev scores in
   `results/m2/extraction_scores.json`). Hand check 28 of 30 correct.
-- M3: plan and quality bar approved (`docs/PLAN.md`, M3); auto-merge is off (every candidate pair is
-  judged by the LLM). M3 run 1 failed (section 2). Steps 1 to 5 of section 3 are done: judge prompt v2,
-  cannot-link, fixed merge order, two-direction pilot (passed, `results/m3/pilot_v2.json`) and the full
-  re-run (`results/m3/resolution_run.json`). **Waiting for the two hand checks**
-  (`results/m3/merge_handcheck.md`, `results/m3/duplicate_handcheck.md`) and for the decision on
-  bridge links in section 3a. Nothing is running now.
+- M3 is done and passed its quality bar (`results/m3/resolution_report.md`, scores in
+  `results/m3/handcheck_scores.json`): 49 of 50 hand-checked merges correct (bar 48); duplicate rate on
+  60 hand-labelled mentions 0.40 before, 0.10 after (bar: at most half). Bridge link recall on the report
+  split: 0.83 before (exact names), 0.80 after M3. Hand checks first drafted by Claude (a different model
+  from the gpt-oss-120b judge), reviewed and corrected by Rohith Kumar Reddipogula.
+- Next: M4 (section 3b). Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 
@@ -89,12 +89,21 @@ Numbers from `results/m3/resolution_run.json` and `results/m3/bridge_link_change
   408 and 429 are retried; a batch error marks only that batch unsure and is logged in
   `results/m3/judge_errors.jsonl`) and restarted from the cache.
 
-Open:
-1. Hand checks: merge precision (bar: at least 48 of 50) and duplicate rate (bar: after at most half of
-   before), in the two sheets above.
-2. Decision on bridge links for M4: keep the M3 clusters as they are and, in M4, also add exact-title
-   links (mention name equals exactly one page title) as a separate, labelled edge type, or accept the
-   M3 clusters alone.
+Closed on 2026-10-09:
+1. Hand checks done; M3 passed (see section 1 and `results/m3/resolution_report.md`).
+2. Bridge links for M4, decided after seeing the report-split numbers: keep the M3 clusters as they are
+   and, in M4, add exact-title links (mention name equals exactly one page title) as a separate,
+   labelled edge type. No M3 threshold, prompt or merge rule changes.
+
+## 3b. Next step: M4 graph build and graph retrieval
+
+See `docs/PLAN.md`, M4. Notes already recorded there:
+- exact-title links as a separate, labelled edge type next to the M3 clusters;
+- hub nodes (United States, France, Italy, frequent concepts such as "suicide") must be capped or
+  down-ranked in graph retrieval so they do not flood the context;
+- the deterministic post-processing of M2 relations is already applied in `results/m2/extractions.jsonl`.
+Before writing M4 code: propose the graph schema, the retrieval method and the M4 dev evaluation, and get
+them approved, as for M2 and M3.
 
 ## 4. History of the M2 pilots
 
