@@ -127,6 +127,25 @@ docker compose up -d                              # Neo4j
 .venv/bin/pytest
 ```
 
+Read-only API (runs from the venv, localhost only; Neo4j must be running):
+
+```
+.venv/bin/uvicorn graphrag.api:app --host 127.0.0.1 --port 8000
+curl -s 127.0.0.1:8000/health
+curl -s -X POST 127.0.0.1:8000/ask -H 'content-type: application/json' \
+     -d '{"question": "Which film has the director born later, Freakin'"'"' Beautiful World or Billy Two Hats?"}'
+curl -s "127.0.0.1:8000/entity/Ted%20Kotcheff"
+```
+
+- `GET /health`: Neo4j reachable and the graph equal to the one the results were produced with.
+- `POST /ask`: the pre-registered GraphRAG system with its frozen settings; returns the answer (or
+  "unknown"), the graph facts it used with their source paragraphs, and the paragraphs in its context.
+  Each new question makes one call to the pinned generator on OpenRouter; repeated questions come from
+  the cache.
+- `GET /entity/{id}`: an entity's names, type, dated facts with sources, relations and page paragraph.
+- No ingestion and no writes. `tests/test_pipeline_parity.py` checks that the API builds exactly the
+  contexts of the committed dev run.
+
 `scripts/run_m5_test.py` refuses to run again by design (run-once lock); the committed files in
 `results/m5/` are the test run. Every LLM call is cached on disk, so re-running a step costs nothing for
 calls that were already made.
