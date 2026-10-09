@@ -1,0 +1,130 @@
+{
+ "entities": 10830,
+ "page_entities": 2048,
+ "rel_edges": 8076,
+ "rel_edges_by_type": {
+  "OTHER": 3064,
+  "director": 852,
+  "country of citizenship": 523,
+  "father": 445,
+  "creator": 337,
+  "mother": 334,
+  "spouse": 308,
+  "country of origin": 298,
+  "child": 222,
+  "place of birth": 219,
+  "sibling": 198,
+  "employer": 191,
+  "award received": 164,
+  "producer": 137,
+  "has part": 131,
+  "performer": 126,
+  "place of death": 106,
+  "publisher": 74,
+  "educated at": 73,
+  "composer": 68,
+  "founded by": 53,
+  "occupation": 39,
+  "country": 36,
+  "place of burial": 33,
+  "editor": 16,
+  "cause of death": 12,
+  "student of": 7,
+  "presenter": 6,
+  "place of detention": 2,
+  "doctoral advisor": 1,
+  "manufacturer": 1
+ },
+ "exact_title_edges": 97,
+ "date_values": 2392,
+ "dropped_relations": {
+  "self loop after resolution": 83,
+  "object is not an extracted entity": 1961,
+  "subject is not an extracted entity": 4
+ },
+ "max_degree": 111,
+ "neo4j_counts": {
+  "entities": 10830,
+  "rels": 8076,
+  "exact": 97,
+  "mentioned_in": 13950
+ },
+ "degree_above_25": 8,
+ "top_degree": [
+  {
+   "entity": "m:A Girl from Hunan::4",
+   "name": "United States",
+   "degree": 111
+  },
+  {
+   "entity": "Beverley Knight",
+   "name": "Beverley Knight",
+   "degree": 40
+  },
+  {
+   "entity": "m:Alix, Countess of Eu::10",
+   "name": "France",
+   "degree": 36
+  },
+  {
+   "entity": "m:205 – Room of Fear::4",
+   "name": "Germany",
+   "degree": 34
+  },
+  {
+   "entity": "m:Adam Richman::2",
+   "name": "United States",
+   "degree": 34
+  },
+  {
+   "entity": "m:Addio, figlio mio!::2",
+   "name": "Italy",
+   "degree": 34
+  },
+  {
+   "entity": "Kodi Ramakrishna",
+   "name": "Kodi Ramakrishna",
+   "degree": 28
+  },
+  {
+   "entity": "New Jersey Drive, Vol. 1",
+   "name": "New Jersey Drive, Vol. 1",
+   "degree": 28
+  },
+  {
+   "entity": "Henry III of England",
+   "name": "Henry III of England",
+   "degree": 25
+  },
+  {
+   "entity": "Housefull 2",
+   "name": "Housefull 2",
+   "degree": 25
+  },
+  {
+   "entity": "John Huston",
+   "name": "John Huston",
+   "degree": 25
+  },
+  {
+   "entity": "Golmaal Again",
+   "name": "Golmaal Again",
+   "degree": 23
+  },
+  {
+   "entity": "m:24 Hours to Kill::7",
+   "name": "United Kingdom",
+   "degree": 22
+  },
+  {
+   "entity": "m:Adela of Champagne::5",
+   "name": "France",
+   "degree": 22
+  },
+  {
+   "entity": "Buddy Holly",
+   "name": "Buddy Holly",
+   "degree": 21
+  }
+ ]
+}
