@@ -245,7 +245,7 @@ historical eras counts as one entity.
 
 ### M4: Graph build + graph retrieval
 
-**DRAFT (2026-10-09), awaiting approval. No M4 code is written before it is approved.**
+**Approved as written on 2026-10-09.** Everything below was fixed before any M4 code or result existed.
 
 Already decided:
 - Exact-title links (decided on 2026-10-09, after seeing the report-split bridge link numbers in
