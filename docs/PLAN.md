@@ -467,7 +467,10 @@ Generated from the M5 results files (no number typed by hand), plain ASCII, numb
 - Hand checks: about 30 minutes of labelling.
 
 **Done when:** `results/m5/` holds the test results, the judge results and the hand-check agreement,
-`results/m5/TEST_RUN.lock` is "finished", and `BENCHMARK.md` is generated.
+`results/m5/TEST_RUN.lock` is "finished", and `BENCHMARK.md` is generated. Done on 2026-10-09: test run
+once at `m5-frozen`; primary result and the pre-registered expectation in `BENCHMARK.md` (section 2);
+judge hand check 29 of 30 (`results/m5/judge_handcheck_scores.json`, first pass drafted by Claude, a
+different model from the judge and the generator, reviewed by Rohith Kumar Reddipogula).
 
 ### M6: Packaging
 - README: problem, design decisions, how to reproduce, results, limitations (aggregation not handled,
