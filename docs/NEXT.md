@@ -16,7 +16,14 @@ Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 - M4 is done (`results/m4/graph_report.md`, numbers from `results/m4/generation_dev.json`): graph built
   and loaded into Neo4j (`results/m4/graph_stats.json`); `graph_plus_chunks` at g = 0.5 passed all three
   criteria of the M4 quality bar on dev and goes to M5 as the GraphRAG system.
-- Next: M5, the single test run (section 3c). Nothing is running now.
+- M5 (single test run, generation) is done at the `m5-frozen` tag (`results/m5/TEST_RUN.lock`:
+  finished). Primary result (`results/m5/test_summary.json`): graph_plus_chunks_g0.5 vs hybrid, paired
+  EM difference +0.221 [+0.173, +0.269] over 375 test questions; the pre-registered expectation (CI
+  above 0) is met. The judge (llama-3.3-70b on parasail/fp8) has judged the 525 unique test answers
+  (`results/m5/judge_summary.json`).
+- **Waiting for the judge hand check**: `results/m5/judge_handcheck.md` (30 items, blind; key in
+  `results/m5/judge_handcheck_key.json`). `BENCHMARK.md` is written only after the hand check is scored.
+  Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 

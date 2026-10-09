@@ -1,0 +1,212 @@
+[
+ {
+  "n": 1,
+  "item_id": "j0d49f89c80",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different place"
+ },
+ {
+  "n": 2,
+  "item_id": "j5180b7e434",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Exact match"
+ },
+ {
+  "n": 3,
+  "item_id": "j423ebee45f",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ },
+ {
+  "n": 4,
+  "item_id": "jbe4270cc53",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias matches"
+ },
+ {
+  "n": 5,
+  "item_id": "jc9b5a69aee",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "matches gold"
+ },
+ {
+  "n": 6,
+  "item_id": "j0f11c3cda0",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Exact match"
+ },
+ {
+  "n": 7,
+  "item_id": "jcdd0423f64",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different institution"
+ },
+ {
+  "n": 8,
+  "item_id": "j6c43de5706",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 9,
+  "item_id": "j25918e09aa",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 10,
+  "item_id": "j82b9b623b7",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "different city"
+ },
+ {
+  "n": 11,
+  "item_id": "j23d3862255",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 12,
+  "item_id": "jf846082479",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 13,
+  "item_id": "j2367d237d9",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Exact match"
+ },
+ {
+  "n": 14,
+  "item_id": "jdc111ce847",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different person"
+ },
+ {
+  "n": 15,
+  "item_id": "j5af6bf21cf",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Less specific"
+ },
+ {
+  "n": 16,
+  "item_id": "j2e51d68ccf",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different state"
+ },
+ {
+  "n": 17,
+  "item_id": "j8b35408991",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ },
+ {
+  "n": 18,
+  "item_id": "j8f776740f4",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ },
+ {
+  "n": 19,
+  "item_id": "j7fdad58def",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "matches gold answer"
+ },
+ {
+  "n": 20,
+  "item_id": "jfb593cf7cd",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different title"
+ },
+ {
+  "n": 21,
+  "item_id": "j101444b869",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 22,
+  "item_id": "j6fac075bb7",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Wrong year"
+ },
+ {
+  "n": 23,
+  "item_id": "j558d400032",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Exact match"
+ },
+ {
+  "n": 24,
+  "item_id": "j98d6b2785f",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ },
+ {
+  "n": 25,
+  "item_id": "j55a8a0f39d",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "Alias match"
+ },
+ {
+  "n": 26,
+  "item_id": "jc19fceaa76",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "diff date"
+ },
+ {
+  "n": 27,
+  "item_id": "j1512150448",
+  "stratum": "judge correct, EM 1",
+  "judge_verdict": "correct",
+  "judge_reason": "matches gold"
+ },
+ {
+  "n": 28,
+  "item_id": "j3a6961950e",
+  "stratum": "judge incorrect",
+  "judge_verdict": "incorrect",
+  "judge_reason": "Different date"
+ },
+ {
+  "n": 29,
+  "item_id": "j9794152798",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ },
+ {
+  "n": 30,
+  "item_id": "j9aaee27afb",
+  "stratum": "judge correct, EM 0",
+  "judge_verdict": "correct",
+  "judge_reason": "Matches gold"
+ }
+]
