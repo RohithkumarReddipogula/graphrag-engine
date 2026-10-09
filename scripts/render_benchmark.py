@@ -1,8 +1,7 @@
 """Generate BENCHMARK.md from the committed results files (docs/PLAN.md, M5.7). Every number comes from:
 results/m5/test_summary.json, results/m5/judge_summary.json, results/m5/judge_handcheck_scores.json,
 results/m5/frozen_settings.json, results/m5/TEST_RUN.lock, results/m5/generation_test_*.jsonl,
-results/m1/generation_dev.json, results/m4/generation_dev.json, results/m4/graph_report.md inputs and
-results/spend/openrouter_calls.jsonl. Plain ASCII (accented names in examples are transliterated)."""
+results/m1/generation_dev.json, results/m4/generation_dev.json and results/m5/spend_snapshot.json. Plain ASCII (accented names in examples are transliterated)."""
 
 import json
 import random
@@ -63,7 +62,7 @@ def render() -> str:
     lock = load("results/m5/TEST_RUN.lock")
     dev1, dev4 = load("results/m1/generation_dev.json"), load("results/m4/generation_dev.json")
     rows = {n: read_jsonl(f"results/m5/generation_test_{n}.jsonl") for n in SYSTEMS}
-    ledger = read_jsonl("results/spend/openrouter_calls.jsonl")
+    spend = load("results/m5/spend_snapshot.json")      # frozen at the last M5 judge call, so it cannot drift
     p = t["primary_result"]
     sec = t["secondary_results"]
 
@@ -203,7 +202,6 @@ def render() -> str:
                          f"Answer: {ascii_text(r['prediction'])}.")
     lines.append("")
 
-    spent = sum(r["cost_usd"] for r in ledger)
     lines += ["## 9. Limitations and cost", "",
               "- Pooled corpus: questions are answered against one corpus of gold and distractor paragraphs, unlike the "
               "standard 2Wiki distractor setting, so absolute numbers are not comparable with published leaderboards; the "
@@ -226,7 +224,8 @@ def render() -> str:
               f"- Judge: agreement with the hand check {hc['agreement']} of {hc['items']}; the hand-check first pass was "
               "drafted by Claude, a different model from the judge and the generator, and reviewed by hand.",
               f"- Cost: the test run {t['spend']['this_run_usd']:.3f} USD, the judge {j['calls']['cost_usd']:.3f} USD; all OpenRouter "
-              f"calls of the project {spent:.2f} USD ({len(ledger):,} calls, `results/spend/openrouter_calls.jsonl`).",
+              f"calls of the project up to the end of M5 {spend['cost_usd']:.2f} USD ({spend['calls']:,} calls; "
+              "`results/m5/spend_snapshot.json`, taken from `results/spend/openrouter_calls.jsonl`).",
               "",
               "---",
               "",

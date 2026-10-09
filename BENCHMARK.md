@@ -176,7 +176,7 @@ Seeded examples (2 per class):
 - Per-type results rest on 75 test questions each; secondary comparisons are exploratory.
 - EM follows the official 2Wiki normaliser, which keeps Unicode dashes; a few correct answers written with a non-breaking hyphen score EM 0 (section 8). The judge counts them correct.
 - Judge: agreement with the hand check 29 of 30; the hand-check first pass was drafted by Claude, a different model from the judge and the generator, and reviewed by hand.
-- Cost: the test run 0.112 USD, the judge 0.017 USD; all OpenRouter calls of the project 1.82 USD (6,148 calls, `results/spend/openrouter_calls.jsonl`).
+- Cost: the test run 0.112 USD, the judge 0.017 USD; all OpenRouter calls of the project up to the end of M5 1.82 USD (6,148 calls; `results/m5/spend_snapshot.json`, taken from `results/spend/openrouter_calls.jsonl`).
 
 ---
 

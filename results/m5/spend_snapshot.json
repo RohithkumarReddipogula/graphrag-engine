@@ -1,0 +1,11 @@
+{
+ "cutoff": "2026-10-09T06:41:49+00:00",
+ "cutoff_rule": "timestamp of the last of the 22 live M5 judge calls (results/m5/judge_summary.json)",
+ "calls": 6148,
+ "cost_usd": 1.815178,
+ "by_provider": {
+  "DeepInfra": 6126,
+  "Parasail": 22
+ },
+ "source": "results/spend/openrouter_calls.jsonl"
+}
