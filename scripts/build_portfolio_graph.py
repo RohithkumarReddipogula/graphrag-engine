@@ -8,7 +8,8 @@
   different entities). Same-name pairs involving a mention cluster can be missed merges, so they are not
   presented as entity resolution working.
 - Layout precomputed (no physics in the browser): a seeded Fruchterman-Reingold layout per connected
-  component, components shelf-packed into one canvas.
+  component scaled to a fixed median link length, components shelf-packed into one canvas in question
+  order (so the components of one question sit side by side).
 - Opening question, by rule: a correctly answered bridge_comparison question whose two top-ranked facts are
   both film -director-> person chains with the director's life date and whose path has no two nodes with
   the same name; among those, the fewest OTHER facts (ties: question id).
@@ -31,6 +32,7 @@ SRC = ROOT / "docs" / "graph_view" / "subgraph.json"
 OUT = ROOT / "docs" / "graph_view" / "portfolio_graph.json"
 CANVAS_WIDTH = 1600
 PAD = 70
+EDGE_LEN = 70
 
 
 def norm(s: str) -> str:
@@ -60,7 +62,7 @@ def fruchterman_reingold(n: int, edges: list[tuple[int, int]], seed: int, iters:
     return pos - pos.mean(axis=0)
 
 
-def layout(nodes: list[dict], links: list[dict]) -> dict[str, tuple[int, int]]:
+def layout(nodes: list[dict], links: list[dict], questions: list[dict]) -> dict[str, tuple[int, int]]:
     ids = [n["id"] for n in nodes]
     adj = defaultdict(set)
     for l in links:
@@ -78,7 +80,12 @@ def layout(nodes: list[dict], links: list[dict]) -> dict[str, tuple[int, int]]:
                 stack += adj[x]
         seen |= comp
         comps.append(sorted(comp))
-    comps.sort(key=lambda c: (-len(c), c[0]))
+    # Components used by the same question are packed next to each other, so a question's zoom stays tight.
+    first_q = {}
+    for qi, q in enumerate(questions):
+        for n in q["path_node_ids"]:
+            first_q.setdefault(n, qi)
+    comps.sort(key=lambda c: (min(first_q.get(n, len(questions)) for n in c), -len(c), c[0]))
 
     placed, x, y, row_h = {}, PAD, PAD, 0
     for comp in comps:
@@ -87,9 +94,9 @@ def layout(nodes: list[dict], links: list[dict]) -> dict[str, tuple[int, int]]:
                         if l["source"] in idx and l["target"] in idx})
         seed = int(hashlib.sha1(comp[0].encode()).hexdigest()[:8], 16)
         pos = fruchterman_reingold(len(comp), edges, seed)
-        span = np.ptp(pos, axis=0) if len(comp) > 1 else np.array([0.0, 0.0])
-        target = 90 * math.sqrt(len(comp))                    # larger components get more room
-        scale = target / max(span.max(), 1e-9) if len(comp) > 1 else 0
+        # Uniform spacing: the median link is EDGE_LEN units long, whatever the component's outliers.
+        lengths = [np.linalg.norm(pos[a] - pos[b]) for a, b in edges]
+        scale = EDGE_LEN / max(float(np.median(lengths)), 1e-9) if edges else 0
         pos = (pos - pos.min(axis=0)) * scale
         w, h = (pos.max(axis=0) if len(comp) > 1 else np.array([0.0, 0.0]))
         if x + w > CANVAS_WIDTH - PAD:
@@ -122,7 +129,7 @@ def main() -> None:
                   for i in to_judge],
         "cost_usd": round(sum(c.cost_usd for c in calls if not c.cached), 6)}, indent=1, ensure_ascii=False) + "\n")
 
-    pos = layout(d["nodes"], d["links"])
+    pos = layout(d["nodes"], d["links"], d["questions"])
     node_ids = [n["id"] for n in d["nodes"]]
     ix = {n: i for i, n in enumerate(node_ids)}
     pages_by_name = defaultdict(list)
