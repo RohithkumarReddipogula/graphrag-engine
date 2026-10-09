@@ -1,0 +1,9 @@
+{
+ "status": "finished",
+ "started_at": "2026-10-09T06:09:40+00:00",
+ "commit": "01ea23424c12f8cfded61bd777ada1fb1b878f71",
+ "settings_hash": "d0fac230b47dde337f0b9de10db81bb131deeaa789531409997df7d14735bb12",
+ "finished_at": "2026-10-09T06:29:46+00:00",
+ "answers": 1875,
+ "summary_sha256": "7923b86c2682f6f6c332febf71fb684c347a413e77696e670c972294bd94221a"
+}

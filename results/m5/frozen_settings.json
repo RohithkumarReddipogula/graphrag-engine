@@ -1,0 +1,55 @@
+{
+ "commit": "01ea23424c12f8cfded61bd777ada1fb1b878f71",
+ "tag": "m5-frozen",
+ "settings_hash": "d0fac230b47dde337f0b9de10db81bb131deeaa789531409997df7d14735bb12",
+ "hybrid": {
+  "with_title": false,
+  "fusion": "weighted",
+  "alpha": 0.9,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "candidates": 50,
+  "rerank_top": 30,
+  "embedding_model": "intfloat/e5-base-v2",
+  "reranker_model": "BAAI/bge-reranker-base",
+  "dense": "exact cosine in Neo4j"
+ },
+ "generation": {
+  "model": "openai/gpt-oss-120b",
+  "endpoint": "deepinfra/bf16",
+  "temperature": 0.0,
+  "reasoning_effort": "medium",
+  "budget_tokens": 1500,
+  "tokenizer": "o200k_base",
+  "system_prompt": "Answer the question using only the context. Reply with the shortest possible answer: an entity name, a date, or yes/no. If the context does not contain the answer, reply unknown. No explanation.",
+  "system_prompt_closed_book": "Answer the question. Reply with the shortest possible answer: an entity name, a date, or yes/no. If you do not know, reply unknown. No explanation."
+ },
+ "graph": {
+  "g": 0.5,
+  "MAX_SEEDS": 5,
+  "SEED_MIN_COS": 0.85,
+  "MIN_ALIAS_CHARS": 3,
+  "MAX_NGRAM": 12,
+  "MAX_NEIGHBOURS": 20,
+  "HUB_DEGREE": 25,
+  "TOP_PATHS": 10
+ },
+ "scoring": {
+  "answers": "official 2Wiki v1.1 EM/F1 with Wikidata aliases",
+  "bootstrap": {
+   "level": 0.95,
+   "resamples": 10000,
+   "seed": 0
+  }
+ },
+ "files_sha256": {
+  "data/corpus.jsonl": "84dae15301fa8855f02161d6ffb90f49ef01ebdf9750c45054332e7db86d1a6a",
+  "data/questions_test.jsonl": "4f6dc8baaa2d56b870526e026f97ea0980eaf0f3795803f7886f6cd4a0dfa5ee",
+  "data/single_hop_test.jsonl": "9b4e708e2d534cf92c5de84e3e5a621e22ab8349a757403708ab222cf82fb851",
+  "data/answer_aliases.json": "cbb72cac3fa33aa62fe756b32767884feded8c85c3728d3d9e0ad748ee2fb918",
+  "results/m1/retrieval_dev.json": "cf4d1130d0b0a9f5b1f7a878c0069de46c858d8f098c44704361227ac09a9217",
+  "results/m2/extractions.jsonl": "8ef3c6434d65b58fd5f31d30b541f239481db7a7d379894c855a5bba76b21bb3",
+  "results/m3/clusters.jsonl": "b7c7abbaddc079c3b3f5f3fc7c93a58f992016a15c016f75864fcb900a66bf2b",
+  "results/m4/graph_stats.json": "fcf0e95a4b68f431edb153324284b0351fa786de9410e515ecb6bb6cacf63b59"
+ }
+}
