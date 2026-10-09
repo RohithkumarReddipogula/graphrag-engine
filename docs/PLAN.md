@@ -344,8 +344,8 @@ M5 reports every system, including `graph_only`.
 
 ### M5: Final test run (once)
 
-**DRAFT (2026-10-09), awaiting approval. No M5 code is written and the test split is not touched before
-it is approved.**
+**Approved on 2026-10-09** with two changes to the draft (one primary result; a pre-registered
+expectation, M5.3). Everything below was fixed before the test split was run.
 
 Test questions so far: their ids were read only to check that dev and test never overlap; their
 paragraphs are part of the shared corpus by design (M1), so M2 extraction and M3 resolution ran on them
@@ -382,11 +382,16 @@ run on any other commit or on a working tree with uncommitted changes.
   REL, EXACT_TITLE and MENTIONED_IN counts) and stops if not.
 
 #### M5.3 Comparisons
-- Primary (approved in M4): `graph_plus_chunks_g0.5` vs `hybrid`, paired EM difference with 95%
-  bootstrap CI over all 375 test questions, and the same on the closed-book-wrong subset (the headline).
-- Secondary, reported as exploratory (several comparisons, no correction): `graph_only` vs `hybrid`;
-  `graph_plus_chunks_g0.5` vs `graph_only`; the ablation vs `graph_plus_chunks_g0.5`; every system vs
-  `closed_book`; per question type.
+- **Primary result (one only):** the paired EM difference of `graph_plus_chunks_g0.5` vs `hybrid` over
+  all 375 test questions, with its 95% bootstrap CI.
+- **Pre-registered expectation (fixed before the run):** `graph_plus_chunks_g0.5` beats `hybrid` on EM,
+  with the 95% CI of the paired difference above 0. The result is reported as it comes out, whatever it
+  is; the expectation is recorded as met or not met.
+- Pre-specified secondary result: the same paired difference on the closed-book-wrong test subset (the
+  questions `closed_book` gets wrong). It is not a second headline.
+- Other secondary comparisons, reported as exploratory (several comparisons, no correction):
+  `graph_only` vs `hybrid`; `graph_plus_chunks_g0.5` vs `graph_only`; the ablation vs
+  `graph_plus_chunks_g0.5`; every system vs `closed_book`; per question type.
 
 #### M5.4 Metrics
 - Per system, per question type, for multi-hop, single-hop and all, and on the closed-book-wrong subset:
@@ -426,8 +431,8 @@ run on any other commit or on a working tree with uncommitted changes.
 #### M5.7 BENCHMARK.md
 Generated from the M5 results files (no number typed by hand), plain ASCII, numbered contents:
 1. setup: data, systems, frozen settings and the `m5-frozen` commit;
-2. primary result: `graph_plus_chunks_g0.5` vs `hybrid` on test, all questions and the closed-book-wrong
-   subset;
+2. primary result: `graph_plus_chunks_g0.5` vs `hybrid` on all 375 test questions, and whether the
+   pre-registered expectation was met; then the closed-book-wrong subset as a secondary result;
 3. full results table per system and per question type (EM, F1, unknown rate, answered, EM on answered,
    CIs);
 4. secondary comparisons and the exact-title ablation;

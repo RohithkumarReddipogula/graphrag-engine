@@ -6,7 +6,9 @@
 | Extractor | openai/gpt-oss-120b | OpenRouter, same pinned endpoint as the generator | Prepaid credit (shared with the generator) | openrouter.ai/settings/credits |
 | Generator | openai/gpt-oss-120b | OpenRouter, pinned endpoint `deepinfra/bf16`, fallbacks disabled | Prepaid credit, 7.60 USD bought | openrouter.ai/settings/credits |
 
-Date the Gemini limits were read: TBD (must be read in AI Studio before the M5 judge runs).
+Date the Gemini limits were read: TBD (must be read in AI Studio before the M5 judge runs). On
+2026-10-09 the values were sent as blank placeholders ("RPM ___, TPM ___, RPD ___"), so nothing was
+recorded; the real values are still needed before the judge runs.
 
 ## Gemini free-tier limits: what was checked (2026-10-09)
 
