@@ -543,7 +543,91 @@ Plain ASCII, numbered contents, no collapsible sections, short plain footer (CLA
 parity test against the committed dev contexts, and `docs/graph_view/subgraph.json` with `example.html`.
 
 ### M7: Optional: `neo4j-graphrag` as a third system
-Same corpus, same generator, same budget, same eval.
+
+**Status:** approved on 2026-10-10 with these choices by Rohith: dev split only (never the test split);
+the library end to end, including its own KG builder; cost cap 1 USD for the full build, stop and ask if
+the pilot projects more; every LLM call, including the library's KG builder, through OpenRouter with our
+cache and spend ledger and no other provider; the same 125 dev questions as M1 and M4; the library's
+graph build cost reported next to ours (0.35 USD, `results/m2/extraction_run.json`).
+
+**Question:** how does an off-the-shelf GraphRAG library (`neo4j-graphrag` 1.22.0, pinned) compare with
+the custom pipeline of M2 to M4 on the same corpus, generator, context budget and scoring? This is a dev
+comparison. It has no pass/fail bar and no pre-registered expectation, and it is never described as a
+test result.
+
+#### M7.1 What comes from the library and what is kept from this project
+From the library, with its defaults unless listed in M7.2:
+- KG builder `SimpleKGPipeline`: its text splitter, its entity and relation extraction prompt
+  (`ERExtractionTemplate`), its graph pruning, its Neo4j writer and its entity resolution
+  (`SinglePropertyExactMatchResolver`: same label and same name).
+- Retriever `VectorCypherRetriever`: vector search over the library's chunk nodes, then one Cypher
+  retrieval query (M7.3).
+
+Kept identical to every other system, so that the comparison is about graph build and retrieval:
+- Generator `openai/gpt-oss-120b` on deepinfra/bf16, temperature 0, reasoning effort medium, through
+  `graphrag.llm` (disk cache, spend ledger, fallbacks disabled).
+- Embeddings `intfloat/e5-base-v2`.
+- Context budget 1,500 tokens, the answer prompt of `graphrag.generation` (short answers, "unknown"
+  allowed), official 2Wiki EM/F1 with aliases, 95% percentile bootstrap CIs (10,000 resamples, seed 0).
+  The library's own answer prompt (`RagTemplate`) is not used: it asks for free-form answers, which
+  exact match would score near 0 for a reason that has nothing to do with the graph.
+
+#### M7.2 Settings fixed before any run
+- LLM adapter: a class implementing the library's `LLMInterface` (`invoke`, `ainvoke`) on top of
+  `CachedLLM.complete`. `supports_structured_output` is false, so the library uses its prompt-and-parse
+  path. No other LLM class of the library is imported. A unit test checks that a repeated call is a cache
+  hit and that a paid call is written to the ledger.
+- Embedder adapter: two instances of the library's `Embedder` over the E5 encoder, one with the passage
+  prefix for the builder and one with the query prefix for the retriever.
+- Schema: given by us, the same information our own extractor gets: the 6 entity types and the 34
+  relation types of M2 (no OTHER). Without a schema the library would run an extra schema-guessing LLM
+  call per document; that mode is not used.
+- Input: one pipeline run per corpus paragraph (2,049 runs), text = title and paragraph text, with our
+  chunk id in the document metadata so that retrieved chunks map back to gold paragraphs.
+- Entity resolution: the library default, on.
+- Storage: a second Neo4j container `graphrag-neo4j-m7` (same image, APOC plugin enabled, own data
+  directory, bolt port 7688). Reasons: the library's writer and resolver need APOC procedures, which the
+  M4 container does not have, and the library's default labels (`Chunk`, `Document`) collide with ours.
+  The M4 container, its data and the M6 parity test are not touched.
+- Dependency: `neo4j-graphrag==1.22.0` as an optional extra `m7`; the unit tests of M0 to M6 do not
+  import it.
+
+#### M7.3 Retrieval and context (fixed before any answer is generated)
+1. Vector search: top 10 library chunks for the question (E5 query embedding, cosine).
+2. Retrieval query: for each chunk, its text and the relations of the entities extracted from it
+   (`(entity)-[:FROM_CHUNK]->(chunk)`, then `(entity)-[rel]-(other)`), as "A -relation-> B" lines, at most
+   20 per chunk, ordered by relation type and names so that the result is deterministic.
+3. Context: chunks in rank order, each followed by its relation lines, cut at 1,500 tokens with the same
+   tokenizer and packer as the other systems.
+4. No value in 1 to 3 is tuned on dev answers. If a step cannot be built as written, the change is
+   recorded here before generation.
+
+#### M7.4 Pilot, then full build
+- Pilot: 50 paragraphs (seeded sample, seed "42:m7-pilot"). Records: cost, calls, tokens, failures,
+  nodes and relations written, share of relations outside the schema that were pruned.
+- Projected full cost = pilot cost per paragraph x 2,049. If it is above 1 USD, or if more than 10% of
+  the pilot paragraphs fail, stop and ask.
+- Full build: 2,049 paragraphs, hard stop if the running M7 build cost reaches 1 USD.
+- Generation on dev: 125 calls, same price class as one M4 dev system.
+
+#### M7.5 What is reported (`results/m7/`, then one section in BENCHMARK.md and one line in the README)
+- System `neo4j_graphrag` on the 125 dev questions: EM and F1 with CIs, per type, unknown rate, share of
+  questions with all gold paragraphs in context.
+- Paired EM difference with 95% CI against `hybrid` (M1) and against `graph_plus_chunks_g0.5` (M4), using
+  their committed dev answers.
+- Build: paragraphs processed and failed, nodes, relations, and the LLM cost of the graph build next to
+  ours (0.35 USD for extraction; our entity resolution cost is listed separately).
+- Stated next to every number: dev split, 125 questions, library at defaults with our schema, one
+  configuration, no tuning.
+
+#### M7.6 Safeguards
+- The M7 scripts read `data/questions_dev.jsonl` only; a unit test fails if any M7 file names the test
+  questions file. `results/m5/` is not read or written.
+- Every LLM call goes through `graphrag.llm` and so into the spend ledger. The adapter also records each
+  call's cost in `results/m7/`, keeps the running sum and refuses further paid calls at the cap.
+
+**Done when:** `results/m7/` holds the pilot, the build report and the dev summary, BENCHMARK.md and the
+README are rendered from those files, and pytest passes.
 
 ## 6. Milestone 1 in detail
 

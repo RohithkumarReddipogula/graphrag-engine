@@ -24,7 +24,7 @@ Last updated: 2026-10-09. Plan and settled decisions: `docs/PLAN.md`. Rules: `CL
 - M6 is done: README rewritten for first readers, read-only API (`graphrag.api`, venv only) and a static
   graph view (`docs/graph_view/`). Every LLM call behind a result went through OpenRouter; the unused
   Gemini path was removed (`results/spend/gemini_audit.json`).
-- Optional next: M7 (`neo4j-graphrag` as a third system), see `docs/PLAN.md`. Nothing is running now.
+- M7 (`neo4j-graphrag` as a third system, dev only) approved on 2026-10-10, plan in `docs/PLAN.md`. Next step: the 50-paragraph pilot (M7.4). Nothing is running now.
 
 ## 2. M3 run 1: what went wrong and why
 

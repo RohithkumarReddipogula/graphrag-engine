@@ -23,6 +23,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=9.1"]
+m7 = ["neo4j-graphrag==1.22.0"]
 
 [build-system]
 requires = ["hatchling"]
