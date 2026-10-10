@@ -544,7 +544,15 @@ parity test against the committed dev contexts, and `docs/graph_view/subgraph.js
 
 ### M7: Optional: `neo4j-graphrag` as a third system
 
-**Status:** approved on 2026-10-10 with these choices by Rohith: dev split only (never the test split);
+**Status: stopped by choice after the plan, not completed** (2026-10-10, decision by Rohith). The 50-paragraph
+pilot was interrupted after 23 paragraphs: 23 paid extraction calls, 0.0045 USD, all in the spend ledger
+(`results/spend/openrouter_calls.jsonl`, rows of 2026-10-10 08:35 to 08:36 UTC). It wrote no result file,
+nothing was measured, and there are no M7 results; `results/m7/` does not exist. The partial pilot graph
+(23 paragraphs) sits only in the local, unversioned M7 database. No full build and no generation was run.
+The adapter code (`src/graphrag/m7.py`), the pilot script (`scripts/run_m7_pilot.py`), their unit tests and
+the second Neo4j service in `docker-compose.yml` are kept, unused. The plan below is kept as written.
+
+**Plan as it was** approved on 2026-10-10 with these choices by Rohith: dev split only (never the test split);
 the library end to end, including its own KG builder; cost cap 1 USD for the full build, stop and ask if
 the pilot projects more; every LLM call, including the library's KG builder, through OpenRouter with our
 cache and spend ledger and no other provider; the same 125 dev questions as M1 and M4; the library's
@@ -628,6 +636,7 @@ Kept identical to every other system, so that the comparison is about graph buil
 
 **Done when:** `results/m7/` holds the pilot, the build report and the dev summary, BENCHMARK.md and the
 README are rendered from those files, and pytest passes.
+Not reached: M7 was stopped before the pilot (see Status above).
 
 ## 6. Milestone 1 in detail
 
